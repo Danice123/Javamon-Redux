@@ -70,3 +70,8 @@ build/
 Thumbs.db
 core/assets/pokemon/
 *.xcf
+desktop/assets
+desktop/Player.xml
+gradle/
+gradlew
+gradlew.bat
