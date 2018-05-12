@@ -1,0 +1,26 @@
+<Move>
+  <name>Sing</name>
+  <type>NORMAL</type>
+  <PP>15</PP>
+  <accuracy>55</accuracy>
+  <speed>0</speed>
+  <DT>NONE</DT>
+  <effect>
+    <require>
+	</require>
+    <effect>
+	  <StatusEffect>
+	    <target>target</target>
+		<status>Sleep</status>
+	  </StatusEffect>
+    </effect>
+  </effect>
+  <isContact>false</isContact>
+  <isProtectable>true</isProtectable>
+  <isReflectable>true</isReflectable>
+  <isSnatchable>false</isSnatchable>
+  <isMirrorable>true</isMirrorable>
+  <isPunch>false</isPunch>
+  <isSound>true</isSound>
+  <canMiss>true</canMiss>
+</Move>

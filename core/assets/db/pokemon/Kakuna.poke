@@ -1,0 +1,89 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>14</number>
+  <name>Kakuna</name>
+  <type1>BUG</type1>
+  <type2>POISON</type2>
+  <dualType>true</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>45</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>25</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>50</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>25</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>25</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>35</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Harden</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Shed Skin</ability1>
+  <dreamAbility>Shed Skin</dreamAbility>
+  <dualAbility>false</dualAbility>
+  <genderRatio>HALF_FEMALE</genderRatio>
+  <genus1>Bug</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>15</hatchCounter>
+  <baseExp>72</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>2</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>120</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium</growthRate>
+  <species>Cocoon</species>
+  <description>While awaiting evolution, it
+hides from predators under
+leaves and in nooks of branches.</description>
+  <height>6</height>
+  <weight>100</weight>
+  <color>Yellow</color>
+  <shape>Squiggle</shape>
+  <habitat>Forest</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

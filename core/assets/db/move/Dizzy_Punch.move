@@ -1,0 +1,42 @@
+<Move>
+  <name>Dizzy Punch</name>
+  <type>NORMAL</type>
+  <PP>10</PP>
+  <accuracy>100</accuracy>
+  <speed>0</speed>
+  <DT>PHYSICAL</DT>
+  <effect>
+    <require>
+	</require>
+    <effect>
+	  <Damage>
+	    <power>70</power>
+      </Damage>
+	  <Chance>
+	    <chance>20</chance>
+		<effect>
+		  <SetFlag>
+			<target>target</target>
+			<flag>isConfused</flag>
+			<text>$target has become confused!</text>
+		  </SetFlag>
+		  <SetCounter>
+			<target>target</target>
+			<counter>ConfusionCounter</counter>
+			<type>random</type>
+			<max>5</max>
+			<min>2</min>
+		  </SetCounter>
+		</effect>
+	  </Chance>
+    </effect>
+  </effect>
+  <isContact>true</isContact>
+  <isProtectable>true</isProtectable>
+  <isReflectable>false</isReflectable>
+  <isSnatchable>false</isSnatchable>
+  <isMirrorable>true</isMirrorable>
+  <isPunch>true</isPunch>
+  <isSound>false</isSound>
+  <canMiss>true</canMiss>
+</Move>

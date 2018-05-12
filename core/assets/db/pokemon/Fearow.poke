@@ -1,0 +1,121 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>22</number>
+  <name>Fearow</name>
+  <type1>NORMAL</type1>
+  <type2>FLYING</type2>
+  <dualType>true</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>65</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>90</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>65</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>61</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>61</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>100</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>34</int>
+        <list>
+          <string>Drill Peck</string>
+        </list>
+      </entry>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Leer</string>
+          <string>Growl</string>
+          <string>Peck</string>
+        </list>
+      </entry>
+      <entry>
+        <int>25</int>
+        <list>
+          <string>Mirror Move</string>
+        </list>
+      </entry>
+      <entry>
+        <int>43</int>
+        <list>
+          <string>Agility</string>
+        </list>
+      </entry>
+      <entry>
+        <int>9</int>
+        <list>
+          <string>Leer</string>
+        </list>
+      </entry>
+      <entry>
+        <int>15</int>
+        <list>
+          <string>Fury Attack</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Keen Eye</ability1>
+  <dreamAbility>Sniper</dreamAbility>
+  <dualAbility>false</dualAbility>
+  <genderRatio>HALF_FEMALE</genderRatio>
+  <genus1>Flying</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>15</hatchCounter>
+  <baseExp>155</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>2</int>
+    </entry>
+  </effort>
+  <captureRate>90</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium</growthRate>
+  <species>Beak</species>
+  <description>It has the stamina to fly all
+day on its broad wings. It
+fights by using its sharp beak.</description>
+  <height>12</height>
+  <weight>380</weight>
+  <color>Brown</color>
+  <shape>Wings</shape>
+  <habitat>Rough_Terrain</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

@@ -1,0 +1,28 @@
+<List>
+  <triggers>
+    <Trigger>
+      <x>5</x>
+      <y>1</y>
+      <layer>1</layer>
+      <script>$DWarp:Pallet_Town:12:6:1</script>
+    </Trigger>
+    <Trigger>
+      <x>6</x>
+      <y>1</y>
+      <layer>1</layer>
+      <script>$DWarp:Pallet_Town:12:6:1</script>
+    </Trigger>
+    <Trigger>
+      <x>6</x>
+      <y>6</y>
+      <layer>1</layer>
+      <script>Barrier</script>
+    </Trigger>
+    <Trigger>
+      <x>5</x>
+      <y>6</y>
+      <layer>1</layer>
+      <script>Barrier2</script>
+    </Trigger>
+  </triggers>
+</List>

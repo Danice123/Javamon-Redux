@@ -1,0 +1,115 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>142</number>
+  <name>Aerodactyl</name>
+  <type1>ROCK</type1>
+  <type2>FLYING</type2>
+  <dualType>true</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>80</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>105</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>65</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>60</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>75</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>130</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Wing Attack</string>
+          <string>Agility</string>
+        </list>
+      </entry>
+      <entry>
+        <int>33</int>
+        <list>
+          <string>Supersonic</string>
+        </list>
+      </entry>
+      <entry>
+        <int>38</int>
+        <list>
+          <string>Bite</string>
+        </list>
+      </entry>
+      <entry>
+        <int>54</int>
+        <list>
+          <string>Hyper Beam</string>
+        </list>
+      </entry>
+      <entry>
+        <int>45</int>
+        <list>
+          <string>Take Down</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Rock Head</ability1>
+  <ability2>Pressure</ability2>
+  <dreamAbility>Unnerve</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>FEMALE_18</genderRatio>
+  <genus1>Flying</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>35</hatchCounter>
+  <baseExp>180</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>2</int>
+    </entry>
+  </effort>
+  <captureRate>45</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Slow</growthRate>
+  <species>Fossil</species>
+  <description>A Pokémon that roamed the skies
+in the dinosaur era. Its teeth are
+like saw blades.</description>
+  <height>18</height>
+  <weight>590</weight>
+  <color>Purple</color>
+  <shape>Wings</shape>
+  <habitat>Mountain</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

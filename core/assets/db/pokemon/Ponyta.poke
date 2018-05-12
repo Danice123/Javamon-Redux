@@ -1,0 +1,125 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>77</number>
+  <name>Ponyta</name>
+  <type1>FIRE</type1>
+  <dualType>false</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>50</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>85</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>55</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>65</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>65</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>90</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Ember</string>
+        </list>
+      </entry>
+      <entry>
+        <int>35</int>
+        <list>
+          <string>Growl</string>
+        </list>
+      </entry>
+      <entry>
+        <int>32</int>
+        <list>
+          <string>Stomp</string>
+        </list>
+      </entry>
+      <entry>
+        <int>48</int>
+        <list>
+          <string>Agility</string>
+        </list>
+      </entry>
+      <entry>
+        <int>39</int>
+        <list>
+          <string>Fire Spin</string>
+        </list>
+      </entry>
+      <entry>
+        <int>43</int>
+        <list>
+          <string>Take Down</string>
+        </list>
+      </entry>
+      <entry>
+        <int>30</int>
+        <list>
+          <string>Tail Whip</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Run Away</ability1>
+  <ability2>Flash Fire</ability2>
+  <dreamAbility>Flame Body</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>HALF_FEMALE</genderRatio>
+  <genus1>Field</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>20</hatchCounter>
+  <baseExp>82</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>1</int>
+    </entry>
+  </effort>
+  <captureRate>190</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium</growthRate>
+  <species>Fire Horse</species>
+  <description>As a newborn, it can barely stand.
+However, through galloping, its
+legs are made tougher and faster.</description>
+  <height>10</height>
+  <weight>300</weight>
+  <color>Yellow</color>
+  <shape>Quadruped</shape>
+  <habitat>Grassland</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

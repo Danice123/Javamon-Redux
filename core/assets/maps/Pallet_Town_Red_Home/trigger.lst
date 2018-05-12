@@ -1,0 +1,22 @@
+<List>
+  <triggers>
+    <Trigger>
+      <x>8</x>
+      <y>7</y>
+      <layer>1</layer>
+      <script>$Warp:Pallet_Town_Red_Home_2:8:7:0</script>
+    </Trigger>
+    <Trigger>
+      <x>3</x>
+      <y>1</y>
+      <layer>1</layer>
+      <script>$DWarp:Pallet_Town:5:12:1</script>
+    </Trigger>
+    <Trigger>
+      <x>4</x>
+      <y>1</y>
+      <layer>1</layer>
+      <script>$DWarp:Pallet_Town:5:12:1</script>
+    </Trigger>
+  </triggers>
+</List>

@@ -1,0 +1,114 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>19</number>
+  <name>Rattata</name>
+  <type1>NORMAL</type1>
+  <dualType>false</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>30</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>56</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>35</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>25</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>35</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>72</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>34</int>
+        <list>
+          <string>Super Fang</string>
+        </list>
+      </entry>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Tackle</string>
+          <string>Tail Whip</string>
+        </list>
+      </entry>
+      <entry>
+        <int>23</int>
+        <list>
+          <string>Focus Energy</string>
+        </list>
+      </entry>
+      <entry>
+        <int>7</int>
+        <list>
+          <string>Quick Attack</string>
+        </list>
+      </entry>
+      <entry>
+        <int>14</int>
+        <list>
+          <string>Hyper Fang</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Run Away</ability1>
+  <ability2>Guts</ability2>
+  <dreamAbility>Hustle</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>HALF_FEMALE</genderRatio>
+  <genus1>Field</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>15</hatchCounter>
+  <baseExp>51</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>1</int>
+    </entry>
+  </effort>
+  <captureRate>255</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium</growthRate>
+  <species>Mouse</species>
+  <description>Cautious in the extreme, its
+hardy vitality lets it live in
+any kind of environment.</description>
+  <height>3</height>
+  <weight>35</weight>
+  <color>Purple</color>
+  <shape>Quadruped</shape>
+  <habitat>Grassland</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

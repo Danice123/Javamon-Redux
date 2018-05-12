@@ -1,0 +1,116 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>140</number>
+  <name>Kabuto</name>
+  <type1>ROCK</type1>
+  <type2>WATER</type2>
+  <dualType>true</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>30</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>80</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>90</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>55</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>45</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>55</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>34</int>
+        <list>
+          <string>Absorb</string>
+        </list>
+      </entry>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Scratch</string>
+          <string>Harden</string>
+        </list>
+      </entry>
+      <entry>
+        <int>49</int>
+        <list>
+          <string>Hydro Pump</string>
+        </list>
+      </entry>
+      <entry>
+        <int>39</int>
+        <list>
+          <string>Slash</string>
+        </list>
+      </entry>
+      <entry>
+        <int>44</int>
+        <list>
+          <string>Leer</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Swift Swim</ability1>
+  <ability2>Battle Armor</ability2>
+  <dreamAbility>Weak Armor</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>FEMALE_18</genderRatio>
+  <genus1>Water</genus1>
+  <genus2>Shellfish</genus2>
+  <dualGenus>true</dualGenus>
+  <hatchCounter>30</hatchCounter>
+  <baseExp>71</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>1</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>45</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium</growthRate>
+  <species>Shellfish</species>
+  <description>It is thought to have inhabited
+beaches 300 million years ago.
+It is protected by a stiff shell.</description>
+  <height>5</height>
+  <weight>115</weight>
+  <color>Brown</color>
+  <shape>Armor</shape>
+  <habitat>Sea</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

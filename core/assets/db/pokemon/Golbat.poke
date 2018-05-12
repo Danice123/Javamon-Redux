@@ -1,0 +1,121 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>42</number>
+  <name>Golbat</name>
+  <type1>POISON</type1>
+  <type2>FLYING</type2>
+  <dualType>true</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>75</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>80</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>70</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>65</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>75</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>90</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Bite</string>
+          <string>Screech</string>
+          <string>Leech Life</string>
+        </list>
+      </entry>
+      <entry>
+        <int>32</int>
+        <list>
+          <string>Wing Attack</string>
+        </list>
+      </entry>
+      <entry>
+        <int>21</int>
+        <list>
+          <string>Confuse Ray</string>
+        </list>
+      </entry>
+      <entry>
+        <int>43</int>
+        <list>
+          <string>Haze</string>
+        </list>
+      </entry>
+      <entry>
+        <int>10</int>
+        <list>
+          <string>Supersonic</string>
+        </list>
+      </entry>
+      <entry>
+        <int>15</int>
+        <list>
+          <string>Bite</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Inner Focus</ability1>
+  <dreamAbility>Infiltrator</dreamAbility>
+  <dualAbility>false</dualAbility>
+  <genderRatio>HALF_FEMALE</genderRatio>
+  <genus1>Flying</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>15</hatchCounter>
+  <baseExp>159</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>2</int>
+    </entry>
+  </effort>
+  <captureRate>90</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium</growthRate>
+  <species>Bat</species>
+  <description>Its sharp fangs puncture the
+toughest of hides and have small
+holes for greedily sucking blood.</description>
+  <height>16</height>
+  <weight>550</weight>
+  <color>Purple</color>
+  <shape>Wings</shape>
+  <habitat>Cave</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

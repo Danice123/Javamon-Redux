@@ -1,0 +1,95 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>129</number>
+  <name>Magikarp</name>
+  <type1>WATER</type1>
+  <dualType>false</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>20</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>10</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>55</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>15</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>20</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>80</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Splash</string>
+        </list>
+      </entry>
+      <entry>
+        <int>15</int>
+        <list>
+          <string>Tackle</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Swift Swim</ability1>
+  <dreamAbility>Rattled</dreamAbility>
+  <dualAbility>false</dualAbility>
+  <genderRatio>HALF_FEMALE</genderRatio>
+  <genus1>Fish</genus1>
+  <genus2>Dragon</genus2>
+  <dualGenus>true</dualGenus>
+  <hatchCounter>5</hatchCounter>
+  <baseExp>40</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>1</int>
+    </entry>
+  </effort>
+  <captureRate>255</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Slow</growthRate>
+  <species>Fish</species>
+  <description>A Magikarp living for many years
+can leap a mountain using Splash.
+The move remains useless, though.</description>
+  <height>9</height>
+  <weight>100</weight>
+  <color>Red</color>
+  <shape>Fish</shape>
+  <habitat>Waters_Edge</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

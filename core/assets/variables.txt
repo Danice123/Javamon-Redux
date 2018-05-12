@@ -1,0 +1,8 @@
+Pallet_Town
+	OakPalletEncounter: Set after first Oak encounter
+	ChoosePokemon: Set when chosing a pokemon, unset after pokemon chosen
+	ChoseBulbasaur: Set when bulbasaur is chosen
+	ChoseCharmander: Set when charmander is chosen
+	ChoseSquirtle: Set when squirtle is chosen
+	BlueLabBattle: Set when Pokemon is chosen, unset after battle
+	FirstRivalBattle: Set after first rival battle

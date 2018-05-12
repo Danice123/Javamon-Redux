@@ -1,0 +1,120 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>90</number>
+  <name>Shellder</name>
+  <type1>WATER</type1>
+  <dualType>false</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>30</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>65</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>100</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>45</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>25</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>40</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>50</int>
+        <list>
+          <string>Ice Beam</string>
+        </list>
+      </entry>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Tackle</string>
+          <string>Withdraw</string>
+        </list>
+      </entry>
+      <entry>
+        <int>18</int>
+        <list>
+          <string>Supersonic</string>
+        </list>
+      </entry>
+      <entry>
+        <int>39</int>
+        <list>
+          <string>Leer</string>
+        </list>
+      </entry>
+      <entry>
+        <int>23</int>
+        <list>
+          <string>Clamp</string>
+        </list>
+      </entry>
+      <entry>
+        <int>30</int>
+        <list>
+          <string>Aurora Beam</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Shell Armor</ability1>
+  <ability2>Skill Link</ability2>
+  <dreamAbility>Overcoat</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>HALF_FEMALE</genderRatio>
+  <genus1>Shellfish</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>20</hatchCounter>
+  <baseExp>61</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>1</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>190</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Slow</growthRate>
+  <species>Bivalve</species>
+  <description>It swims backward by opening and
+closing its two shells. Its large
+tongue is always kept hanging out.</description>
+  <height>3</height>
+  <weight>40</weight>
+  <color>Purple</color>
+  <shape>Ball</shape>
+  <habitat>Sea</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

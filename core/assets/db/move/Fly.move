@@ -1,0 +1,37 @@
+<Move>
+  <name>Fly</name>
+  <type>FLYING</type>
+  <PP>15</PP>
+  <accuracy>0</accuracy>
+  <speed>0</speed>
+  <DT>PHYSICAL</DT>
+  <effect>
+    <require>
+	</require>
+    <effect>
+	  <SetFlag>
+	    <target>user</target>
+		<flag>MultiTurnMove</flag>
+		<text>$target flew up high!</text>
+	  </SetFlag>
+	  <SetFlag>
+	    <target>user</target>
+		<flag>isInTheSky</flag>
+	  </SetFlag>
+	  <SetCounter>
+	    <target>user</target>
+	    <counter>MultiTurnCounter</counter>
+	    <type>set</type>
+	    <n>1</n>
+	  </SetCounter>
+    </effect>
+  </effect>
+  <isContact>false</isContact>
+  <isProtectable>false</isProtectable>
+  <isReflectable>false</isReflectable>
+  <isSnatchable>false</isSnatchable>
+  <isMirrorable>true</isMirrorable>
+  <isPunch>false</isPunch>
+  <isSound>false</isSound>
+  <canMiss>false</canMiss>
+</Move>

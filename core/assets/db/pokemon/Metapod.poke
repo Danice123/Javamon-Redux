@@ -1,0 +1,88 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>11</number>
+  <name>Metapod</name>
+  <type1>BUG</type1>
+  <dualType>false</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>50</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>20</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>55</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>25</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>25</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>30</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Harden</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Shed Skin</ability1>
+  <dreamAbility>Shed Skin</dreamAbility>
+  <dualAbility>false</dualAbility>
+  <genderRatio>HALF_FEMALE</genderRatio>
+  <genus1>Bug</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>15</hatchCounter>
+  <baseExp>72</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>2</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>120</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium</growthRate>
+  <species>Cocoon</species>
+  <description>A steel-hard shell protects its
+tender body. It quietly endures
+hardships while awaiting evolution.</description>
+  <height>7</height>
+  <weight>99</weight>
+  <color>Green</color>
+  <shape>Squiggle</shape>
+  <habitat>Forest</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

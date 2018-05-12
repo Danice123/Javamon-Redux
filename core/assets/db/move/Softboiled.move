@@ -1,0 +1,25 @@
+<Move>
+  <name>Softboiled</name>
+  <type>NORMAL</type>
+  <PP>10</PP>
+  <accuracy>0</accuracy>
+  <speed>0</speed>
+  <DT>NONE</DT>
+  <effect>
+    <require>
+	</require>
+    <effect>
+	  <Heal>
+	    <percent>50</percent>
+	  </Heal>
+    </effect>
+  </effect>
+  <isContact>false</isContact>
+  <isProtectable>false</isProtectable>
+  <isReflectable>false</isReflectable>
+  <isSnatchable>true</isSnatchable>
+  <isMirrorable>false</isMirrorable>
+  <isPunch>false</isPunch>
+  <isSound>false</isSound>
+  <canMiss>false</canMiss>
+</Move>

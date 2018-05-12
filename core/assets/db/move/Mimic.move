@@ -1,0 +1,22 @@
+<Move>
+  <name>Mimic</name>
+  <type>NORMAL</type>
+  <PP>10</PP>
+  <accuracy>0</accuracy>
+  <speed>0</speed>
+  <DT>NONE</DT>
+  <effect>
+    <require>
+	</require>
+    <effect>
+    </effect>
+  </effect>
+  <isContact>false</isContact>
+  <isProtectable>true</isProtectable>
+  <isReflectable>false</isReflectable>
+  <isSnatchable>false</isSnatchable>
+  <isMirrorable>false</isMirrorable>
+  <isPunch>false</isPunch>
+  <isSound>false</isSound>
+  <canMiss>false</canMiss>
+</Move>

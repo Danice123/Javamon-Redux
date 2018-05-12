@@ -1,0 +1,111 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>31</number>
+  <name>Nidoqueen</name>
+  <type1>POISON</type1>
+  <type2>GROUND</type2>
+  <dualType>true</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>90</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>82</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>87</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>75</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>85</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>76</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Scratch</string>
+          <string>Tackle</string>
+          <string>Body Slam</string>
+          <string>Tail Whip</string>
+        </list>
+      </entry>
+      <entry>
+        <int>23</int>
+        <list>
+          <string>Body Slam</string>
+        </list>
+      </entry>
+      <entry>
+        <int>8</int>
+        <list>
+          <string>Scratch</string>
+        </list>
+      </entry>
+      <entry>
+        <int>14</int>
+        <list>
+          <string>Poison Sting</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Poison Point</ability1>
+  <ability2>Rivalry</ability2>
+  <dreamAbility>Sheer Force</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>ALWAYS_FEMALE</genderRatio>
+  <genus1>Undiscovered</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>20</hatchCounter>
+  <baseExp>223</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>3</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>45</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium_slow</growthRate>
+  <species>Drill</species>
+  <description>Its entire body is armored with
+hard scales. It will protect the
+young in its burrow with its life.</description>
+  <height>13</height>
+  <weight>600</weight>
+  <color>Blue</color>
+  <shape>Upright</shape>
+  <habitat>Grassland</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

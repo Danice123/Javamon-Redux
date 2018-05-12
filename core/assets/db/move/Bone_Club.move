@@ -1,0 +1,34 @@
+<Move>
+  <name>Bone Club</name>
+  <type>GROUND</type>
+  <PP>20</PP>
+  <accuracy>85</accuracy>
+  <speed>0</speed>
+  <DT>PHYSICAL</DT>
+  <effect>
+    <require>
+	</require>
+    <effect>
+	  <Damage>
+	    <power>65</power>
+      </Damage>
+	  <Chance>
+	    <chance>10</chance>
+		<effect>
+		  <SetFlag>
+			<target>target</target>
+			<flag>isFlinching</flag>
+		  </SetFlag>
+		</effect>
+	  </Chance>
+    </effect>
+  </effect>
+  <isContact>false</isContact>
+  <isProtectable>true</isProtectable>
+  <isReflectable>false</isReflectable>
+  <isSnatchable>false</isSnatchable>
+  <isMirrorable>true</isMirrorable>
+  <isPunch>false</isPunch>
+  <isSound>false</isSound>
+  <canMiss>true</canMiss>
+</Move>

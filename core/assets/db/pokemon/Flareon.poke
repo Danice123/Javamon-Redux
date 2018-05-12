@@ -1,0 +1,140 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>136</number>
+  <name>Flareon</name>
+  <type1>FIRE</type1>
+  <dualType>false</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>65</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>130</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>60</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>95</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>110</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>65</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Sand-Attack</string>
+          <string>Tackle</string>
+          <string>Ember</string>
+          <string>Quick Attack</string>
+        </list>
+      </entry>
+      <entry>
+        <int>48</int>
+        <list>
+          <string>Rage</string>
+        </list>
+      </entry>
+      <entry>
+        <int>54</int>
+        <list>
+          <string>Flamethrower</string>
+        </list>
+      </entry>
+      <entry>
+        <int>37</int>
+        <list>
+          <string>Tail Whip</string>
+        </list>
+      </entry>
+      <entry>
+        <int>42</int>
+        <list>
+          <string>Leer</string>
+        </list>
+      </entry>
+      <entry>
+        <int>27</int>
+        <list>
+          <string>Quick Attack</string>
+        </list>
+      </entry>
+      <entry>
+        <int>40</int>
+        <list>
+          <string>Bite</string>
+        </list>
+      </entry>
+      <entry>
+        <int>44</int>
+        <list>
+          <string>Fire Spin</string>
+        </list>
+      </entry>
+      <entry>
+        <int>31</int>
+        <list>
+          <string>Ember</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Flash Fire</ability1>
+  <ability2>Flash Fire</ability2>
+  <dreamAbility>Guts</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>FEMALE_18</genderRatio>
+  <genus1>Field</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>35</hatchCounter>
+  <baseExp>184</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>2</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>45</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium</growthRate>
+  <species>Flame</species>
+  <description>Inhaled air is heated in the flame
+sac in its body to an intense fire
+over 3,000 degrees Fahrenheit.</description>
+  <height>9</height>
+  <weight>250</weight>
+  <color>Red</color>
+  <shape>Quadruped</shape>
+  <habitat>Urban</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

@@ -1,0 +1,110 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>45</number>
+  <name>Vileplume</name>
+  <type1>GRASS</type1>
+  <type2>POISON</type2>
+  <dualType>true</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>75</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>80</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>85</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>100</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>90</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>50</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>17</int>
+        <list>
+          <string>Stun Spore</string>
+        </list>
+      </entry>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Acid</string>
+          <string>Stun Spore</string>
+          <string>Sleep Powder</string>
+          <string>Petal Dance</string>
+        </list>
+      </entry>
+      <entry>
+        <int>19</int>
+        <list>
+          <string>Sleep Powder</string>
+        </list>
+      </entry>
+      <entry>
+        <int>15</int>
+        <list>
+          <string>PoisonPowder</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Chlorophyll</ability1>
+  <dreamAbility>Effect Spore</dreamAbility>
+  <dualAbility>false</dualAbility>
+  <genderRatio>HALF_FEMALE</genderRatio>
+  <genus1>Grass</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>20</hatchCounter>
+  <baseExp>216</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>3</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>45</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium_slow</growthRate>
+  <species>Flower</species>
+  <description>Its petals are the largest in the
+world. As it walks, it scatters
+extremely allergenic pollen.</description>
+  <height>12</height>
+  <weight>186</weight>
+  <color>Red</color>
+  <shape>Humanoid</shape>
+  <habitat>Grassland</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

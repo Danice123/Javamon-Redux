@@ -1,0 +1,126 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>35</number>
+  <name>Clefairy</name>
+  <type1>NORMAL</type1>
+  <dualType>false</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>70</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>45</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>48</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>60</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>65</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>35</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Pound</string>
+          <string>Growl</string>
+        </list>
+      </entry>
+      <entry>
+        <int>48</int>
+        <list>
+          <string>Light Screen</string>
+        </list>
+      </entry>
+      <entry>
+        <int>18</int>
+        <list>
+          <string>DoubleSlap</string>
+        </list>
+      </entry>
+      <entry>
+        <int>39</int>
+        <list>
+          <string>Defense Curl</string>
+        </list>
+      </entry>
+      <entry>
+        <int>24</int>
+        <list>
+          <string>Minimize</string>
+        </list>
+      </entry>
+      <entry>
+        <int>13</int>
+        <list>
+          <string>Sing</string>
+        </list>
+      </entry>
+      <entry>
+        <int>31</int>
+        <list>
+          <string>Metronome</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Cute Charm</ability1>
+  <ability2>Magic Guard</ability2>
+  <dreamAbility>Friend Guard</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>FEMALE_34</genderRatio>
+  <genus1>Fairy</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>10</hatchCounter>
+  <baseExp>113</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>2</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>150</captureRate>
+  <baseHappiness>140</baseHappiness>
+  <growthRate>Fast</growthRate>
+  <species>Fairy</species>
+  <description>It is said that happiness will come
+to those who see a gathering of
+Clefairy dancing under a full moon.</description>
+  <height>6</height>
+  <weight>75</weight>
+  <color>Pink</color>
+  <shape>Upright</shape>
+  <habitat>Mountain</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

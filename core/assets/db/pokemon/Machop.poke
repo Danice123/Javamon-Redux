@@ -1,0 +1,119 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>66</number>
+  <name>Machop</name>
+  <type1>FIGHTING</type1>
+  <dualType>false</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>70</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>80</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>50</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>35</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>35</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>35</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Karate Chop</string>
+        </list>
+      </entry>
+      <entry>
+        <int>32</int>
+        <list>
+          <string>Focus Energy</string>
+        </list>
+      </entry>
+      <entry>
+        <int>39</int>
+        <list>
+          <string>Seismic Toss</string>
+        </list>
+      </entry>
+      <entry>
+        <int>20</int>
+        <list>
+          <string>Low Kick</string>
+        </list>
+      </entry>
+      <entry>
+        <int>25</int>
+        <list>
+          <string>Leer</string>
+        </list>
+      </entry>
+      <entry>
+        <int>46</int>
+        <list>
+          <string>Submission</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Guts</ability1>
+  <ability2>No Guard</ability2>
+  <dreamAbility>Steadfast</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>FEMALE_14</genderRatio>
+  <genus1>Humanoid</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>20</hatchCounter>
+  <baseExp>61</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>1</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>180</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium_slow</growthRate>
+  <species>Superpower</species>
+  <description>Though small in stature, it is
+powerful enough to easily heft and
+throw a number of Geodude at once.</description>
+  <height>8</height>
+  <weight>195</weight>
+  <color>Gray</color>
+  <shape>Upright</shape>
+  <habitat>Mountain</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

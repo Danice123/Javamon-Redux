@@ -1,0 +1,33 @@
+!Branch:OakPalletEncounter OakInLab
+!Goto:Continue
+@OakInLab
+!Unhide:Oak
+@Continue
+!Branch:FirstRivalBattle BlueNotInLab
+!Goto:Continue2
+@BlueNotInLab
+!Hide:Blue
+@Continue2
+!Branch:ChoseBulbasaur HideBulb
+!Branch:ChoseCharmander HideChar
+!Branch:ChoseSquirtle HideSquirt
+!Goto:Continue3
+@HideSquirt
+!Hide:pokeballBulb
+!Hide:pokeballSquir
+!Goto:Continue3
+@HideBulb
+!Hide:pokeballBulb
+!Hide:pokeballChar
+!Goto:Continue3
+@HideChar
+!Hide:pokeballChar
+!Hide:pokeballSquir
+@Continue3
+!Branch:HasPokedex HasPokedex
+!Goto:Continue4
+@HasPokedex
+!Hide:pokedex1
+!Hide:pokedex2
+@Continue4
+!Stop:

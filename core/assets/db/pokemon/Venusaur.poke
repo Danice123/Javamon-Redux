@@ -1,0 +1,135 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>3</number>
+  <name>Venusaur</name>
+  <type1>GRASS</type1>
+  <type2>POISON</type2>
+  <dualType>true</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>80</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>82</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>83</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>100</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>100</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>80</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Vine Whip</string>
+          <string>Tackle</string>
+          <string>Growl</string>
+          <string>Leech Seed</string>
+        </list>
+      </entry>
+      <entry>
+        <int>55</int>
+        <list>
+          <string>Sleep Powder</string>
+        </list>
+      </entry>
+      <entry>
+        <int>65</int>
+        <list>
+          <string>SolarBeam</string>
+        </list>
+      </entry>
+      <entry>
+        <int>22</int>
+        <list>
+          <string>PoisonPowder</string>
+        </list>
+      </entry>
+      <entry>
+        <int>7</int>
+        <list>
+          <string>Leech Seed</string>
+        </list>
+      </entry>
+      <entry>
+        <int>43</int>
+        <list>
+          <string>Growth</string>
+        </list>
+      </entry>
+      <entry>
+        <int>13</int>
+        <list>
+          <string>Vine Whip</string>
+        </list>
+      </entry>
+      <entry>
+        <int>30</int>
+        <list>
+          <string>Razor Leaf</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Overgrow</ability1>
+  <dreamAbility>Chlorophyll</dreamAbility>
+  <dualAbility>false</dualAbility>
+  <genderRatio>FEMALE_18</genderRatio>
+  <genus1>Monster</genus1>
+  <genus2>Grass</genus2>
+  <dualGenus>true</dualGenus>
+  <hatchCounter>20</hatchCounter>
+  <baseExp>236</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>2</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>1</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>45</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium_slow</growthRate>
+  <species>Seed</species>
+  <description>After a rainy day, the flower on
+its back smells stronger. The
+scent attracts other Pokémon.</description>
+  <height>20</height>
+  <weight>1000</weight>
+  <color>Green</color>
+  <shape>Quadruped</shape>
+  <habitat>Grassland</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

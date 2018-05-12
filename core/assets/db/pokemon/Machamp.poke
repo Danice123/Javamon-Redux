@@ -1,0 +1,121 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>68</number>
+  <name>Machamp</name>
+  <type1>FIGHTING</type1>
+  <dualType>false</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>90</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>130</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>80</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>65</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>85</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>55</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Karate Chop</string>
+          <string>Leer</string>
+          <string>Low Kick</string>
+        </list>
+      </entry>
+      <entry>
+        <int>20</int>
+        <list>
+          <string>Low Kick</string>
+        </list>
+      </entry>
+      <entry>
+        <int>36</int>
+        <list>
+          <string>Focus Energy</string>
+        </list>
+      </entry>
+      <entry>
+        <int>52</int>
+        <list>
+          <string>Submission</string>
+        </list>
+      </entry>
+      <entry>
+        <int>25</int>
+        <list>
+          <string>Leer</string>
+        </list>
+      </entry>
+      <entry>
+        <int>44</int>
+        <list>
+          <string>Seismic Toss</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Guts</ability1>
+  <ability2>No Guard</ability2>
+  <dreamAbility>Steadfast</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>FEMALE_14</genderRatio>
+  <genus1>Humanoid</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>20</hatchCounter>
+  <baseExp>227</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>3</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>45</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium_slow</growthRate>
+  <species>Superpower</species>
+  <description>Its four muscled arms slam foes
+with powerful punches and chops
+at blinding speed.</description>
+  <height>16</height>
+  <weight>1300</weight>
+  <color>Gray</color>
+  <shape>Humanoid</shape>
+  <habitat>Mountain</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

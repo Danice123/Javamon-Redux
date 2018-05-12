@@ -1,0 +1,120 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>98</number>
+  <name>Krabby</name>
+  <type1>WATER</type1>
+  <dualType>false</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>30</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>105</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>90</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>25</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>25</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>50</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>35</int>
+        <list>
+          <string>Crabhammer</string>
+        </list>
+      </entry>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Leer</string>
+          <string>Bubble</string>
+        </list>
+      </entry>
+      <entry>
+        <int>20</int>
+        <list>
+          <string>ViceGrip</string>
+        </list>
+      </entry>
+      <entry>
+        <int>25</int>
+        <list>
+          <string>Guillotine</string>
+        </list>
+      </entry>
+      <entry>
+        <int>40</int>
+        <list>
+          <string>Harden</string>
+        </list>
+      </entry>
+      <entry>
+        <int>30</int>
+        <list>
+          <string>Stomp</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Hyper Cutter</ability1>
+  <ability2>Shell Armor</ability2>
+  <dreamAbility>Sheer Force</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>HALF_FEMALE</genderRatio>
+  <genus1>Shellfish</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>20</hatchCounter>
+  <baseExp>65</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>1</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>225</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium</growthRate>
+  <species>River Crab</species>
+  <description>It lives in burrows dug on sandy
+beaches. Its pincers fully grow
+back if they are broken in battle.</description>
+  <height>4</height>
+  <weight>65</weight>
+  <color>Red</color>
+  <shape>Armor</shape>
+  <habitat>Waters_Edge</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

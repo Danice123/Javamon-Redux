@@ -1,0 +1,27 @@
+<Move>
+  <name>Mist</name>
+  <type>ICE</type>
+  <PP>30</PP>
+  <accuracy>0</accuracy>
+  <speed>0</speed>
+  <DT>NONE</DT>
+  <effect>
+    <require>
+	</require>
+    <effect>
+	  <SetFlag>
+	    <target>user</target>
+		<flag>mist</flag>
+		<text>A mist arose on this side of the field!</text>
+	  </SetFlag>
+    </effect>
+  </effect>
+  <isContact>false</isContact>
+  <isProtectable>false</isProtectable>
+  <isReflectable>false</isReflectable>
+  <isSnatchable>true</isSnatchable>
+  <isMirrorable>false</isMirrorable>
+  <isPunch>false</isPunch>
+  <isSound>false</isSound>
+  <canMiss>false</canMiss>
+</Move>

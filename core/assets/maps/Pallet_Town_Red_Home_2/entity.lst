@@ -1,0 +1,27 @@
+<List>
+  <entities>
+    <Entity>
+      <type>Sign</type>
+      <name>SNES</name>
+      <x>4</x>
+      <y>3</y>
+      <layer>0</layer>
+      <strings>
+        <entry>
+          <string>text</string>
+          <string>$playerName$ is playing the SNES!/n...Okay! It's time to go!</string>
+        </entry>
+      </strings>
+    </Entity>
+    <Entity>
+      <type>Object</type>
+      <name>homePC</name>
+      <x>1</x>
+      <y>7</y>
+      <layer>0</layer>
+      <script>homePC</script>
+      <strings>
+      </strings>
+    </Entity>
+  </entities>
+</List>

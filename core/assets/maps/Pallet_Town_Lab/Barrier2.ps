@@ -1,0 +1,36 @@
+!Branch:BlueLabBattle BlueLabBattle
+!Branch:ChoosePokemon ChoosePokemon
+!Stop:
+@ChoosePokemon
+!Lock:
+!Display:1
+!Walk:p N
+!Unlock
+!Stop:
+@BlueLabBattle
+!Lock:
+!Face:p N
+!Display:2
+!Branch:ChoseBulbasaur ChoseBulbasaur
+!Branch:ChoseCharmander ChoseCharmander
+!Walk:Blue W W W W S
+!StartBattle:RivalBulbasaurTrainer
+!Goto:FinishBattle
+@ChoseBulbasaur
+!Walk:Blue W W S
+!StartBattle:RivalCharmanderTrainer
+!Goto:FinishBattle
+@ChoseCharmander
+!Walk:Blue W W W S
+!StartBattle:RivalSquirtleTrainer
+@FinishBattle
+!Display:3
+!Walk:Blue E S S S S S S S S
+!Hide:Blue
+!Unset:BlueLabBattle
+!Set:FirstRivalBattle
+!Unlock:
+!Stop:
+$1:Oak; Hey! Don't go away yet!
+$2:<rivalName>; Wait <playerName>! Let's check out our Pokemon!/nCome on, I'll take you on!
+$3:<rivalName>; Okay! I'll make my Pokemon fight to toughen it up!/n<playerName>! Gramps! Smell you later!

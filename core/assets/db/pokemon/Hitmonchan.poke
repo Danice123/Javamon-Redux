@@ -1,0 +1,120 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>107</number>
+  <name>Hitmonchan</name>
+  <type1>FIGHTING</type1>
+  <dualType>false</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>50</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>105</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>79</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>35</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>110</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>76</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Comet Punch</string>
+          <string>Agility</string>
+        </list>
+      </entry>
+      <entry>
+        <int>33</int>
+        <list>
+          <string>Fire Punch</string>
+        </list>
+      </entry>
+      <entry>
+        <int>48</int>
+        <list>
+          <string>Mega Punch</string>
+        </list>
+      </entry>
+      <entry>
+        <int>38</int>
+        <list>
+          <string>Ice Punch</string>
+        </list>
+      </entry>
+      <entry>
+        <int>53</int>
+        <list>
+          <string>Counter</string>
+        </list>
+      </entry>
+      <entry>
+        <int>43</int>
+        <list>
+          <string>ThunderPunch</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Keen Eye</ability1>
+  <ability2>Iron Fist</ability2>
+  <dreamAbility>Inner Focus</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>NEVER_FEMALE</genderRatio>
+  <genus1>Humanoid</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>25</hatchCounter>
+  <baseExp>159</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>2</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>45</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium</growthRate>
+  <species>Punching</species>
+  <description>The arm-twisting punches it throws
+pulverize even concrete. It rests
+after three minutes of fighting.</description>
+  <height>14</height>
+  <weight>502</weight>
+  <color>Brown</color>
+  <shape>Humanoid</shape>
+  <habitat>Urban</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

@@ -1,0 +1,125 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>127</number>
+  <name>Pinsir</name>
+  <type1>BUG</type1>
+  <dualType>false</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>65</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>125</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>100</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>55</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>70</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>85</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>ViceGrip</string>
+        </list>
+      </entry>
+      <entry>
+        <int>49</int>
+        <list>
+          <string>Slash</string>
+        </list>
+      </entry>
+      <entry>
+        <int>54</int>
+        <list>
+          <string>Swords Dance</string>
+        </list>
+      </entry>
+      <entry>
+        <int>36</int>
+        <list>
+          <string>Focus Energy</string>
+        </list>
+      </entry>
+      <entry>
+        <int>25</int>
+        <list>
+          <string>Seismic Toss</string>
+        </list>
+      </entry>
+      <entry>
+        <int>43</int>
+        <list>
+          <string>Harden</string>
+        </list>
+      </entry>
+      <entry>
+        <int>30</int>
+        <list>
+          <string>Guillotine</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Hyper Cutter</ability1>
+  <ability2>Mold Breaker</ability2>
+  <dreamAbility>Moxie</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>HALF_FEMALE</genderRatio>
+  <genus1>Bug</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>25</hatchCounter>
+  <baseExp>175</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>2</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>45</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Slow</growthRate>
+  <species>Stag Beetle</species>
+  <description>It grips prey with its pincers
+until the prey is torn in half.
+What it can’t tear, it tosses far.</description>
+  <height>15</height>
+  <weight>550</weight>
+  <color>Brown</color>
+  <shape>Humanoid</shape>
+  <habitat>Forest</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

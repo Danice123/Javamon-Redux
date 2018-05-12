@@ -1,0 +1,34 @@
+<Move>
+  <name>Supersonic</name>
+  <type>NORMAL</type>
+  <PP>20</PP>
+  <accuracy>55</accuracy>
+  <speed>0</speed>
+  <DT>NONE</DT>
+  <effect>
+    <require>
+	</require>
+    <effect>
+	  <SetFlag>
+	    <target>target</target>
+		<flag>isConfused</flag>
+		<text>$target has become confused!</text>
+	  </SetFlag>
+	  <SetCounter>
+		<target>target</target>
+		<counter>ConfusionCounter</counter>
+		<type>random</type>
+		<max>5</max>
+		<min>2</min>
+	  </SetCounter>
+    </effect>
+  </effect>
+  <isContact>false</isContact>
+  <isProtectable>true</isProtectable>
+  <isReflectable>true</isReflectable>
+  <isSnatchable>false</isSnatchable>
+  <isMirrorable>true</isMirrorable>
+  <isPunch>false</isPunch>
+  <isSound>true</isSound>
+  <canMiss>true</canMiss>
+</Move>

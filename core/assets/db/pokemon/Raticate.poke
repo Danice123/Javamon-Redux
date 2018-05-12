@@ -1,0 +1,115 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>20</number>
+  <name>Raticate</name>
+  <type1>NORMAL</type1>
+  <dualType>false</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>55</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>81</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>60</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>50</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>70</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>97</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Tackle</string>
+          <string>Tail Whip</string>
+          <string>Quick Attack</string>
+        </list>
+      </entry>
+      <entry>
+        <int>7</int>
+        <list>
+          <string>Quick Attack</string>
+        </list>
+      </entry>
+      <entry>
+        <int>27</int>
+        <list>
+          <string>Focus Energy</string>
+        </list>
+      </entry>
+      <entry>
+        <int>41</int>
+        <list>
+          <string>Super Fang</string>
+        </list>
+      </entry>
+      <entry>
+        <int>14</int>
+        <list>
+          <string>Hyper Fang</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Run Away</ability1>
+  <ability2>Guts</ability2>
+  <dreamAbility>Hustle</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>HALF_FEMALE</genderRatio>
+  <genus1>Field</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>15</hatchCounter>
+  <baseExp>145</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>2</int>
+    </entry>
+  </effort>
+  <captureRate>127</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium</growthRate>
+  <species>Mouse</species>
+  <description>It whittles its constantly growing
+fangs by gnawing on hard things.
+It can chew apart cinder walls.</description>
+  <height>7</height>
+  <weight>185</weight>
+  <color>Brown</color>
+  <shape>Quadruped</shape>
+  <habitat>Grassland</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

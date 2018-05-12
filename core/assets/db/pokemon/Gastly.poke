@@ -1,0 +1,102 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>92</number>
+  <name>Gastly</name>
+  <type1>GHOST</type1>
+  <type2>POISON</type2>
+  <dualType>true</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>30</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>35</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>30</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>100</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>35</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>80</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>35</int>
+        <list>
+          <string>Dream Eater</string>
+        </list>
+      </entry>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Night Shade</string>
+          <string>Confuse Ray</string>
+          <string>Lick</string>
+        </list>
+      </entry>
+      <entry>
+        <int>27</int>
+        <list>
+          <string>Hypnosis</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Levitate</ability1>
+  <dualAbility>false</dualAbility>
+  <genderRatio>HALF_FEMALE</genderRatio>
+  <genus1>Amorphous</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>20</hatchCounter>
+  <baseExp>62</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>1</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>190</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium_slow</growthRate>
+  <species>Gas</species>
+  <description>Born from gases, anyone would
+faint if engulfed by its gaseous
+body, which contains poison.</description>
+  <height>13</height>
+  <weight>1</weight>
+  <color>Purple</color>
+  <shape>Ball</shape>
+  <habitat>Cave</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

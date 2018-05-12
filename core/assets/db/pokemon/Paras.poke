@@ -1,0 +1,121 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>46</number>
+  <name>Paras</name>
+  <type1>BUG</type1>
+  <type2>GRASS</type2>
+  <dualType>true</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>35</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>70</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>55</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>45</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>55</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>25</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>34</int>
+        <list>
+          <string>Slash</string>
+        </list>
+      </entry>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Scratch</string>
+        </list>
+      </entry>
+      <entry>
+        <int>20</int>
+        <list>
+          <string>Leech Life</string>
+        </list>
+      </entry>
+      <entry>
+        <int>27</int>
+        <list>
+          <string>Spore</string>
+        </list>
+      </entry>
+      <entry>
+        <int>41</int>
+        <list>
+          <string>Growth</string>
+        </list>
+      </entry>
+      <entry>
+        <int>13</int>
+        <list>
+          <string>Stun Spore</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Effect Spore</ability1>
+  <ability2>Dry Skin</ability2>
+  <dreamAbility>Damp</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>HALF_FEMALE</genderRatio>
+  <genus1>Bug</genus1>
+  <genus2>Grass</genus2>
+  <dualGenus>true</dualGenus>
+  <hatchCounter>20</hatchCounter>
+  <baseExp>57</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>1</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>190</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium</growthRate>
+  <species>Mushroom</species>
+  <description>Mushrooms named tochukaso grow
+on its back. They grow along
+with the host Paras.</description>
+  <height>3</height>
+  <weight>54</weight>
+  <color>Red</color>
+  <shape>Armor</shape>
+  <habitat>Forest</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

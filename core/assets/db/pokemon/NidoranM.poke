@@ -1,0 +1,127 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>32</number>
+  <name>Nidoran?</name>
+  <type1>POISON</type1>
+  <dualType>false</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>46</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>57</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>40</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>40</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>40</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>50</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Tackle</string>
+          <string>Leer</string>
+        </list>
+      </entry>
+      <entry>
+        <int>21</int>
+        <list>
+          <string>Focus Energy</string>
+        </list>
+      </entry>
+      <entry>
+        <int>36</int>
+        <list>
+          <string>Horn Drill</string>
+        </list>
+      </entry>
+      <entry>
+        <int>8</int>
+        <list>
+          <string>Horn Attack</string>
+        </list>
+      </entry>
+      <entry>
+        <int>43</int>
+        <list>
+          <string>Double Kick</string>
+        </list>
+      </entry>
+      <entry>
+        <int>29</int>
+        <list>
+          <string>Fury Attack</string>
+        </list>
+      </entry>
+      <entry>
+        <int>14</int>
+        <list>
+          <string>Poison Sting</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Poison Point</ability1>
+  <ability2>Rivalry</ability2>
+  <dreamAbility>Hustle</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>NEVER_FEMALE</genderRatio>
+  <genus1>Monster</genus1>
+  <genus2>Field</genus2>
+  <dualGenus>true</dualGenus>
+  <hatchCounter>20</hatchCounter>
+  <baseExp>55</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>1</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>235</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium_slow</growthRate>
+  <species>Poison Pin</species>
+  <description>It scans its surroundings by
+raising its ears out of the grass.
+Its toxic horn is for protection.</description>
+  <height>5</height>
+  <weight>90</weight>
+  <color>Purple</color>
+  <shape>Quadruped</shape>
+  <habitat>Grassland</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

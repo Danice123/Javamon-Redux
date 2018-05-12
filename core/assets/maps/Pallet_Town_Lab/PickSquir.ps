@@ -1,0 +1,32 @@
+!Branch:ChoosePokemon ChoosePokemon
+!Branch:ChoseBulbasaur LastPokemon
+!Display:1
+!Stop:
+@ChoosePokemon
+!Lock:
+!ShowDexPage:Squirtle
+!Choose:2 yes/no ChoseSquirtle
+!Branch:ChoseSquirtle Chosen
+!Unlock:
+!Stop:
+@Chosen
+!Hide:pokeballSquir
+!GivePokemon:Squirtle 5
+!Display:3
+!Walk:Blue S S E E E E N
+!Hide:pokeballBulb
+!Display:4
+!Display:5
+!Set:BlueLabBattle
+!Unset:ChoosePokemon
+!Unlock:
+!Stop:
+@LastPokemon
+!Display:6
+!Stop:
+$1:Those are Pokeballs. They contain Pokemon!
+$2:So! You want the water Pokemon, Squirtle?
+$3:This Pokemon is really energetic!
+$4:<rivalName>; I'll take this one, then!
+$5:<rivalName> received a Bulbasaur!
+$6:Thats Prof. Oak's last Pokemon!

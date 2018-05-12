@@ -1,0 +1,69 @@
+<List>
+	<entities>
+		<Entity>
+			<type>Sign</type>
+			<name>bookcase</name>
+			<x>1</x>
+			<y>7</y>
+			<layer>1</layer>
+			<strings>
+				<entry>
+					<string>text</string>
+					<string>Crammed full of Pokemon books!</string>
+				</entry>
+			</strings>
+		</Entity>
+		<Entity>
+			<type>Sign</type>
+			<name>bookcase</name>
+			<x>2</x>
+			<y>7</y>
+			<layer>1</layer>
+			<strings>
+				<entry>
+					<string>text</string>
+					<string>Crammed full of Pokemon books!</string>
+				</entry>
+			</strings>
+		</Entity>
+		<Entity>
+			<type>Sign</type>
+			<name>bookcase</name>
+			<x>8</x>
+			<y>7</y>
+			<layer>1</layer>
+			<strings>
+				<entry>
+					<string>text</string>
+					<string>Crammed full of Pokemon books!</string>
+				</entry>
+			</strings>
+		</Entity>
+		<Entity>
+			<type>NPC</type>
+			<name>sister</name>
+			<spriteset>girl2</spriteset>
+			<x>3</x>
+			<y>5</y>
+			<layer>1</layer>
+			<script>Pallet_Town_Rival_Sister</script>
+			<facing>East</facing>
+			<strings>
+			</strings>
+		</Entity>
+		<Entity>
+			<type>Sign</type>
+			<name>map</name>
+			<spriteset>book</spriteset>
+			<x>4</x>
+			<y>5</y>
+			<layer>2</layer>
+			<strings>
+				<entry>
+					<string>text</string>
+					<string>It's a big map! This is useful!</string>
+				</entry>
+			</strings>
+		</Entity>
+	</entities>
+</List>

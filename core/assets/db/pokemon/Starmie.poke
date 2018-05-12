@@ -1,0 +1,92 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>121</number>
+  <name>Starmie</name>
+  <type1>WATER</type1>
+  <type2>PSYCHIC</type2>
+  <dualType>true</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>60</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>75</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>85</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>100</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>85</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>115</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Tackle</string>
+          <string>Water Gun</string>
+          <string>Harden</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Illuminate</ability1>
+  <ability2>Natural Cure</ability2>
+  <dreamAbility>Analytic</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>GENDERLESS</genderRatio>
+  <genus1>Shellfish</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>20</hatchCounter>
+  <baseExp>182</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>2</int>
+    </entry>
+  </effort>
+  <captureRate>60</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Slow</growthRate>
+  <species>Mysterious</species>
+  <description>At the center of its body is a red
+core, which sends mysterious
+radio signals into the night sky.</description>
+  <height>11</height>
+  <weight>800</weight>
+  <color>Purple</color>
+  <shape>Blob</shape>
+  <habitat>Sea</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

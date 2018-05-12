@@ -1,0 +1,127 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>48</number>
+  <name>Venonat</name>
+  <type1>BUG</type1>
+  <type2>POISON</type2>
+  <dualType>true</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>60</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>55</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>50</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>40</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>55</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>45</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>35</int>
+        <list>
+          <string>Psybeam</string>
+        </list>
+      </entry>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Tackle</string>
+          <string>Disable</string>
+        </list>
+      </entry>
+      <entry>
+        <int>38</int>
+        <list>
+          <string>Sleep Powder</string>
+        </list>
+      </entry>
+      <entry>
+        <int>43</int>
+        <list>
+          <string>Psychic</string>
+        </list>
+      </entry>
+      <entry>
+        <int>24</int>
+        <list>
+          <string>PoisonPowder</string>
+        </list>
+      </entry>
+      <entry>
+        <int>27</int>
+        <list>
+          <string>Leech Life</string>
+        </list>
+      </entry>
+      <entry>
+        <int>30</int>
+        <list>
+          <string>Stun Spore</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Compoundeyes</ability1>
+  <ability2>Tinted Lens</ability2>
+  <dreamAbility>Run Away</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>HALF_FEMALE</genderRatio>
+  <genus1>Bug</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>20</hatchCounter>
+  <baseExp>61</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>1</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>190</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium</growthRate>
+  <species>Insect</species>
+  <description>Its big eyes are actually clusters
+of tiny eyes. At night, its kind is
+drawn by light.</description>
+  <height>10</height>
+  <weight>300</weight>
+  <color>Purple</color>
+  <shape>Humanoid</shape>
+  <habitat>Forest</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

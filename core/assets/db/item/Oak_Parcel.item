@@ -1,0 +1,6 @@
+<Item>
+	<name>Oak's Parcel</name>
+	<isStackable>false</isStackable>
+	<isTossable>false</isTossable>
+	<script>Oak_Parcel</script>
+</Item>

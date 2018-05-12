@@ -1,0 +1,20 @@
+!Face:t p
+!Branch:HasPokedex HasPokedex
+!Display:1
+!Face:t e
+!Stop:
+@HasPokedex
+!Branch:HasTownMap HasTownMap
+!Display:2
+!GiveItem:Town_Map
+!Hide:map
+!Display:3
+!Set:HasTownMap
+!Stop:
+@HasTownMap
+!Display:4
+!Stop:
+$1:Hi <playerName>! <rivalName> is out at Grandpa's lab.
+$2:Grandpa asked you to run an errand? Here, this will help you!
+$3:<playerName> got a Town Map!
+$4:Use the Town Map to find out where you are.

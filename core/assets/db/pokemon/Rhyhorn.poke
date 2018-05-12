@@ -1,0 +1,127 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>111</number>
+  <name>Rhyhorn</name>
+  <type1>GROUND</type1>
+  <type2>ROCK</type2>
+  <dualType>true</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>80</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>85</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>95</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>30</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>30</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>25</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>50</int>
+        <list>
+          <string>Leer</string>
+        </list>
+      </entry>
+      <entry>
+        <int>35</int>
+        <list>
+          <string>Tail Whip</string>
+        </list>
+      </entry>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Horn Attack</string>
+        </list>
+      </entry>
+      <entry>
+        <int>55</int>
+        <list>
+          <string>Take Down</string>
+        </list>
+      </entry>
+      <entry>
+        <int>40</int>
+        <list>
+          <string>Fury Attack</string>
+        </list>
+      </entry>
+      <entry>
+        <int>45</int>
+        <list>
+          <string>Horn Drill</string>
+        </list>
+      </entry>
+      <entry>
+        <int>30</int>
+        <list>
+          <string>Stomp</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Lightningrod</ability1>
+  <ability2>Rock Head</ability2>
+  <dreamAbility>Reckless</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>HALF_FEMALE</genderRatio>
+  <genus1>Monster</genus1>
+  <genus2>Field</genus2>
+  <dualGenus>true</dualGenus>
+  <hatchCounter>20</hatchCounter>
+  <baseExp>69</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>1</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>120</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Slow</growthRate>
+  <species>Spikes</species>
+  <description>Its powerful tackles can destroy
+anything. However, it is too
+slow witted to help people work.</description>
+  <height>10</height>
+  <weight>1150</weight>
+  <color>Gray</color>
+  <shape>Quadruped</shape>
+  <habitat>Rough_Terrain</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

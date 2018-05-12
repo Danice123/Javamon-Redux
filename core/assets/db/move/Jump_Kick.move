@@ -1,0 +1,28 @@
+<Move>
+  <name>Jump Kick</name>
+  <type>FIGHTING</type>
+  <PP>10</PP>
+  <accuracy>95</accuracy>
+  <speed>0</speed>
+  <DT>PHYSICAL</DT>
+  <effect>
+    <require>
+	  <Misscoil>
+		<recoil>50</recoil>
+	  </Misscoil>
+	</require>
+    <effect>
+	  <Damage>
+	    <power>100</power>
+	  </Damage>
+    </effect>
+  </effect>
+  <isContact>true</isContact>
+  <isProtectable>true</isProtectable>
+  <isReflectable>false</isReflectable>
+  <isSnatchable>false</isSnatchable>
+  <isMirrorable>true</isMirrorable>
+  <isPunch>false</isPunch>
+  <isSound>false</isSound>
+  <canMiss>false</canMiss>
+</Move>

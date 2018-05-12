@@ -1,0 +1,127 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>75</number>
+  <name>Graveler</name>
+  <type1>ROCK</type1>
+  <type2>GROUND</type2>
+  <dualType>true</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>55</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>95</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>115</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>45</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>45</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>35</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>16</int>
+        <list>
+          <string>Rock Throw</string>
+        </list>
+      </entry>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Tackle</string>
+          <string>Defense Curl</string>
+        </list>
+      </entry>
+      <entry>
+        <int>21</int>
+        <list>
+          <string>Selfdestruct</string>
+        </list>
+      </entry>
+      <entry>
+        <int>36</int>
+        <list>
+          <string>Earthquake</string>
+        </list>
+      </entry>
+      <entry>
+        <int>43</int>
+        <list>
+          <string>Explosion</string>
+        </list>
+      </entry>
+      <entry>
+        <int>11</int>
+        <list>
+          <string>Defense Curl</string>
+        </list>
+      </entry>
+      <entry>
+        <int>29</int>
+        <list>
+          <string>Harden</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Rock Head</ability1>
+  <ability2>Sturdy</ability2>
+  <dreamAbility>Sand Veil</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>HALF_FEMALE</genderRatio>
+  <genus1>Mineral</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>15</hatchCounter>
+  <baseExp>137</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>2</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>120</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium_slow</growthRate>
+  <species>Rock</species>
+  <description>It rolls on mountain paths to move.
+Once it builds momentum, no Pokémon
+can stop it without difficulty.</description>
+  <height>10</height>
+  <weight>1050</weight>
+  <color>Brown</color>
+  <shape>Humanoid</shape>
+  <habitat>Mountain</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

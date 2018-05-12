@@ -1,0 +1,91 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>38</number>
+  <name>Ninetales</name>
+  <type1>FIRE</type1>
+  <dualType>false</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>73</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>76</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>75</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>81</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>100</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>100</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Tail Whip</string>
+          <string>Roar</string>
+          <string>Ember</string>
+          <string>Quick Attack</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Flash Fire</ability1>
+  <dreamAbility>Drought</dreamAbility>
+  <dualAbility>false</dualAbility>
+  <genderRatio>FEMALE_34</genderRatio>
+  <genus1>Field</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>20</hatchCounter>
+  <baseExp>177</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>1</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>1</int>
+    </entry>
+  </effort>
+  <captureRate>75</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium</growthRate>
+  <species>Fox</species>
+  <description>Its nine tails are said to be
+imbued with a mystic power.
+It can live for a thousand years.</description>
+  <height>11</height>
+  <weight>199</weight>
+  <color>Yellow</color>
+  <shape>Quadruped</shape>
+  <habitat>Grassland</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

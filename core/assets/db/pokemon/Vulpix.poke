@@ -1,0 +1,119 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>37</number>
+  <name>Vulpix</name>
+  <type1>FIRE</type1>
+  <dualType>false</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>38</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>41</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>40</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>50</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>65</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>65</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>16</int>
+        <list>
+          <string>Quick Attack</string>
+        </list>
+      </entry>
+      <entry>
+        <int>35</int>
+        <list>
+          <string>Flamethrower</string>
+        </list>
+      </entry>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Tail Whip</string>
+          <string>Ember</string>
+        </list>
+      </entry>
+      <entry>
+        <int>21</int>
+        <list>
+          <string>Roar</string>
+        </list>
+      </entry>
+      <entry>
+        <int>42</int>
+        <list>
+          <string>Fire Spin</string>
+        </list>
+      </entry>
+      <entry>
+        <int>28</int>
+        <list>
+          <string>Confuse Ray</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Flash Fire</ability1>
+  <dreamAbility>Drought</dreamAbility>
+  <dualAbility>false</dualAbility>
+  <genderRatio>FEMALE_34</genderRatio>
+  <genus1>Field</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>20</hatchCounter>
+  <baseExp>60</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>1</int>
+    </entry>
+  </effort>
+  <captureRate>190</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium</growthRate>
+  <species>Fox</species>
+  <description>It controls balls of fire. As it
+grows, its six tails split from
+their tips to make more tails.</description>
+  <height>6</height>
+  <weight>99</weight>
+  <color>Brown</color>
+  <shape>Quadruped</shape>
+  <habitat>Grassland</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

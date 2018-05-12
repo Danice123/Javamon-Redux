@@ -1,0 +1,89 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>63</number>
+  <name>Abra</name>
+  <type1>PSYCHIC</type1>
+  <dualType>false</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>25</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>20</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>15</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>105</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>55</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>90</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Teleport</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Synchronize</ability1>
+  <ability2>Inner Focus</ability2>
+  <dreamAbility>Magic Guard</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>FEMALE_14</genderRatio>
+  <genus1>Humanoid</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>20</hatchCounter>
+  <baseExp>62</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>1</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>200</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium_slow</growthRate>
+  <species>Psi</species>
+  <description>Using its psychic power is such a
+strain on its brain that it needs
+to sleep for 18 hours a day.</description>
+  <height>9</height>
+  <weight>195</weight>
+  <color>Brown</color>
+  <shape>Upright</shape>
+  <habitat>Urban</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

@@ -1,0 +1,33 @@
+!Branch:ChoosePokemon ChoosePokemon
+!Branch:ChoseCharmander LastPokemon
+!Display:1
+!Stop:
+@ChoosePokemon
+!Lock:
+!ShowDexPage:Bulbasaur
+!Choose:2 yes/no ChoseBulbasaur
+!Branch:ChoseBulbasaur Chosen
+!Unlock:
+!Stop:
+@Chosen
+!Hide:pokeballBulb
+!GivePokemon:Bulbasaur 5
+!Display:3
+!Walk:Blue S E E
+!Face:Blue N
+!Hide:pokeballChar
+!Display:4
+!Display:5
+!Set:BlueLabBattle
+!Unset:ChoosePokemon
+!Unlock:
+!Stop:
+@LastPokemon
+!Display:6
+!Stop:
+$1:Those are Pokeballs. They contain Pokemon!
+$2:So! You want the plant Pokemon, Bulbasaur?
+$3:This Pokemon is really energetic!
+$4:<rivalName>; I'll take this one, then!
+$5:<rivalName> received a Charmander!
+$6:Thats Prof. Oak's last Pokemon!

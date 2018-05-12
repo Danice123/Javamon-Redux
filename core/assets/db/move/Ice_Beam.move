@@ -1,0 +1,34 @@
+<Move>
+  <name>Ice Beam</name>
+  <type>ICE</type>
+  <PP>10</PP>
+  <accuracy>100</accuracy>
+  <speed>0</speed>
+  <DT>SPECIAL</DT>
+  <effect>
+    <require>
+	</require>
+    <effect>
+	  <Damage>
+	    <power>95</power>
+	  </Damage>
+	  <Chance>
+	    <chance>10</chance>
+		<effect>
+		  <StatusEffect>
+			<target>target</target>
+			<status>Freeze</status>
+		  </StatusEffect>
+		</effect>
+	  </Chance>
+    </effect>
+  </effect>
+  <isContact>false</isContact>
+  <isProtectable>true</isProtectable>
+  <isReflectable>false</isReflectable>
+  <isSnatchable>false</isSnatchable>
+  <isMirrorable>true</isMirrorable>
+  <isPunch>false</isPunch>
+  <isSound>false</isSound>
+  <canMiss>true</canMiss>
+</Move>

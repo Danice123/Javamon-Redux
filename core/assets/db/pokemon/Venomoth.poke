@@ -1,0 +1,129 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>49</number>
+  <name>Venomoth</name>
+  <type1>BUG</type1>
+  <type2>POISON</type2>
+  <dualType>true</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>70</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>65</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>60</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>90</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>75</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>90</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>50</int>
+        <list>
+          <string>Psychic</string>
+        </list>
+      </entry>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Tackle</string>
+          <string>Disable</string>
+          <string>PoisonPowder</string>
+          <string>Leech Life</string>
+        </list>
+      </entry>
+      <entry>
+        <int>38</int>
+        <list>
+          <string>Psybeam</string>
+        </list>
+      </entry>
+      <entry>
+        <int>43</int>
+        <list>
+          <string>Sleep Powder</string>
+        </list>
+      </entry>
+      <entry>
+        <int>24</int>
+        <list>
+          <string>PoisonPowder</string>
+        </list>
+      </entry>
+      <entry>
+        <int>27</int>
+        <list>
+          <string>Leech Life</string>
+        </list>
+      </entry>
+      <entry>
+        <int>30</int>
+        <list>
+          <string>Stun Spore</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Shield Dust</ability1>
+  <ability2>Tinted Lens</ability2>
+  <dreamAbility>Wonder Skin</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>HALF_FEMALE</genderRatio>
+  <genus1>Bug</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>20</hatchCounter>
+  <baseExp>158</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>1</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>1</int>
+    </entry>
+  </effort>
+  <captureRate>75</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium</growthRate>
+  <species>Poison Moth</species>
+  <description>It flutters its wings to scatter
+dustlike scales. The scales leach
+toxins if they contact skin.</description>
+  <height>15</height>
+  <weight>125</weight>
+  <color>Purple</color>
+  <shape>Bug_Wings</shape>
+  <habitat>Forest</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

@@ -1,0 +1,25 @@
+<Move>
+  <name>Night Shade</name>
+  <type>GHOST</type>
+  <PP>15</PP>
+  <accuracy>100</accuracy>
+  <speed>0</speed>
+  <DT>SPECIAL</DT>
+  <effect>
+    <require>
+	</require>
+    <effect>
+	  <LevelDamage>
+	    <percent>100</percent>
+	  </LevelDamage>
+    </effect>
+  </effect>
+  <isContact>false</isContact>
+  <isProtectable>true</isProtectable>
+  <isReflectable>false</isReflectable>
+  <isSnatchable>false</isSnatchable>
+  <isMirrorable>true</isMirrorable>
+  <isPunch>false</isPunch>
+  <isSound>false</isSound>
+  <canMiss>true</canMiss>
+</Move>

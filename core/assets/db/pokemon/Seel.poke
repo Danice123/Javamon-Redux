@@ -1,0 +1,120 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>86</number>
+  <name>Seel</name>
+  <type1>WATER</type1>
+  <dualType>false</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>65</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>45</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>55</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>45</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>70</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>45</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>35</int>
+        <list>
+          <string>Aurora Beam</string>
+        </list>
+      </entry>
+      <entry>
+        <int>50</int>
+        <list>
+          <string>Ice Beam</string>
+        </list>
+      </entry>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Headbutt</string>
+        </list>
+      </entry>
+      <entry>
+        <int>40</int>
+        <list>
+          <string>Rest</string>
+        </list>
+      </entry>
+      <entry>
+        <int>30</int>
+        <list>
+          <string>Growl</string>
+        </list>
+      </entry>
+      <entry>
+        <int>45</int>
+        <list>
+          <string>Take Down</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Thick Fat</ability1>
+  <ability2>Hydration</ability2>
+  <dreamAbility>Ice Body</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>HALF_FEMALE</genderRatio>
+  <genus1>Water</genus1>
+  <genus2>Field</genus2>
+  <dualGenus>true</dualGenus>
+  <hatchCounter>20</hatchCounter>
+  <baseExp>65</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>1</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>190</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium</growthRate>
+  <species>Sea Lion</species>
+  <description>A Pokémon that lives on icebergs.
+It swims in the sea using the point
+on its head to break up ice.</description>
+  <height>11</height>
+  <weight>900</weight>
+  <color>White</color>
+  <shape>Fish</shape>
+  <habitat>Sea</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

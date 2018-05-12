@@ -1,0 +1,28 @@
+<List>
+	<entities>
+		<Entity>
+			<type>NPC</type>
+			<name>Blue</name>
+			<spriteset>Blue</spriteset>
+			<x>22</x>
+			<y>14</y>
+			<layer>1</layer>
+			<facing>South</facing>
+			<strings/>
+			<hidden>true</hidden>
+		</Entity>
+		<Entity>
+			<type>Sign</type>
+			<name>Route</name>
+			<x>9</x>
+			<y>8</y>
+			<layer>1</layer>
+			<strings>
+				<entry>
+					<string>text</string>
+					<string>Pokemon League - Front Gate</string>
+				</entry>
+			</strings>
+		</Entity>
+	</entities>
+</List>

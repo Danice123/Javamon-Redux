@@ -1,0 +1,124 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>126</number>
+  <name>Magmar</name>
+  <type1>FIRE</type1>
+  <dualType>false</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>65</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>95</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>57</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>100</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>85</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>93</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Ember</string>
+        </list>
+      </entry>
+      <entry>
+        <int>48</int>
+        <list>
+          <string>SmokeScreen</string>
+        </list>
+      </entry>
+      <entry>
+        <int>55</int>
+        <list>
+          <string>Flamethrower</string>
+        </list>
+      </entry>
+      <entry>
+        <int>39</int>
+        <list>
+          <string>Confuse Ray</string>
+        </list>
+      </entry>
+      <entry>
+        <int>36</int>
+        <list>
+          <string>Leer</string>
+        </list>
+      </entry>
+      <entry>
+        <int>52</int>
+        <list>
+          <string>Smog</string>
+        </list>
+      </entry>
+      <entry>
+        <int>43</int>
+        <list>
+          <string>Fire Punch</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Flame Body</ability1>
+  <dreamAbility>Vital Spirit</dreamAbility>
+  <dualAbility>false</dualAbility>
+  <genderRatio>FEMALE_14</genderRatio>
+  <genus1>Humanoid</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>25</hatchCounter>
+  <baseExp>173</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>2</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>45</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium</growthRate>
+  <species>Spitfire</species>
+  <description>When it breathes deeply, heat
+waves form around its body, making
+it hard to see clearly.</description>
+  <height>13</height>
+  <weight>445</weight>
+  <color>Red</color>
+  <shape>Upright</shape>
+  <habitat>Mountain</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

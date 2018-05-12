@@ -1,0 +1,14 @@
+<Item>
+	<name>PokeBall</name>
+	<isStackable>true</isStackable>
+	<isTossable>true</isTossable>
+	<isUsableInField>false</isUsableInField>
+	<isUsableInBattle>true</isUsableInBattle>
+	<isConsumedOnUse>true</isConsumedOnUse>
+	<effect>
+		<require/>
+		<effect>
+			<Catch/>
+		</effect>
+	</effect>
+</Item>

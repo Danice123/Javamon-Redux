@@ -1,0 +1,34 @@
+<Move>
+  <name>Confuse Ray</name>
+  <type>GHOST</type>
+  <PP>10</PP>
+  <accuracy>100</accuracy>
+  <speed>0</speed>
+  <DT>NONE</DT>
+  <effect>
+    <require>
+	</require>
+    <effect>
+	  <SetFlag>
+	    <target>target</target>
+		<flag>isConfused</flag>
+		<text>$target has become confused!</text>
+	  </SetFlag>
+	  <SetCounter>
+	    <target>target</target>
+		<counter>ConfusionCounter</counter>
+		<type>random</type>
+		<max>5</max>
+		<min>2</min>
+	  </SetCounter>
+    </effect>
+  </effect>
+  <isContact>false</isContact>
+  <isProtectable>true</isProtectable>
+  <isReflectable>true</isReflectable>
+  <isSnatchable>false</isSnatchable>
+  <isMirrorable>true</isMirrorable>
+  <isPunch>false</isPunch>
+  <isSound>false</isSound>
+  <canMiss>true</canMiss>
+</Move>

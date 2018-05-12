@@ -1,0 +1,121 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>95</number>
+  <name>Onix</name>
+  <type1>ROCK</type1>
+  <type2>GROUND</type2>
+  <dualType>true</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>35</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>45</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>160</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>30</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>45</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>70</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Tackle</string>
+          <string>Screech</string>
+        </list>
+      </entry>
+      <entry>
+        <int>19</int>
+        <list>
+          <string>Rock Throw</string>
+        </list>
+      </entry>
+      <entry>
+        <int>33</int>
+        <list>
+          <string>Slam</string>
+        </list>
+      </entry>
+      <entry>
+        <int>25</int>
+        <list>
+          <string>Rage</string>
+        </list>
+      </entry>
+      <entry>
+        <int>43</int>
+        <list>
+          <string>Harden</string>
+        </list>
+      </entry>
+      <entry>
+        <int>15</int>
+        <list>
+          <string>Bind</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Rock Head</ability1>
+  <ability2>Sturdy</ability2>
+  <dreamAbility>Weak Armor</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>HALF_FEMALE</genderRatio>
+  <genus1>Mineral</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>25</hatchCounter>
+  <baseExp>77</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>1</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>45</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium</growthRate>
+  <species>Rock Snake</species>
+  <description>It burrows through the ground
+at a speed of 50 mph while
+feeding on large boulders.</description>
+  <height>88</height>
+  <weight>2100</weight>
+  <color>Gray</color>
+  <shape>Squiggle</shape>
+  <habitat>Cave</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

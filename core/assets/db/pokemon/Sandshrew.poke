@@ -1,0 +1,118 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>27</number>
+  <name>Sandshrew</name>
+  <type1>GROUND</type1>
+  <dualType>false</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>50</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>75</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>85</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>20</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>30</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>40</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>17</int>
+        <list>
+          <string>Slash</string>
+        </list>
+      </entry>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Scratch</string>
+        </list>
+      </entry>
+      <entry>
+        <int>38</int>
+        <list>
+          <string>Fury Swipes</string>
+        </list>
+      </entry>
+      <entry>
+        <int>24</int>
+        <list>
+          <string>Poison Sting</string>
+        </list>
+      </entry>
+      <entry>
+        <int>10</int>
+        <list>
+          <string>Sand-Attack</string>
+        </list>
+      </entry>
+      <entry>
+        <int>31</int>
+        <list>
+          <string>Swift</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Sand Veil</ability1>
+  <dreamAbility>Sand Rush</dreamAbility>
+  <dualAbility>false</dualAbility>
+  <genderRatio>HALF_FEMALE</genderRatio>
+  <genus1>Field</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>20</hatchCounter>
+  <baseExp>60</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>1</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>255</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium</growthRate>
+  <species>Mouse</species>
+  <description>To protect itself from attackers,
+it curls up into a ball. It lives in
+arid regions with minimal rainfall.</description>
+  <height>6</height>
+  <weight>120</weight>
+  <color>Yellow</color>
+  <shape>Upright</shape>
+  <habitat>Rough_Terrain</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

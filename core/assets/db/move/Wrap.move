@@ -1,0 +1,36 @@
+<Move>
+  <name>Wrap</name>
+  <type>NORMAL</type>
+  <PP>20</PP>
+  <accuracy>90</accuracy>
+  <speed>0</speed>
+  <DT>PHYSICAL</DT>
+  <effect>
+    <require>
+	</require>
+    <effect>
+	  <Damage>
+	    <power>15</power>
+	  </Damage>
+	  <SetFlag>
+	    <target>user</target>
+		<flag>MultiTurnMove</flag>
+	  </SetFlag>
+	  <SetCounter>
+	    <target>user</target>
+		<counter>MultiTurnCounter</counter>
+		<type>random</type>
+		<min>2</min>
+		<max>5</max>
+	  </SetCounter>
+    </effect>
+  </effect>
+  <isContact>true</isContact>
+  <isProtectable>true</isProtectable>
+  <isReflectable>false</isReflectable>
+  <isSnatchable>false</isSnatchable>
+  <isMirrorable>true</isMirrorable>
+  <isPunch>false</isPunch>
+  <isSound>false</isSound>
+  <canMiss>true</canMiss>
+</Move>

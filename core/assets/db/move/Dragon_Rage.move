@@ -1,0 +1,25 @@
+<Move>
+  <name>Dragon Rage</name>
+  <type>DRAGON</type>
+  <PP>10</PP>
+  <accuracy>100</accuracy>
+  <speed>0</speed>
+  <DT>SPECIAL</DT>
+  <effect>
+    <require>
+	</require>
+    <effect>
+	  <StaticDamage>
+	    <damage>40</damage>
+	  </StaticDamage>
+    </effect>
+  </effect>
+  <isContact>false</isContact>
+  <isProtectable>true</isProtectable>
+  <isReflectable>false</isReflectable>
+  <isSnatchable>false</isSnatchable>
+  <isMirrorable>true</isMirrorable>
+  <isPunch>false</isPunch>
+  <isSound>false</isSound>
+  <canMiss>true</canMiss>
+</Move>

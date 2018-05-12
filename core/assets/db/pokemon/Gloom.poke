@@ -1,0 +1,127 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>44</number>
+  <name>Gloom</name>
+  <type1>GRASS</type1>
+  <type2>POISON</type2>
+  <dualType>true</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>60</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>65</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>70</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>85</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>75</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>40</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>17</int>
+        <list>
+          <string>Stun Spore</string>
+        </list>
+      </entry>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Absorb</string>
+          <string>PoisonPowder</string>
+          <string>Stun Spore</string>
+        </list>
+      </entry>
+      <entry>
+        <int>19</int>
+        <list>
+          <string>Sleep Powder</string>
+        </list>
+      </entry>
+      <entry>
+        <int>38</int>
+        <list>
+          <string>Petal Dance</string>
+        </list>
+      </entry>
+      <entry>
+        <int>52</int>
+        <list>
+          <string>SolarBeam</string>
+        </list>
+      </entry>
+      <entry>
+        <int>28</int>
+        <list>
+          <string>Acid</string>
+        </list>
+      </entry>
+      <entry>
+        <int>15</int>
+        <list>
+          <string>PoisonPowder</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Chlorophyll</ability1>
+  <dreamAbility>Stench</dreamAbility>
+  <dualAbility>false</dualAbility>
+  <genderRatio>HALF_FEMALE</genderRatio>
+  <genus1>Grass</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>20</hatchCounter>
+  <baseExp>138</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>2</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>120</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium_slow</growthRate>
+  <species>Weed</species>
+  <description>The honey it drools from its mouth
+smells so atrocious, it can curl
+noses more than a mile away.</description>
+  <height>8</height>
+  <weight>86</weight>
+  <color>Blue</color>
+  <shape>Humanoid</shape>
+  <habitat>Grassland</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

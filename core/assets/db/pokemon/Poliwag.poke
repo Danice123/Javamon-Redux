@@ -1,0 +1,125 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>60</number>
+  <name>Poliwag</name>
+  <type1>WATER</type1>
+  <dualType>false</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>40</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>50</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>40</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>40</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>40</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>90</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Bubble</string>
+        </list>
+      </entry>
+      <entry>
+        <int>16</int>
+        <list>
+          <string>Hypnosis</string>
+        </list>
+      </entry>
+      <entry>
+        <int>19</int>
+        <list>
+          <string>Water Gun</string>
+        </list>
+      </entry>
+      <entry>
+        <int>38</int>
+        <list>
+          <string>Amnesia</string>
+        </list>
+      </entry>
+      <entry>
+        <int>25</int>
+        <list>
+          <string>DoubleSlap</string>
+        </list>
+      </entry>
+      <entry>
+        <int>31</int>
+        <list>
+          <string>Body Slam</string>
+        </list>
+      </entry>
+      <entry>
+        <int>45</int>
+        <list>
+          <string>Hydro Pump</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Water Absorb</ability1>
+  <ability2>Damp</ability2>
+  <dreamAbility>Swift Swim</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>HALF_FEMALE</genderRatio>
+  <genus1>Water</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>20</hatchCounter>
+  <baseExp>60</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>1</int>
+    </entry>
+  </effort>
+  <captureRate>255</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium_slow</growthRate>
+  <species>Tadpole</species>
+  <description>Its skin is so thin, its internal
+organs are visible. It has trouble
+walking on its newly grown feet.</description>
+  <height>6</height>
+  <weight>124</weight>
+  <color>Blue</color>
+  <shape>Legs</shape>
+  <habitat>Waters_Edge</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

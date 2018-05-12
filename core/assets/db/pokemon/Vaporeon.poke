@@ -1,0 +1,140 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>134</number>
+  <name>Vaporeon</name>
+  <type1>WATER</type1>
+  <dualType>false</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>130</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>65</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>60</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>110</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>95</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>65</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Sand-Attack</string>
+          <string>Tackle</string>
+          <string>Water Gun</string>
+          <string>Quick Attack</string>
+        </list>
+      </entry>
+      <entry>
+        <int>48</int>
+        <list>
+          <string>Mist</string>
+        </list>
+      </entry>
+      <entry>
+        <int>54</int>
+        <list>
+          <string>Hydro Pump</string>
+        </list>
+      </entry>
+      <entry>
+        <int>37</int>
+        <list>
+          <string>Tail Whip</string>
+        </list>
+      </entry>
+      <entry>
+        <int>42</int>
+        <list>
+          <string>Acid Armor</string>
+        </list>
+      </entry>
+      <entry>
+        <int>27</int>
+        <list>
+          <string>Quick Attack</string>
+        </list>
+      </entry>
+      <entry>
+        <int>40</int>
+        <list>
+          <string>Bite</string>
+        </list>
+      </entry>
+      <entry>
+        <int>44</int>
+        <list>
+          <string>Haze</string>
+        </list>
+      </entry>
+      <entry>
+        <int>31</int>
+        <list>
+          <string>Water Gun</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Water Absorb</ability1>
+  <ability2>Water Absorb</ability2>
+  <dreamAbility>Hydration</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>FEMALE_18</genderRatio>
+  <genus1>Field</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>35</hatchCounter>
+  <baseExp>184</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>2</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>45</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium</growthRate>
+  <species>Bubble Jet</species>
+  <description>Its cell composition is similar
+to water molecules. As a result,
+it can melt away into water.</description>
+  <height>10</height>
+  <weight>290</weight>
+  <color>Blue</color>
+  <shape>Quadruped</shape>
+  <habitat>Urban</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

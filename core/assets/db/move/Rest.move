@@ -1,0 +1,29 @@
+<Move>
+  <name>Rest</name>
+  <type>PSYCHIC</type>
+  <PP>10</PP>
+  <accuracy>0</accuracy>
+  <speed>0</speed>
+  <DT>NONE</DT>
+  <effect>
+    <require>
+	</require>
+    <effect>
+	  <StatusEffect>
+	    <target>user</target>
+		<status>Sleep</status>
+	  </StatusEffect>
+	  <Heal>
+	    <percent>100</percent>
+	  </Heal>
+    </effect>
+  </effect>
+  <isContact>false</isContact>
+  <isProtectable>false</isProtectable>
+  <isReflectable>false</isReflectable>
+  <isSnatchable>true</isSnatchable>
+  <isMirrorable>false</isMirrorable>
+  <isPunch>false</isPunch>
+  <isSound>false</isSound>
+  <canMiss>false</canMiss>
+</Move>

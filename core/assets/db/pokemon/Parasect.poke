@@ -1,0 +1,123 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>47</number>
+  <name>Parasect</name>
+  <type1>BUG</type1>
+  <type2>GRASS</type2>
+  <dualType>true</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>60</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>95</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>80</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>60</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>80</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>30</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Scratch</string>
+          <string>Stun Spore</string>
+          <string>Leech Life</string>
+        </list>
+      </entry>
+      <entry>
+        <int>48</int>
+        <list>
+          <string>Growth</string>
+        </list>
+      </entry>
+      <entry>
+        <int>39</int>
+        <list>
+          <string>Slash</string>
+        </list>
+      </entry>
+      <entry>
+        <int>20</int>
+        <list>
+          <string>Leech Life</string>
+        </list>
+      </entry>
+      <entry>
+        <int>13</int>
+        <list>
+          <string>Stun Spore</string>
+        </list>
+      </entry>
+      <entry>
+        <int>30</int>
+        <list>
+          <string>Spore</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Effect Spore</ability1>
+  <ability2>Dry Skin</ability2>
+  <dreamAbility>Damp</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>HALF_FEMALE</genderRatio>
+  <genus1>Bug</genus1>
+  <genus2>Grass</genus2>
+  <dualGenus>true</dualGenus>
+  <hatchCounter>20</hatchCounter>
+  <baseExp>142</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>2</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>1</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>75</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium</growthRate>
+  <species>Mushroom</species>
+  <description>A mushroom grown larger than the
+host’s body controls Parasect.
+It scatters poisonous spores.</description>
+  <height>10</height>
+  <weight>295</weight>
+  <color>Red</color>
+  <shape>Armor</shape>
+  <habitat>Forest</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

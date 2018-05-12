@@ -1,0 +1,56 @@
+<List>
+  <entities>
+    <Entity>
+      <type>Sign</type>
+      <name>bookcase</name>
+      <x>2</x>
+      <y>7</y>
+      <layer>1</layer>
+      <strings>
+        <entry>
+          <string>text</string>
+          <string>Crammed full of Pokemon books!</string>
+        </entry>
+      </strings>
+    </Entity>
+    <Entity>
+      <type>Sign</type>
+      <name>bookcase</name>
+      <x>1</x>
+      <y>7</y>
+      <layer>1</layer>
+      <strings>
+        <entry>
+          <string>text</string>
+          <string>Crammed full of Pokemon books!</string>
+        </entry>
+      </strings>
+    </Entity>
+    <Entity>
+      <type>Sign</type>
+      <name>tv</name>
+      <x>4</x>
+      <y>7</y>
+      <layer>1</layer>
+      <strings>
+        <entry>
+          <string>text</string>
+          <string>There's a movie on TV. Four boys are walking on railroad tracks./nI better go too.</string>
+        </entry>
+      </strings>
+    </Entity>
+    <Entity>
+      <type>NPC</type>
+      <name>mom</name>
+      <spriteset>mom</spriteset>
+      <x>6</x>
+      <y>4</y>
+      <layer>1</layer>
+      <script>mom</script>
+      <facing>West</facing>
+      <strings>
+      </strings>
+      <behavior>FaceWest</behavior>
+    </Entity>
+  </entities>
+</List>

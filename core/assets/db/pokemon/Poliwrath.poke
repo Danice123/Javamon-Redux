@@ -1,0 +1,105 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>62</number>
+  <name>Poliwrath</name>
+  <type1>WATER</type1>
+  <type2>FIGHTING</type2>
+  <dualType>true</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>90</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>85</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>95</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>70</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>90</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>70</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>16</int>
+        <list>
+          <string>Hypnosis</string>
+        </list>
+      </entry>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>DoubleSlap</string>
+          <string>Body Slam</string>
+          <string>Water Gun</string>
+          <string>Hypnosis</string>
+        </list>
+      </entry>
+      <entry>
+        <int>19</int>
+        <list>
+          <string>Water Gun</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Water Absorb</ability1>
+  <ability2>Damp</ability2>
+  <dreamAbility>Swift Swim</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>HALF_FEMALE</genderRatio>
+  <genus1>Water</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>20</hatchCounter>
+  <baseExp>225</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>3</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>45</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium_slow</growthRate>
+  <species>Tadpole</species>
+  <description>With its extremely tough muscles,
+it can keep swimming in the Pacific
+Ocean without resting.</description>
+  <height>13</height>
+  <weight>540</weight>
+  <color>Blue</color>
+  <shape>Humanoid</shape>
+  <habitat>Waters_Edge</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

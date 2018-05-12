@@ -1,0 +1,127 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>17</number>
+  <name>Pidgeotto</name>
+  <type1>NORMAL</type1>
+  <type2>FLYING</type2>
+  <dualType>true</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>63</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>60</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>55</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>50</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>50</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>71</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Gust</string>
+          <string>Sand-Attack</string>
+        </list>
+      </entry>
+      <entry>
+        <int>49</int>
+        <list>
+          <string>Mirror Move</string>
+        </list>
+      </entry>
+      <entry>
+        <int>21</int>
+        <list>
+          <string>Whirlwind</string>
+        </list>
+      </entry>
+      <entry>
+        <int>5</int>
+        <list>
+          <string>Sand-Attack</string>
+        </list>
+      </entry>
+      <entry>
+        <int>40</int>
+        <list>
+          <string>Agility</string>
+        </list>
+      </entry>
+      <entry>
+        <int>12</int>
+        <list>
+          <string>Quick Attack</string>
+        </list>
+      </entry>
+      <entry>
+        <int>31</int>
+        <list>
+          <string>Wing Attack</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Keen Eye</ability1>
+  <ability2>Tangled Feet</ability2>
+  <dreamAbility>Big Pecks</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>HALF_FEMALE</genderRatio>
+  <genus1>Flying</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>15</hatchCounter>
+  <baseExp>122</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>2</int>
+    </entry>
+  </effort>
+  <captureRate>120</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium_slow</growthRate>
+  <species>Bird</species>
+  <description>It flies over its wide territory in
+search of prey, downing it
+with its highly developed claws.</description>
+  <height>11</height>
+  <weight>300</weight>
+  <color>Brown</color>
+  <shape>Wings</shape>
+  <habitat>Forest</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

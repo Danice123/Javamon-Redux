@@ -1,0 +1,16 @@
+<List>
+	<triggers>
+		<Trigger>
+			<x>31</x>
+			<y>14</y>
+			<layer>1</layer>
+			<script>RivalBottom</script>
+		</Trigger>
+		<Trigger>
+			<x>31</x>
+			<y>15</y>
+			<layer>1</layer>
+			<script>RivalTop</script>
+		</Trigger>
+	</triggers>
+</List>

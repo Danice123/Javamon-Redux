@@ -1,0 +1,117 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>139</number>
+  <name>Omastar</name>
+  <type1>ROCK</type1>
+  <type2>WATER</type2>
+  <dualType>true</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>70</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>60</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>125</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>115</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>70</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>55</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>34</int>
+        <list>
+          <string>Horn Attack</string>
+        </list>
+      </entry>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Horn Attack</string>
+          <string>Water Gun</string>
+          <string>Withdraw</string>
+        </list>
+      </entry>
+      <entry>
+        <int>49</int>
+        <list>
+          <string>Hydro Pump</string>
+        </list>
+      </entry>
+      <entry>
+        <int>39</int>
+        <list>
+          <string>Leer</string>
+        </list>
+      </entry>
+      <entry>
+        <int>44</int>
+        <list>
+          <string>Spike Cannon</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Swift Swim</ability1>
+  <ability2>Shell Armor</ability2>
+  <dreamAbility>Weak Armor</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>FEMALE_18</genderRatio>
+  <genus1>Water</genus1>
+  <genus2>Shellfish</genus2>
+  <dualGenus>true</dualGenus>
+  <hatchCounter>30</hatchCounter>
+  <baseExp>173</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>2</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>45</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium</growthRate>
+  <species>Spiral</species>
+  <description>It is thought that this Pokémon
+became extinct because its spiral
+shell grew too large.</description>
+  <height>10</height>
+  <weight>350</weight>
+  <color>Blue</color>
+  <shape>Tenticles</shape>
+  <habitat>Sea</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

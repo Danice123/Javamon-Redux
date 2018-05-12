@@ -1,0 +1,91 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>40</number>
+  <name>Wigglytuff</name>
+  <type1>NORMAL</type1>
+  <dualType>false</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>140</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>70</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>45</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>75</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>50</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>45</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>DoubleSlap</string>
+          <string>Sing</string>
+          <string>Disable</string>
+          <string>Defense Curl</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Cute Charm</ability1>
+  <dreamAbility>Frisk</dreamAbility>
+  <dualAbility>false</dualAbility>
+  <genderRatio>FEMALE_34</genderRatio>
+  <genus1>Fairy</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>10</hatchCounter>
+  <baseExp>191</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>3</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>50</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Fast</growthRate>
+  <species>Balloon</species>
+  <description>Its fine fur feels sublime to the
+touch. It can expand its body by
+inhaling air.</description>
+  <height>10</height>
+  <weight>120</weight>
+  <color>Pink</color>
+  <shape>Humanoid</shape>
+  <habitat>Grassland</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

@@ -1,0 +1,27 @@
+<Move>
+  <name>String Shot</name>
+  <type>BUG</type>
+  <PP>40</PP>
+  <accuracy>95</accuracy>
+  <speed>0</speed>
+  <DT>NONE</DT>
+  <effect>
+    <require>
+	</require>
+    <effect>
+	  <StatEffect>
+	    <target>target</target>
+		<stat>speed</stat>
+		<levels>-1</levels>
+	  </StatEffect>
+    </effect>
+  </effect>
+  <isContact>false</isContact>
+  <isProtectable>true</isProtectable>
+  <isReflectable>true</isReflectable>
+  <isSnatchable>false</isSnatchable>
+  <isMirrorable>true</isMirrorable>
+  <isPunch>false</isPunch>
+  <isSound>false</isSound>
+  <canMiss>true</canMiss>
+</Move>

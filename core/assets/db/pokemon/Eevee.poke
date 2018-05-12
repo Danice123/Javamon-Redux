@@ -1,0 +1,114 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>133</number>
+  <name>Eevee</name>
+  <type1>NORMAL</type1>
+  <dualType>false</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>55</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>55</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>50</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>45</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>65</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>55</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Sand-Attack</string>
+          <string>Tackle</string>
+        </list>
+      </entry>
+      <entry>
+        <int>37</int>
+        <list>
+          <string>Bite</string>
+        </list>
+      </entry>
+      <entry>
+        <int>27</int>
+        <list>
+          <string>Quick Attack</string>
+        </list>
+      </entry>
+      <entry>
+        <int>31</int>
+        <list>
+          <string>Tail Whip</string>
+        </list>
+      </entry>
+      <entry>
+        <int>45</int>
+        <list>
+          <string>Take Down</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Run Away</ability1>
+  <ability2>Adaptability</ability2>
+  <dreamAbility>Anticipation</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>FEMALE_18</genderRatio>
+  <genus1>Field</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>35</hatchCounter>
+  <baseExp>65</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>1</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>45</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium</growthRate>
+  <species>Evolution</species>
+  <description>Because its genetic makeup is
+irregular, it quickly changes its
+form due to a variety of causes.</description>
+  <height>3</height>
+  <weight>65</weight>
+  <color>Brown</color>
+  <shape>Quadruped</shape>
+  <habitat>Urban</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

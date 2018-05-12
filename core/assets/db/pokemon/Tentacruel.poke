@@ -1,0 +1,140 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>73</number>
+  <name>Tentacruel</name>
+  <type1>WATER</type1>
+  <type2>POISON</type2>
+  <dualType>true</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>80</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>70</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>65</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>80</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>120</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>100</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>35</int>
+        <list>
+          <string>Barrier</string>
+        </list>
+      </entry>
+      <entry>
+        <int>50</int>
+        <list>
+          <string>Hydro Pump</string>
+        </list>
+      </entry>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Wrap</string>
+          <string>Supersonic</string>
+          <string>Acid</string>
+        </list>
+      </entry>
+      <entry>
+        <int>18</int>
+        <list>
+          <string>Poison Sting</string>
+        </list>
+      </entry>
+      <entry>
+        <int>22</int>
+        <list>
+          <string>Water Gun</string>
+        </list>
+      </entry>
+      <entry>
+        <int>7</int>
+        <list>
+          <string>Supersonic</string>
+        </list>
+      </entry>
+      <entry>
+        <int>43</int>
+        <list>
+          <string>Screech</string>
+        </list>
+      </entry>
+      <entry>
+        <int>27</int>
+        <list>
+          <string>Constrict</string>
+        </list>
+      </entry>
+      <entry>
+        <int>13</int>
+        <list>
+          <string>Wrap</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Clear Body</ability1>
+  <ability2>Liquid Ooze</ability2>
+  <dreamAbility>Rain Dish</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>HALF_FEMALE</genderRatio>
+  <genus1>Shellfish</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>20</hatchCounter>
+  <baseExp>180</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>2</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>60</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Slow</growthRate>
+  <species>Jellyfish</species>
+  <description>It extends its 80 tentacles to
+form an encircling poisonous net
+that is difficult to escape.</description>
+  <height>16</height>
+  <weight>550</weight>
+  <color>Blue</color>
+  <shape>Tenticles</shape>
+  <habitat>Sea</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

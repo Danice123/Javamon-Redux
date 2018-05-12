@@ -1,0 +1,134 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>2</number>
+  <name>Ivysaur</name>
+  <type1>GRASS</type1>
+  <type2>POISON</type2>
+  <dualType>true</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>60</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>62</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>63</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>80</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>80</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>60</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Tackle</string>
+          <string>Growl</string>
+          <string>Leech Seed</string>
+        </list>
+      </entry>
+      <entry>
+        <int>38</int>
+        <list>
+          <string>Growth</string>
+        </list>
+      </entry>
+      <entry>
+        <int>54</int>
+        <list>
+          <string>SolarBeam</string>
+        </list>
+      </entry>
+      <entry>
+        <int>22</int>
+        <list>
+          <string>PoisonPowder</string>
+        </list>
+      </entry>
+      <entry>
+        <int>7</int>
+        <list>
+          <string>Leech Seed</string>
+        </list>
+      </entry>
+      <entry>
+        <int>46</int>
+        <list>
+          <string>Sleep Powder</string>
+        </list>
+      </entry>
+      <entry>
+        <int>13</int>
+        <list>
+          <string>Vine Whip</string>
+        </list>
+      </entry>
+      <entry>
+        <int>30</int>
+        <list>
+          <string>Razor Leaf</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Overgrow</ability1>
+  <dreamAbility>Chlorophyll</dreamAbility>
+  <dualAbility>false</dualAbility>
+  <genderRatio>FEMALE_18</genderRatio>
+  <genus1>Monster</genus1>
+  <genus2>Grass</genus2>
+  <dualGenus>true</dualGenus>
+  <hatchCounter>20</hatchCounter>
+  <baseExp>142</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>1</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>1</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>45</captureRate>
+  <baseHappiness>70</baseHappiness>
+  <growthRate>Medium_slow</growthRate>
+  <species>Seed</species>
+  <description>When the bud on its back starts
+swelling, a sweet aroma wafts to
+indicate the flower’s coming bloom.</description>
+  <height>10</height>
+  <weight>130</weight>
+  <color>Green</color>
+  <shape>Quadruped</shape>
+  <habitat>Grassland</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

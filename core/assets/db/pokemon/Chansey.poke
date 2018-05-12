@@ -1,0 +1,126 @@
+<com.github.danice123.javamon.data.pokemon.Pokemon>
+  <number>113</number>
+  <name>Chansey</name>
+  <type1>NORMAL</type1>
+  <dualType>false</dualType>
+  <stats enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>250</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>5</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>5</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>35</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>105</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>50</int>
+    </entry>
+  </stats>
+  <moveSet>
+    <list>
+      <entry>
+        <int>1</int>
+        <list>
+          <string>Pound</string>
+          <string>DoubleSlap</string>
+        </list>
+      </entry>
+      <entry>
+        <int>48</int>
+        <list>
+          <string>Light Screen</string>
+        </list>
+      </entry>
+      <entry>
+        <int>38</int>
+        <list>
+          <string>Minimize</string>
+        </list>
+      </entry>
+      <entry>
+        <int>54</int>
+        <list>
+          <string>Double-Edge</string>
+        </list>
+      </entry>
+      <entry>
+        <int>24</int>
+        <list>
+          <string>Sing</string>
+        </list>
+      </entry>
+      <entry>
+        <int>44</int>
+        <list>
+          <string>Defense Curl</string>
+        </list>
+      </entry>
+      <entry>
+        <int>30</int>
+        <list>
+          <string>Growl</string>
+        </list>
+      </entry>
+    </list>
+  </moveSet>
+  <ability1>Natural Cure</ability1>
+  <ability2>Serene Grace</ability2>
+  <dreamAbility>Healer</dreamAbility>
+  <dualAbility>true</dualAbility>
+  <genderRatio>ALWAYS_FEMALE</genderRatio>
+  <genus1>Fairy</genus1>
+  <dualGenus>false</dualGenus>
+  <hatchCounter>40</hatchCounter>
+  <baseExp>395</baseExp>
+  <effort enum-type="Stat">
+    <entry>
+      <Stat>health</Stat>
+      <int>2</int>
+    </entry>
+    <entry>
+      <Stat>attack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>defense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sattack</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>Sdefense</Stat>
+      <int>0</int>
+    </entry>
+    <entry>
+      <Stat>speed</Stat>
+      <int>0</int>
+    </entry>
+  </effort>
+  <captureRate>30</captureRate>
+  <baseHappiness>140</baseHappiness>
+  <growthRate>Fast</growthRate>
+  <species>Egg</species>
+  <description>A kindly Pokémon that lays highly
+nutritious eggs and shares them
+with injured Pokémon or people.</description>
+  <height>11</height>
+  <weight>346</weight>
+  <color>Pink</color>
+  <shape>Upright</shape>
+  <habitat>Urban</habitat>
+</com.github.danice123.javamon.data.pokemon.Pokemon>

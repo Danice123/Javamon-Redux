@@ -1,0 +1,22 @@
+<Move>
+  <name></name>
+  <type></type>
+  <PP></PP>
+  <accuracy>100</accuracy>
+  <speed>0</speed>
+  <DT></DT>
+  <effect>
+    <require>
+	</require>
+    <effect>
+    </effect>
+  </effect>
+  <isContact>false</isContact>
+  <isProtectable>false</isProtectable>
+  <isReflectable>false</isReflectable>
+  <isSnatchable>false</isSnatchable>
+  <isMirrorable>false</isMirrorable>
+  <isPunch>false</isPunch>
+  <isSound>false</isSound>
+  <canMiss>true</canMiss>
+</Move>
