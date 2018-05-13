@@ -25,7 +25,12 @@ public class Inventory {
 				}
 			}
 			if (!addedToStack) {
-				items.add(new ItemStack(item, amount));
+				if (item instanceof ItemStack) {
+					((ItemStack) item).set(amount);
+					items.add(item);
+				} else {
+					items.add(new ItemStack(item, amount));
+				}
 			}
 		} else {
 			for (int i = 0; i < amount; i++) {

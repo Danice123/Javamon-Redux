@@ -38,8 +38,10 @@ public class ThreadUtils {
 		}
 	}
 
-	public static void makeAnonThread(final Runnable anon) {
-		new Thread(anon).start();
+	public static Thread makeAnonThread(final Runnable anon) {
+		final Thread t = new Thread(anon);
+		t.start();
+		return t;
 	}
 
 }

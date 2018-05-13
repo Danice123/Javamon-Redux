@@ -7,6 +7,8 @@ import java.util.List;
 import com.github.danice123.javamon.data.pokemon.PokeInstance;
 import com.github.danice123.javamon.display.screen.Screen;
 import com.github.danice123.javamon.display.screen.menu.BattleMenu;
+import com.github.danice123.javamon.display.screen.menu.PartyMenu.PartyMenuType;
+import com.github.danice123.javamon.logic.Coord;
 import com.github.danice123.javamon.logic.Game;
 import com.github.danice123.javamon.logic.ThreadUtils;
 import com.github.danice123.javamon.logic.battlesystem.BattleAction;
@@ -71,9 +73,9 @@ public class BattleMenuHandler extends MenuHandler implements EffectHandler {
 
 	public boolean ask(final String string) {
 		final ChoiceboxHandler choiceboxHandler = new ChoiceboxHandler(game, string,
-				new String[] { "yes/no", "battleQuestion" });
+				new String[] { "yes/no", "choice1" });
 		choiceboxHandler.waitAndHandle();
-		return game.getPlayer().getFlag("battleQuestion");
+		return game.getPlayer().getFlag("choice1");
 	}
 
 	public int ask(final String string, final String[] args) {
@@ -84,7 +86,7 @@ public class BattleMenuHandler extends MenuHandler implements EffectHandler {
 		choiceboxHandler.waitAndHandle();
 
 		for (int i = 0; i < args.length; i++) {
-			if (game.getPlayer().getFlag(args[i])) {
+			if (game.getPlayer().getFlag("choice" + (i + 1))) {
 				return i;
 			}
 		}
@@ -97,7 +99,8 @@ public class BattleMenuHandler extends MenuHandler implements EffectHandler {
 
 	public void quit() {
 		battleIsOver = true;
-		battleMenu.kill();
+		ThreadUtils.notifyOnObject(battleMenu);
+		battleMenu.disposeMe();
 	}
 
 	public BattleAction openMenu() {
@@ -110,11 +113,28 @@ public class BattleMenuHandler extends MenuHandler implements EffectHandler {
 	}
 
 	public int switchToNewPokemon() {
-		final ChoosePokemonHandler choosePokemonInBattleHandler = new ChoosePokemonHandler(
-				game, battlesystem.getPlayerPokemon(), false);
+		final ChoosePokemonHandler choosePokemonInBattleHandler = new ChoosePokemonHandler(game,
+				battlesystem.getPlayerPokemon(), PartyMenuType.Switch, false);
 		choosePokemonInBattleHandler.waitAndHandle();
 		ThreadUtils.sleep(10);
 		return choosePokemonInBattleHandler.getChosenPokemon();
+	}
+
+	public void respawnPlayer() {
+		game.getPlayer().modifyMoney(game.getPlayer().getMoney() / -2);
+
+		for (int i = 0; i < game.getPlayer().getParty().getSize(); i++) {
+			game.getPlayer().getParty().getPokemon(i).heal();
+		}
+
+		final String[] respawn = game.getPlayer().getString("respawnPoint").split(":");
+		ThreadUtils.makeAnonThread(() -> {
+			game.getMapHandler().loadMap(respawn[0]);
+			game.getPlayer().setCoord(
+					new Coord(Integer.parseInt(respawn[1]), Integer.parseInt(respawn[2])),
+					Integer.parseInt(respawn[3]));
+			game.getMapHandler().getMap().executeMapScript(game);
+		});
 	}
 
 }

@@ -35,8 +35,8 @@ public abstract class Screen {
 		}
 		isChild = true;
 		// this.parent = parent;
-		parent.hasChild = true;
 		parent.child = this;
+		parent.hasChild = true;
 	}
 
 	public boolean hasChild() {
@@ -149,7 +149,11 @@ public abstract class Screen {
 	public void resume() {
 	}
 
-	public void dispose() {
+	public void disposeMe() {
+		disposeMe = true;
+	}
+
+	private void dispose() {
 		batch.dispose();
 		shape.dispose();
 	}

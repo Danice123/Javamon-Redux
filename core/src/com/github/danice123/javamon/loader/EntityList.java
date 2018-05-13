@@ -11,6 +11,7 @@ import com.github.danice123.javamon.data.pokemon.PokeInstance;
 import com.github.danice123.javamon.data.pokemon.Pokemon;
 import com.github.danice123.javamon.display.sprite.Spriteset;
 import com.github.danice123.javamon.logic.Coord;
+import com.github.danice123.javamon.logic.RandomNumberGenerator;
 import com.github.danice123.javamon.logic.battlesystem.Party;
 import com.github.danice123.javamon.logic.entity.EntityHandler;
 import com.github.danice123.javamon.logic.entity.TrainerHandler;
@@ -40,15 +41,16 @@ public class EntityList {
 						.setBehavior(BehaviorFactory.getBehavior(e.behavior, new Coord(e.x, e.y)));
 				break;
 			case Trainer:
+				final long trainerId = RandomNumberGenerator.random.nextInt(1000000);
 				final Party party = new Party();
 				for (final String s : e.party) {
 					final PokeInstance p = new PokeInstance(Pokemon.getPokemon(s.split(" ")[0]),
-							Integer.parseInt(s.split(" ")[1]));
+							Integer.parseInt(s.split(" ")[1]), e.name, trainerId);
 					party.add(p);
 				}
 
 				entity = new TrainerHandler(e.name, getSpriteset(assets, e.spriteset),
-						e.trainerName, party);
+						e.trainerName, e.trainerLossQuip, e.winnings, party);
 				entity.setScript(getScript(assets, mapName, e.script));
 				entity.setFacing(e.facing);
 				((WalkableHandler) entity)

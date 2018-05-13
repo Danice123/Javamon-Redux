@@ -20,7 +20,7 @@ public class CheckLastMove extends Require {
 				menu.print("The move failed...");
 				return false;
 			}
-			if (target.battleStatus.flags.get("isDisabled") && target.battleStatus
+			if (target.battleStatus.getFlag("isDisabled") && target.battleStatus
 					.getCounter("DisabledMove") == target.battleStatus.lastMove) {
 				menu.print("The move failed...");
 				return false;

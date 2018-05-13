@@ -28,6 +28,10 @@ public class ItemStack extends Item {
 		amount -= remove;
 	}
 
+	public void set(final int set) {
+		amount = set;
+	}
+
 	public Item getItem() {
 		return baseItem;
 	}
@@ -65,6 +69,11 @@ public class ItemStack extends Item {
 	@Override
 	public boolean isConsumedOnUse() {
 		return baseItem.isConsumedOnUse();
+	}
+
+	@Override
+	public int getCost() {
+		return baseItem.getCost();
 	}
 
 	@Override

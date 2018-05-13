@@ -3,21 +3,20 @@ package com.github.danice123.javamon.logic.map;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import java.util.Random;
 
 import com.github.danice123.javamon.data.pokemon.PokeInstance;
 import com.github.danice123.javamon.data.pokemon.Pokemon;
+import com.github.danice123.javamon.logic.RandomNumberGenerator;
 import com.google.common.collect.Lists;
 
 public class EncounterList {
 
-	private static final Random RANDOM = new Random();
-
 	public List<EncounterData> encounters;
 	public Map<String, Integer> typeChance;
 
-	public Optional<PokeInstance> generateWildPokemon(final String encounterType) {
-		if (RANDOM.nextInt(100) < typeChance.get(encounterType)) {
+	public Optional<PokeInstance> generateWildPokemon(final String encounterType,
+			final String playerName, final long playerId) {
+		if (RandomNumberGenerator.random.nextInt(100) < typeChance.get(encounterType)) {
 
 			final List<EncounterData> validEncounters = Lists.newArrayList();
 			int totalChance = 0;
@@ -32,18 +31,18 @@ public class EncounterList {
 				return Optional.empty();
 			}
 
-			int chance = RANDOM.nextInt(totalChance);
+			int chance = RandomNumberGenerator.random.nextInt(totalChance);
 			for (final EncounterData encounter : encounters) {
 				chance -= encounter.chance;
 				if (chance <= 0) {
 					if (encounter.maxLevel != null) {
-						final int levelMod = RANDOM
+						final int levelMod = RandomNumberGenerator.random
 								.nextInt(encounter.maxLevel - encounter.minLevel);
 						return Optional.of(new PokeInstance(Pokemon.getPokemon(encounter.pokemon),
-								encounter.minLevel + levelMod));
+								encounter.minLevel + levelMod, playerName, playerId));
 					} else {
 						return Optional.of(new PokeInstance(Pokemon.getPokemon(encounter.pokemon),
-								encounter.minLevel));
+								encounter.minLevel, playerName, playerId));
 					}
 				}
 			}

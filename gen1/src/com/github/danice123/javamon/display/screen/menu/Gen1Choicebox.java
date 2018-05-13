@@ -5,6 +5,9 @@ import java.util.List;
 import com.badlogic.gdx.assets.AssetManager;
 import com.github.danice123.javamon.display.RenderInfo;
 import com.github.danice123.javamon.display.screen.Screen;
+import com.github.danice123.javamon.display.screen.helper.BorderBoxContent;
+import com.github.danice123.javamon.display.screen.helper.BoxContent;
+import com.github.danice123.javamon.display.screen.helper.ListBox;
 import com.github.danice123.javamon.logic.ControlProcessor.Key;
 import com.github.danice123.javamon.logic.ThreadUtils;
 
@@ -12,7 +15,6 @@ public class Gen1Choicebox extends Choicebox {
 
 	private final Gen1Chatbox chatbox;
 	private List<String> variables;
-	private int index = 0;
 
 	public Gen1Choicebox(final Screen parent) {
 		super(parent);
@@ -30,43 +32,30 @@ public class Gen1Choicebox extends Choicebox {
 	protected void init(final AssetManager assets) {
 	}
 
+	private BoxContent window;
+	private ListBox menu;
+
 	@Override
 	protected void renderScreen(final RenderInfo ri, final float delta) {
+		if (menu == null) {
+			if (variables.size() > 1) {
+				menu = new ListBox(0, 0);
+				for (final String var : variables) {
+					menu.addLine(var);
+				}
+				window = new BorderBoxContent(0, 0, 100, menu.getHeight()).addContent(menu);
+			} else {
+				menu = new ListBox(0, 0).addLine("Yes").addLine("No");
+				window = new BorderBoxContent(-50, 80, 50, menu.getHeight()).addContent(menu);
+			}
+		}
+
 		batch.begin();
 		chatbox.renderChatbox(batch, ri);
-		if (chatbox.isFinished()) {
-
-			final int side;
-			final int top;
-
-			if (variables.size() > 1) {
-				final int width = 80 * ri.getScale();
-				final int height = 25 * variables.size() * ri.getScale();
-				side = ri.screenWidth - width;
-				top = (50 + 25 * variables.size()) * ri.getScale();
-
-				ri.border.drawBox(batch, side, top - height, width, height);
-				for (int i = 0; i < variables.size(); i++) {
-					ri.font.draw(batch, variables.get(i),
-							side + ri.border.WIDTH + 7 * ri.getScale(),
-							top - 12 * ri.getScale() - 18 * ri.getScale() * i);
-				}
-			} else {
-				final int width = 50 * ri.getScale();
-				final int height = 50 * ri.getScale();
-				side = ri.screenWidth - width;
-				top = 100 * ri.getScale();
-
-				ri.border.drawBox(batch, side, top - height, width, height);
-				ri.font.draw(batch, "Yes", side + ri.border.WIDTH + 7 * ri.getScale(),
-						top - 12 * ri.getScale() - 18 * ri.getScale() * 1);
-				ri.font.draw(batch, "No", side + ri.border.WIDTH + 9 * ri.getScale(),
-						top - 12 * ri.getScale() - 18 * ri.getScale() * 2);
-			}
-			batch.draw(ri.arrow.rightArrow, side + 6 * ri.getScale(),
-					top - 20 * ri.getScale() - 18 * ri.getScale() * index,
-					ri.arrow.rightArrow.getRegionWidth() * ri.getScale(),
-					ri.arrow.rightArrow.getRegionHeight() * ri.getScale());
+		if (variables.size() > 1) {
+			window.render(ri, batch, 0, 0);
+		} else {
+			window.render(ri, batch, ri.screenWidth / ri.getScale(), 0);
 		}
 		batch.end();
 	}
@@ -80,14 +69,10 @@ public class Gen1Choicebox extends Choicebox {
 		if (chatbox.isFinished()) {
 			switch (key) {
 			case up:
-				if (index != 0) {
-					index--;
-				}
+				menu.decrement();
 				break;
 			case down:
-				if (index != 1) {
-					index++;
-				}
+				menu.increment();
 				break;
 			case accept:
 				chatbox.disposeChatbox();
@@ -104,7 +89,7 @@ public class Gen1Choicebox extends Choicebox {
 
 	@Override
 	public int getChoiceIndex() {
-		return index;
+		return menu.getIndex();
 	}
 
 }

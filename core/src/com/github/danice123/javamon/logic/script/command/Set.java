@@ -9,8 +9,9 @@ import com.github.danice123.javamon.logic.script.ScriptException;
 public class Set extends Command {
 
 	@Override
-	public void execute(Game game, HashMap<String, String> strings, EntityHandler target) throws ScriptException {
-		game.getPlayer().setFlag(parseString(args[0], strings), true);
+	public void execute(final Game game, final HashMap<String, String> strings,
+			final EntityHandler target) throws ScriptException {
+		game.getPlayer().setFlag(parseString(game, args[0], strings), true);
 	}
 
 }

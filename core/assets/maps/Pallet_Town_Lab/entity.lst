@@ -32,9 +32,13 @@
 			<x>3</x>
 			<y>2</y>
 			<layer>1</layer>
-			<script>Pallet_Town_Scientist</script>
+			<script>Talk</script>
 			<facing>East</facing>
 			<strings>
+				<entry>
+					<string>text</string>
+					<string>I study Pokemon as Prof. Oak's Aide.</string>
+				</entry>
 			</strings>
 			<behavior>LookAround</behavior>
 		</Entity>
@@ -45,9 +49,13 @@
 			<x>7</x>
 			<y>2</y>
 			<layer>1</layer>
-			<script>Pallet_Town_Scientist</script>
+			<script>Talk</script>
 			<facing>West</facing>
 			<strings>
+				<entry>
+					<string>text</string>
+					<string>I study Pokemon as Prof. Oak's Aide.</string>
+				</entry>
 			</strings>
 			<behavior>LookAround</behavior>
 		</Entity>
@@ -58,9 +66,13 @@
 			<x>2</x>
 			<y>4</y>
 			<layer>1</layer>
-			<script>Pallet_Town_Person_C</script>
+			<script>Talk</script>
 			<facing>North</facing>
 			<strings>
+				<entry>
+					<string>text</string>
+					<string>Prof. Oak is the authority on Pokemon!/nMany Pokemon trainers hold him in high regard!</string>
+				</entry>
 			</strings>
 			<behavior>WalkVertical</behavior>
 		</Entity>
@@ -71,8 +83,12 @@
 			<x>7</x>
 			<y>9</y>
 			<layer>2</layer>
-			<script>PickChar</script>
+			<script>Pokeball</script>
 			<strings>
+				<entry>
+					<string>pokemon</string>
+					<string>Charmander</string>
+				</entry>
 			</strings>
 		</Entity>
 		<Entity>
@@ -82,8 +98,12 @@
 			<x>8</x>
 			<y>9</y>
 			<layer>2</layer>
-			<script>PickSquir</script>
+			<script>Pokeball</script>
 			<strings>
+				<entry>
+					<string>pokemon</string>
+					<string>Squirtle</string>
+				</entry>
 			</strings>
 		</Entity>
 		<Entity>
@@ -93,58 +113,68 @@
 			<x>9</x>
 			<y>9</y>
 			<layer>2</layer>
-			<script>PickBulb</script>
+			<script>Pokeball</script>
 			<strings>
+				<entry>
+					<string>pokemon</string>
+					<string>Bulbasaur</string>
+				</entry>
 			</strings>
 		</Entity>
-	<Entity>
-		<type>Trainer</type>
-		<name>RivalSquirtleTrainer</name>
-		<spriteset>Blue</spriteset>
-		<x>0</x>
-		<y>0</y>
-		<layer>0</layer>
-		<facing>South</facing>
-		<strings>
-		</strings>
-		<hidden>true</hidden>
-		<party>
-			<String>Squirtle 5</String>
-		</party>
-		<trainerName>Rival</trainerName>
-	</Entity>
 		<Entity>
-		<type>Trainer</type>
-		<name>RivalCharmanderTrainer</name>
-		<spriteset>Blue</spriteset>
-		<x>0</x>
-		<y>0</y>
-		<layer>0</layer>
-		<facing>South</facing>
-		<strings>
-		</strings>
-		<hidden>true</hidden>
-		<party>
-			<String>Charmander 5</String>
-		</party>
-		<trainerName>Rival</trainerName>
-	</Entity>
-		<Entity>
-		<type>Trainer</type>
-		<name>RivalBulbasaurTrainer</name>
-		<spriteset>Blue</spriteset>
-		<x>0</x>
-		<y>0</y>
-		<layer>0</layer>
-		<facing>South</facing>
-		<strings>
-		</strings>
-		<hidden>true</hidden>
-		<party>
-			<String>Bulbasaur 5</String>
-		</party>
-		<trainerName>Rival</trainerName>
-	</Entity>
+			<type>Trainer</type>
+			<name>RivalSquirtleTrainer</name>
+			<spriteset>Blue</spriteset>
+			<x>0</x>
+			<y>0</y>
+			<layer>0</layer>
+			<facing>South</facing>
+			<strings>
+			</strings>
+			<hidden>true</hidden>
+			<party>
+				<String>Squirtle 5</String>
+			</party>
+			<trainerName>Rival</trainerName>
+			<trainerLossQuip>Blue: WHAT? Unbelievable! I picked the wrong Pokemon!</trainerLossQuip>
+			<winnings>175</winnings>
+		</Entity>
+			<Entity>
+			<type>Trainer</type>
+			<name>RivalCharmanderTrainer</name>
+			<spriteset>Blue</spriteset>
+			<x>0</x>
+			<y>0</y>
+			<layer>0</layer>
+			<facing>South</facing>
+			<strings>
+			</strings>
+			<hidden>true</hidden>
+			<party>
+				<String>Charmander 5</String>
+			</party>
+			<trainerName>Rival</trainerName>
+			<trainerLossQuip>Blue: WHAT? Unbelievable! I picked the wrong Pokemon!</trainerLossQuip>
+			<winnings>175</winnings>
+		</Entity>
+			<Entity>
+			<type>Trainer</type>
+			<name>RivalBulbasaurTrainer</name>
+			<spriteset>Blue</spriteset>
+			<x>0</x>
+			<y>0</y>
+			<layer>0</layer>
+			<facing>South</facing>
+			<strings>
+			</strings>
+			<hidden>true</hidden>
+			<party>
+				<String>Bulbasaur 5</String>
+			</party>
+			<trainerName>Rival</trainerName>
+			<trainerLossQuip>Blue: WHAT? Unbelievable! I picked the wrong Pokemon!</trainerLossQuip>
+			<winnings>175</winnings>
+		</Entity>
 		<Entity>
 			<type>NPC</type>
 			<name>pokedex1</name>

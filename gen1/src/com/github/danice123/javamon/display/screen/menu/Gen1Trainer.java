@@ -37,14 +37,18 @@ public class Gen1Trainer extends TrainerMenu {
 		final int playerBoxTop = ri.screenHeight - 20 * ri.getScale();
 		final int playerBoxSide = 20 * ri.getScale();
 
-		ri.border.drawBox(batch, 0, ri.screenHeight - 80 * ri.getScale(), ri.screenWidth, 80 * ri.getScale());
+		ri.border.drawBox(batch, 0, ri.screenHeight - 80 * ri.getScale(), ri.screenWidth,
+				80 * ri.getScale());
 
 		ri.font.draw(batch, "NAME/ " + player.getName(), playerBoxSide, playerBoxTop);
-		ri.font.draw(batch, "MONEY/ $0000", playerBoxSide, playerBoxTop - 18 * 1 * ri.getScale());
+		ri.font.draw(batch, "MONEY/ $" + player.getMoney(), playerBoxSide,
+				playerBoxTop - 18 * 1 * ri.getScale());
 		ri.font.draw(batch, "TIME/ 10:48", playerBoxSide, playerBoxTop - 18 * 2 * ri.getScale());
 
-		batch.draw(playerImage, playerBoxSide + 140 * ri.getScale(), playerBoxTop - 50 * ri.getScale(), playerImage.getWidth() * ri.getScale(),
-				playerImage.getHeight() * ri.getScale(), 0, 0, playerImage.getWidth(), playerImage.getHeight(), false, false);
+		batch.draw(playerImage, playerBoxSide + 140 * ri.getScale(),
+				playerBoxTop - 50 * ri.getScale(), playerImage.getWidth() * ri.getScale(),
+				playerImage.getHeight() * ri.getScale(), 0, 0, playerImage.getWidth(),
+				playerImage.getHeight(), false, false);
 
 		batch.end();
 	}

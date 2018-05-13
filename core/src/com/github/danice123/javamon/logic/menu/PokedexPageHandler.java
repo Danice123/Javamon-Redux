@@ -13,17 +13,18 @@ public class PokedexPageHandler extends MenuHandler {
 
 	private final PokedexPageMenu pokedexPageMenu;
 
-	public PokedexPageHandler(final Game game, final Pokemon pokemon) {
+	public PokedexPageHandler(final Game game, final Pokemon pokemon, final boolean isCaught) {
 		super(game);
 		pokedexPageMenu = buildPokedexPageMenu(game.getLatestScreen());
-		pokedexPageMenu.setupMenu(pokemon);
+		pokedexPageMenu.setupMenu(pokemon, isCaught);
 	}
 
 	private PokedexPageMenu buildPokedexPageMenu(final Screen parent) {
 		try {
-			return (PokedexPageMenu) pokedexPageMenuClass.getConstructor(Screen.class).newInstance(parent);
-		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException
-				| SecurityException e) {
+			return (PokedexPageMenu) pokedexPageMenuClass.getConstructor(Screen.class)
+					.newInstance(parent);
+		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException
+				| InvocationTargetException | NoSuchMethodException | SecurityException e) {
 			throw new RuntimeException("No/Bad Pokedex Page Menu class found");
 		}
 	}

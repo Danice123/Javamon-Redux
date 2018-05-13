@@ -9,7 +9,7 @@ public class Catch extends Effect {
 	@Override
 	public void use(final EffectHandler menu, final PokeInstance user, final PokeInstance target,
 			final Move move) {
-		target.battleStatus.flags.put("isCaught", true);
+		target.battleStatus.setFlag("isCaught", true);
 	}
 
 }

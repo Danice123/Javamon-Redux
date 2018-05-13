@@ -21,6 +21,7 @@ public class Item {
 	private boolean isConsumedOnUse;
 	private String script;
 	private Action effect;
+	private Integer cost;
 
 	public String getTag() {
 		return tag;
@@ -48,6 +49,10 @@ public class Item {
 
 	public boolean isConsumedOnUse() {
 		return isConsumedOnUse;
+	}
+
+	public int getCost() {
+		return cost;
 	}
 
 	public Optional<Script> getScript(final AssetManager assetManager) {

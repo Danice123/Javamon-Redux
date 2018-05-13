@@ -58,4 +58,19 @@ public class WildTrainer implements Trainer {
 		return false;
 	}
 
+	@Override
+	public String getTrainerLossQuip() {
+		return "";
+	}
+
+	@Override
+	public int getWinnings() {
+		return 0;
+	}
+
+	@Override
+	public boolean modifyMoney(final int winnings) {
+		return false;
+	}
+
 }

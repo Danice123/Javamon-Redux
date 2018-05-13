@@ -18,13 +18,6 @@ public class ScriptHandler implements Runnable {
 		this.game = game;
 		this.script = script;
 		this.target = target;
-		initDefaultStrings();
-	}
-
-	private void initDefaultStrings() {
-		script.strings.put("playerName", game.getPlayer().getPlayerName());
-		// TODO: Store rival name
-		script.strings.put("rivalName", "Rival");
 	}
 
 	@Override
@@ -37,27 +30,33 @@ public class ScriptHandler implements Runnable {
 				if (script.commands[i].args.length > 2) {
 					switch (script.commands[i].args[2]) {
 					case "Item":
-						if (game.getPlayer().getInventory().hasItem(parseString(script.commands[i].args[0], script.strings))) {
-							i = script.branches.get(script.commands[i].args[1]);
+						if (game.getPlayer().getInventory().hasItem(
+								parseString(game, script.commands[i].args[0], script.strings))) {
+							i = script.branches.get(
+									parseString(game, script.commands[i].args[1], script.strings));
 							break;
 						}
 					default:
 						i++;
 					}
-				} else if (game.getPlayer().getFlag(parseString(script.commands[i].args[0], script.strings))) {
-					i = script.branches.get(script.commands[i].args[1]);
+				} else if (game.getPlayer()
+						.getFlag(parseString(game, script.commands[i].args[0], script.strings))) {
+					i = script.branches
+							.get(parseString(game, script.commands[i].args[1], script.strings));
 				} else {
 					i++;
 				}
 			} else if (Goto.class.isInstance(script.commands[i])) {
-				i = script.branches.get(script.commands[i].args[0]);
+				i = script.branches
+						.get(parseString(game, script.commands[i].args[0], script.strings));
 			} else if (Stop.class.isInstance(script.commands[i])) {
 				break;
 			} else {
 				try {
 					script.commands[i].execute(game, script.strings, target);
 				} catch (final ScriptException e) {
-					System.out.println(e.getMessage() + ": Line " + Integer.toString(i + 1 + script.branches.size()));
+					System.out.println(e.getMessage() + ": Line "
+							+ Integer.toString(i + 1 + script.branches.size()));
 					return;
 				}
 				i++;
@@ -68,12 +67,23 @@ public class ScriptHandler implements Runnable {
 		}
 	}
 
-	private String parseString(String s, final HashMap<String, String> strings) {
+	public static String parseString(final Game game, String s,
+			final HashMap<String, String> strings) {
 		do {
 			final int b = s.indexOf("<");
 			if (b != -1) {
 				final int e = s.indexOf(">", b);
-				s = s.substring(0, b) + strings.get(s.substring(b + 1, e)) + s.substring(e + 1, s.length());
+				final String var = s.substring(b + 1, e);
+				if (strings.containsKey(var)) {
+					s = s.substring(0, b) + strings.get(var) + s.substring(e + 1, s.length());
+				} else if (var.equals("playerName")) {
+					s = s.substring(0, b) + game.getPlayer().getName()
+							+ s.substring(e + 1, s.length());
+				} else {
+					s = s.substring(0, b) + game.getPlayer().getString(var)
+							+ s.substring(e + 1, s.length());
+				}
+
 			} else {
 				break;
 			}

@@ -16,14 +16,14 @@ public class PCHandler extends MenuHandler {
 	public PCHandler(final Game game) {
 		super(game);
 		pcMenu = buildPCMenu(game.getLatestScreen());
-		pcMenu.setupMenu(game.getPlayer().getFlag("KnowsStorageName"), game.getPlayer().getPlayerName());
+		pcMenu.setupMenu(game.getPlayer().getFlag("KnowsStorageName"), game.getPlayer().getName());
 	}
 
 	private PCMenu buildPCMenu(final Screen parent) {
 		try {
 			return pcMenuClass.getConstructor(Screen.class).newInstance(parent);
-		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException
-				| SecurityException e) {
+		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException
+				| InvocationTargetException | NoSuchMethodException | SecurityException e) {
 			throw new RuntimeException("No/Bad Start Menu class found");
 		}
 	}
@@ -40,13 +40,15 @@ public class PCHandler extends MenuHandler {
 			if (game.getPlayer().getFlag("KnowsStorageName")) {
 
 			} else {
-				final ChatboxHandler chatboxHandler = new ChatboxHandler(game, "Accessed someone's PC./nAccessed Pokemon Storage System.");
+				final ChatboxHandler chatboxHandler = new ChatboxHandler(game,
+						"Accessed someone's PC./nAccessed Pokemon Storage System.");
 				chatboxHandler.waitAndHandle();
 				ThreadUtils.sleep(10);
 			}
 			return true;
 		case Item:
-			final ChatboxHandler chatboxHandler = new ChatboxHandler(game, "Accessed my PC./nAccessed Item Storage System.");
+			final ChatboxHandler chatboxHandler = new ChatboxHandler(game,
+					"Accessed my PC./nAccessed Item Storage System.");
 			chatboxHandler.waitAndHandle();
 			ThreadUtils.sleep(10);
 

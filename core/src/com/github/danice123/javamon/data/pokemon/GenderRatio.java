@@ -2,12 +2,14 @@ package com.github.danice123.javamon.data.pokemon;
 
 import java.util.Random;
 
+import com.github.danice123.javamon.logic.RandomNumberGenerator;
+
 public enum GenderRatio {
 	GENDERLESS, NEVER_FEMALE, FEMALE_18, FEMALE_14, HALF_FEMALE, FEMALE_34, ALWAYS_FEMALE;
 
-	public static Gender generateGender(GenderRatio type) {
+	public static Gender generateGender(final GenderRatio type) {
 		// TODO: Source random
-		Random r = new Random();
+		final Random r = RandomNumberGenerator.random;
 		int i;
 		switch (type) {
 		case FEMALE_18:
@@ -25,7 +27,7 @@ public enum GenderRatio {
 				return Gender.Male;
 			}
 		case HALF_FEMALE:
-			boolean b = r.nextBoolean();
+			final boolean b = r.nextBoolean();
 			if (b) {
 				return Gender.Female;
 			} else {
@@ -48,7 +50,7 @@ public enum GenderRatio {
 		return null;
 	}
 
-	public static GenderRatio getRatio(int i) {
+	public static GenderRatio getRatio(final int i) {
 		switch (i) {
 		case 8:
 			return GenderRatio.ALWAYS_FEMALE;

@@ -10,12 +10,9 @@ import com.github.danice123.javamon.logic.script.ScriptException;
 public class OpenPC extends Command {
 
 	@Override
-	public void execute(final Game game, final HashMap<String, String> strings, final EntityHandler target) throws ScriptException {
-		if (isMenuOpen(game)) {
-			System.out.println("Menu Open Already");
-		} else {
-			final PCHandler pcHandler = new PCHandler(game);
-			pcHandler.waitAndHandle();
-		}
+	public void execute(final Game game, final HashMap<String, String> strings,
+			final EntityHandler target) throws ScriptException {
+		final PCHandler pcHandler = new PCHandler(game);
+		pcHandler.waitAndHandle();
 	}
 }

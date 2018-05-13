@@ -4,7 +4,7 @@ import com.github.danice123.javamon.display.screen.Screen;
 
 public abstract class StartMenu extends AbstractMenu {
 
-	public StartMenu(final Screen parent) {
+	protected StartMenu(final Screen parent) {
 		super(parent);
 	}
 

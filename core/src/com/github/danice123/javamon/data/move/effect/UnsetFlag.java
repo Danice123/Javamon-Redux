@@ -20,7 +20,7 @@ public class UnsetFlag extends Effect {
 			p = user;
 		}
 
-		p.battleStatus.flags.put(flag, false);
+		p.battleStatus.setFlag(flag, false);
 		if (text != null) {
 			text = text.replace("$target", p.getName());
 			if (p.battleStatus.lastMove != -1) {

@@ -1,32 +1,24 @@
 package com.github.danice123.javamon.logic.entity.behavior;
 
-import com.github.danice123.javamon.logic.ThreadUtils;
 import com.github.danice123.javamon.logic.entity.WalkableHandler;
 
-public class EntityBehaviorThread implements Runnable {
+public class EntityBehaviorThread {
 
-	private EntityBehavior behavior;
-	private WalkableHandler handler;
-	private boolean isRunning;
+	private final EntityBehavior behavior;
+	private final WalkableHandler handler;
+	private long timeSinceLastAction = 0;
 
-	public EntityBehaviorThread(EntityBehavior behavior, WalkableHandler handler) {
+	public EntityBehaviorThread(final EntityBehavior behavior, final WalkableHandler handler) {
 		this.behavior = behavior;
 		this.handler = handler;
-		isRunning = true;
 	}
 
-	@Override
-	public void run() {
-		while (isRunning) {
-			ThreadUtils.sleep(behavior.getMillisecondsToWait());
-			if (!isRunning)
-				break;
+	public void run(final long delta) {
+		timeSinceLastAction += delta;
+
+		if (timeSinceLastAction >= behavior.getMillisecondsToWait()) {
 			behavior.takeAction(handler);
+			timeSinceLastAction = 0;
 		}
 	}
-
-	public void killThread() {
-		isRunning = false;
-	}
-
 }

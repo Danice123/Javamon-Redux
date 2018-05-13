@@ -9,5 +9,5 @@ public abstract class PokedexPageMenu extends AbstractMenu {
 		super(parent);
 	}
 
-	public abstract void setupMenu(Pokemon pokemon);
+	public abstract void setupMenu(Pokemon pokemon, boolean caught);
 }

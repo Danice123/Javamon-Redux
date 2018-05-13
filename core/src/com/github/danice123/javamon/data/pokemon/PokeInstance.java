@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Random;
 
 import com.github.danice123.javamon.data.move.Move;
+import com.github.danice123.javamon.logic.RandomNumberGenerator;
 import com.github.danice123.javamon.logic.battlesystem.BattleStatus;
 import com.google.common.collect.Lists;
 
@@ -15,10 +16,10 @@ public class PokeInstance {
 	public final Gender gender;
 	public final EnumMap<Stat, Integer> IV;
 	public final String originalTrainer;
-	public final int idNumber;
+	public final long idNumber;
 
 	private String name;
-	private final boolean customName;
+	private boolean customName;
 
 	private int level;
 	private int experience;
@@ -38,20 +39,22 @@ public class PokeInstance {
 
 	public transient BattleStatus battleStatus;
 
-	public PokeInstance(final Pokemon pokemon, /* Player player, */ final int level) {
+	public PokeInstance(final Pokemon pokemon, final int level, final String playerName,
+			final long playerId) {
 		name = pokemon.name;
-		originalTrainer = "Test"; // player.name;
-		idNumber = 111111; // player.ID;
+		originalTrainer = playerName;
+		idNumber = playerId;
 		customName = false;
 		this.pokemon = pokemon.name;
-		gender = Gender.Male; // Gender.generateGender(pokemon.getGenderRate());
+		gender = Gender.Male;
+		// TODO: Gender.generateGender(pokemon.getGenderRate());
 		this.level = level;
 		experience = Growth.getExpNeeded(pokemon.growthRate, level);
 
 		// generate IVs
 		// TODO: Source random
 		IV = new EnumMap<Stat, Integer>(Stat.class);
-		final Random random = new Random();
+		final Random random = RandomNumberGenerator.random;
 		IV.put(Stat.health, random.nextInt(32));
 		IV.put(Stat.attack, random.nextInt(32));
 		IV.put(Stat.defense, random.nextInt(32));
@@ -91,6 +94,7 @@ public class PokeInstance {
 
 	public void changeName(final String name) {
 		this.name = name;
+		customName = true;
 	}
 
 	public int getLevel() {
@@ -194,7 +198,7 @@ public class PokeInstance {
 		currentHealth = getHealth();
 		currentHealthPercent = 1;
 		for (int i = 0; i < getMoveAmount(); i++) {
-			PP[i] = Move.getMove(moves[i]).getPP();
+			CPP[i] = PP[i];
 		}
 		status = Status.None;
 	}

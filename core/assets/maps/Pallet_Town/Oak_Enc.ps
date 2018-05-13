@@ -3,10 +3,22 @@
 !Display:1
 !Face:p s
 !Unhide:Oak
+
+!Goto:<Side>
+@Left
+!Walk:Oak N N E N N N
+!Display:2
+!Follow:p Oak
+!Walk:Oak S S S W S S S S S S S E E E N
+!Goto:Continue
+@Right
 !Walk:Oak N N E N N E N
 !Display:2
 !Follow:p Oak
 !Walk:Oak S W S S W S S S S S S S E E E N
+!Goto:Continue
+
+@Continue
 !Hide:Oak
 !Unfollow:Oak
 !Walk:p N

@@ -167,7 +167,8 @@ public class World extends Screen {
 			}
 
 			final Optional<PokeInstance> wildPokemonEncounter = mapHandler.getMap()
-					.getWildPokemonEncounter(player.getCoord(), player.getLayer());
+					.getWildPokemonEncounter(player.getCoord(), player.getLayer(), player.getName(),
+							player.getPlayerId());
 			if (wildPokemonEncounter.isPresent()) {
 				final BattleMenuHandler battleMenuHandler = new BattleMenuHandler(game,
 						game.getPlayer(), wildPokemonEncounter.get());

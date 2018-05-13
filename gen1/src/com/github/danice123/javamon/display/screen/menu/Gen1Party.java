@@ -100,47 +100,28 @@ public class Gen1Party extends PartyMenu {
 					(15 + 14 * (2 - 0)) * ri.getScale());
 			ri.font.draw(batch, "Switch", ri.screenWidth - 60 * ri.getScale(),
 					(15 + 14 * (2 - 1)) * ri.getScale());
-			ri.font.draw(batch, "Cancel", ri.screenWidth - 60 * ri.getScale(),
-					(15 + 14 * (2 - 2)) * ri.getScale());
 			break;
-		case ChooseBattle:
+		case Switch:
 			ri.font.draw(batch, "Switch", ri.screenWidth - 60 * ri.getScale(),
 					(15 + 14 * (2 - 0)) * ri.getScale());
 			ri.font.draw(batch, "Status", ri.screenWidth - 60 * ri.getScale(),
 					(15 + 14 * (2 - 1)) * ri.getScale());
-			ri.font.draw(batch, "Cancel", ri.screenWidth - 60 * ri.getScale(),
-					(15 + 14 * (2 - 2)) * ri.getScale());
+			break;
+		case UseItem:
+			ri.font.draw(batch, "Use", ri.screenWidth - 60 * ri.getScale(),
+					(15 + 14 * (2 - 0)) * ri.getScale());
+			ri.font.draw(batch, "Status", ri.screenWidth - 60 * ri.getScale(),
+					(15 + 14 * (2 - 1)) * ri.getScale());
 			break;
 		}
+		ri.font.draw(batch, "Cancel", ri.screenWidth - 60 * ri.getScale(),
+				(15 + 14 * (2 - 2)) * ri.getScale());
+
 		batch.draw(ri.arrow.rightArrow, ri.screenWidth - 70 * ri.getScale(),
 				(7 + 14 * (2 - submenuIndex)) * ri.getScale(),
 				ri.arrow.rightArrow.getRegionWidth() * ri.getScale(),
 				ri.arrow.rightArrow.getRegionHeight() * ri.getScale());
 	}
-
-	// public static void drawHealthBar(final RenderInfo ri, final ShapeRenderer
-	// shape,
-	// final PokeInstance poke, final int x, final int y, final int width, final
-	// int height) {
-	// shape.setColor(0f, 0f, 0f, 0f);
-	// shape.rect(x, y + ri.getScale(), width, height - 2 * ri.getScale());
-	// shape.rect(x + ri.getScale(), y, width - 2 * ri.getScale(), height);
-	// shape.setColor(1f, 1f, 1f, 0f);
-	// shape.rect(x + ri.getScale(), y + ri.getScale(), width - 2 *
-	// ri.getScale(),
-	// height - 2 * ri.getScale());
-	// shape.setColor(0f, 1f, 0f, 0f);
-	// final float hp = poke.getCurrentHealthPercent();
-	// if (hp < .5f) {
-	// shape.setColor(1f, 1f, 0f, 0f);
-	// }
-	// if (hp < .1f) {
-	// shape.setColor(1f, 0f, 0f, 0f);
-	// }
-	// shape.rect(x + ri.getScale(), y + ri.getScale(), hp * width - 2 *
-	// ri.getScale(),
-	// height - 2 * ri.getScale());
-	// }
 
 	@Override
 	protected void tickSelf(final float delta) {
@@ -228,7 +209,8 @@ public class Gen1Party extends PartyMenu {
 					action = PartyMenuAction.View;
 					ThreadUtils.notifyOnObject(this);
 					break;
-				case ChooseBattle:
+				case Switch:
+				case UseItem:
 					action = PartyMenuAction.Switch;
 					ThreadUtils.notifyOnObject(this);
 					break;
@@ -244,7 +226,8 @@ public class Gen1Party extends PartyMenu {
 					}
 					isSubmenuOpen = false;
 					break;
-				case ChooseBattle:
+				case Switch:
+				case UseItem:
 					action = PartyMenuAction.View;
 					ThreadUtils.notifyOnObject(this);
 					break;

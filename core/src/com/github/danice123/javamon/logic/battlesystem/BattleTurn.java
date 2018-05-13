@@ -23,23 +23,23 @@ public class BattleTurn {
 
 		// prechecks--------------------------------------------------------------
 		// Recharge
-		if (user.battleStatus.flags.get("isCharging")) {
+		if (user.battleStatus.getFlag("isCharging")) {
 			menu.print(user.getName() + " must recharge!");
-			user.battleStatus.flags.put("isCharging", false);
+			user.battleStatus.setFlag("isCharging", false);
 			attack = false;
 		}
 		// Flinch
-		if (user.battleStatus.flags.get("isFlinching")) {
+		if (user.battleStatus.getFlag("isFlinching")) {
 			menu.print(user.getName() + " flinched!");
-			user.battleStatus.flags.put("isFlinching", false);
+			user.battleStatus.setFlag("isFlinching", false);
 			attack = false;
 		}
 		// Confuse
-		if (user.battleStatus.flags.get("isConfused")) {
+		if (user.battleStatus.getFlag("isConfused")) {
 			menu.print(user.getName() + " is confused!");
 			user.battleStatus.decrementCounter("ConfusionCounter");
 			if (user.battleStatus.getCounter("ConfusionCounter") <= 0) {
-				user.battleStatus.flags.put("isConfused", false);
+				user.battleStatus.setFlag("isConfused", false);
 				menu.print(user.getName() + " snapped out of confusion!");
 			} else {
 				if (random.nextBoolean()) {
@@ -50,13 +50,13 @@ public class BattleTurn {
 			}
 		}
 		// Disable
-		if (user.battleStatus.flags.get("isDisabled")) {
+		if (user.battleStatus.getFlag("isDisabled")) {
 			if (user.battleStatus.getCounter("DisableCounter") <= 0) {
-				user.battleStatus.flags.put("isDisabled", false);
+				user.battleStatus.setFlag("isDisabled", false);
 				menu.print(user.getName() + "'s "
 						+ user.getMove(user.battleStatus.getCounter("DisabledMove")).getName()
 						+ " has been un-disabled!");
-				user.battleStatus.flags.put("DisabledMoveChosen", false);
+				user.battleStatus.setFlag("DisabledMoveChosen", false);
 				user.battleStatus.setCounter("DisabledMove", 0);
 			} else if (move == user.battleStatus.getCounter("DisabledMove")) {
 				menu.print(user.getMove(user.battleStatus.getCounter("DisabledMove")).getName()
@@ -105,21 +105,21 @@ public class BattleTurn {
 		if (attack) {
 			user.CPP[move]--;
 			// Continue Attack Modifier
-			if (user.battleStatus.flags.get("MultiTurnMove")) {
+			if (user.battleStatus.getFlag("MultiTurnMove")) {
 				final Move cont = Move
 						.getMove(user.getMove(user.battleStatus.lastMove).getName() + "_con");
 				menu.print(user.getName() + " uses " + cont.getName() + "!");
 				cont.getEffect().use(menu, user, target, cont);
 				user.battleStatus.decrementCounter("MultiTurnCounter");
 				if (user.battleStatus.getCounter("MultiTurnCounter") <= 0) {
-					user.battleStatus.flags.put("MultiTurnMove", false);
+					user.battleStatus.setFlag("MultiTurnMove", false);
 
 					// Confuse after end Modifier
-					if (user.battleStatus.flags.get("ConfusesUserOnFinish")) {
-						user.battleStatus.flags.put("isConfused", true);
+					if (user.battleStatus.getFlag("ConfusesUserOnFinish")) {
+						user.battleStatus.setFlag("isConfused", true);
 						user.battleStatus.setCounter("ConfusionCounter", random.nextInt(3) + 2);
 						menu.print(user.getName() + " became confused from exhustion!");
-						user.battleStatus.flags.put("ConfusesUserOnFinish", false);
+						user.battleStatus.setFlag("ConfusesUserOnFinish", false);
 					}
 				}
 			} else {
@@ -129,7 +129,7 @@ public class BattleTurn {
 			}
 
 			// Successful Move checks
-			if (user.battleStatus.flags.get("isDisabled")) {
+			if (user.battleStatus.getFlag("isDisabled")) {
 				user.battleStatus.decrementCounter("DisableCounter");
 			}
 		}
@@ -162,7 +162,7 @@ public class BattleTurn {
 
 		// postchecks-------------------------------------------------------------
 		// Leech Seed
-		if (user.battleStatus.flags.get("isSeeded")) {
+		if (user.battleStatus.getFlag("isSeeded")) {
 			user.changeHealth(-(user.getHealth() / 8));
 			target.changeHealth(user.getHealth() / 8);
 			menu.print(user.getName() + " was drained by the leech seed!");

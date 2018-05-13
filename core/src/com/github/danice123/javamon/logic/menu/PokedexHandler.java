@@ -24,8 +24,8 @@ public class PokedexHandler extends MenuHandler {
 	private PokedexMenu buildPokedexMenu(final Screen parent) {
 		try {
 			return (PokedexMenu) pokedexMenuClass.getConstructor(Screen.class).newInstance(parent);
-		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException
-				| SecurityException e) {
+		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException
+				| InvocationTargetException | NoSuchMethodException | SecurityException e) {
 			throw new RuntimeException("No/Bad Pokedex Menu class found");
 		}
 	}
@@ -39,7 +39,9 @@ public class PokedexHandler extends MenuHandler {
 	protected boolean handleResponse() {
 		switch (pokedexMenu.getMenuAction()) {
 		case View:
-			final PokedexPageHandler pokedexPageHandler = new PokedexPageHandler(game, pokedb.getPokemon(pokedexMenu.getPokemonChoice()));
+			final PokedexPageHandler pokedexPageHandler = new PokedexPageHandler(game,
+					pokedb.getPokemon(pokedexMenu.getPokemonChoice()),
+					game.getPlayer().getPokeData().isCaught(pokedexMenu.getPokemonChoice()));
 			pokedexPageHandler.waitAndHandle();
 			return true;
 		case Cry:
@@ -47,6 +49,7 @@ public class PokedexHandler extends MenuHandler {
 		case Area:
 			return true;
 		case Exit:
+			pokedexMenu.disposeMe();
 			return false;
 		default:
 			return true;

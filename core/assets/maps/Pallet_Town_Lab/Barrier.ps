@@ -10,22 +10,50 @@
 @BlueLabBattle
 !Lock:
 !Face:p N
+!RespawnPoint:
 !Display:2
-!Branch:ChoseBulbasaur ChoseBulbasaur
-!Branch:ChoseCharmander ChoseCharmander
+!Branch:ChoseBulbasaur <Side>Bulbasaur
+!Branch:ChoseCharmander <Side>Charmander
+!Branch:ChoseSquirtle <Side>Squirtle
+!Stop:
+
+@LeftSquirtle
+!Walk:Blue W W W W S
+!Goto:BattleSquirtle
+@RightSquirtle
 !Walk:Blue W W W S
+@BattleSquirtle
 !StartBattle:RivalBulbasaurTrainer
 !Goto:FinishBattle
-@ChoseBulbasaur
+
+@LeftBulbasaur
+!Walk:Blue W W S
+!Goto:BattleBulbasaur
+@RightBulbasaur
 !Walk:Blue W S
+@BattleBulbasaur
 !StartBattle:RivalCharmanderTrainer
 !Goto:FinishBattle
-@ChoseCharmander
+
+@LeftCharmander
+!Walk:Blue W W W S
+!Goto:BattleCharmander
+@RightCharmander
 !Walk:Blue W W S
+@BattleCharmander
 !StartBattle:RivalSquirtleTrainer
+
 @FinishBattle
 !Display:3
+
+!Goto:<Side>
+@Left
+!Walk:Blue E S S S S S S S S
+!Goto:Continue
+@Right
 !Walk:Blue W S S S S S S S S
+
+@Continue
 !Hide:Blue
 !Unset:BlueLabBattle
 !Set:FirstRivalBattle

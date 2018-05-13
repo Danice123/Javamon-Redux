@@ -8,6 +8,7 @@ import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Texture;
 import com.github.danice123.javamon.data.pokemon.PokeDB;
 import com.github.danice123.javamon.display.Display;
+import com.github.danice123.javamon.display.screen.Background;
 import com.github.danice123.javamon.display.screen.Loading;
 import com.github.danice123.javamon.display.screen.Screen;
 import com.github.danice123.javamon.display.screen.World;
@@ -15,6 +16,8 @@ import com.github.danice123.javamon.display.sprite.Spriteset;
 import com.github.danice123.javamon.loader.MainLoader;
 import com.github.danice123.javamon.logic.entity.Player;
 import com.github.danice123.javamon.logic.map.MapHandler;
+import com.github.danice123.javamon.logic.menu.GameMenuHandler;
+import com.github.danice123.javamon.logic.script.ScriptHandler;
 
 public class Game implements Runnable {
 
@@ -82,31 +85,44 @@ public class Game implements Runnable {
 		// Grab Pokemon database
 		pokemonDB = assets.get("assets/db/pokemon");
 
+		// Setup input processer
+		Gdx.input.setInputProcessor(controlProcessor);
+		new Thread(controlProcessor).start();
+
+		// Menu
+		final Background background = new Background();
+		display.setScreen(background);
+		load.disposeMe();
+
+		final GameMenuHandler gameMenuHandler = new GameMenuHandler(this);
+		gameMenuHandler.waitAndHandle();
+
 		// Create player
 		final Optional<Spriteset> spriteset = Optional
 				.of(new Spriteset((Texture) assets.get("assets/entity/sprites/Red.png")));
 		player = new Player(spriteset);
 		mapHandler.setPlayer(player);
 
-		// Find Save (testing)
-		final File save = new File("Player.xml");
+		// Load or new game
 		String mapName;
-		if (save.exists()) {
-			final SaveFile sf = SaveFile.load(save);
+		switch (gameMenuHandler.getAction()) {
+		case LoadGame:
+			final SaveFile sf = SaveFile.load(new File("Player.xml"));
 			mapName = player.load(sf);
-		} else {
-			player.setCoord(new Coord(3, 3), 0);
+			break;
+		case NewGame:
+			new ScriptHandler(this, assets.get("assets/scripts/Start.ps"), null).run();
+			player.setCoord(new Coord(4, 2), 0);
+			player.setFacing(Dir.North);
 			mapName = "Pallet_Town_Red_Home_2";
+			break;
+		default:
+			return; // Nonsense
 		}
-
-		// Setup input processer
-		Gdx.input.setInputProcessor(controlProcessor);
-		new Thread(controlProcessor).start();
 
 		// Starting game
 		display.setScreen(world);
 		mapHandler.loadMap(mapName);
-		load.finished();
 		mapHandler.getMap().executeMapScript(this);
 	}
 

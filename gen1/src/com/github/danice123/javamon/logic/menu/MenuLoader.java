@@ -4,6 +4,7 @@ import com.github.danice123.javamon.display.screen.menu.Gen1Bag;
 import com.github.danice123.javamon.display.screen.menu.Gen1Battle;
 import com.github.danice123.javamon.display.screen.menu.Gen1Chatbox;
 import com.github.danice123.javamon.display.screen.menu.Gen1Choicebox;
+import com.github.danice123.javamon.display.screen.menu.Gen1GameMenu;
 import com.github.danice123.javamon.display.screen.menu.Gen1ItemStorage;
 import com.github.danice123.javamon.display.screen.menu.Gen1PC;
 import com.github.danice123.javamon.display.screen.menu.Gen1Party;
@@ -12,7 +13,9 @@ import com.github.danice123.javamon.display.screen.menu.Gen1PlayerBattle;
 import com.github.danice123.javamon.display.screen.menu.Gen1Pokedex;
 import com.github.danice123.javamon.display.screen.menu.Gen1PokedexPage;
 import com.github.danice123.javamon.display.screen.menu.Gen1Save;
+import com.github.danice123.javamon.display.screen.menu.Gen1Shop;
 import com.github.danice123.javamon.display.screen.menu.Gen1StartMenu;
+import com.github.danice123.javamon.display.screen.menu.Gen1TextInput;
 import com.github.danice123.javamon.display.screen.menu.Gen1Trainer;
 import com.github.danice123.javamon.loader.LoadMenusFromHere;
 
@@ -20,6 +23,8 @@ public class MenuLoader implements LoadMenusFromHere {
 
 	@Override
 	public void load() {
+		GameMenuHandler.gameMenuClass = Gen1GameMenu.class;
+		TextInputHandler.textInputClass = Gen1TextInput.class;
 		StartMenuHandler.startMenuClass = Gen1StartMenu.class;
 		PokedexHandler.pokedexMenuClass = Gen1Pokedex.class;
 		PokedexPageHandler.pokedexPageMenuClass = Gen1PokedexPage.class;
@@ -36,5 +41,6 @@ public class MenuLoader implements LoadMenusFromHere {
 		ChatboxHandler.chatboxClass = Gen1Chatbox.class;
 		ChoiceboxHandler.choiceboxClass = Gen1Choicebox.class;
 		PCHandler.pcMenuClass = Gen1PC.class;
+		ShopHandler.shopMenuClass = Gen1Shop.class;
 	}
 }

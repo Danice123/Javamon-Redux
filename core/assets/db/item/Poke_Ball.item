@@ -11,4 +11,5 @@
 			<Catch/>
 		</effect>
 	</effect>
+	<cost>200</cost>
 </Item>

@@ -14,11 +14,15 @@ public class PokeData {
 	}
 
 	public void seen(final int index) {
-		data.put(index, State.seen);
+		if (!isSeen(index)) {
+			data.put(index, State.seen);
+		}
 	}
 
 	public void caught(final int index) {
-		data.put(index, State.caught);
+		if (!isCaught(index)) {
+			data.put(index, State.caught);
+		}
 	}
 
 	public boolean isSeen(final int index) {
@@ -38,8 +42,7 @@ public class PokeData {
 
 	public int amountCaught() {
 		int num = 0;
-		for (final Iterator<Integer> i = data.keySet().iterator(); i
-				.hasNext();) {
+		for (final Iterator<Integer> i = data.keySet().iterator(); i.hasNext();) {
 			if (data.get(i.next()) == State.caught) {
 				num++;
 			}
@@ -49,8 +52,7 @@ public class PokeData {
 
 	public int amountSeen() {
 		int num = 0;
-		for (final Iterator<Integer> i = data.keySet().iterator(); i
-				.hasNext();) {
+		for (final Iterator<Integer> i = data.keySet().iterator(); i.hasNext();) {
 			final int n = i.next();
 			if (data.get(n) == State.caught || data.get(n) == State.seen) {
 				num++;

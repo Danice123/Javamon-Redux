@@ -37,8 +37,4 @@ public class Loading extends Screen {
 	protected void handleKey(final Key key) {
 
 	}
-
-	public void finished() {
-		disposeMe = true;
-	}
 }

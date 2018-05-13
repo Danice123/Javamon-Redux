@@ -3,12 +3,14 @@ package com.github.danice123.javamon.display.screen.menu;
 import com.badlogic.gdx.assets.AssetManager;
 import com.github.danice123.javamon.display.RenderInfo;
 import com.github.danice123.javamon.display.screen.Screen;
+import com.github.danice123.javamon.display.screen.helper.BorderBoxContent;
+import com.github.danice123.javamon.display.screen.helper.BoxContent;
+import com.github.danice123.javamon.display.screen.helper.ListBox;
 import com.github.danice123.javamon.logic.ControlProcessor.Key;
 import com.github.danice123.javamon.logic.ThreadUtils;
 
 public class Gen1StartMenu extends StartMenu {
 
-	private int index;
 	private boolean hasPokemon;
 	private boolean hasPokedex;
 	private StartMenuOptions startMenuOption;
@@ -16,7 +18,6 @@ public class Gen1StartMenu extends StartMenu {
 	public Gen1StartMenu(final Screen parent) {
 		super(parent);
 		renderBehind = true;
-		index = 0;
 	}
 
 	@Override
@@ -34,33 +35,26 @@ public class Gen1StartMenu extends StartMenu {
 	protected void init(final AssetManager assets) {
 	}
 
+	private BoxContent window;
+	private ListBox menu;
+
 	@Override
 	protected void renderScreen(final RenderInfo ri, final float delta) {
-		final int width = 90 * ri.getScale();
-		final int height = 140 * ri.getScale();
-		final int side = ri.screenWidth - width;
-		final int top = ri.screenHeight;
-		batch.begin();
-		ri.border.drawBox(batch, side, top - height, width, height);
-		ri.font.setColor(0f, 0f, 0f, 1f);
-		if (!hasPokedex) {
-			ri.font.setColor(0f, 0f, 0f, 0.5f);
+		if (menu == null) {
+			menu = new ListBox(0, 0);
+			if (hasPokedex) {
+				menu.addLine("PokeDex");
+			}
+			if (hasPokemon) {
+				menu.addLine("Pokemon");
+			}
+			menu.addLine("Bag").addLine("Trainer").addLine("Save").addLine("Options")
+					.addLine("Exit");
+			window = new BorderBoxContent(-90, 0, 90, menu.getHeight()).addContent(menu);
 		}
-		ri.font.draw(batch, "PokeDex", side + 18 * ri.getScale(), top - 12 * ri.getScale());
-		ri.font.setColor(0f, 0f, 0f, 1f);
-		if (!hasPokemon) {
-			ri.font.setColor(0f, 0f, 0f, 0.5f);
-		}
-		ri.font.draw(batch, "Pokemon", side + 18 * ri.getScale(), top - 12 * ri.getScale() - 18 * ri.getScale() * 1);
-		ri.font.setColor(0f, 0f, 0f, 1f);
-		ri.font.draw(batch, "Bag", side + 18 * ri.getScale(), top - 12 * ri.getScale() - 18 * ri.getScale() * 2);
-		ri.font.draw(batch, "Trainer", side + 18 * ri.getScale(), top - 12 * ri.getScale() - 18 * ri.getScale() * 3);
-		ri.font.draw(batch, "Save", side + 18 * ri.getScale(), top - 12 * ri.getScale() - 18 * ri.getScale() * 4);
-		ri.font.draw(batch, "Options", side + 18 * ri.getScale(), top - 12 * ri.getScale() - 18 * ri.getScale() * 5);
-		ri.font.draw(batch, "Exit", side + 18 * ri.getScale(), top - 12 * ri.getScale() - 18 * ri.getScale() * 6);
 
-		batch.draw(ri.arrow.rightArrow, side + 6 * ri.getScale(), top - 20 * ri.getScale() - 18 * ri.getScale() * index,
-				ri.arrow.rightArrow.getRegionWidth() * ri.getScale(), ri.arrow.rightArrow.getRegionHeight() * ri.getScale());
+		batch.begin();
+		window.render(ri, batch, ri.screenWidth / ri.getScale(), 0);
 		batch.end();
 	}
 
@@ -72,20 +66,20 @@ public class Gen1StartMenu extends StartMenu {
 	protected void handleMenuKey(final Key key) {
 		switch (key) {
 		case up:
-			if (index > 0) {
-				index--;
-			} else {
-				index = 6;
-			}
+			menu.decrement();
 			break;
 		case down:
-			if (index < 6) {
-				index++;
-			} else {
-				index = 0;
-			}
+			menu.increment();
 			break;
 		case accept:
+			int index = menu.getIndex();
+			if (!hasPokedex) {
+				index++;
+			}
+			if (!hasPokemon) {
+				index++;
+			}
+
 			switch (index) {
 			case 0:
 				startMenuOption = StartMenuOptions.Pokedex;

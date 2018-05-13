@@ -12,6 +12,7 @@ import com.github.danice123.javamon.data.pokemon.PokeInstance;
 import com.github.danice123.javamon.display.screen.Screen;
 import com.github.danice123.javamon.display.screen.menu.BagMenu;
 import com.github.danice123.javamon.display.screen.menu.BagMenu.BagMenuType;
+import com.github.danice123.javamon.display.screen.menu.PartyMenu.PartyMenuType;
 import com.github.danice123.javamon.logic.Game;
 import com.github.danice123.javamon.logic.ThreadUtils;
 import com.github.danice123.javamon.logic.script.Script;
@@ -64,7 +65,7 @@ public class BagHandler extends MenuHandler implements EffectHandler {
 				final Optional<Action> effect = item.getEffect();
 				if (effect.isPresent()) {
 					final ChoosePokemonHandler choosePokemonHandler = new ChoosePokemonHandler(game,
-							null, true);
+							null, PartyMenuType.UseItem, true);
 					choosePokemonHandler.waitAndHandle();
 					if (choosePokemonHandler.getChosenPokemon() == null) {
 						return true;

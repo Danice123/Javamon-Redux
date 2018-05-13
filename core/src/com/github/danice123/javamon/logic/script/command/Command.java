@@ -6,31 +6,26 @@ import com.github.danice123.javamon.logic.Dir;
 import com.github.danice123.javamon.logic.Game;
 import com.github.danice123.javamon.logic.entity.EntityHandler;
 import com.github.danice123.javamon.logic.script.ScriptException;
+import com.github.danice123.javamon.logic.script.ScriptHandler;
 
 public abstract class Command {
 
 	public String[] args;
 
-	public abstract void execute(Game game, HashMap<String, String> strings, EntityHandler target) throws ScriptException;
+	public abstract void execute(Game game, HashMap<String, String> strings, EntityHandler target)
+			throws ScriptException;
 
-	protected String parseString(String s, final HashMap<String, String> strings) {
-		do {
-			final int b = s.indexOf("<");
-			if (b != -1) {
-				final int e = s.indexOf(">", b);
-				s = s.substring(0, b) + strings.get(s.substring(b + 1, e)) + s.substring(e + 1, s.length());
-			} else {
-				break;
-			}
-		} while (true);
-		return s;
+	protected String parseString(final Game game, final String s,
+			final HashMap<String, String> strings) {
+		return ScriptHandler.parseString(game, s, strings);
 	}
 
 	protected boolean isMenuOpen(final Game game) {
 		return game.getBaseScreen().hasChild();
 	}
 
-	protected Dir getDir(final Game game, final String s, final EntityHandler source) throws ScriptException {
+	protected Dir getDir(final Game game, final String s, final EntityHandler source)
+			throws ScriptException {
 		switch (s.toLowerCase()) {
 		case "n":
 			return Dir.North;
@@ -58,7 +53,8 @@ public abstract class Command {
 				}
 			}
 		default:
-			throw new ScriptException("Generic Bad Direction", ScriptException.SCRIPT_ERROR_TYPE.badArgs);
+			throw new ScriptException("Generic Bad Direction",
+					ScriptException.SCRIPT_ERROR_TYPE.badArgs);
 		}
 	}
 }

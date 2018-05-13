@@ -1,10 +1,43 @@
 !Branch:SecondRivalBattle Ignore
 !Lock:
 !Unhide:Blue
+!Goto:<Side>
+
+@Bottom
+!Walk:Blue E E E E E E E E
+!Goto:Continue
+@Top
 !Walk:Blue N E E E E E E E E
+
+@Continue
 !Display:1
+!Branch:ChoseBulbasaur ChoseBulbasaur
+!Branch:ChoseCharmander ChoseCharmander
+!Branch:ChoseSquirtle ChoseSquirtle
+!Stop:
+
+@ChoseBulbasaur
+!StartBattle:RivalCharmanderTrainer
+!Goto:Continue2
+
+@ChoseCharmander
+!StartBattle:RivalSquirtleTrainer
+!Goto:Continue2
+
+@ChoseSquirtle
+!StartBattle:RivalBulbasaurTrainer
+
+@Continue2
 !Display:2
+!Goto:<Side>2
+
+@Bottom2
+!Walk:Blue N E E E S S S S S S S
+!Goto:Continue3
+@Top2
 !Walk:Blue S E E E S S S S S S
+
+@Continue3
 !Hide:Blue
 !Set:SecondRivalBattle
 !Unlock:

@@ -1,6 +1,31 @@
 <List>
 	<typeChance>
+		<entry>
+			<String>Grass</String>
+			<int>20</int>
+		</entry>
 	</typeChance>
 	<encounters>
+		<Encounter>
+			<encounterType>Grass</encounterType>
+			<pokemon>Weedle</pokemon>
+			<minLevel>3</minLevel>
+			<maxLevel>5</maxLevel>
+			<chance>15</chance>
+		</Encounter>
+		<Encounter>
+			<encounterType>Grass</encounterType>
+			<pokemon>Rattata</pokemon>
+			<minLevel>2</minLevel>
+			<maxLevel>5</maxLevel>
+			<chance>45</chance>
+		</Encounter>
+		<Encounter>
+			<encounterType>Grass</encounterType>
+			<pokemon>Pidgey</pokemon>
+			<minLevel>3</minLevel>
+			<maxLevel>5</maxLevel>
+			<chance>40</chance>
+		</Encounter>
 	</encounters>
 </List>

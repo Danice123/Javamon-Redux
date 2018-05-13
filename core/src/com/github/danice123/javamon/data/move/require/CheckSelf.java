@@ -11,7 +11,7 @@ public class CheckSelf extends Require {
 	@Override
 	public boolean check(final EffectHandler menu, final PokeInstance user,
 			final PokeInstance target, final Move move) {
-		if (isCharging && !user.battleStatus.flags.get("isSeeded")) {
+		if (isCharging && !user.battleStatus.getFlag("isSeeded")) {
 			return false;
 		}
 		return true;

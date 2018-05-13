@@ -1,5 +1,5 @@
 <Move>
-  <name>Sand Attack</name>
+  <name>Sand-Attack</name>
   <type>NORMAL</type>
   <PP>15</PP>
   <accuracy>100</accuracy>

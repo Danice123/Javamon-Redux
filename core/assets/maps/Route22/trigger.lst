@@ -4,13 +4,13 @@
 			<x>31</x>
 			<y>14</y>
 			<layer>1</layer>
-			<script>RivalBottom</script>
+			<script>Rival:Side=Bottom</script>
 		</Trigger>
 		<Trigger>
 			<x>31</x>
 			<y>15</y>
 			<layer>1</layer>
-			<script>RivalTop</script>
+			<script>Rival:Side=Top</script>
 		</Trigger>
 	</triggers>
 </List>

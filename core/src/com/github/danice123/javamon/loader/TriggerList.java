@@ -29,7 +29,14 @@ public class TriggerList {
 				s[t.layer][t.x][t.y].strings.put("layer", arg[4]);
 			} else {
 				try {
-					s[t.layer][t.x][t.y] = (Script) assets.get("assets/maps/" + mapName + "/" + t.script + ".ps");
+					final String[] args = t.script.split(":");
+					s[t.layer][t.x][t.y] = new Script(
+							(Script) assets.get("assets/maps/" + mapName + "/" + args[0] + ".ps"));
+
+					for (int i = 1; i < args.length; i++) {
+						final String[] keyPair = args[i].split("=");
+						s[t.layer][t.x][t.y].strings.put(keyPair[0], keyPair[1]);
+					}
 				} catch (final NullPointerException e) {
 					System.out.println("Error loading script " + t.script + " from map " + mapName);
 					throw e;

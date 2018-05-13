@@ -16,11 +16,13 @@ public class SaveFile {
 
 	// Player
 	public HashMap<String, Boolean> flag;
+	public HashMap<String, String> strings;
 	public PokeData pokeData;
-	public String name;
 	public Party party;
 	public List<SerializedItem> inventory;
 	public List<SerializedItem> itemStorage;
+	public int money;
+	public long id;
 
 	// Walkable
 	public Dir facing;

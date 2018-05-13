@@ -13,7 +13,7 @@ public class CheckEnemy extends Require {
 	@Override
 	public boolean check(final EffectHandler menu, final PokeInstance user,
 			final PokeInstance target, final Move move) {
-		if (disabled && target.battleStatus.flags.get("isDisabled")) {
+		if (disabled && target.battleStatus.getFlag("isDisabled")) {
 			menu.print("The move failed...");
 			return false;
 		}

@@ -12,7 +12,7 @@ public class BattleStatus {
 
 	private EnumMap<Stat, Integer> stats;
 
-	public final Map<String, Boolean> flags;
+	private final Map<String, Boolean> flags;
 	private final Map<String, Integer> counters;
 
 	public BattleStatus() {
@@ -30,6 +30,17 @@ public class BattleStatus {
 		stats.put(Stat.Sdefense, 0);
 		stats.put(Stat.accuracy, 0);
 		stats.put(Stat.evasion, 0);
+	}
+
+	public boolean getFlag(final String flag) {
+		if (!flags.containsKey(flag)) {
+			return false;
+		}
+		return flags.get(flag);
+	}
+
+	public void setFlag(final String flag, final boolean value) {
+		flags.put(flag, value);
 	}
 
 	public int getCounter(final String counter) {

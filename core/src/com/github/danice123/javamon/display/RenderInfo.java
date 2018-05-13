@@ -20,7 +20,8 @@ public class RenderInfo {
 		border = new BorderBox(new Texture("assets/gui/border.png"), getScale());
 		arrow = new Arrow(new Texture("assets/gui/arrow.png"));
 
-		final FreeTypeFontGenerator fontGen = new FreeTypeFontGenerator(Gdx.files.internal("assets/gui/font.ttf"));
+		final FreeTypeFontGenerator fontGen = new FreeTypeFontGenerator(
+				Gdx.files.internal("assets/gui/font.ttf"));
 		final FreeTypeFontParameter param = new FreeTypeFontParameter();
 		param.size = 8 * getScale();
 		font = fontGen.generateFont(param);
@@ -29,5 +30,9 @@ public class RenderInfo {
 
 	public int getScale() {
 		return screenWidth / 240;
+	}
+
+	public int convertXToRightSided(final int x) {
+		return (screenWidth - x * getScale()) / getScale();
 	}
 }

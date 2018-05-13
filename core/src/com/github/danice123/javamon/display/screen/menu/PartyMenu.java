@@ -29,7 +29,7 @@ public abstract class PartyMenu extends AbstractMenu {
 	}
 
 	public enum PartyMenuType {
-		View, ChooseBattle;
+		View, Switch, UseItem;
 	}
 
 }

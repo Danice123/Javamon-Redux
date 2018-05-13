@@ -13,4 +13,5 @@
 			</Heal>
 		</effect>
 	</effect>
+	<cost>300</cost>
 </Item>

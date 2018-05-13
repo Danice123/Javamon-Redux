@@ -13,20 +13,25 @@ public class ChoiceboxHandler extends MenuHandler {
 	static Class<? extends Choicebox> choiceboxClass;
 
 	private final Choicebox choicebox;
+	private final String type;
 	private List<String> variables;
 
 	public ChoiceboxHandler(final Game game, final String text, final String[] args) {
 		super(game);
-		choicebox = buildChatbox(game.getBaseScreen());
-		if (args[0].equals("yes/no")) {
+		type = args[0];
+		choicebox = buildChatbox(game.getLatestScreen());
+		switch (type) {
+		case "yes/no":
 			variables = Lists.newArrayList(args[1]);
 			game.getPlayer().setFlag(args[1], false);
-		} else if (args[0].equals("choice")) {
+			break;
+		case "choice":
 			variables = Lists.newArrayList();
 			for (int i = 1; i < args.length; i++) {
 				variables.add(args[i]);
-				game.getPlayer().setFlag(args[i], false);
+				game.getPlayer().setFlag("choice" + i, false);
 			}
+			break;
 		}
 		choicebox.setupMenu(text, variables);
 	}
@@ -47,8 +52,15 @@ public class ChoiceboxHandler extends MenuHandler {
 
 	@Override
 	protected boolean handleResponse() {
-		if (choicebox.getChoiceIndex() < variables.size()) {
-			game.getPlayer().setFlag(variables.get(choicebox.getChoiceIndex()), true);
+		switch (type) {
+		case "yes/no":
+			if (choicebox.getChoiceIndex() == 0) {
+				game.getPlayer().setFlag(variables.get(0), true);
+			}
+			break;
+		case "choice":
+			game.getPlayer().setFlag("choice" + (choicebox.getChoiceIndex() + 1), true);
+			break;
 		}
 		return false;
 	}

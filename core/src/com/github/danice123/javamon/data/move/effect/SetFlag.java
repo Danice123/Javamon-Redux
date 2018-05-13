@@ -20,7 +20,7 @@ public class SetFlag extends Effect {
 			p = user;
 		}
 
-		p.battleStatus.flags.put(flag, true);
+		p.battleStatus.setFlag(flag, true);
 		if (text != null) {
 			text = text.replace("$target", p.getName());
 			if (p.battleStatus.lastMove != -1) {

@@ -51,7 +51,24 @@
 			<y>2</y>
 			<layer>1</layer>
 			<script>Viridian_Shop</script>
-			<strings/>
+			<strings>
+				<entry>
+					<string>item0</string>
+					<string>Poke_Ball</string>
+				</entry>
+				<entry>
+					<string>item1</string>
+					<string>Antidote</string>
+				</entry>
+				<entry>
+					<string>item2</string>
+					<string>Paralyze_Heal</string>
+				</entry>
+				<entry>
+					<string>item3</string>
+					<string>Burn_Heal</string>
+				</entry>
+			</strings>
 		</Entity>
 		<Entity>
 			<type>Object</type>
@@ -60,7 +77,24 @@
 			<y>1</y>
 			<layer>1</layer>
 			<script>Viridian_Shop</script>
-			<strings/>
+			<strings>
+				<entry>
+					<string>item0</string>
+					<string>Poke_Ball</string>
+				</entry>
+				<entry>
+					<string>item1</string>
+					<string>Antidote</string>
+				</entry>
+				<entry>
+					<string>item2</string>
+					<string>Paralyze_Heal</string>
+				</entry>
+				<entry>
+					<string>item3</string>
+					<string>Burn_Heal</string>
+				</entry>
+			</strings>
 		</Entity>
 	</entities>
 </List>

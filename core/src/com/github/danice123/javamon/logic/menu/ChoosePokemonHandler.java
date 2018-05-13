@@ -22,19 +22,19 @@ public class ChoosePokemonHandler extends MenuHandler {
 	private final boolean canCancel;
 
 	public ChoosePokemonHandler(final Game game, final PokeInstance currentPokemon,
-			final boolean canCancel) {
+			final PartyMenuType type, final boolean canCancel) {
 		super(game);
 		this.currentPokemon = currentPokemon;
 		this.canCancel = canCancel;
 		party = game.getPlayer().getParty();
-		partyMenu = buildPartyMenu(game.getLatestScreen());
+		partyMenu = buildPartyMenu(game.getLatestScreen(), type);
 		partyMenu.setupMenu(party);
 	}
 
-	private PartyMenu buildPartyMenu(final Screen parent) {
+	private PartyMenu buildPartyMenu(final Screen parent, final PartyMenuType type) {
 		try {
 			return partyMenuClass.getConstructor(Screen.class, PartyMenuType.class)
-					.newInstance(parent, PartyMenuType.ChooseBattle);
+					.newInstance(parent, type);
 		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException
 				| InvocationTargetException | NoSuchMethodException | SecurityException e) {
 			throw new RuntimeException("No/Bad Party Menu class found");

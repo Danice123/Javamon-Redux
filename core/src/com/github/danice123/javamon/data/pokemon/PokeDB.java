@@ -3,31 +3,34 @@ package com.github.danice123.javamon.data.pokemon;
 import java.util.HashMap;
 
 import com.badlogic.gdx.files.FileHandle;
+import com.google.common.collect.Maps;
 
 public class PokeDB {
 
-	private HashMap<Integer, String> pokemonList;
-	private int nPokemon;
+	private final HashMap<Integer, String> pokemonList;
+	private final int nPokemon;
 
-	public PokeDB(FileHandle folder) {
-		FileHandle[] pf = folder.list(".poke");
+	public PokeDB(final FileHandle folder) {
+		final FileHandle[] pf = folder.list(".poke");
 
-		pokemonList = new HashMap<Integer, String>();
-		nPokemon = 0;
+		pokemonList = Maps.newHashMap();
+		int nPokemon = 0;
 		for (int i = 0; i < pf.length; i++) {
-			Pokemon p = Pokemon.getPokemon(pf[i].nameWithoutExtension());
+			final Pokemon p = Pokemon.getPokemon(pf[i].nameWithoutExtension());
 			pokemonList.put(p.number, pf[i].nameWithoutExtension());
-			if (nPokemon < p.number)
+			if (nPokemon < p.number) {
 				nPokemon = p.number;
+			}
 		}
+		this.nPokemon = nPokemon;
 	}
 
 	public int getNumberPokemon() {
 		return nPokemon;
 	}
 
-	public Pokemon getPokemon(int i) {
-		String fileName = pokemonList.get(i);
+	public Pokemon getPokemon(final int i) {
+		final String fileName = pokemonList.get(i);
 		if (fileName == null) {
 			return null;
 		}

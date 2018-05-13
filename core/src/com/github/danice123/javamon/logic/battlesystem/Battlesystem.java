@@ -10,6 +10,8 @@ import com.github.danice123.javamon.data.pokemon.PokeInstance;
 import com.github.danice123.javamon.data.pokemon.PokeInstance.Levelup;
 import com.github.danice123.javamon.data.pokemon.Stat;
 import com.github.danice123.javamon.data.pokemon.Status;
+import com.github.danice123.javamon.logic.RandomNumberGenerator;
+import com.github.danice123.javamon.logic.entity.Player;
 import com.github.danice123.javamon.logic.menu.BattleMenuHandler;
 
 public class Battlesystem implements Runnable {
@@ -34,7 +36,7 @@ public class Battlesystem implements Runnable {
 		pUsed[0] = player.firstPokemon();
 		pUsed[1] = enemy.firstPokemon();
 
-		random = new Random();
+		random = RandomNumberGenerator.random;
 		turn = new BattleTurn(menu, random);
 	}
 
@@ -68,6 +70,8 @@ public class Battlesystem implements Runnable {
 		menu.printnw("Go! " + getPlayerPokemon().getName() + "!!");
 		// menu.playerThrowPokemon();
 
+		((Player) getPlayer()).getPokeData().seen(getEnemyPokemon().getPokemon().number);
+
 		BattleResult result = null;
 		do {
 			mainLoop();
@@ -76,7 +80,7 @@ public class Battlesystem implements Runnable {
 				break;
 			}
 
-			if (getEnemyPokemon().battleStatus.flags.get("isCaught")) {
+			if (getEnemyPokemon().battleStatus.getFlag("isCaught")) {
 				result = BattleResult.Catch;
 				break;
 			}
@@ -100,6 +104,8 @@ public class Battlesystem implements Runnable {
 					pUsed[1]++;
 					getEnemyPokemon().battleStatus = new BattleStatus();
 					menu.print("Trainer threw out " + getEnemyPokemon().getName() + "!");
+					((Player) getPlayer()).getPokeData()
+							.seen(getEnemyPokemon().getPokemon().number);
 				} else {
 					result = BattleResult.Win;
 					break;
@@ -111,16 +117,23 @@ public class Battlesystem implements Runnable {
 		case Catch:
 			menu.print(getPlayer().getName() + " caught the " + getEnemyPokemon().getName() + "!");
 			getPlayer().getParty().add(getEnemyPokemon());
+			((Player) getPlayer()).getPokeData().caught(getEnemyPokemon().getPokemon().number);
 			break;
 		case Lose:
-			menu.print("You Lose...");
+			menu.print(getPlayer().getName() + " is out of useable Pokemon!");
+			menu.print(getPlayer().getName() + " blacked out!");
+			menu.respawnPlayer();
 			break;
 		case Run:
 			menu.print("You Ran...");
 			break;
 		case Win:
 			if (!isRunnable) {
-				menu.print("You Win!");
+				menu.print(getPlayer().getName() + " defeated " + getEnemy().getName() + "!");
+				menu.print(getEnemy().getTrainerLossQuip());
+				getPlayer().modifyMoney(getEnemy().getWinnings());
+				menu.print(getPlayer().getName() + " got $" + getEnemy().getWinnings()
+						+ " for winning!");
 			}
 			break;
 		default:
@@ -146,7 +159,7 @@ public class Battlesystem implements Runnable {
 				final Action action = menuResponse.item.getEffect().get();
 				action.use(menu, getPlayerPokemon(), getEnemyPokemon(), new ItemMove());
 
-				if (getEnemyPokemon().battleStatus.flags.get("isCaught")) {
+				if (getEnemyPokemon().battleStatus.getFlag("isCaught")) {
 					return;
 				}
 				break;
@@ -199,17 +212,17 @@ public class Battlesystem implements Runnable {
 
 			// HACKS
 			// disable
-			if (getPlayerPokemon().battleStatus.flags.get("isDisabled")
-					&& !getPlayerPokemon().battleStatus.flags.get("DisabledMoveChosen")) {
+			if (getPlayerPokemon().battleStatus.getFlag("isDisabled")
+					&& !getPlayerPokemon().battleStatus.getFlag("DisabledMoveChosen")) {
 				getPlayerPokemon().battleStatus.setCounter("DisabledMove",
 						getPlayerPokemon().battleStatus.lastMove);
-				getPlayerPokemon().battleStatus.flags.put("DisabledMoveChosen", true);
+				getPlayerPokemon().battleStatus.setFlag("DisabledMoveChosen", true);
 			}
-			if (getEnemyPokemon().battleStatus.flags.get("isDisabled")
-					&& !getEnemyPokemon().battleStatus.flags.get("DisabledMoveChosen")) {
+			if (getEnemyPokemon().battleStatus.getFlag("isDisabled")
+					&& !getEnemyPokemon().battleStatus.getFlag("DisabledMoveChosen")) {
 				getEnemyPokemon().battleStatus.setCounter("DisabledMove",
 						getEnemyPokemon().battleStatus.lastMove);
-				getEnemyPokemon().battleStatus.flags.put("DisabledMoveChosen", true);
+				getEnemyPokemon().battleStatus.setFlag("DisabledMoveChosen", true);
 			}
 		} while (true);
 	}

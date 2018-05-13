@@ -23,4 +23,10 @@ public interface Trainer {
 
 	boolean isTrainerBattle();
 
+	String getTrainerLossQuip();
+
+	int getWinnings();
+
+	boolean modifyMoney(int winnings);
+
 }

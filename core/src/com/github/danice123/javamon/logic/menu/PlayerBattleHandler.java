@@ -5,6 +5,7 @@ import java.lang.reflect.InvocationTargetException;
 import com.github.danice123.javamon.data.item.Item;
 import com.github.danice123.javamon.data.item.ItemStack;
 import com.github.danice123.javamon.display.screen.Screen;
+import com.github.danice123.javamon.display.screen.menu.PartyMenu.PartyMenuType;
 import com.github.danice123.javamon.display.screen.menu.PlayerBattleMenu;
 import com.github.danice123.javamon.logic.Game;
 import com.github.danice123.javamon.logic.ThreadUtils;
@@ -76,7 +77,7 @@ public class PlayerBattleHandler extends MenuHandler {
 			return true;
 		case Switch:
 			final ChoosePokemonHandler choosePokemonInBattleHandler = new ChoosePokemonHandler(game,
-					system.getPlayerPokemon(), true);
+					system.getPlayerPokemon(), PartyMenuType.Switch, true);
 			choosePokemonInBattleHandler.waitAndHandle();
 			ThreadUtils.sleep(10);
 			if (choosePokemonInBattleHandler.getChosenPokemon() != null) {

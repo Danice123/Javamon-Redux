@@ -17,7 +17,6 @@ import com.github.danice123.javamon.loader.TriggerList;
 import com.github.danice123.javamon.logic.Coord;
 import com.github.danice123.javamon.logic.Dir;
 import com.github.danice123.javamon.logic.Game;
-import com.github.danice123.javamon.logic.ThreadUtils;
 import com.github.danice123.javamon.logic.entity.EntityHandler;
 import com.github.danice123.javamon.logic.entity.Player;
 import com.github.danice123.javamon.logic.entity.WalkableHandler;
@@ -66,7 +65,6 @@ public class MapData {
 					final EntityBehaviorThread thread = new EntityBehaviorThread(
 							walkable.getBehavior().get(), walkable);
 					entityThreads.add(thread);
-					ThreadUtils.makeAnonThread(thread);
 				}
 			}
 		}
@@ -128,6 +126,10 @@ public class MapData {
 		return tweaks.get(dir);
 	}
 
+	public List<EntityBehaviorThread> getEntityThreads() {
+		return entityThreads;
+	}
+
 	public Integer getAdjMapLayerChange(final Dir dir) {
 		if (layerChange.get(dir) == null) {
 			return null;
@@ -180,9 +182,6 @@ public class MapData {
 	}
 
 	public void dispose() {
-		for (final EntityBehaviorThread thread : entityThreads) {
-			thread.killThread();
-		}
 		if (renderer != null) {
 			renderer.dispose();
 		}
@@ -231,7 +230,8 @@ public class MapData {
 		return null;
 	}
 
-	public Optional<PokeInstance> getWildPokemonEncounter(final Coord coord, final int layer) {
+	public Optional<PokeInstance> getWildPokemonEncounter(final Coord coord, final int layer,
+			final String playerName, final long playerId) {
 		final TiledMapTileLayer l = (TiledMapTileLayer) map.getLayers().get(layer);
 		final Cell cell = l.getCell(coord.x, coord.y);
 		if (cell == null) {
@@ -241,7 +241,7 @@ public class MapData {
 		if (encounter == null) {
 			return Optional.empty();
 		}
-		return encounters.generateWildPokemon(encounter);
+		return encounters.generateWildPokemon(encounter, playerName, playerId);
 	}
 
 	public EntityHandler getEntity(final Coord coord, final int layer) {

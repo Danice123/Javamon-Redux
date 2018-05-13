@@ -26,9 +26,40 @@ public class MapHandler {
 	private String map;
 	private Map<Dir, String> adjMaps = Maps.newHashMap();
 	private Map<Dir, Vector3> adjTweak = Maps.newHashMap();
+	private final Thread entityThread;
 
 	public MapHandler(final AssetManager assets) {
 		this.assets = assets;
+
+		entityThread = ThreadUtils.makeAnonThread(() -> {
+			long time = System.currentTimeMillis();
+			while (!Thread.interrupted()) {
+				final long delta = System.currentTimeMillis() - time;
+				time = System.currentTimeMillis();
+				if (mapCache.containsKey(map)) {
+					mapCache.get(map).getEntityThreads().forEach(thread -> {
+						thread.run(delta);
+					});
+					for (final Dir dir : ADJ_DIRS) {
+						if (mapCache.get(map).getAdjMapName(dir) != null) {
+							if (mapCache.containsKey(mapCache.get(map).getAdjMapName(dir))) {
+								mapCache.get(mapCache.get(map).getAdjMapName(dir))
+										.getEntityThreads().forEach(thread -> {
+											thread.run(delta);
+										});
+							}
+						}
+					}
+				}
+				try {
+					synchronized (this) {
+						wait(100);
+					}
+				} catch (final InterruptedException e) {
+					return;
+				}
+			}
+		});
 	}
 
 	public MapData getMap() {
@@ -45,15 +76,13 @@ public class MapHandler {
 
 	public void loadMap(final String mapName) {
 		map = mapName;
+		adjMaps = Maps.newHashMap();
+		adjTweak = Maps.newHashMap();
 		ThreadUtils.waitOnObject(map);
 
 		final MapData data = mapCache.get(map);
-		adjMaps = Maps.newHashMap();
-		adjTweak = Maps.newHashMap();
 		for (final Dir dir : ADJ_DIRS) {
 			if (data.getAdjMapName(dir) != null) {
-				adjMaps.put(dir, data.getAdjMapName(dir));
-
 				switch (dir) {
 				case East:
 					adjTweak.put(dir, new Vector3(data.getX(), data.getAdjMapTweak(dir), 0));
@@ -63,15 +92,16 @@ public class MapHandler {
 					break;
 				case South:
 					adjTweak.put(dir, new Vector3(data.getAdjMapTweak(dir),
-							-mapCache.get(adjMaps.get(dir)).getY(), 0));
+							-mapCache.get(data.getAdjMapName(dir)).getY(), 0));
 					break;
 				case West:
-					adjTweak.put(dir, new Vector3(-mapCache.get(adjMaps.get(dir)).getX(),
+					adjTweak.put(dir, new Vector3(-mapCache.get(data.getAdjMapName(dir)).getX(),
 							data.getAdjMapTweak(dir), 0));
 					break;
 				default:
 					break;
 				}
+				adjMaps.put(dir, data.getAdjMapName(dir));
 			}
 		}
 	}
@@ -132,6 +162,7 @@ public class MapHandler {
 		for (final MapData data : mapCache.values()) {
 			data.dispose();
 		}
+		entityThread.interrupt();
 	}
 
 	public void tick() {

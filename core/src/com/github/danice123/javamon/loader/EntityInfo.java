@@ -21,4 +21,6 @@ public class EntityInfo {
 	public ArrayList<String> party;
 	public String behavior;
 	public String trainerName;
+	public String trainerLossQuip;
+	public Integer winnings;
 }

@@ -25,10 +25,6 @@ public abstract class AbstractMenu extends Screen {
 		}
 	}
 
-	public void disposeMe() {
-		disposeMe = true;
-	}
-
 	protected abstract void handleMenuKey(Key key);
 
 }
