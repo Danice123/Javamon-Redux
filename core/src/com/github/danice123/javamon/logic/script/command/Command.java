@@ -26,6 +26,7 @@ public abstract class Command {
 
 	protected Dir getDir(final Game game, final String s, final EntityHandler source)
 			throws ScriptException {
+		int dx, dy;
 		switch (s.toLowerCase()) {
 		case "n":
 			return Dir.North;
@@ -36,8 +37,8 @@ public abstract class Command {
 		case "w":
 			return Dir.West;
 		case "p":
-			final int dx = source.getX() - game.getPlayer().getX();
-			final int dy = source.getY() - game.getPlayer().getY();
+			dx = source.getX() - game.getPlayer().getX();
+			dy = source.getY() - game.getPlayer().getY();
 
 			if (Math.abs(dx) > Math.abs(dy)) {
 				if (dx > 0) {
@@ -50,6 +51,23 @@ public abstract class Command {
 					return Dir.South;
 				} else {
 					return Dir.North;
+				}
+			}
+		case "t":
+			dx = source.getX() - game.getPlayer().getX();
+			dy = source.getY() - game.getPlayer().getY();
+
+			if (Math.abs(dx) > Math.abs(dy)) {
+				if (dx > 0) {
+					return Dir.East;
+				} else {
+					return Dir.West;
+				}
+			} else {
+				if (dy > 0) {
+					return Dir.North;
+				} else {
+					return Dir.South;
 				}
 			}
 		default:

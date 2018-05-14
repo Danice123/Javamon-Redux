@@ -1,0 +1,22 @@
+<List>
+  <triggers>
+    <Trigger>
+      <x>4</x>
+      <y>0</y>
+      <layer>1</layer>
+      <script>$DWarp:Route2:3:28:1</script>
+    </Trigger>
+    <Trigger>
+      <x>5</x>
+      <y>0</y>
+      <layer>1</layer>
+      <script>$DWarp:Route2:3:28:1</script>
+    </Trigger>
+    <Trigger>
+      <x>5</x>
+      <y>7</y>
+      <layer>1</layer>
+      <script>$Warp:Viridian_Forest:17:0:1</script>
+    </Trigger>
+  </triggers>
+</List>

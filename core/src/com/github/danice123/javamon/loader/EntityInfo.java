@@ -23,4 +23,5 @@ public class EntityInfo {
 	public String trainerName;
 	public String trainerLossQuip;
 	public Integer winnings;
+	public Integer trainerRange;
 }

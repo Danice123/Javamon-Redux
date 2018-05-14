@@ -69,14 +69,14 @@ public class Gen1Shop extends ShopMenu {
 		for (final Item item : shop.getItems()) {
 			buyMenu.addContent(
 					new HorzBox(0, 0).setSpacing(48).addContent(new BoxTextContent(item.getName()))
-							.addContent(new BoxTextContent("$" + item.getCost()).setVertIndent(8)));
+							.addContent(new BoxTextContent("$" + item.getCost()).setVertIndent(6)));
 		}
 		buyMenu.addContent(new BoxTextContent("Cancel"));
-		buyWindow = new BorderBoxContent(20, 10, 140, menu.getHeight()).addContent(buyMenu);
+		buyWindow = new BorderBoxContent(20, 10, 140, buyMenu.getHeight()).addContent(buyMenu);
 
 		amountBox = new AmountBox("x");
 		costBox = new AmountBox("$");
-		amountMenu = new BorderBoxContent(40, 80, 120, 18).addContent(
+		amountMenu = new BorderBoxContent(40, 80, 120, 36).addContent(
 				new HorzBox(0, 0).setSpacing(60).addContent(amountBox).addContent(costBox));
 	}
 
@@ -89,8 +89,8 @@ public class Gen1Shop extends ShopMenu {
 	@Override
 	protected void renderScreen(final RenderInfo ri, final float delta) {
 		if (money == null) {
-			money = new BorderBoxContent(-80, 0, 80, 18)
-					.addContent(new BoxTextContent("$" + player.getMoney()));
+			money = new BorderBoxContent(-80, 0, 80, 36)
+					.addContent(new BoxTextContent("$" + player.getMoney()).setHorzIndent(10));
 		}
 		if (sellWindow == null) {
 			sellMenu = new ListBox(0, 0);
@@ -105,7 +105,8 @@ public class Gen1Shop extends ShopMenu {
 				}
 			}
 			sellMenu.addContent(new BoxTextContent("Cancel"));
-			sellWindow = new BorderBoxContent(20, 10, 140, menu.getHeight()).addContent(buyMenu);
+			sellWindow = new BorderBoxContent(20, 10, 140, sellMenu.getHeight())
+					.addContent(sellMenu);
 		}
 
 		batch.begin();

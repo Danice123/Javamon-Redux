@@ -8,6 +8,8 @@ import com.github.danice123.javamon.logic.ThreadUtils;
 
 public class Walkable extends Entity {
 
+	private static final int multiplier = 2;
+
 	private boolean isWalking = false;
 	private int ref = 0;
 
@@ -19,7 +21,7 @@ public class Walkable extends Entity {
 	public void tick() {
 		super.tick();
 		if (isWalking) {
-			ref++;
+			ref += multiplier;
 			moveDir(getFacing());
 			if (ref == 8) {
 				setTextureRegion(sprites.get().getSprite(Dir.toWalk(getFacing())));
@@ -41,16 +43,16 @@ public class Walkable extends Entity {
 	private void moveDir(final Dir dir) {
 		switch (dir) {
 		case North:
-			setY(getY() + 1);
+			setY(getY() + multiplier);
 			break;
 		case South:
-			setY(getY() - 1);
+			setY(getY() - multiplier);
 			break;
 		case East:
-			setX(getX() + 1);
+			setX(getX() + multiplier);
 			break;
 		case West:
-			setX(getX() - 1);
+			setX(getX() - multiplier);
 			break;
 		default:
 		}

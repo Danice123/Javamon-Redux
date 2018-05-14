@@ -1,6 +1,6 @@
 <com.github.danice123.javamon.data.pokemon.Pokemon>
   <number>32</number>
-  <name>Nidoran?</name>
+  <name>NidoranM</name>
   <type1>POISON</type1>
   <dualType>false</dualType>
   <stats enum-type="Stat">

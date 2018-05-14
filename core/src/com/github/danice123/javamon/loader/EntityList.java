@@ -27,6 +27,7 @@ public class EntityList {
 		final ArrayList<EntityHandler> entityList = new ArrayList<EntityHandler>();
 		for (final EntityInfo e : entities) {
 			EntityHandler entity = null;
+			e.strings.put("name", e.name);
 			switch (e.type) {
 			case Sign:
 				entity = new EntityHandler(e.name, getSpriteset(assets, e.spriteset));
@@ -51,6 +52,9 @@ public class EntityList {
 
 				entity = new TrainerHandler(e.name, getSpriteset(assets, e.spriteset),
 						e.trainerName, e.trainerLossQuip, e.winnings, party);
+				if (e.trainerRange != null) {
+					((TrainerHandler) entity).setRange(e.trainerRange);
+				}
 				entity.setScript(getScript(assets, mapName, e.script));
 				entity.setFacing(e.facing);
 				((WalkableHandler) entity)

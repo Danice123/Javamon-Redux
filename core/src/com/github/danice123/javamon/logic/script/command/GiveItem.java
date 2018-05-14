@@ -10,12 +10,13 @@ import com.github.danice123.javamon.logic.script.ScriptException;
 public class GiveItem extends Command {
 
 	@Override
-	public void execute(final Game game, final HashMap<String, String> strings, final EntityHandler target) throws ScriptException {
-		final Item item = Item.getItem(args[0]);
+	public void execute(final Game game, final HashMap<String, String> strings,
+			final EntityHandler target) throws ScriptException {
+		final Item item = Item.getItem(parseString(game, args[0], strings));
 
 		int amount;
 		if (args.length > 1) {
-			amount = Integer.parseInt(args[1]);
+			amount = Integer.parseInt(parseString(game, args[1], strings));
 		} else {
 			amount = 1;
 		}

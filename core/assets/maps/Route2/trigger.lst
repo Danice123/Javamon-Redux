@@ -1,4 +1,16 @@
 <List>
-  <triggers>
-  </triggers>
+	<triggers>
+		<Trigger>
+			<x>3</x>
+			<y>28</y>
+			<layer>1</layer>
+			<script>$Warp:Route2_South_Forest:4:0:1</script>
+		</Trigger>
+		<Trigger>
+			<x>3</x>
+			<y>59</y>
+			<layer>1</layer>
+			<script>$DWarp:Route2_North_Forest:5:7:1</script>
+		</Trigger>
+	</triggers>
 </List>

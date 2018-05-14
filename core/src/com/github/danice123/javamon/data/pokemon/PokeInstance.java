@@ -29,7 +29,6 @@ public class PokeInstance {
 	private final int[] PP = new int[4];
 
 	private int currentHealth;
-	private float currentHealthPercent;
 	public int[] CPP = new int[4];
 
 	public Status status = Status.None;
@@ -77,7 +76,6 @@ public class PokeInstance {
 			}
 		}
 		currentHealth = getHealth();
-		currentHealthPercent = 1f;
 		CPP[0] = getPP(0);
 		CPP[1] = getPP(1);
 		CPP[2] = getPP(2);
@@ -169,7 +167,7 @@ public class PokeInstance {
 	}
 
 	public float getCurrentHealthPercent() {
-		return currentHealthPercent;
+		return (float) currentHealth / (float) getHealth();
 	}
 
 	public void changeHealth(final int amount) {
@@ -181,7 +179,6 @@ public class PokeInstance {
 		if (currentHealth > getHealth()) {
 			currentHealth = getHealth();
 		}
-		currentHealthPercent = (float) currentHealth / (float) getHealth();
 	}
 
 	public void changeStat(final Stat stat, final int amount) {
@@ -196,7 +193,6 @@ public class PokeInstance {
 
 	public void heal() {
 		currentHealth = getHealth();
-		currentHealthPercent = 1;
 		for (int i = 0; i < getMoveAmount(); i++) {
 			CPP[i] = PP[i];
 		}

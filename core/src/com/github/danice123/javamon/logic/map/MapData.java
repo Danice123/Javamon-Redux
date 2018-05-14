@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Optional;
 
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.maps.MapLayer;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
 import com.badlogic.gdx.maps.tiled.TiledMapTileLayer.Cell;
@@ -19,6 +20,7 @@ import com.github.danice123.javamon.logic.Dir;
 import com.github.danice123.javamon.logic.Game;
 import com.github.danice123.javamon.logic.entity.EntityHandler;
 import com.github.danice123.javamon.logic.entity.Player;
+import com.github.danice123.javamon.logic.entity.TrainerHandler;
 import com.github.danice123.javamon.logic.entity.WalkableHandler;
 import com.github.danice123.javamon.logic.entity.behavior.EntityBehaviorThread;
 import com.github.danice123.javamon.logic.script.Script;
@@ -232,12 +234,18 @@ public class MapData {
 
 	public Optional<PokeInstance> getWildPokemonEncounter(final Coord coord, final int layer,
 			final String playerName, final long playerId) {
-		final TiledMapTileLayer l = (TiledMapTileLayer) map.getLayers().get(layer);
-		final Cell cell = l.getCell(coord.x, coord.y);
-		if (cell == null) {
-			return Optional.empty();
+
+		String encounter = null;
+		for (final MapLayer ml : map.getLayers()) {
+			final TiledMapTileLayer l = (TiledMapTileLayer) ml;
+			final Cell cell = l.getCell(coord.x, coord.y);
+			if (cell != null) {
+				encounter = (String) cell.getTile().getProperties().get("Encounter");
+				if (encounter != null) {
+					break;
+				}
+			}
 		}
-		final String encounter = (String) cell.getTile().getProperties().get("Encounter");
 		if (encounter == null) {
 			return Optional.empty();
 		}
@@ -279,5 +287,31 @@ public class MapData {
 		if (mapScript.isPresent()) {
 			new Thread(new ScriptHandler(game, mapScript.get(), null)).start();
 		}
+	}
+
+	public Optional<TrainerHandler> getTrainerFacingPlayer(final Coord coord, final int layer) {
+		for (final EntityHandler entity : entities) {
+			if (entity instanceof TrainerHandler) {
+				final TrainerHandler trainer = (TrainerHandler) entity;
+
+				if (entity.getY() == coord.y
+						&& (entity.getX() - coord.x > 0 && entity.getFacing().equals(Dir.West)
+								|| entity.getX() - coord.x < 0
+										&& entity.getFacing().equals(Dir.East))
+						&& Math.abs(entity.getX() - coord.x) <= trainer.getRange()) {
+					return Optional.of(trainer);
+				}
+				if (entity.getX() == coord.x
+						&& (entity.getY() - coord.y > 0 && entity.getFacing().equals(Dir.South)
+								|| entity.getY() - coord.y < 0
+										&& entity.getFacing().equals(Dir.North))
+						&& Math.abs(entity.getY() - coord.y) <= trainer.getRange()) {
+					return Optional.of(trainer);
+				}
+			}
+
+		}
+
+		return Optional.empty();
 	}
 }

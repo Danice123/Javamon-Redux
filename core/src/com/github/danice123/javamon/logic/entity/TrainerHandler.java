@@ -16,6 +16,7 @@ public class TrainerHandler extends WalkableHandler implements Trainer {
 	private final String trainerLossQuip;
 	private final Party party;
 	private final int winnings;
+	private int range;
 
 	public TrainerHandler(final String name, final Optional<Spriteset> sprites,
 			final String trainerName, final String trainerLossQuip, final int winnings,
@@ -25,6 +26,7 @@ public class TrainerHandler extends WalkableHandler implements Trainer {
 		this.trainerLossQuip = trainerLossQuip;
 		this.party = party;
 		this.winnings = winnings;
+		range = 0;
 	}
 
 	@Override
@@ -87,6 +89,14 @@ public class TrainerHandler extends WalkableHandler implements Trainer {
 	@Override
 	public boolean modifyMoney(final int winnings) {
 		return false;
+	}
+
+	public int getRange() {
+		return range;
+	}
+
+	public void setRange(final int range) {
+		this.range = range;
 	}
 
 }

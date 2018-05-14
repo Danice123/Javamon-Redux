@@ -15,6 +15,7 @@ import com.github.danice123.javamon.logic.Game;
 import com.github.danice123.javamon.logic.ThreadUtils;
 import com.github.danice123.javamon.logic.entity.EntityHandler;
 import com.github.danice123.javamon.logic.entity.Player;
+import com.github.danice123.javamon.logic.entity.TrainerHandler;
 import com.github.danice123.javamon.logic.map.MapHandler;
 import com.github.danice123.javamon.logic.menu.BattleMenuHandler;
 import com.github.danice123.javamon.logic.menu.StartMenuHandler;
@@ -164,6 +165,14 @@ public class World extends Screen {
 				new Thread(new ScriptHandler(game, trigger.get(), null)).start();
 				ThreadUtils.sleep(100);
 				return;
+			}
+
+			final Optional<TrainerHandler> trainer = mapHandler.getMap()
+					.getTrainerFacingPlayer(player.getCoord(), player.getLayer());
+			if (trainer.isPresent() && !player.getFlag(trainer.get().getEntity().getName())) {
+				while (trainer.get().walk(mapHandler, trainer.get().getFacing())) {
+				}
+				trainer.get().activate(game);
 			}
 
 			final Optional<PokeInstance> wildPokemonEncounter = mapHandler.getMap()

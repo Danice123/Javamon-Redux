@@ -9,9 +9,10 @@ import com.github.danice123.javamon.logic.script.ScriptException;
 public class Face extends Command {
 
 	@Override
-	public void execute(final Game game, final HashMap<String, String> strings, final EntityHandler target) throws ScriptException {
+	public void execute(final Game game, final HashMap<String, String> strings,
+			final EntityHandler target) throws ScriptException {
 		if (args[0].toLowerCase().equals("p")) {
-			game.getPlayer().setFacing(getDir(game, args[1], null));
+			game.getPlayer().setFacing(getDir(game, args[1], target));
 		} else if (args[0].toLowerCase().equals("t")) {
 			try {
 				target.setFacing(getDir(game, args[1], target));
