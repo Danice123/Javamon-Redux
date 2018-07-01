@@ -1,13 +1,16 @@
-package com.github.danice123.javamon.display.screen.menu;
+package com.github.danice123.javamon.display.screen.menu.title;
 
 import com.badlogic.gdx.assets.AssetManager;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.github.danice123.javamon.display.RenderInfo;
 import com.github.danice123.javamon.display.screen.Screen;
 import com.github.danice123.javamon.display.screen.helper.BorderBoxContent;
 import com.github.danice123.javamon.display.screen.helper.BoxContent;
 import com.github.danice123.javamon.display.screen.helper.BoxTextContent;
 import com.github.danice123.javamon.display.screen.helper.ListBox;
+import com.github.danice123.javamon.display.screen.helper.Timer;
 import com.github.danice123.javamon.display.screen.helper.VertBox;
+import com.github.danice123.javamon.display.screen.menu.GameMenu;
 import com.github.danice123.javamon.logic.ControlProcessor.Key;
 import com.github.danice123.javamon.logic.ThreadUtils;
 
@@ -15,8 +18,10 @@ public class Gen1GameMenu extends GameMenu {
 
 	private boolean hasSave;
 
-	private boolean isMenuOpen = false;
+	private TitleStage stage = TitleStage.Start;
 	private GameMenuAction action;
+
+	private final Gen1TitleMenu titleMenu = new Gen1TitleMenu();
 
 	public Gen1GameMenu(final Screen parent) {
 		super(parent);
@@ -29,55 +34,84 @@ public class Gen1GameMenu extends GameMenu {
 
 	@Override
 	protected void init(final AssetManager assets) {
-
+		titleMenu.init(assets);
 	}
+
+	private BoxContent startScreen;
 
 	private BoxContent window;
 	private ListBox menu;
-	private BoxContent titleScreen;
 
 	@Override
 	protected void renderScreen(final RenderInfo ri, final float delta) {
-		if (menu == null) {
-			if (hasSave) {
-				menu = new ListBox(0, 0).addLine("Continue").addLine("New Game").addLine("Option");
-			} else {
-				menu = new ListBox(0, 0).addLine("New Game").addLine("Option");
+
+		switch (stage) {
+		case Start:
+			if (startScreen == null) {
+				startScreen = new VertBox(20, 50)
+						.addContent(new BoxTextContent("'95'96'98 Nintendo"))
+						.addContent(new BoxTextContent("'95'96'98 Creatures inc."))
+						.addContent(new BoxTextContent("'95'96'98 Game Freak inc."));
 			}
-			window = new BorderBoxContent(0, 0, 100, menu.getHeight()).addContent(menu);
-		}
-		if (titleScreen == null) {
-			titleScreen = new VertBox(75, 60)
-					.addContent(new BoxTextContent("Pokemon").setHorzIndent(15))
-					.addContent(new BoxTextContent("Red Version"));
+			batch.begin();
+			startScreen.render(ri, batch, 0, 0);
+			batch.end();
+			break;
+		case TitleScreen:
+			titleMenu.renderScreen(ri, delta, batch);
+			break;
+		case Menu:
+			if (menu == null) {
+				if (hasSave) {
+					menu = new ListBox(0, 0).addLine("Continue").addLine("New Game")
+							.addLine("Option");
+				} else {
+					menu = new ListBox(0, 0).addLine("New Game").addLine("Option");
+				}
+				window = new BorderBoxContent(0, 0, 100, menu.getHeight()).addContent(menu);
+			}
+			batch.begin();
+			window.render(ri, batch, 0, 0);
+			batch.end();
+			break;
 		}
 
-		batch.begin();
-		if (isMenuOpen) {
-			window.render(ri, batch, 0, 0);
-		} else {
-			titleScreen.render(ri, batch, 0, 0);
-		}
-		batch.end();
 	}
+
+	private final Timer startTimer = new Timer(2) {
+
+		@Override
+		public void ring(final float delta, final float timeSinceRung) {
+			stage = TitleStage.TitleScreen;
+		}
+	};
 
 	@Override
 	protected void tickSelf(final float delta) {
+		switch (stage) {
+		case Start:
+			startTimer.tick(delta);
+			break;
+		case TitleScreen:
+			titleMenu.tickSelf(delta);
+			break;
+		case Menu:
+			break;
+		}
 
 	}
 
 	@Override
 	protected void handleMenuKey(final Key key) {
-		if (isMenuOpen) {
-			handleMenuMenuKey(key);
-			return;
-		}
-		switch (key) {
-		case accept:
-		case start:
-			isMenuOpen = true;
+		switch (stage) {
+		case Start:
 			break;
-		default:
+		case TitleScreen:
+			stage = TitleStage.Menu;
+			break;
+		case Menu:
+			handleMenuMenuKey(key);
+			break;
 		}
 	}
 
@@ -105,7 +139,7 @@ public class Gen1GameMenu extends GameMenu {
 			}
 			break;
 		case deny:
-			isMenuOpen = false;
+			stage = TitleStage.TitleScreen;
 			break;
 		case up:
 			menu.decrement();
@@ -120,6 +154,19 @@ public class Gen1GameMenu extends GameMenu {
 	@Override
 	public GameMenuAction getMenuAction() {
 		return action;
+	}
+
+	interface Gen1GameMenuPart {
+
+		void init(final AssetManager assets);
+
+		void renderScreen(final RenderInfo ri, final float delta, final SpriteBatch batch);
+
+		void tickSelf(final float delta);
+	}
+
+	private enum TitleStage {
+		Start, TitleScreen, Menu
 	}
 
 }

@@ -10,15 +10,17 @@ import com.github.danice123.javamon.logic.script.ScriptException;
 public class Walk extends Command {
 
 	@Override
-	public void execute(final Game game, final HashMap<String, String> strings, final EntityHandler target) throws ScriptException {
+	public void execute(final Game game, final HashMap<String, String> strings,
+			final EntityHandler target) throws ScriptException {
 		if (args[0].toLowerCase().equals("p")) {
 			for (int i = 1; i < args.length; i++) {
-				game.getPlayer().walk(game.getMapHandler(), getDir(game, args[i], null));
+				game.getPlayer().walk(game.getMapHandler(), getDir(game, args[i], target));
 			}
 		} else if (args[0].toLowerCase().equals("t")) {
 			try {
 				for (int i = 1; i < args.length; i++) {
-					((WalkableHandler) target).walk(game.getMapHandler(), getDir(game, args[i], target));
+					((WalkableHandler) target).walk(game.getMapHandler(),
+							getDir(game, args[i], target));
 				}
 			} catch (final ClassCastException e) {
 				throw new ScriptException("Walk", ScriptException.SCRIPT_ERROR_TYPE.badTarget);

@@ -1,0 +1,16 @@
+<List>
+	<triggers>
+		<Trigger>
+			<x>2</x>
+			<y>0</y>
+			<layer>1</layer>
+			<script>$DWarp:Pewter_City:7:6:1</script>
+		</Trigger>
+		<Trigger>
+			<x>3</x>
+			<y>0</y>
+			<layer>1</layer>
+			<script>$DWarp:Pewter_City:7:6:1</script>
+		</Trigger>
+	</triggers>
+</List>

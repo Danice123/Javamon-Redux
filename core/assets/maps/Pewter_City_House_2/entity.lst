@@ -1,0 +1,94 @@
+<List>
+	<entities>
+		<Entity>
+			<type>NPC</type>
+			<name>dad</name>
+			<spriteset>father</spriteset>
+			<x>1</x>
+			<y>5</y>
+			<layer>1</layer>
+			<script>Talk</script>
+			<facing>South</facing>
+			<behavior>LookAround</behavior>
+			<strings>
+				<entry>
+					<string>text</string>
+					<string>Our Pokemon's an outsider, so it's hard to handle./nAn outsider is a Pokemon that you get in a trade./nIt grows fast, but it may ignore an unskilled trainer in battle!/nIf only we had some Badges...</string>
+				</entry>
+			</strings>
+		</Entity>
+		<Entity>
+			<type>NPC</type>
+			<name>child</name>
+			<spriteset>child_girl</spriteset>
+			<x>3</x>
+			<y>2</y>
+			<layer>1</layer>
+			<script>Talk</script>
+			<facing>East</facing>
+			<behavior>FaceEast</behavior>
+			<strings>
+				<entry>
+					<string>text</string>
+					<string>Nidoran sit!</string>
+				</entry>
+			</strings>
+		</Entity>
+		<Entity>
+			<type>NPC</type>
+			<name>child</name>
+			<spriteset>pokemon</spriteset>
+			<x>4</x>
+			<y>2</y>
+			<layer>1</layer>
+			<script>Talk</script>
+			<facing>West</facing>
+			<behavior>FaceWest</behavior>
+			<strings>
+				<entry>
+					<string>text</string>
+					<string>Nidoran: Bowbow!</string>
+				</entry>
+			</strings>
+		</Entity>
+		<Entity>
+			<type>Sign</type>
+			<name>bookcase</name>
+			<x>0</x>
+			<y>6</y>
+			<layer>1</layer>
+			<strings>
+			<entry>
+				<string>text</string>
+				<string>Crammed full of Pokemon books!</string>
+			</entry>
+			</strings>
+		</Entity>
+		<Entity>
+			<type>Sign</type>
+			<name>bookcase</name>
+			<x>1</x>
+			<y>6</y>
+			<layer>1</layer>
+			<strings>
+			<entry>
+				<string>text</string>
+				<string>Crammed full of Pokemon books!</string>
+			</entry>
+			</strings>
+		</Entity>
+		<Entity>
+			<type>Sign</type>
+			<name>bookcase</name>
+			<x>7</x>
+			<y>6</y>
+			<layer>1</layer>
+			<strings>
+			<entry>
+				<string>text</string>
+				<string>Crammed full of Pokemon books!</string>
+			</entry>
+			</strings>
+		</Entity>
+	</entities>
+</List>

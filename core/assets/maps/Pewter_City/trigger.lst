@@ -1,4 +1,46 @@
 <List>
 	<triggers>
+		<Trigger>
+			<x>35</x>
+			<y>18</y>
+			<layer>1</layer>
+			<script>routeguardtrigger:y=1</script>
+		</Trigger>
+		<Trigger>
+			<x>35</x>
+			<y>17</y>
+			<layer>1</layer>
+			<script>routeguardtrigger:y=2</script>
+		</Trigger>
+		<Trigger>
+			<x>35</x>
+			<y>16</y>
+			<layer>1</layer>
+			<script>routeguardtrigger:y=3</script>
+		</Trigger>
+		<Trigger>
+			<x>7</x>
+			<y>6</y>
+			<layer>1</layer>
+			<script>$Warp:Pewter_City_House_1:2:0:1</script>
+		</Trigger>
+		<Trigger>
+			<x>29</x>
+			<y>22</y>
+			<layer>1</layer>
+			<script>$Warp:Pewter_City_House_2:2:0:1</script>
+		</Trigger>
+		<Trigger>
+			<x>13</x>
+			<y>10</y>
+			<layer>1</layer>
+			<script>$Warp:Pewter_City_PC:3:0:1</script>
+		</Trigger>
+		<Trigger>
+			<x>23</x>
+			<y>18</y>
+			<layer>1</layer>
+			<script>$Warp:Pewter_City_PM:3:0:1</script>
+		</Trigger>
 	</triggers>
 </List>

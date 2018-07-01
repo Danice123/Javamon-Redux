@@ -8,6 +8,7 @@ import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Texture;
 import com.github.danice123.javamon.data.Inventory;
 import com.github.danice123.javamon.data.PokeData;
+import com.github.danice123.javamon.data.pokemon.Status;
 import com.github.danice123.javamon.display.sprite.Spriteset;
 import com.github.danice123.javamon.logic.Coord;
 import com.github.danice123.javamon.logic.RandomNumberGenerator;
@@ -140,6 +141,11 @@ public class Player extends WalkableHandler implements Trainer {
 
 	@Override
 	public int firstPokemon() {
+		for (int i = 0; i < party.getSize(); i++) {
+			if (!party.getPokemon(i).status.equals(Status.Fainted)) {
+				return i;
+			}
+		}
 		return 0;
 	}
 

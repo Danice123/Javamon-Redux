@@ -57,6 +57,24 @@ public abstract class Command {
 			dx = source.getX() - game.getPlayer().getX();
 			dy = source.getY() - game.getPlayer().getY();
 
+			if (Math.abs(dx) == Math.abs(dy)) {
+				switch (source.getFacing()) {
+				case North:
+					dy--;
+					break;
+				case South:
+					dy++;
+					break;
+				case East:
+					dx++;
+					break;
+				case West:
+					dx--;
+					break;
+				default:
+				}
+			}
+
 			if (Math.abs(dx) > Math.abs(dy)) {
 				if (dx > 0) {
 					return Dir.East;

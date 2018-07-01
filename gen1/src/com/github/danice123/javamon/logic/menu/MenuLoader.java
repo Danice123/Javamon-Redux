@@ -4,7 +4,6 @@ import com.github.danice123.javamon.display.screen.menu.Gen1Bag;
 import com.github.danice123.javamon.display.screen.menu.Gen1Battle;
 import com.github.danice123.javamon.display.screen.menu.Gen1Chatbox;
 import com.github.danice123.javamon.display.screen.menu.Gen1Choicebox;
-import com.github.danice123.javamon.display.screen.menu.Gen1GameMenu;
 import com.github.danice123.javamon.display.screen.menu.Gen1ItemStorage;
 import com.github.danice123.javamon.display.screen.menu.Gen1PC;
 import com.github.danice123.javamon.display.screen.menu.Gen1Party;
@@ -17,6 +16,7 @@ import com.github.danice123.javamon.display.screen.menu.Gen1Shop;
 import com.github.danice123.javamon.display.screen.menu.Gen1StartMenu;
 import com.github.danice123.javamon.display.screen.menu.Gen1TextInput;
 import com.github.danice123.javamon.display.screen.menu.Gen1Trainer;
+import com.github.danice123.javamon.display.screen.menu.title.Gen1GameMenu;
 import com.github.danice123.javamon.loader.LoadMenusFromHere;
 
 public class MenuLoader implements LoadMenusFromHere {

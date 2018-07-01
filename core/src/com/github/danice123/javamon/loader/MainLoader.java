@@ -5,6 +5,7 @@ import com.badlogic.gdx.assets.loaders.resolvers.InternalFileHandleResolver;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Texture;
 import com.github.danice123.javamon.data.pokemon.PokeDB;
+import com.github.danice123.javamon.display.sprite.Animation;
 import com.github.danice123.javamon.logic.map.MapData;
 import com.github.danice123.javamon.logic.script.Script;
 
@@ -15,6 +16,7 @@ public class MainLoader extends AssetManager {
 		setLoader(MapData.class, new MapLoader(new InternalFileHandleResolver()));
 		setLoader(Script.class, new ScriptLoader(new InternalFileHandleResolver()));
 		setLoader(PokeDB.class, new PokemonLoader(new InternalFileHandleResolver()));
+		setLoader(Animation.class, new AnimationLoader(new InternalFileHandleResolver()));
 
 		loadSprites();
 		loadGUI();
@@ -35,8 +37,6 @@ public class MainLoader extends AssetManager {
 	private void loadGUI() {
 		load("assets/gui/border.png", Texture.class);
 		load("assets/gui/arrow.png", Texture.class);
-		// load(com.github.Danice123.javamon.screen.menu.gen1.Pokedex.pokeball,
-		// Texture.class);
 	}
 
 	private void loadScripts() {

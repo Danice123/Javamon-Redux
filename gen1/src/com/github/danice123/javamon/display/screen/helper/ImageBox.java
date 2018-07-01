@@ -2,16 +2,22 @@ package com.github.danice123.javamon.display.screen.helper;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.github.danice123.javamon.display.RenderInfo;
 
 public class ImageBox implements BoxContent {
 
-	private final Texture texture;
+	private final TextureRegion texture;
 	private int horzOffset;
 	private int vertOffset;
+	private boolean bottomAlign = false;
 
 	public ImageBox(final Texture texture) {
-		this.texture = texture;
+		this.texture = new TextureRegion(texture);
+	}
+
+	protected TextureRegion getTexture() {
+		return texture;
 	}
 
 	public ImageBox setHorzIndent(final int horzOffset) {
@@ -24,13 +30,24 @@ public class ImageBox implements BoxContent {
 		return this;
 	}
 
+	public ImageBox setAlignBottom() {
+		bottomAlign = true;
+		return this;
+	}
+
 	@Override
 	public void render(final RenderInfo ri, final SpriteBatch batch, final int x, final int y) {
+		float alignY;
+		if (bottomAlign) {
+			alignY = ri.screenHeight - (y + vertOffset) * ri.getScale();
+		} else {
+			alignY = ri.screenHeight - (y + vertOffset) * ri.getScale()
+					- getTexture().getRegionHeight() * ri.getScale();
+		}
 
-		batch.draw(texture, (x + horzOffset) * ri.getScale(),
-				ri.screenHeight - (y + vertOffset) * ri.getScale()
-						- texture.getHeight() * ri.getScale(),
-				texture.getWidth() * ri.getScale(), texture.getHeight() * ri.getScale());
+		batch.draw(getTexture(), (x + horzOffset) * ri.getScale(), alignY,
+				getTexture().getRegionWidth() * ri.getScale(),
+				getTexture().getRegionHeight() * ri.getScale());
 	}
 
 }

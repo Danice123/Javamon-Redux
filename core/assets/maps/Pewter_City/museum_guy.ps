@@ -1,0 +1,50 @@
+!Lock:
+!Face:t p
+!Choose:1 yes/no Choice
+!Branch:Choice yes
+!SetString:Choice ydiff
+!Goto:<Choice>
+!Stop:
+
+@-1
+!Display:3
+!Walk:t N
+!Walk:p N
+!Walk:t N
+!Walk:p N
+!Goto:Continue
+
+@0
+!Display:3
+!Walk:t N
+!Walk:p t
+!Walk:t N
+!Walk:p N
+!Goto:Continue
+
+@1
+!Display:3
+!Walk:p W
+!Sleep:100
+!Walk:t N N
+!Walk:p E
+
+@Continue
+!Follow:p t
+!Walk:t N N N N W W W W W W W W W W W W W N N N W
+!Unfollow:t
+!Face:t p
+!Display:4
+!Walk:t S S S S S S S S
+!Move:t 27 18 1
+!Unlock:
+!Stop:
+@yes
+!Display:2
+!Unlock:
+!Stop:
+
+$1:Did you check out the Museum?
+$2:Weren't those fossils from Mt. Moon amazing?
+$3:Really? you absolutely have to go!
+$4:It's right here! You have to pay to get in, but it's worth it! See you around!

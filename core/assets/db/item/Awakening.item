@@ -1,0 +1,14 @@
+<Item>
+	<name>Awakening</name>
+	<isStackable>true</isStackable>
+	<isTossable>true</isTossable>
+	<isUsableInField>true</isUsableInField>
+	<isUsableInBattle>true</isUsableInBattle>
+	<isConsumedOnUse>true</isConsumedOnUse>
+	<effect>
+		<require/>
+		<effect>
+		</effect>
+	</effect>
+	<cost>200</cost>
+</Item>
