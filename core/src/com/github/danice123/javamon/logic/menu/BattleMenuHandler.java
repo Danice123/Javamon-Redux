@@ -4,7 +4,6 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import java.util.List;
 
-import com.github.danice123.javamon.data.pokemon.PokeInstance;
 import com.github.danice123.javamon.display.screen.Screen;
 import com.github.danice123.javamon.display.screen.menu.BattleMenu;
 import com.github.danice123.javamon.display.screen.menu.PartyMenu.PartyMenuType;
@@ -15,6 +14,8 @@ import com.github.danice123.javamon.logic.battlesystem.BattleAction;
 import com.github.danice123.javamon.logic.battlesystem.Battlesystem;
 import com.github.danice123.javamon.logic.battlesystem.Trainer;
 import com.github.danice123.javamon.logic.battlesystem.WildTrainer;
+
+import dev.dankins.javamon.data.monster.instance.MonsterInstance;
 
 public class BattleMenuHandler extends MenuHandler implements EffectHandler {
 
@@ -34,7 +35,7 @@ public class BattleMenuHandler extends MenuHandler implements EffectHandler {
 	}
 
 	public BattleMenuHandler(final Game game, final Trainer player,
-			final PokeInstance wildPokemon) {
+			final MonsterInstance wildPokemon) {
 		super(game);
 		final WildTrainer enemy = new WildTrainer(wildPokemon);
 		battlesystem = new Battlesystem(this, player, enemy);

@@ -1,14 +1,11 @@
 package com.github.danice123.javamon.logic.entity;
 
-import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Texture;
-import com.github.danice123.javamon.data.Inventory;
-import com.github.danice123.javamon.data.PokeData;
-import com.github.danice123.javamon.data.pokemon.Status;
 import com.github.danice123.javamon.display.sprite.Spriteset;
 import com.github.danice123.javamon.logic.Coord;
 import com.github.danice123.javamon.logic.RandomNumberGenerator;
@@ -17,12 +14,17 @@ import com.github.danice123.javamon.logic.battlesystem.Party;
 import com.github.danice123.javamon.logic.battlesystem.Trainer;
 import com.google.common.collect.Maps;
 
+import dev.dankins.javamon.data.CollectionLibrary;
+import dev.dankins.javamon.data.Inventory;
+import dev.dankins.javamon.data.monster.Status;
+import dev.dankins.javamon.data.monster.instance.MonsterInstance;
+
 public class Player extends WalkableHandler implements Trainer {
 
-	private HashMap<String, Boolean> flag;
-	private HashMap<String, String> strings;
-	private PokeData pokeData;
-	private Party party;
+	private Map<String, Boolean> flag;
+	private Map<String, String> strings;
+	private CollectionLibrary pokeData;
+	private final Party party;
 	private Inventory inventory;
 	private Inventory itemStorage;
 	private int money;
@@ -32,7 +34,7 @@ public class Player extends WalkableHandler implements Trainer {
 		super("Player", sprites);
 		flag = Maps.newHashMap();
 		strings = Maps.newHashMap();
-		pokeData = new PokeData();
+		pokeData = new CollectionLibrary();
 		party = new Party();
 		inventory = new Inventory();
 		itemStorage = new Inventory();
@@ -68,7 +70,7 @@ public class Player extends WalkableHandler implements Trainer {
 		strings.put(key, val);
 	}
 
-	public PokeData getPokeData() {
+	public CollectionLibrary getPokeData() {
 		return pokeData;
 	}
 
@@ -105,7 +107,7 @@ public class Player extends WalkableHandler implements Trainer {
 		s.flag = flag;
 		s.strings = strings;
 		s.pokeData = pokeData;
-		s.party = party;
+		s.party = party.getParty();
 		s.inventory = inventory.serializeInventory();
 		s.itemStorage = itemStorage.serializeInventory();
 		s.facing = entity.getFacing();
@@ -115,15 +117,17 @@ public class Player extends WalkableHandler implements Trainer {
 		return s;
 	}
 
-	public String load(final SaveFile s) {
+	public String load(final AssetManager assetManager, final SaveFile s) {
 		money = s.money;
 		id = s.id;
 		flag = s.flag;
 		strings = s.strings;
 		pokeData = s.pokeData;
-		party = s.party;
-		inventory = Inventory.deserializeInventory(s.inventory);
-		itemStorage = Inventory.deserializeInventory(s.itemStorage);
+		for (final MonsterInstance i : s.party) {
+			party.add(i);
+		}
+		inventory = new Inventory(assetManager, s.inventory);
+		itemStorage = new Inventory(assetManager, s.itemStorage);
 		entity.setFacing(s.facing);
 		setCoord(new Coord(s.x, s.y), s.layer);
 		return s.mapName;
@@ -142,7 +146,7 @@ public class Player extends WalkableHandler implements Trainer {
 	@Override
 	public int firstPokemon() {
 		for (int i = 0; i < party.getSize(); i++) {
-			if (!party.getPokemon(i).status.equals(Status.Fainted)) {
+			if (!party.getPokemon(i).status.equals(Status.FAINTED)) {
 				return i;
 			}
 		}

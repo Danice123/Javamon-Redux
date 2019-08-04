@@ -1,31 +1,16 @@
 package com.github.danice123.javamon.logic;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-import com.github.danice123.javamon.data.PokeData;
-import com.github.danice123.javamon.data.SerializedItem;
-import com.github.danice123.javamon.logic.battlesystem.Party;
-import com.thoughtworks.xstream.XStream;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import dev.dankins.javamon.data.CollectionLibrary;
+import dev.dankins.javamon.data.item.SerializedItem;
+import dev.dankins.javamon.data.monster.instance.MonsterInstance;
 
 public class SaveFile {
-
-	// Player
-	public HashMap<String, Boolean> flag;
-	public HashMap<String, String> strings;
-	public PokeData pokeData;
-	public Party party;
-	public List<SerializedItem> inventory;
-	public List<SerializedItem> itemStorage;
-	public int money;
-	public long id;
-
-	// Walkable
-	public Dir facing;
 
 	// Entity
 	public int layer;
@@ -33,29 +18,48 @@ public class SaveFile {
 	public int y;
 	public String mapName;
 
-	public void save() {
-		final XStream s = getXStream();
-		FileOutputStream out;
-		try {
-			out = new FileOutputStream(new File("Player.xml"));
+	// Walkable
+	public Dir facing;
 
-			s.toXML(this, out);
-			out.close();
-		} catch (final FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (final IOException e) {
-			e.printStackTrace();
-		}
+	// Player
+	public long id;
+	public int money;
+	public List<MonsterInstance> party;
+	public List<SerializedItem> inventory;
+	public List<SerializedItem> itemStorage;
+	public CollectionLibrary pokeData;
+	public Map<String, Boolean> flag;
+	public Map<String, String> strings;
+
+	@JsonCreator
+	public SaveFile(@JsonProperty("layer") final int layer,
+		@JsonProperty("x") final int x,
+		@JsonProperty("y") final int y,
+		@JsonProperty("mapName") final String mapName,
+		@JsonProperty("facing") final Dir facing,
+		@JsonProperty("id") final long id,
+		@JsonProperty("money") final int money,
+		@JsonProperty("party") final List<MonsterInstance> party,
+		@JsonProperty("inventory") final List<SerializedItem> inventory,
+		@JsonProperty("itemStorage") final List<SerializedItem> itemStorage,
+		@JsonProperty("pokeData") final CollectionLibrary pokeData,
+		@JsonProperty("flag") final Map<String, Boolean> flag,
+		@JsonProperty("strings") final Map<String, String> strings) {
+		this.layer = layer;
+		this.x = x;
+		this.y = y;
+		this.mapName = mapName;
+		this.facing = facing;
+		this.id = id;
+		this.money = money;
+		this.party = party;
+		this.inventory = inventory;
+		this.itemStorage = itemStorage;
+		this.pokeData = pokeData;
+		this.flag = flag;
+		this.strings = strings;
 	}
 
-	public static SaveFile load(final File save) {
-		final XStream s = getXStream();
-		return (SaveFile) s.fromXML(save);
-	}
-
-	private static XStream getXStream() {
-		final XStream s = new XStream();
-		s.alias("item", SerializedItem.class);
-		return s;
+	public SaveFile() {
 	}
 }

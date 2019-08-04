@@ -1,9 +1,6 @@
 package com.github.danice123.javamon.display.screen.menu;
 
 import com.badlogic.gdx.assets.AssetManager;
-import com.github.danice123.javamon.data.Inventory;
-import com.github.danice123.javamon.data.item.Item;
-import com.github.danice123.javamon.data.item.ItemStack;
 import com.github.danice123.javamon.display.RenderInfo;
 import com.github.danice123.javamon.display.screen.Screen;
 import com.github.danice123.javamon.display.screen.helper.AmountBox;
@@ -15,6 +12,10 @@ import com.github.danice123.javamon.display.screen.helper.ListBox;
 import com.github.danice123.javamon.logic.ControlProcessor.Key;
 import com.github.danice123.javamon.logic.ThreadUtils;
 import com.github.danice123.javamon.logic.entity.Player;
+
+import dev.dankins.javamon.data.Inventory;
+import dev.dankins.javamon.data.item.Item;
+import dev.dankins.javamon.data.item.ItemStack;
 
 public class Gen1Shop extends ShopMenu {
 
@@ -82,7 +83,7 @@ public class Gen1Shop extends ShopMenu {
 
 	@Override
 	public void updateMenu() {
-		sellMenu = null;
+		sellWindow = null;
 		money = null;
 	}
 

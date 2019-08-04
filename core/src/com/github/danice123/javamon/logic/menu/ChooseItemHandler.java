@@ -2,12 +2,13 @@ package com.github.danice123.javamon.logic.menu;
 
 import java.lang.reflect.InvocationTargetException;
 
-import com.github.danice123.javamon.data.Inventory;
-import com.github.danice123.javamon.data.item.Item;
 import com.github.danice123.javamon.display.screen.Screen;
 import com.github.danice123.javamon.display.screen.menu.BagMenu;
 import com.github.danice123.javamon.display.screen.menu.BagMenu.BagMenuType;
 import com.github.danice123.javamon.logic.Game;
+
+import dev.dankins.javamon.data.Inventory;
+import dev.dankins.javamon.data.item.Item;
 
 public class ChooseItemHandler extends MenuHandler {
 

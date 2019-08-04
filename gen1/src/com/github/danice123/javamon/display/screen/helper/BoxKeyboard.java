@@ -5,11 +5,8 @@ import com.github.danice123.javamon.display.RenderInfo;
 
 public class BoxKeyboard extends VertBox {
 
-	private static final String[][] rows = { { "A", "B", "C", "D", "E", "F", "G", "H", "I" },
-			{ "J", "K", "L", "M", "N", "O", "P", "Q", "R" },
-			{ "S", "T", "U", "V", "W", "X", "Y", "Z", "" },
-			{ "x", "(", ")", ":", ";", "[", "]", "", "" },
-			{ "-", "?", "!", "♂", "♀", "/", ".", ",", "E" } };
+	private static final String[][] rows = { { "A", "B", "C", "D", "E", "F", "G", "H", "I" }, { "J", "K", "L", "M", "N", "O", "P", "Q", "R" },
+			{ "S", "T", "U", "V", "W", "X", "Y", "Z", "" }, { "x", "(", ")", ":", ";", "[", "]", "", "" }, { "-", "?", "!", "♂", "♀", "/", ".", ",", "E" } };
 
 	private final BoxTextContent entry;
 	// private final BoxTextContent caseDisplay;
@@ -43,10 +40,8 @@ public class BoxKeyboard extends VertBox {
 		final int xOffset = x + this.x;
 		final int yOffset = y + this.y;
 
-		batch.draw(ri.arrow.rightArrow, (xOffset + 8 + 25 * col) * ri.getScale(),
-				ri.screenHeight - (yOffset + 8 + 18 * (row + 1)) * ri.getScale(),
-				ri.arrow.rightArrow.getRegionWidth() * ri.getScale(),
-				ri.arrow.rightArrow.getRegionHeight() * ri.getScale());
+		batch.draw(ri.arrow.rightArrow, (xOffset + 8 + 25 * col) * ri.getScale(), ri.screenHeight - (yOffset + 8 + 18 * (row + 1)) * ri.getScale(),
+				ri.arrow.rightArrow.getRegionWidth() * ri.getScale(), ri.arrow.rightArrow.getRegionHeight() * ri.getScale());
 
 		super.render(ri, batch, xOffset + 18, yOffset - 20);
 	}

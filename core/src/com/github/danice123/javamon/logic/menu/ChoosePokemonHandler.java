@@ -2,13 +2,14 @@ package com.github.danice123.javamon.logic.menu;
 
 import java.lang.reflect.InvocationTargetException;
 
-import com.github.danice123.javamon.data.pokemon.PokeInstance;
 import com.github.danice123.javamon.display.screen.Screen;
 import com.github.danice123.javamon.display.screen.menu.PartyMenu;
 import com.github.danice123.javamon.display.screen.menu.PartyMenu.PartyMenuType;
 import com.github.danice123.javamon.logic.Game;
 import com.github.danice123.javamon.logic.ThreadUtils;
 import com.github.danice123.javamon.logic.battlesystem.Party;
+
+import dev.dankins.javamon.data.monster.instance.MonsterInstance;
 
 public class ChoosePokemonHandler extends MenuHandler {
 
@@ -18,10 +19,10 @@ public class ChoosePokemonHandler extends MenuHandler {
 	private final Party party;
 
 	private Integer chosenPokemon = null;
-	private final PokeInstance currentPokemon;
+	private final MonsterInstance currentPokemon;
 	private final boolean canCancel;
 
-	public ChoosePokemonHandler(final Game game, final PokeInstance currentPokemon,
+	public ChoosePokemonHandler(final Game game, final MonsterInstance currentPokemon,
 			final PartyMenuType type, final boolean canCancel) {
 		super(game);
 		this.currentPokemon = currentPokemon;

@@ -4,15 +4,16 @@ import java.util.List;
 
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Texture;
-import com.github.danice123.javamon.data.pokemon.PokeInstance;
 import com.google.common.collect.Lists;
+
+import dev.dankins.javamon.data.monster.instance.MonsterInstance;
 
 public class WildTrainer implements Trainer {
 
 	private final Party party;
-	private final PokeInstance wildPokemon;
+	private final MonsterInstance wildPokemon;
 
-	public WildTrainer(final PokeInstance wildPokemon) {
+	public WildTrainer(final MonsterInstance wildPokemon) {
 		this.wildPokemon = wildPokemon;
 		party = new Party();
 		party.add(wildPokemon);
@@ -50,7 +51,7 @@ public class WildTrainer implements Trainer {
 
 	@Override
 	public List<String> getPokemonTextures() {
-		return Lists.newArrayList(Integer.toString(wildPokemon.getPokemon().number));
+		return Lists.newArrayList(Integer.toString(wildPokemon.monster.number));
 	}
 
 	@Override

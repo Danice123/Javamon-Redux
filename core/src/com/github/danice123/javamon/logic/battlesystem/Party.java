@@ -2,44 +2,47 @@ package com.github.danice123.javamon.logic.battlesystem;
 
 import java.util.List;
 
-import com.github.danice123.javamon.data.pokemon.PokeInstance;
 import com.google.common.collect.Lists;
+
+import dev.dankins.javamon.data.monster.instance.MonsterInstance;
 
 public class Party {
 
-	private final PokeInstance[] party;
-	private int size = 0;
+	private final List<MonsterInstance> party;
 
 	public Party() {
-		party = new PokeInstance[6];
+		party = Lists.newArrayList();
+	}
+
+	public List<MonsterInstance> getParty() {
+		return party;
 	}
 
 	public int getSize() {
-		return size;
+		return party.size();
 	}
 
-	public boolean add(final PokeInstance pokemon) {
-		if (size < party.length) {
-			party[size] = pokemon;
-			size++;
+	public boolean add(final MonsterInstance pokemon) {
+		if (party.size() < 6) {
+			party.add(pokemon);
 			return true;
 		}
 		return false;
 	}
 
 	public void switchPokemon(final int a, final int b) {
-		final PokeInstance pA = party[a];
-		final PokeInstance pB = party[b];
-		party[a] = pB;
-		party[b] = pA;
+		final MonsterInstance pA = party.get(a);
+		final MonsterInstance pB = party.get(b);
+		party.set(a, pB);
+		party.set(b, pA);
 	}
 
-	public PokeInstance getPokemon(final int i) {
-		return party[i];
+	public MonsterInstance getPokemon(final int i) {
+		return party.get(i);
 	}
 
 	public boolean hasPokemonLeft() {
-		for (final PokeInstance pokemon : party) {
+		for (final MonsterInstance pokemon : party) {
 			if (pokemon != null && pokemon.getCurrentHealth() > 0) {
 				return true;
 			}
@@ -49,9 +52,9 @@ public class Party {
 
 	public List<String> getPokemonTextures() {
 		final List<String> textures = Lists.newArrayList();
-		for (final PokeInstance pokemon : party) {
+		for (final MonsterInstance pokemon : party) {
 			if (pokemon != null) {
-				textures.add(Integer.toString(pokemon.getPokemon().number));
+				textures.add(Integer.toString(pokemon.monster.number));
 			}
 		}
 		return textures;

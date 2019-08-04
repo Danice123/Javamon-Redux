@@ -2,11 +2,12 @@ package com.github.danice123.javamon.logic.menu;
 
 import java.lang.reflect.InvocationTargetException;
 
-import com.github.danice123.javamon.data.Inventory;
-import com.github.danice123.javamon.data.item.Item;
 import com.github.danice123.javamon.display.screen.Screen;
 import com.github.danice123.javamon.display.screen.menu.ShopMenu;
 import com.github.danice123.javamon.logic.Game;
+
+import dev.dankins.javamon.data.Inventory;
+import dev.dankins.javamon.data.item.Item;
 
 public class ShopHandler extends MenuHandler {
 

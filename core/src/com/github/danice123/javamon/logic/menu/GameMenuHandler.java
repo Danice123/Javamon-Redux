@@ -18,14 +18,14 @@ public class GameMenuHandler extends MenuHandler {
 	public GameMenuHandler(final Game game) {
 		super(game);
 		gameMenu = buildGameMenu(game.getLatestScreen());
-		gameMenu.setupMenu(new FileHandle("Player.xml").exists());
+		gameMenu.setupMenu(new FileHandle("Player.yaml").exists());
 	}
 
 	private GameMenu buildGameMenu(final Screen parent) {
 		try {
 			return gameMenuClass.getConstructor(Screen.class).newInstance(parent);
-		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException
-				| InvocationTargetException | NoSuchMethodException | SecurityException e) {
+		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException
+				| SecurityException e) {
 			throw new RuntimeException("No/Bad Game Menu class found");
 		}
 	}

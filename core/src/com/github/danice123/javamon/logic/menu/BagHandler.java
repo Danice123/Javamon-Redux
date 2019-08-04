@@ -1,22 +1,23 @@
 package com.github.danice123.javamon.logic.menu;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.List;
 import java.util.Optional;
 
-import com.github.danice123.javamon.data.Inventory;
-import com.github.danice123.javamon.data.item.Item;
-import com.github.danice123.javamon.data.item.ItemMove;
-import com.github.danice123.javamon.data.item.ItemStack;
-import com.github.danice123.javamon.data.move.Action;
-import com.github.danice123.javamon.data.pokemon.PokeInstance;
 import com.github.danice123.javamon.display.screen.Screen;
 import com.github.danice123.javamon.display.screen.menu.BagMenu;
 import com.github.danice123.javamon.display.screen.menu.BagMenu.BagMenuType;
 import com.github.danice123.javamon.display.screen.menu.PartyMenu.PartyMenuType;
 import com.github.danice123.javamon.logic.Game;
 import com.github.danice123.javamon.logic.ThreadUtils;
-import com.github.danice123.javamon.logic.script.Script;
 import com.github.danice123.javamon.logic.script.ScriptHandler;
+
+import dev.dankins.javamon.data.Inventory;
+import dev.dankins.javamon.data.item.Item;
+import dev.dankins.javamon.data.item.ItemStack;
+import dev.dankins.javamon.data.monster.attack.effect.Effect;
+import dev.dankins.javamon.data.monster.instance.MonsterInstance;
+import dev.dankins.javamon.data.script.Script;
 
 public class BagHandler extends MenuHandler implements EffectHandler {
 
@@ -34,10 +35,9 @@ public class BagHandler extends MenuHandler implements EffectHandler {
 
 	private BagMenu buildBagMenu(final Screen parent) {
 		try {
-			return bagMenuClass.getConstructor(Screen.class, BagMenuType.class).newInstance(parent,
-					BagMenuType.View);
-		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException
-				| InvocationTargetException | NoSuchMethodException | SecurityException e) {
+			return bagMenuClass.getConstructor(Screen.class, BagMenuType.class).newInstance(parent, BagMenuType.View);
+		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException
+				| SecurityException e) {
 			throw new RuntimeException("No/Bad Bag Menu class found");
 		}
 	}
@@ -62,18 +62,16 @@ public class BagHandler extends MenuHandler implements EffectHandler {
 					return true;
 				}
 				// Item with effect
-				final Optional<Action> effect = item.getEffect();
+				final Optional<List<Effect>> effect = item.getEffects();
 				if (effect.isPresent()) {
-					final ChoosePokemonHandler choosePokemonHandler = new ChoosePokemonHandler(game,
-							null, PartyMenuType.UseItem, true);
+					final ChoosePokemonHandler choosePokemonHandler = new ChoosePokemonHandler(game, null, PartyMenuType.UseItem, true);
 					choosePokemonHandler.waitAndHandle();
 					if (choosePokemonHandler.getChosenPokemon() == null) {
 						return true;
 					}
 
-					final PokeInstance target = game.getPlayer().getParty()
-							.getPokemon(choosePokemonHandler.getChosenPokemon());
-					effect.get().use(this, target, target, new ItemMove());
+					final MonsterInstance target = game.getPlayer().getParty().getPokemon(choosePokemonHandler.getChosenPokemon());
+					// effect.get().use(this, target, target, new ItemMove());
 
 					if (item.isConsumedOnUse()) {
 						if (item instanceof ItemStack) {
@@ -88,8 +86,7 @@ public class BagHandler extends MenuHandler implements EffectHandler {
 					}
 				}
 			} else {
-				final ChatboxHandler chatboxHandler = new ChatboxHandler(game,
-						"You can't use that now!");
+				final ChatboxHandler chatboxHandler = new ChatboxHandler(game, "You can't use that now!");
 				chatboxHandler.waitAndHandle();
 			}
 
@@ -107,8 +104,7 @@ public class BagHandler extends MenuHandler implements EffectHandler {
 					playerInventory.removeItem(item);
 				}
 			} else {
-				final ChatboxHandler chatboxHandler = new ChatboxHandler(game,
-						"That's too important to toss!");
+				final ChatboxHandler chatboxHandler = new ChatboxHandler(game, "That's too important to toss!");
 				chatboxHandler.waitAndHandle();
 				ThreadUtils.sleep(10);
 			}

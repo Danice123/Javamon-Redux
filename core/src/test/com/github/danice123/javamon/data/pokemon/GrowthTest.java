@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import dev.dankins.javamon.data.monster.Growth;
+
 public class GrowthTest {
 
 	@Test

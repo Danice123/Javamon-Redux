@@ -3,8 +3,9 @@ package com.github.danice123.javamon.logic.battlesystem;
 import java.util.EnumMap;
 import java.util.Map;
 
-import com.github.danice123.javamon.data.pokemon.Stat;
 import com.google.common.collect.Maps;
+
+import dev.dankins.javamon.data.monster.Stat;
 
 public class BattleStatus {
 
@@ -23,13 +24,13 @@ public class BattleStatus {
 
 	public void resetStats() {
 		stats = new EnumMap<Stat, Integer>(Stat.class);
-		stats.put(Stat.attack, 0);
-		stats.put(Stat.defense, 0);
-		stats.put(Stat.speed, 0);
-		stats.put(Stat.Sattack, 0);
-		stats.put(Stat.Sdefense, 0);
-		stats.put(Stat.accuracy, 0);
-		stats.put(Stat.evasion, 0);
+		stats.put(Stat.ATTACK, 0);
+		stats.put(Stat.DEFENSE, 0);
+		stats.put(Stat.SPEED, 0);
+		stats.put(Stat.SPECIAL_ATTACK, 0);
+		stats.put(Stat.SPECIAL_DEFENSE, 0);
+		stats.put(Stat.ACCURACY, 0);
+		stats.put(Stat.EVASION, 0);
 	}
 
 	public boolean getFlag(final String flag) {
@@ -92,7 +93,7 @@ public class BattleStatus {
 	}
 
 	public int getAccuracy() {
-		final int a = stats.get(Stat.accuracy);
+		final int a = stats.get(Stat.ACCURACY);
 		if (a < 0) {
 			return 300 / (3 - a);
 		} else {
@@ -101,7 +102,7 @@ public class BattleStatus {
 	}
 
 	public int getEvasion() {
-		final int e = stats.get(Stat.evasion);
+		final int e = stats.get(Stat.EVASION);
 		if (e < 0) {
 			return (3 - e) * 100 / 3;
 		} else {
@@ -110,7 +111,7 @@ public class BattleStatus {
 	}
 
 	public double getMultiplier(final Stat stat) {
-		if (stat == Stat.accuracy || stat == Stat.evasion) {
+		if (stat == Stat.ACCURACY || stat == Stat.EVASION) {
 			return 1.0;
 		}
 		switch (stats.get(stat)) {

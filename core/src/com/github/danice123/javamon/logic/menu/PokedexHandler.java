@@ -2,30 +2,31 @@ package com.github.danice123.javamon.logic.menu;
 
 import java.lang.reflect.InvocationTargetException;
 
-import com.github.danice123.javamon.data.pokemon.PokeDB;
 import com.github.danice123.javamon.display.screen.Screen;
 import com.github.danice123.javamon.display.screen.menu.PokedexMenu;
 import com.github.danice123.javamon.logic.Game;
+
+import dev.dankins.javamon.data.monster.MonsterList;
 
 public class PokedexHandler extends MenuHandler {
 
 	static Class<?> pokedexMenuClass;
 
 	private final PokedexMenu pokedexMenu;
-	private final PokeDB pokedb;
+	private final MonsterList monsterList;
 
 	public PokedexHandler(final Game game) {
 		super(game);
-		pokedb = game.getPokemonDB();
+		monsterList = game.getMonsterList();
 		pokedexMenu = buildPokedexMenu(game.getLatestScreen());
-		pokedexMenu.setupMenu(pokedb, game.getPlayer().getPokeData());
+		pokedexMenu.setupMenu(monsterList, game.getPlayer().getPokeData());
 	}
 
 	private PokedexMenu buildPokedexMenu(final Screen parent) {
 		try {
 			return (PokedexMenu) pokedexMenuClass.getConstructor(Screen.class).newInstance(parent);
-		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException
-				| InvocationTargetException | NoSuchMethodException | SecurityException e) {
+		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException
+				| SecurityException e) {
 			throw new RuntimeException("No/Bad Pokedex Menu class found");
 		}
 	}
@@ -39,8 +40,7 @@ public class PokedexHandler extends MenuHandler {
 	protected boolean handleResponse() {
 		switch (pokedexMenu.getMenuAction()) {
 		case View:
-			final PokedexPageHandler pokedexPageHandler = new PokedexPageHandler(game,
-					pokedb.getPokemon(pokedexMenu.getPokemonChoice()),
+			final PokedexPageHandler pokedexPageHandler = new PokedexPageHandler(game, monsterList.getMonster(pokedexMenu.getPokemonChoice()),
 					game.getPlayer().getPokeData().isCaught(pokedexMenu.getPokemonChoice()));
 			pokedexPageHandler.waitAndHandle();
 			return true;

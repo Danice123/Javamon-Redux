@@ -1,8 +1,9 @@
 package com.github.danice123.javamon.display.screen.menu;
 
-import com.github.danice123.javamon.data.pokemon.PokeInstance;
 import com.github.danice123.javamon.display.screen.Screen;
 import com.github.danice123.javamon.logic.battlesystem.BattleAction;
+
+import dev.dankins.javamon.data.monster.instance.MonsterInstance;
 
 public abstract class PlayerBattleMenu extends AbstractMenu {
 
@@ -10,7 +11,7 @@ public abstract class PlayerBattleMenu extends AbstractMenu {
 		super(parent);
 	}
 
-	public abstract void setupMenu(PokeInstance pokemon);
+	public abstract void setupMenu(MonsterInstance pokemon);
 
 	public abstract BattleAction getAction();
 }

@@ -12,8 +12,9 @@ import com.github.danice123.javamon.logic.Coord;
 import com.github.danice123.javamon.logic.Dir;
 import com.github.danice123.javamon.logic.ThreadUtils;
 import com.github.danice123.javamon.logic.entity.Player;
-import com.github.danice123.javamon.logic.script.Script;
 import com.google.common.collect.Maps;
+
+import dev.dankins.javamon.data.script.Script;
 
 public class MapHandler {
 
@@ -43,10 +44,9 @@ public class MapHandler {
 					for (final Dir dir : ADJ_DIRS) {
 						if (mapCache.get(map).getAdjMapName(dir) != null) {
 							if (mapCache.containsKey(mapCache.get(map).getAdjMapName(dir))) {
-								mapCache.get(mapCache.get(map).getAdjMapName(dir))
-										.getEntityThreads().forEach(thread -> {
-											thread.run(delta);
-										});
+								mapCache.get(mapCache.get(map).getAdjMapName(dir)).getEntityThreads().forEach(thread -> {
+									thread.run(delta);
+								});
 							}
 						}
 					}
@@ -91,12 +91,10 @@ public class MapHandler {
 					adjTweak.put(dir, new Vector3(data.getAdjMapTweak(dir), data.getY(), 0));
 					break;
 				case South:
-					adjTweak.put(dir, new Vector3(data.getAdjMapTweak(dir),
-							-mapCache.get(data.getAdjMapName(dir)).getY(), 0));
+					adjTweak.put(dir, new Vector3(data.getAdjMapTweak(dir), -mapCache.get(data.getAdjMapName(dir)).getY(), 0));
 					break;
 				case West:
-					adjTweak.put(dir, new Vector3(-mapCache.get(data.getAdjMapName(dir)).getX(),
-							data.getAdjMapTweak(dir), 0));
+					adjTweak.put(dir, new Vector3(-mapCache.get(data.getAdjMapName(dir)).getX(), data.getAdjMapTweak(dir), 0));
 					break;
 				default:
 					break;
@@ -123,8 +121,7 @@ public class MapHandler {
 		ThreadUtils.notifyOnObject(map);
 
 		// Code from world to set correct camera coords
-		camera.translate(player.getEntity().getX() / 16 - camera.position.x + 0.8f,
-				player.getEntity().getY() / 16 - camera.position.y + 0.8f);
+		camera.translate(player.getEntity().getX() / 16 - camera.position.x + 0.8f, player.getEntity().getY() / 16 - camera.position.y + 0.8f);
 		camera.update();
 
 		final Matrix4 m = camera.combined;
@@ -147,13 +144,13 @@ public class MapHandler {
 				}
 			}
 		}
-		if (!assets.isLoaded(mapFolder.path())) {
-			assets.load(mapFolder.path(), MapData.class, new MapLoader.Parameters(this));
+		if (!assets.isLoaded(mapName)) {
+			assets.load(mapName, MapData.class, new MapLoader.Parameters(this));
 		}
 		while (!assets.update()) {
 		}
 
-		final MapData data = assets.get("assets/maps/" + mapName);
+		final MapData data = assets.get(mapName);
 		mapCache.put(mapName, data);
 		return data;
 	}

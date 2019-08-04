@@ -12,9 +12,6 @@ import com.badlogic.gdx.maps.tiled.TiledMapTileLayer.Cell;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 import com.badlogic.gdx.maps.tiled.tiles.AnimatedTiledMapTile;
 import com.badlogic.gdx.math.Matrix4;
-import com.github.danice123.javamon.data.pokemon.PokeInstance;
-import com.github.danice123.javamon.loader.EntityList;
-import com.github.danice123.javamon.loader.TriggerList;
 import com.github.danice123.javamon.logic.Coord;
 import com.github.danice123.javamon.logic.Dir;
 import com.github.danice123.javamon.logic.Game;
@@ -23,10 +20,13 @@ import com.github.danice123.javamon.logic.entity.Player;
 import com.github.danice123.javamon.logic.entity.TrainerHandler;
 import com.github.danice123.javamon.logic.entity.WalkableHandler;
 import com.github.danice123.javamon.logic.entity.behavior.EntityBehaviorThread;
-import com.github.danice123.javamon.logic.script.Script;
 import com.github.danice123.javamon.logic.script.ScriptHandler;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
+
+import dev.dankins.javamon.data.map.EncounterList;
+import dev.dankins.javamon.data.map.TriggerList;
+import dev.dankins.javamon.data.script.Script;
 
 public class MapData {
 
@@ -44,11 +44,16 @@ public class MapData {
 	private final Map<Dir, Integer> tweaks;
 	private final Map<Dir, String> layerChange;
 
-	public MapData(final String mapName, final MapHandler mapHandler, final TiledMap mapData,
-			final EntityList entityList, final TriggerList triggerList,
-			final EncounterList encounterList, final Optional<Script> mapScript) {
+	public MapData(final String mapName,
+		final MapHandler mapHandler,
+		final TiledMap mapData,
+		final List<EntityHandler> entityList,
+		final TriggerList triggerList,
+		final EncounterList encounterList,
+		final Optional<Script> mapScript) {
 		this.mapName = mapName;
 		map = mapData;
+		entities = entityList;
 		encounters = encounterList;
 		this.mapScript = mapScript;
 
@@ -56,16 +61,13 @@ public class MapData {
 		renderer = new OrthogonalTiledMapRenderer(map, 1 / 16f);
 
 		// Load entities
-		entities = entityList.load(mapHandler.getAssetLoader(), mapName);
-
 		entityThreads = Lists.newArrayList();
 		for (final EntityHandler entity : entities) {
 			if (entity instanceof WalkableHandler) {
 				final WalkableHandler walkable = (WalkableHandler) entity;
 				if (walkable.getBehavior().isPresent()) {
 					walkable.getBehavior().get().setMapHandler(mapHandler);
-					final EntityBehaviorThread thread = new EntityBehaviorThread(
-							walkable.getBehavior().get(), walkable);
+					final EntityBehaviorThread thread = new EntityBehaviorThread(walkable.getBehavior().get(), walkable);
 					entityThreads.add(thread);
 				}
 			}
@@ -84,24 +86,31 @@ public class MapData {
 		layerChange = Maps.newHashMap();
 		if (map.getProperties().get("Up") != null) {
 			adjMaps.put(Dir.North, (String) map.getProperties().get("Up"));
-			tweaks.put(Dir.North, Integer.parseInt((String) map.getProperties().get("UpTweak")));
+			tweaks.put(Dir.North, getIntFromMapProperties(map.getProperties().get("UpTweak")));
 			layerChange.put(Dir.North, (String) map.getProperties().get("UpLayer"));
 		}
 		if (map.getProperties().get("Down") != null) {
 			adjMaps.put(Dir.South, (String) map.getProperties().get("Down"));
-			tweaks.put(Dir.South, Integer.parseInt((String) map.getProperties().get("DownTweak")));
+			tweaks.put(Dir.South, getIntFromMapProperties(map.getProperties().get("DownTweak")));
 			layerChange.put(Dir.South, (String) map.getProperties().get("DownLayer"));
 		}
 		if (map.getProperties().get("Left") != null) {
 			adjMaps.put(Dir.West, (String) map.getProperties().get("Left"));
-			tweaks.put(Dir.West, Integer.parseInt((String) map.getProperties().get("LeftTweak")));
+			tweaks.put(Dir.West, getIntFromMapProperties(map.getProperties().get("LeftTweak")));
 			layerChange.put(Dir.West, (String) map.getProperties().get("LeftLayer"));
 		}
 		if (map.getProperties().get("Right") != null) {
 			adjMaps.put(Dir.East, (String) map.getProperties().get("Right"));
-			tweaks.put(Dir.East, Integer.parseInt((String) map.getProperties().get("RightTweak")));
+			tweaks.put(Dir.East, getIntFromMapProperties(map.getProperties().get("RightTweak")));
 			layerChange.put(Dir.East, (String) map.getProperties().get("RightLayer"));
 		}
+	}
+
+	private Integer getIntFromMapProperties(final Object property) {
+		if (property instanceof Integer) {
+			return (Integer) property;
+		}
+		return Integer.parseInt((String) property);
 	}
 
 	public String getMapName() {
@@ -232,8 +241,7 @@ public class MapData {
 		return null;
 	}
 
-	public Optional<PokeInstance> getWildPokemonEncounter(final Coord coord, final int layer,
-			final String playerName, final long playerId) {
+	public Optional<WildEncounter> getWildPokemonEncounter(final Coord coord, final int layer) {
 
 		String encounter = null;
 		for (final MapLayer ml : map.getLayers()) {
@@ -249,7 +257,7 @@ public class MapData {
 		if (encounter == null) {
 			return Optional.empty();
 		}
-		return encounters.generateWildPokemon(encounter, playerName, playerId);
+		return encounters.generateWildPokemon(encounter);
 	}
 
 	public EntityHandler getEntity(final Coord coord, final int layer) {
@@ -296,15 +304,13 @@ public class MapData {
 
 				if (entity.getY() == coord.y
 						&& (entity.getX() - coord.x > 0 && entity.getFacing().equals(Dir.West)
-								|| entity.getX() - coord.x < 0
-										&& entity.getFacing().equals(Dir.East))
+								|| entity.getX() - coord.x < 0 && entity.getFacing().equals(Dir.East))
 						&& Math.abs(entity.getX() - coord.x) <= trainer.getRange()) {
 					return Optional.of(trainer);
 				}
 				if (entity.getX() == coord.x
 						&& (entity.getY() - coord.y > 0 && entity.getFacing().equals(Dir.South)
-								|| entity.getY() - coord.y < 0
-										&& entity.getFacing().equals(Dir.North))
+								|| entity.getY() - coord.y < 0 && entity.getFacing().equals(Dir.North))
 						&& Math.abs(entity.getY() - coord.y) <= trainer.getRange()) {
 					return Optional.of(trainer);
 				}

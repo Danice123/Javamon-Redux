@@ -1,7 +1,8 @@
 package com.github.danice123.javamon.display.screen.menu;
 
-import com.github.danice123.javamon.data.pokemon.PokeInstance;
 import com.github.danice123.javamon.display.screen.Screen;
+
+import dev.dankins.javamon.data.monster.instance.MonsterInstance;
 
 public abstract class PartyStatusMenu extends AbstractMenu {
 
@@ -9,6 +10,6 @@ public abstract class PartyStatusMenu extends AbstractMenu {
 		super(parent);
 	}
 
-	public abstract void setupMenu(PokeInstance pokemon);
+	public abstract void setupMenu(MonsterInstance pokemon);
 
 }

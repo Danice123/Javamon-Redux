@@ -8,6 +8,8 @@ import com.github.danice123.javamon.logic.script.command.Branch;
 import com.github.danice123.javamon.logic.script.command.Goto;
 import com.github.danice123.javamon.logic.script.command.Stop;
 
+import dev.dankins.javamon.data.script.Script;
+
 public class ScriptHandler implements Runnable {
 
 	private final Game game;

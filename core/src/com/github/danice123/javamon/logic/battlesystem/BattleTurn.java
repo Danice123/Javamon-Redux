@@ -2,11 +2,12 @@ package com.github.danice123.javamon.logic.battlesystem;
 
 import java.util.Random;
 
-import com.github.danice123.javamon.data.move.Move;
-import com.github.danice123.javamon.data.pokemon.PokeInstance;
-import com.github.danice123.javamon.data.pokemon.Stat;
-import com.github.danice123.javamon.data.pokemon.Status;
 import com.github.danice123.javamon.logic.menu.BattleMenuHandler;
+
+import dev.dankins.javamon.data.monster.Stat;
+import dev.dankins.javamon.data.monster.Status;
+import dev.dankins.javamon.data.monster.attack.Attack;
+import dev.dankins.javamon.data.monster.instance.MonsterInstance;
 
 public class BattleTurn {
 
@@ -18,7 +19,7 @@ public class BattleTurn {
 		this.random = random;
 	}
 
-	public void turn(final PokeInstance user, final PokeInstance target, final int move) {
+	public void turn(final MonsterInstance user, final MonsterInstance target, final int move) {
 		boolean attack = true;
 
 		// prechecks--------------------------------------------------------------
@@ -53,14 +54,11 @@ public class BattleTurn {
 		if (user.battleStatus.getFlag("isDisabled")) {
 			if (user.battleStatus.getCounter("DisableCounter") <= 0) {
 				user.battleStatus.setFlag("isDisabled", false);
-				menu.print(user.getName() + "'s "
-						+ user.getMove(user.battleStatus.getCounter("DisabledMove")).getName()
-						+ " has been un-disabled!");
+				menu.print(user.getName() + "'s " + user.moves[user.battleStatus.getCounter("DisabledMove")].name + " has been un-disabled!");
 				user.battleStatus.setFlag("DisabledMoveChosen", false);
 				user.battleStatus.setCounter("DisabledMove", 0);
 			} else if (move == user.battleStatus.getCounter("DisabledMove")) {
-				menu.print(user.getMove(user.battleStatus.getCounter("DisabledMove")).getName()
-						+ " is disabled!");
+				menu.print(user.moves[user.battleStatus.getCounter("DisabledMove")].name + " is disabled!");
 				attack = false;
 				user.battleStatus.decrementCounter("DisableCounter");
 			}
@@ -70,26 +68,26 @@ public class BattleTurn {
 		// pre-move status
 		// check--------------------------------------------------
 		switch (user.status) {
-		case Sleep:
+		case SLEEP:
 			user.sleepCounter--;
 			if (user.sleepCounter == 0) {
-				user.status = Status.None;
+				user.status = Status.NONE;
 				menu.print(user.getName() + " woke up!");
 			} else {
 				menu.print(user.getName() + " is asleep!");
 				attack = false;
 			}
 			break;
-		case Freeze:
+		case FREEZE:
 			if (random.nextInt(100) < 20) {
-				user.status = Status.None;
+				user.status = Status.NONE;
 				menu.print(user.getName() + " thawed!");
 			} else {
 				menu.print(user.getName() + " is frozen solid!");
 				attack = false;
 			}
 			break;
-		case Paralysis:
+		case PARALYSIS:
 			if (random.nextInt(100) < 25) {
 				menu.print(user.getName() + " is unable to move!");
 				attack = false;
@@ -106,10 +104,9 @@ public class BattleTurn {
 			user.CPP[move]--;
 			// Continue Attack Modifier
 			if (user.battleStatus.getFlag("MultiTurnMove")) {
-				final Move cont = Move
-						.getMove(user.getMove(user.battleStatus.lastMove).getName() + "_con");
-				menu.print(user.getName() + " uses " + cont.getName() + "!");
-				cont.getEffect().use(menu, user, target, cont);
+				final Attack cont = Attack.getMove(user.moves[user.battleStatus.lastMove].name + "_con");
+				menu.print(user.getName() + " uses " + cont.name + "!");
+				cont.use(user, target);
 				user.battleStatus.decrementCounter("MultiTurnCounter");
 				if (user.battleStatus.getCounter("MultiTurnCounter") <= 0) {
 					user.battleStatus.setFlag("MultiTurnMove", false);
@@ -123,8 +120,8 @@ public class BattleTurn {
 					}
 				}
 			} else {
-				menu.print(user.getName() + " uses " + user.getMove(move).getName() + "!");
-				user.getMove(move).getEffect().use(menu, user, target, user.getMove(move));
+				menu.print(user.getName() + " uses " + user.moves[move].name + "!");
+				user.moves[move].use(user, target);
 				user.battleStatus.lastMove = move;
 			}
 
@@ -138,17 +135,17 @@ public class BattleTurn {
 		// post-move status
 		// check-------------------------------------------------
 		switch (user.status) {
-		case Burn:
+		case BURN:
 			user.changeHealth(-(user.getHealth() / 8));
 			menu.print(user.getName() + " is hurt by its burn!");
 			menu.print("--DEBUG " + user.getHealth() / 8 + " damage");
 			break;
-		case Poison:
+		case POISON:
 			user.changeHealth(-(user.getHealth() / 8));
 			menu.print(user.getName() + " is hurt by the poison!");
 			menu.print("--DEBUG " + user.getHealth() / 8 + " damage");
 			break;
-		case Toxic:
+		case POISON_TOXIC:
 			final int n = user.battleStatus.incrementCounter("ToxicCounter");
 			user.changeHealth((int) -(user.getHealth() * (n / 16.0)));
 			menu.print(user.getName() + " is hurt by the poison!");
@@ -170,10 +167,9 @@ public class BattleTurn {
 		// postchecks-------------------------------------------------------------
 	}
 
-	private int confusionCalc(final PokeInstance user) {
-		int damage = (2 * user.getLevel() / 5 + 2) * user.getAttack() * 40 / user.getDefense() / 50
-				+ 2;
-		damage *= user.battleStatus.getMultiplier(Stat.attack);
+	private int confusionCalc(final MonsterInstance user) {
+		int damage = (2 * user.getLevel() / 5 + 2) * user.getAttack() * 40 / user.getDefense() / 50 + 2;
+		damage *= user.battleStatus.getMultiplier(Stat.ATTACK);
 		return damage;
 	}
 }

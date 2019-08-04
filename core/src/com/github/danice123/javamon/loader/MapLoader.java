@@ -7,32 +7,83 @@ import java.util.Optional;
 import com.badlogic.gdx.assets.AssetDescriptor;
 import com.badlogic.gdx.assets.AssetLoaderParameters;
 import com.badlogic.gdx.assets.AssetManager;
-import com.badlogic.gdx.assets.loaders.AsynchronousAssetLoader;
 import com.badlogic.gdx.assets.loaders.FileHandleResolver;
+import com.badlogic.gdx.assets.loaders.SynchronousAssetLoader;
+import com.badlogic.gdx.assets.loaders.resolvers.InternalFileHandleResolver;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 import com.badlogic.gdx.utils.Array;
-import com.github.danice123.javamon.logic.map.EncounterData;
-import com.github.danice123.javamon.logic.map.EncounterList;
+import com.github.danice123.javamon.logic.entity.EntityHandler;
 import com.github.danice123.javamon.logic.map.MapData;
 import com.github.danice123.javamon.logic.map.MapHandler;
-import com.github.danice123.javamon.logic.script.Script;
 import com.github.danice123.javamon.logic.script.ScriptException;
 import com.google.common.collect.Lists;
-import com.thoughtworks.xstream.XStream;
 
-public class MapLoader extends AsynchronousAssetLoader<MapData, MapLoader.Parameters> {
+import dev.dankins.javamon.data.map.EncounterList;
+import dev.dankins.javamon.data.map.TriggerList;
+import dev.dankins.javamon.data.script.Script;
+
+public class MapLoader extends SynchronousAssetLoader<MapData, MapLoader.Parameters> {
 
 	private final TmxMapLoader tmxMapLoader;
-	private EntityList entityList;
-	private TriggerList triggerList;
-	private EncounterList encounterList;
-	private Optional<Script> mapScript;
 
-	public MapLoader(final FileHandleResolver resolver) {
-		super(resolver);
-		tmxMapLoader = new TmxMapLoader(resolver);
+	public MapLoader() {
+		super(new MapFileResolver());
+		tmxMapLoader = new TmxMapLoader(new InternalFileHandleResolver());
+	}
+
+	@Override
+	public MapData load(final AssetManager manager, final String fileName, final FileHandle file, final Parameters parameter) {
+		Optional<Script> mapScript = Optional.empty();
+		TriggerList triggerList = new TriggerList();
+		EncounterList encounterList = new EncounterList();
+		final List<EntityHandler> entityList = Lists.newArrayList();
+		for (final FileHandle child : file.list()) {
+			if (child.name().equals("mapScript.ps")) {
+				try {
+					mapScript = Optional.of(new Script(child));
+				} catch (IOException | ScriptException e) {
+					e.printStackTrace();
+				}
+			}
+			if (child.name().equals("trigger.yaml")) {
+				triggerList = manager.get(file.name(), TriggerList.class);
+			}
+			if (child.name().equals("encounter.yaml")) {
+				encounterList = manager.get(file.name(), EncounterList.class);
+			}
+			if (child.extension().equals("entity")) {
+				entityList.add(manager.get(child.path(), EntityHandler.class));
+			}
+		}
+
+		final TiledMap mapData = tmxMapLoader.load(file.path() + "/map.tmx");
+		return new MapData(file.name(), parameter.handler, mapData, entityList, triggerList, encounterList, mapScript);
+	}
+
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@Override
+	public Array<AssetDescriptor> getDependencies(final String fileName, final FileHandle file, final Parameters parameter) {
+
+		final List<AssetDescriptor> dep = Lists.newArrayList();
+		for (final FileHandle child : file.list()) {
+			if (child.extension().equals("ps") && child.nameWithoutExtension().equals("mapScript")) {
+				dep.add(new AssetDescriptor<Script>(child, Script.class));
+			}
+			if (child.extension().equals("entity")) {
+				dep.add(new AssetDescriptor<EntityHandler>(child, EntityHandler.class));
+			}
+		}
+
+		if (file.child("trigger.yaml").exists()) {
+			dep.add(new AssetDescriptor<TriggerList>(file.name(), TriggerList.class));
+		}
+		if (file.child("encounter.yaml").exists()) {
+			dep.add(new AssetDescriptor<EncounterList>(file.name(), EncounterList.class));
+		}
+
+		return new Array(dep.toArray(new AssetDescriptor[0]));
 	}
 
 	static public class Parameters extends AssetLoaderParameters<MapData> {
@@ -44,69 +95,13 @@ public class MapLoader extends AsynchronousAssetLoader<MapData, MapLoader.Parame
 		}
 	}
 
-	@Override
-	public void loadAsync(final AssetManager manager, final String fileName, final FileHandle file,
-			final Parameters parameter) {
-		entityList = (EntityList) getEntityListXStream().fromXML(file.child("entity.lst").reader());
-		triggerList = (TriggerList) getTriggerListXStream()
-				.fromXML(file.child("trigger.lst").reader());
-		encounterList = (EncounterList) getEncounterListXStream()
-				.fromXML(file.child("encounter.lst").reader());
+	static private class MapFileResolver implements FileHandleResolver {
 
-		mapScript = Optional.empty();
-		if (file.child("mapScript.ps").exists()) {
-			try {
-				mapScript = Optional.of(new Script(file.child("mapScript.ps")));
-			} catch (IOException | ScriptException e) {
-				e.printStackTrace();
-			}
+		@Override
+		public FileHandle resolve(final String mapName) {
+			return new FileHandle("assets/maps/" + mapName);
 		}
-	}
 
-	private static XStream getEntityListXStream() {
-		final XStream s = new XStream();
-		s.alias("List", EntityList.class);
-		s.alias("Entity", EntityInfo.class);
-		s.alias("String", String.class);
-		return s;
-	}
-
-	private static XStream getTriggerListXStream() {
-		final XStream s = new XStream();
-		s.alias("List", TriggerList.class);
-		s.alias("Trigger", Trigger.class);
-		return s;
-	}
-
-	private static XStream getEncounterListXStream() {
-		final XStream s = new XStream();
-		s.alias("List", EncounterList.class);
-		s.alias("Encounter", EncounterData.class);
-		s.alias("String", String.class);
-		return s;
-	}
-
-	@Override
-	public MapData loadSync(final AssetManager manager, final String fileName,
-			final FileHandle file, final Parameters parameter) {
-		final TiledMap mapData = tmxMapLoader.load(file.path() + "/map.tmx");
-		return new MapData(file.name(), parameter.handler, mapData, entityList, triggerList,
-				encounterList, mapScript);
-	}
-
-	@SuppressWarnings({ "rawtypes", "unchecked" })
-	@Override
-	public Array<AssetDescriptor> getDependencies(final String fileName, final FileHandle file,
-			final Parameters parameter) {
-
-		final List<AssetDescriptor> dep = Lists.newArrayList();
-		for (final FileHandle script : file.list()) {
-			if (script.extension().equals("ps")
-					&& script.nameWithoutExtension().equals("mapScript")) {
-				dep.add(new AssetDescriptor<Script>(script, Script.class));
-			}
-		}
-		return new Array(dep.toArray(new AssetDescriptor[0]));
 	}
 
 }

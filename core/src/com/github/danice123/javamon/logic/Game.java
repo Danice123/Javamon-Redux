@@ -1,12 +1,12 @@
 package com.github.danice123.javamon.logic;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Optional;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Texture;
-import com.github.danice123.javamon.data.pokemon.PokeDB;
 import com.github.danice123.javamon.display.Display;
 import com.github.danice123.javamon.display.screen.Background;
 import com.github.danice123.javamon.display.screen.Loading;
@@ -19,6 +19,8 @@ import com.github.danice123.javamon.logic.map.MapHandler;
 import com.github.danice123.javamon.logic.menu.GameMenuHandler;
 import com.github.danice123.javamon.logic.script.ScriptHandler;
 
+import dev.dankins.javamon.data.monster.MonsterList;
+
 public class Game implements Runnable {
 
 	private final Display display;
@@ -28,7 +30,7 @@ public class Game implements Runnable {
 
 	private Player player;
 	private final MapHandler mapHandler;
-	private PokeDB pokemonDB;
+	private MonsterList monsterList;
 
 	// hacky
 	public boolean controlLock;
@@ -53,8 +55,8 @@ public class Game implements Runnable {
 		return mapHandler;
 	}
 
-	public PokeDB getPokemonDB() {
-		return pokemonDB;
+	public MonsterList getMonsterList() {
+		return monsterList;
 	}
 
 	public Screen getBaseScreen() {
@@ -81,9 +83,7 @@ public class Game implements Runnable {
 		final Loading load = new Loading(assets);
 		display.setScreen(load);
 		ThreadUtils.waitOnObject(load);
-
-		// Grab Pokemon database
-		pokemonDB = assets.get("assets/db/pokemon");
+		monsterList = assets.get("Pokemon");
 
 		// Setup input processer
 		Gdx.input.setInputProcessor(controlProcessor);
@@ -98,17 +98,21 @@ public class Game implements Runnable {
 		gameMenuHandler.waitAndHandle();
 
 		// Create player
-		final Optional<Spriteset> spriteset = Optional
-				.of(new Spriteset((Texture) assets.get("assets/entity/sprites/Red.png")));
+		final Optional<Spriteset> spriteset = Optional.of(new Spriteset((Texture) assets.get("assets/entity/sprites/Red.png")));
 		player = new Player(spriteset);
 		mapHandler.setPlayer(player);
 
 		// Load or new game
-		String mapName;
+		String mapName = null;
 		switch (gameMenuHandler.getAction()) {
 		case LoadGame:
-			final SaveFile sf = SaveFile.load(new File("Player.xml"));
-			mapName = player.load(sf);
+			SaveFile sf;
+			try {
+				sf = assets.objectMapper.readValue(new File("Player.yaml"), SaveFile.class);
+				mapName = player.load(assets, sf);
+			} catch (final IOException e) {
+				e.printStackTrace();
+			}
 			break;
 		case NewGame:
 			new ScriptHandler(this, assets.get("assets/scripts/Start.ps"), null).run();
@@ -129,6 +133,10 @@ public class Game implements Runnable {
 	public void saveGame() {
 		final SaveFile save = player.createSave();
 		save.mapName = mapHandler.getMap().getMapName();
-		save.save();
+		try {
+			assets.objectMapper.writeValue(new File("Player.yaml"), save);
+		} catch (final IOException e) {
+			e.printStackTrace();
+		}
 	}
 }

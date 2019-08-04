@@ -2,16 +2,23 @@ package com.github.danice123.javamon.logic.script.command;
 
 import java.util.HashMap;
 
-import com.github.danice123.javamon.data.item.Item;
+import com.badlogic.gdx.assets.AssetDescriptor;
 import com.github.danice123.javamon.logic.Game;
 import com.github.danice123.javamon.logic.entity.EntityHandler;
 import com.github.danice123.javamon.logic.script.ScriptException;
+
+import dev.dankins.javamon.data.item.Item;
 
 public class TakeItem extends Command {
 
 	@Override
 	public void execute(final Game game, final HashMap<String, String> strings, final EntityHandler target) throws ScriptException {
-		final Item item = Item.getItem(args[0]);
+		final AssetDescriptor<Item> asset = new AssetDescriptor<Item>(parseString(game, args[0], strings), Item.class);
+		if (!game.getAssets().isLoaded(asset)) {
+			game.getAssets().load(asset);
+			game.getAssets().finishLoadingAsset(asset);
+		}
+		final Item item = game.getAssets().get(asset);
 
 		int amount;
 		if (args.length > 1) {

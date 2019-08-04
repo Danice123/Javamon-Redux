@@ -1,8 +1,9 @@
 package com.github.danice123.javamon.display.screen.menu;
 
-import com.github.danice123.javamon.data.Inventory;
 import com.github.danice123.javamon.display.screen.Screen;
 import com.github.danice123.javamon.logic.entity.Player;
+
+import dev.dankins.javamon.data.Inventory;
 
 public abstract class ShopMenu extends AbstractMenu {
 

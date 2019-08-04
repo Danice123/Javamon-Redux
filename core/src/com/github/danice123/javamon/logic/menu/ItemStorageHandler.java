@@ -2,13 +2,14 @@ package com.github.danice123.javamon.logic.menu;
 
 import java.lang.reflect.InvocationTargetException;
 
-import com.github.danice123.javamon.data.Inventory;
-import com.github.danice123.javamon.data.item.Item;
-import com.github.danice123.javamon.data.item.ItemStack;
 import com.github.danice123.javamon.display.screen.Screen;
 import com.github.danice123.javamon.display.screen.menu.ItemStorageMenu;
 import com.github.danice123.javamon.logic.Game;
 import com.github.danice123.javamon.logic.ThreadUtils;
+
+import dev.dankins.javamon.data.Inventory;
+import dev.dankins.javamon.data.item.Item;
+import dev.dankins.javamon.data.item.ItemStack;
 
 public class ItemStorageHandler extends MenuHandler {
 
@@ -61,7 +62,7 @@ public class ItemStorageHandler extends MenuHandler {
 				if (chosenStack.size() <= 0) {
 					storageInventory.removeItem(chosenStack);
 				}
-				playerInventory.addItems(chosenStack.getItem(), chosenAmount);
+				playerInventory.addItems(chosenStack, chosenAmount);
 			} else {
 				storageInventory.removeItem(chosenItem);
 				playerInventory.addItem(chosenItem);
@@ -89,7 +90,7 @@ public class ItemStorageHandler extends MenuHandler {
 				if (chosenStack.size() <= 0) {
 					playerInventory.removeItem(chosenStack);
 				}
-				storageInventory.addItems(chosenStack.getItem(), chosenAmount);
+				storageInventory.addItems(chosenStack, chosenAmount);
 			} else {
 				playerInventory.removeItem(chosenItem);
 				storageInventory.addItem(chosenItem);

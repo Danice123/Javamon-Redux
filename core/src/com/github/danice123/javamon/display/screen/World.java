@@ -6,7 +6,6 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.github.danice123.javamon.data.pokemon.PokeInstance;
 import com.github.danice123.javamon.display.RenderInfo;
 import com.github.danice123.javamon.logic.ControlProcessor.Key;
 import com.github.danice123.javamon.logic.Coord;
@@ -17,10 +16,13 @@ import com.github.danice123.javamon.logic.entity.EntityHandler;
 import com.github.danice123.javamon.logic.entity.Player;
 import com.github.danice123.javamon.logic.entity.TrainerHandler;
 import com.github.danice123.javamon.logic.map.MapHandler;
+import com.github.danice123.javamon.logic.map.WildEncounter;
 import com.github.danice123.javamon.logic.menu.BattleMenuHandler;
 import com.github.danice123.javamon.logic.menu.StartMenuHandler;
-import com.github.danice123.javamon.logic.script.Script;
 import com.github.danice123.javamon.logic.script.ScriptHandler;
+
+import dev.dankins.javamon.data.monster.instance.MonsterInstance;
+import dev.dankins.javamon.data.script.Script;
 
 public class World extends Screen {
 
@@ -91,12 +93,10 @@ public class World extends Screen {
 
 	private void playerActivate() {
 		final Player player = game.getPlayer();
-		if (activateEntity(mapHandler.getMap()
-				.getEntity(player.getCoord().inDirection(player.getFacing()), player.getLayer()))) {
+		if (activateEntity(mapHandler.getMap().getEntity(player.getCoord().inDirection(player.getFacing()), player.getLayer()))) {
 			return;
 		}
-		if (activateEntity(mapHandler.getMap().getEntity(
-				player.getCoord().inDirection(player.getFacing()), player.getLayer() + 1))) {
+		if (activateEntity(mapHandler.getMap().getEntity(player.getCoord().inDirection(player.getFacing()), player.getLayer() + 1))) {
 			return;
 		}
 	}
@@ -120,38 +120,28 @@ public class World extends Screen {
 			switch (dir) {
 			case North:
 				if (player.getY() == mapHandler.getMap().getY()) {
-					player.setCoord(
-							new Coord(player.getX() - mapHandler.getMap().getAdjMapTweak(dir), 0),
-							layer);
+					player.setCoord(new Coord(player.getX() - mapHandler.getMap().getAdjMapTweak(dir), 0), layer);
 					mapHandler.loadMap(mapHandler.getMap().getAdjMapName(dir));
 					mapHandler.getMap().executeMapScript(game);
 				}
 				break;
 			case South:
 				if (player.getY() == -1) {
-					player.setCoord(
-							new Coord(player.getX() - mapHandler.getMap().getAdjMapTweak(dir),
-									mapHandler.getMapBorderBottomHeight() - 1),
-							layer);
+					player.setCoord(new Coord(player.getX() - mapHandler.getMap().getAdjMapTweak(dir), mapHandler.getMapBorderBottomHeight() - 1), layer);
 					mapHandler.loadMap(mapHandler.getMap().getAdjMapName(dir));
 					mapHandler.getMap().executeMapScript(game);
 				}
 				break;
 			case East:
 				if (player.getX() == mapHandler.getMap().getX()) {
-					player.setCoord(
-							new Coord(0, player.getY() - mapHandler.getMap().getAdjMapTweak(dir)),
-							layer);
+					player.setCoord(new Coord(0, player.getY() - mapHandler.getMap().getAdjMapTweak(dir)), layer);
 					mapHandler.loadMap(mapHandler.getMap().getAdjMapName(dir));
 					mapHandler.getMap().executeMapScript(game);
 				}
 				break;
 			case West:
 				if (player.getX() == -1) {
-					player.setCoord(
-							new Coord(mapHandler.getMapBorderLeftWidth() - 1,
-									player.getY() - mapHandler.getMap().getAdjMapTweak(dir)),
-							layer);
+					player.setCoord(new Coord(mapHandler.getMapBorderLeftWidth() - 1, player.getY() - mapHandler.getMap().getAdjMapTweak(dir)), layer);
 					mapHandler.loadMap(mapHandler.getMap().getAdjMapName(dir));
 					mapHandler.getMap().executeMapScript(game);
 				}
@@ -159,28 +149,26 @@ public class World extends Screen {
 			default:
 				break;
 			}
-			final Optional<Script> trigger = mapHandler.getMap().getTrigger(player.getCoord(),
-					player.getLayer());
+			final Optional<Script> trigger = mapHandler.getMap().getTrigger(player.getCoord(), player.getLayer());
 			if (trigger.isPresent()) {
 				new Thread(new ScriptHandler(game, trigger.get(), null)).start();
 				ThreadUtils.sleep(100);
 				return;
 			}
 
-			final Optional<TrainerHandler> trainer = mapHandler.getMap()
-					.getTrainerFacingPlayer(player.getCoord(), player.getLayer());
+			final Optional<TrainerHandler> trainer = mapHandler.getMap().getTrainerFacingPlayer(player.getCoord(), player.getLayer());
 			if (trainer.isPresent() && !player.getFlag(trainer.get().getEntity().getName())) {
 				while (trainer.get().walk(mapHandler, trainer.get().getFacing())) {
 				}
 				trainer.get().activate(game);
 			}
 
-			final Optional<PokeInstance> wildPokemonEncounter = mapHandler.getMap()
-					.getWildPokemonEncounter(player.getCoord(), player.getLayer(), player.getName(),
-							player.getPlayerId());
+			final Optional<WildEncounter> wildPokemonEncounter = mapHandler.getMap().getWildPokemonEncounter(player.getCoord(), player.getLayer());
+
 			if (wildPokemonEncounter.isPresent()) {
-				final BattleMenuHandler battleMenuHandler = new BattleMenuHandler(game,
-						game.getPlayer(), wildPokemonEncounter.get());
+				final MonsterInstance wildPokemon = new MonsterInstance(game.getMonsterList().getMonster(wildPokemonEncounter.get().monsterName),
+						wildPokemonEncounter.get().level, player.getName(), player.getPlayerId());
+				final BattleMenuHandler battleMenuHandler = new BattleMenuHandler(game, game.getPlayer(), wildPokemon);
 				ThreadUtils.makeAnonThread(new Runnable() {
 					@Override
 					public void run() {

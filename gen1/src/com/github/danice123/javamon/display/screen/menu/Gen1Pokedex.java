@@ -3,8 +3,6 @@ package com.github.danice123.javamon.display.screen.menu;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
-import com.github.danice123.javamon.data.PokeData;
-import com.github.danice123.javamon.data.pokemon.PokeDB;
 import com.github.danice123.javamon.display.RenderInfo;
 import com.github.danice123.javamon.display.screen.Screen;
 import com.github.danice123.javamon.display.screen.helper.BasicBoxContent;
@@ -17,13 +15,16 @@ import com.github.danice123.javamon.display.screen.helper.VertBox;
 import com.github.danice123.javamon.logic.ControlProcessor.Key;
 import com.github.danice123.javamon.logic.ThreadUtils;
 
+import dev.dankins.javamon.data.CollectionLibrary;
+import dev.dankins.javamon.data.monster.MonsterList;
+
 public class Gen1Pokedex extends PokedexMenu {
 
 	public static final String pokeball = "assets/gui/pokedex/pokeball.png";
 	private Texture pokeballTex;
 
-	private PokeDB pokemonDB;
-	private PokeData pokeData;
+	private MonsterList pokemonDB;
+	private CollectionLibrary pokeData;
 
 	private boolean isSubmenuOpen = false;
 	private PokedexMenuAction action;
@@ -34,7 +35,7 @@ public class Gen1Pokedex extends PokedexMenu {
 	}
 
 	@Override
-	public void setupMenu(final PokeDB pokemonDB, final PokeData pokeData) {
+	public void setupMenu(final MonsterList pokemonDB, final CollectionLibrary pokeData) {
 		this.pokemonDB = pokemonDB;
 		this.pokeData = pokeData;
 		initializeWait = false;
@@ -56,7 +57,7 @@ public class Gen1Pokedex extends PokedexMenu {
 
 		pokemonList = new ListBox(1, 27).setListSize(7);
 
-		for (int i = 1; i < pokemonDB.getNumberPokemon(); i++) {
+		for (int i = 1; i < pokemonDB.totalMonsters; i++) {
 
 			final BoxTextContent number = new BoxTextContent(getPokemonNumber(i)).setVertIndent(-8);
 			final BasicBoxContent numberBox = new BasicBoxContent(0, 0).addContent(number);
@@ -65,23 +66,17 @@ public class Gen1Pokedex extends PokedexMenu {
 			}
 
 			final BoxTextContent name = new BoxTextContent(getPokemonName(i));
-			final BasicBoxContent horzBox = new HorzBox(0, 0).setSpacing(24).addContent(numberBox)
-					.addContent(name);
+			final BasicBoxContent horzBox = new HorzBox(0, 0).setSpacing(24).addContent(numberBox).addContent(name);
 			pokemonList.addContent(horzBox);
 		}
 
 		dataPanel = new VertBox(-36, 23).setSpacing(20)
 				.addContent(new VertBox(0, 0).setSpacing(8).addContent(new BoxTextContent("Seen"))
-						.addContent(new BoxTextContent(Integer.toString(pokeData.amountSeen()))
-								.setHorzIndent(16)))
-				.addContent(
-						new VertBox(0, 0).setSpacing(8).addContent(new BoxTextContent("Own"))
-								.addContent(new BoxTextContent(
-										Integer.toString(pokeData.amountCaught()))
-												.setHorzIndent(16)));
+						.addContent(new BoxTextContent(Integer.toString(pokeData.amountSeen())).setHorzIndent(16)))
+				.addContent(new VertBox(0, 0).setSpacing(8).addContent(new BoxTextContent("Own"))
+						.addContent(new BoxTextContent(Integer.toString(pokeData.amountCaught())).setHorzIndent(16)));
 
-		submenu = new ListBox(-43, 91).setArrowIndent(10).addLine("Data").addLine("Cry")
-				.addLine("Area").addLine("Quit");
+		submenu = new ListBox(-43, 91).setArrowIndent(10).addLine("Data").addLine("Cry").addLine("Area").addLine("Quit");
 		submenu.toggleArrowHidden();
 	}
 
@@ -91,8 +86,7 @@ public class Gen1Pokedex extends PokedexMenu {
 		shape.setColor(.2f, .2f, .2f, 0f);
 		shape.rect(0, 0, ri.screenWidth, ri.screenHeight);
 		shape.setColor(1f, 1f, 1f, 0f);
-		shape.rect(1 * ri.getScale(), 1 * ri.getScale(), ri.screenWidth - 2 * ri.getScale(),
-				ri.screenHeight - 2 * ri.getScale());
+		shape.rect(1 * ri.getScale(), 1 * ri.getScale(), ri.screenWidth - 2 * ri.getScale(), ri.screenHeight - 2 * ri.getScale());
 		shape.setColor(0f, 0f, 0f, 0f);
 		shape.rect(ri.screenWidth - 45 * ri.getScale(), 0, 2 * ri.getScale(), ri.screenWidth);
 
@@ -100,14 +94,11 @@ public class Gen1Pokedex extends PokedexMenu {
 		final int yoff = 11;
 		for (int i = 0; i < 8; i++) {
 			shape.setColor(0f, 0f, 0f, 0f);
-			shape.rect(xoff - 2 * ri.getScale(), (yoff + i * 17) * ri.getScale(), 6 * ri.getScale(),
-					6 * ri.getScale());
+			shape.rect(xoff - 2 * ri.getScale(), (yoff + i * 17) * ri.getScale(), 6 * ri.getScale(), 6 * ri.getScale());
 			shape.setColor(.5f, .5f, .5f, 0f);
-			shape.rect(xoff - 1 * ri.getScale(), (yoff + i * 17 + 1) * ri.getScale(),
-					4 * ri.getScale(), 4 * ri.getScale());
+			shape.rect(xoff - 1 * ri.getScale(), (yoff + i * 17 + 1) * ri.getScale(), 4 * ri.getScale(), 4 * ri.getScale());
 			shape.setColor(1f, 1f, 1f, 0f);
-			shape.rect(xoff, (yoff + i * 17 + 1) * ri.getScale(), 2 * ri.getScale(),
-					4 * ri.getScale());
+			shape.rect(xoff, (yoff + i * 17 + 1) * ri.getScale(), 2 * ri.getScale(), 4 * ri.getScale());
 		}
 
 		shape.setColor(0f, 0f, 0f, 0f);
@@ -125,16 +116,16 @@ public class Gen1Pokedex extends PokedexMenu {
 
 	private String getPokemonName(final int i) {
 		if (pokeData.isCaught(i) || pokeData.isSeen(i)) {
-			return pokemonDB.getPokemon(i).name;
+			return pokemonDB.getMonster(i).name;
 		}
 		return "-------------------";
 	}
 
 	private String getPokemonNumber(final int i) {
-		if (pokemonDB.getPokemon(i) == null) {
+		if (pokemonDB.getMonster(i) == null) {
 			return "???";
 		}
-		return pokemonDB.getPokemon(i).getFormattedNumber();
+		return pokemonDB.getMonster(i).getFormattedNumber();
 	}
 
 	@Override

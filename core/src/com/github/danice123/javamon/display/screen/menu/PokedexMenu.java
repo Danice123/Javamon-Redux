@@ -1,8 +1,9 @@
 package com.github.danice123.javamon.display.screen.menu;
 
-import com.github.danice123.javamon.data.PokeData;
-import com.github.danice123.javamon.data.pokemon.PokeDB;
 import com.github.danice123.javamon.display.screen.Screen;
+
+import dev.dankins.javamon.data.CollectionLibrary;
+import dev.dankins.javamon.data.monster.MonsterList;
 
 public abstract class PokedexMenu extends AbstractMenu {
 
@@ -10,7 +11,7 @@ public abstract class PokedexMenu extends AbstractMenu {
 		super(parent);
 	}
 
-	public abstract void setupMenu(PokeDB pokemonDB, PokeData pokeData);
+	public abstract void setupMenu(MonsterList pokemonDB, CollectionLibrary pokeData);
 
 	public abstract PokedexMenuAction getMenuAction();
 

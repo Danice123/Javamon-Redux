@@ -1,6 +1,6 @@
 package com.github.danice123.javamon.logic.entity;
 
-import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 import com.github.danice123.javamon.display.entity.Entity;
@@ -8,8 +8,9 @@ import com.github.danice123.javamon.display.sprite.Spriteset;
 import com.github.danice123.javamon.logic.Coord;
 import com.github.danice123.javamon.logic.Dir;
 import com.github.danice123.javamon.logic.Game;
-import com.github.danice123.javamon.logic.script.Script;
 import com.github.danice123.javamon.logic.script.ScriptHandler;
+
+import dev.dankins.javamon.data.script.Script;
 
 public class EntityHandler {
 
@@ -85,7 +86,7 @@ public class EntityHandler {
 		entity.setVisible(isVisible);
 	}
 
-	public void addStrings(final HashMap<String, String> map) {
+	public void addStrings(final Map<String, String> map) {
 		if (script.isPresent()) {
 			script.get().strings.putAll(map);
 		}

@@ -4,7 +4,6 @@ import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
 import com.badlogic.gdx.utils.Align;
-import com.github.danice123.javamon.data.pokemon.Pokemon;
 import com.github.danice123.javamon.display.RenderInfo;
 import com.github.danice123.javamon.display.screen.Screen;
 import com.github.danice123.javamon.display.screen.helper.BasicBoxContent;
@@ -14,10 +13,12 @@ import com.github.danice123.javamon.display.screen.helper.VertBox;
 import com.github.danice123.javamon.logic.ControlProcessor.Key;
 import com.github.danice123.javamon.logic.ThreadUtils;
 
+import dev.dankins.javamon.data.monster.Monster;
+
 public class Gen1PokedexPage extends PokedexPageMenu {
 
 	private Texture image;
-	private Pokemon pokemon;
+	private Monster pokemon;
 	private boolean isCaught;
 
 	public Gen1PokedexPage(final Screen parent) {
@@ -26,7 +27,7 @@ public class Gen1PokedexPage extends PokedexPageMenu {
 	}
 
 	@Override
-	public void setupMenu(final Pokemon pokemon, final boolean caught) {
+	public void setupMenu(final Monster pokemon, final boolean caught) {
 		this.pokemon = pokemon;
 		isCaught = caught;
 		initializeWait = false;
@@ -42,20 +43,17 @@ public class Gen1PokedexPage extends PokedexPageMenu {
 
 		final BasicBoxContent height;
 		if (isCaught) {
-			height = new HorzBox(0, 0).setSpacing(48).addTextContent("HT")
-					.addTextContent(Integer.toString(pokemon.height) + "m");
+			height = new HorzBox(0, 0).setSpacing(48).addTextContent("HT").addTextContent(Integer.toString(pokemon.height) + "m");
 		} else {
 			height = new HorzBox(0, 0).setSpacing(48).addTextContent("HT").addTextContent("???m");
 		}
 		final BasicBoxContent weight;
 		if (isCaught) {
-			weight = new HorzBox(0, 0).setSpacing(48).addTextContent("WT")
-					.addTextContent(Integer.toString(pokemon.weight) + "lb");
+			weight = new HorzBox(0, 0).setSpacing(48).addTextContent("WT").addTextContent(Integer.toString(pokemon.weight) + "lb");
 		} else {
 			weight = new HorzBox(0, 0).setSpacing(48).addTextContent("WT").addTextContent("???lb");
 		}
-		stats = new VertBox(100, 15).addTextContent(pokemon.name).addTextContent(pokemon.species)
-				.addContent(height).addContent(weight);
+		stats = new VertBox(100, 15).addTextContent(pokemon.name).addTextContent(pokemon.species).addContent(height).addContent(weight);
 	}
 
 	@Override
@@ -65,14 +63,11 @@ public class Gen1PokedexPage extends PokedexPageMenu {
 		shape.setColor(.5f, .5f, .5f, 0f);
 		shape.rect(0, 0, ri.screenWidth, ri.screenHeight);
 		shape.setColor(0f, 0f, 0f, 0f);
-		shape.rect(5 * ri.getScale(), 5 * ri.getScale(), ri.screenWidth - 10 * ri.getScale(),
-				ri.screenHeight - 10 * ri.getScale());
+		shape.rect(5 * ri.getScale(), 5 * ri.getScale(), ri.screenWidth - 10 * ri.getScale(), ri.screenHeight - 10 * ri.getScale());
 		shape.setColor(1f, 1f, 1f, 0f);
-		shape.rect(6 * ri.getScale(), 6 * ri.getScale(), ri.screenWidth - 12 * ri.getScale(),
-				ri.screenHeight - 12 * ri.getScale());
+		shape.rect(6 * ri.getScale(), 6 * ri.getScale(), ri.screenWidth - 12 * ri.getScale(), ri.screenHeight - 12 * ri.getScale());
 		shape.setColor(0f, 0f, 0f, 0f);
-		shape.rect(6 * ri.getScale(), 69 * ri.getScale(), ri.screenWidth - 12 * ri.getScale(),
-				2 * ri.getScale());
+		shape.rect(6 * ri.getScale(), 69 * ri.getScale(), ri.screenWidth - 12 * ri.getScale(), 2 * ri.getScale());
 
 		final int xoff = 11;
 		final int yoff = 69 * ri.getScale();
@@ -81,14 +76,11 @@ public class Gen1PokedexPage extends PokedexPageMenu {
 				continue;
 			}
 			shape.setColor(0f, 0f, 0f, 0f);
-			shape.rect((xoff + i * 17) * ri.getScale(), yoff - 2 * ri.getScale(), 6 * ri.getScale(),
-					6 * ri.getScale());
+			shape.rect((xoff + i * 17) * ri.getScale(), yoff - 2 * ri.getScale(), 6 * ri.getScale(), 6 * ri.getScale());
 			shape.setColor(.5f, .5f, .5f, 0f);
-			shape.rect((xoff + i * 17 + 1) * ri.getScale(), yoff - 1 * ri.getScale(),
-					4 * ri.getScale(), 4 * ri.getScale());
+			shape.rect((xoff + i * 17 + 1) * ri.getScale(), yoff - 1 * ri.getScale(), 4 * ri.getScale(), 4 * ri.getScale());
 			shape.setColor(1f, 1f, 1f, 0f);
-			shape.rect((xoff + i * 17 + 1) * ri.getScale(), yoff, 4 * ri.getScale(),
-					2 * ri.getScale());
+			shape.rect((xoff + i * 17 + 1) * ri.getScale(), yoff, 4 * ri.getScale(), 2 * ri.getScale());
 		}
 		shape.end();
 
@@ -96,18 +88,14 @@ public class Gen1PokedexPage extends PokedexPageMenu {
 		stats.render(ri, batch, 0, 0);
 
 		if (isCaught) {
-			ri.font.draw(batch, pokemon.description.replace('\n', ' '), 10 * ri.getScale(),
-					60 * ri.getScale(), 220 * ri.getScale(), Align.left, true);
+			ri.font.draw(batch, pokemon.description.replace('\n', ' '), 10 * ri.getScale(), 60 * ri.getScale(), 220 * ri.getScale(), Align.left, true);
 		}
 
 		final int centerX = 50 * ri.getScale() - image.getWidth() * ri.getScale() / 2;
-		final int centerY = ri.screenHeight - 40 * ri.getScale()
-				- image.getHeight() * ri.getScale() / 2;
-		batch.draw(image, centerX, centerY, image.getWidth() * ri.getScale(),
-				image.getHeight() * ri.getScale(), 0, 0, image.getWidth(), image.getHeight(), true,
-				false);
-		ri.font.draw(batch, "No." + pokemon.getFormattedNumber(), 25 * ri.getScale(),
-				ri.screenHeight - 75 * ri.getScale());
+		final int centerY = ri.screenHeight - 40 * ri.getScale() - image.getHeight() * ri.getScale() / 2;
+		batch.draw(image, centerX, centerY, image.getWidth() * ri.getScale(), image.getHeight() * ri.getScale(), 0, 0, image.getWidth(), image.getHeight(),
+				true, false);
+		ri.font.draw(batch, "No." + pokemon.getFormattedNumber(), 25 * ri.getScale(), ri.screenHeight - 75 * ri.getScale());
 		batch.end();
 	}
 

@@ -1,6 +1,6 @@
 package com.github.danice123.javamon.logic.battlesystem;
 
-import com.github.danice123.javamon.data.item.Item;
+import dev.dankins.javamon.data.item.Item;
 
 public class BattleAction {
 

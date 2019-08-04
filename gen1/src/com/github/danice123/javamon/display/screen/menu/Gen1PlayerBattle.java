@@ -1,7 +1,6 @@
 package com.github.danice123.javamon.display.screen.menu;
 
 import com.badlogic.gdx.assets.AssetManager;
-import com.github.danice123.javamon.data.pokemon.PokeInstance;
 import com.github.danice123.javamon.display.RenderInfo;
 import com.github.danice123.javamon.display.screen.Screen;
 import com.github.danice123.javamon.logic.ControlProcessor.Key;
@@ -9,9 +8,11 @@ import com.github.danice123.javamon.logic.ThreadUtils;
 import com.github.danice123.javamon.logic.battlesystem.BattleAction;
 import com.github.danice123.javamon.logic.battlesystem.BattleAction.BattleActionEnum;
 
+import dev.dankins.javamon.data.monster.instance.MonsterInstance;
+
 public class Gen1PlayerBattle extends PlayerBattleMenu {
 
-	private PokeInstance pokemon;
+	private MonsterInstance pokemon;
 
 	private int index = 0;
 	private int mindex = 0;
@@ -24,7 +25,7 @@ public class Gen1PlayerBattle extends PlayerBattleMenu {
 	}
 
 	@Override
-	public void setupMenu(final PokeInstance pokemon) {
+	public void setupMenu(final MonsterInstance pokemon) {
 		this.pokemon = pokemon;
 	}
 
@@ -41,27 +42,20 @@ public class Gen1PlayerBattle extends PlayerBattleMenu {
 		batch.begin();
 
 		if (isMoveMenuOpen) {
-			ri.border.drawBox(batch, 50 * ri.getScale(), 0, ri.screenWidth - 50 * ri.getScale(),
-					50 * ri.getScale());
+			ri.border.drawBox(batch, 50 * ri.getScale(), 0, ri.screenWidth - 50 * ri.getScale(), 50 * ri.getScale());
 			for (int i = 0; i < pokemon.getMoveAmount(); i++) {
-				ri.font.draw(batch, pokemon.getMove(i).getName(), (50 + 20) * ri.getScale(),
-						(15 + 9 * (3 - i)) * ri.getScale());
+				ri.font.draw(batch, pokemon.moves[i].name, (50 + 20) * ri.getScale(), (15 + 9 * (3 - i)) * ri.getScale());
 			}
-			batch.draw(ri.arrow.rightArrow, (50 + 9) * ri.getScale(),
-					(6 + 9 * (3 - mindex)) * ri.getScale(),
-					ri.arrow.rightArrow.getRegionWidth() * ri.getScale(),
-					ri.arrow.rightArrow.getRegionHeight() * ri.getScale());
+			batch.draw(ri.arrow.rightArrow, (50 + 9) * ri.getScale(), (6 + 9 * (3 - mindex)) * ri.getScale(),
+					ri.arrow.rightArrow.getRegionWidth() * ri.getScale(), ri.arrow.rightArrow.getRegionHeight() * ri.getScale());
 		} else {
-			ri.border.drawBox(batch, 110 * ri.getScale(), 0, ri.screenWidth - 110 * ri.getScale(),
-					50 * ri.getScale());
+			ri.border.drawBox(batch, 110 * ri.getScale(), 0, ri.screenWidth - 110 * ri.getScale(), 50 * ri.getScale());
 			ri.font.draw(batch, "Fight", (110 + 20) * ri.getScale(), 40 * ri.getScale());
 			ri.font.draw(batch, "PKMN", (110 + 80) * ri.getScale(), 40 * ri.getScale());
 			ri.font.draw(batch, "Item", (110 + 20) * ri.getScale(), 20 * ri.getScale());
 			ri.font.draw(batch, "Run", (110 + 80) * ri.getScale(), 20 * ri.getScale());
-			batch.draw(ri.arrow.rightArrow, (110 + 9 + 60 * (index % 2)) * ri.getScale(),
-					(31 - 20 * (index / 2)) * ri.getScale(),
-					ri.arrow.rightArrow.getRegionWidth() * ri.getScale(),
-					ri.arrow.rightArrow.getRegionHeight() * ri.getScale());
+			batch.draw(ri.arrow.rightArrow, (110 + 9 + 60 * (index % 2)) * ri.getScale(), (31 - 20 * (index / 2)) * ri.getScale(),
+					ri.arrow.rightArrow.getRegionWidth() * ri.getScale(), ri.arrow.rightArrow.getRegionHeight() * ri.getScale());
 		}
 		batch.end();
 	}

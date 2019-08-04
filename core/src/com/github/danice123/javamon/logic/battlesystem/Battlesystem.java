@@ -3,16 +3,14 @@ package com.github.danice123.javamon.logic.battlesystem;
 import java.util.Collection;
 import java.util.Random;
 
-import com.github.danice123.javamon.data.item.ItemMove;
-import com.github.danice123.javamon.data.move.Action;
-import com.github.danice123.javamon.data.move.Move;
-import com.github.danice123.javamon.data.pokemon.PokeInstance;
-import com.github.danice123.javamon.data.pokemon.PokeInstance.Levelup;
-import com.github.danice123.javamon.data.pokemon.Stat;
-import com.github.danice123.javamon.data.pokemon.Status;
 import com.github.danice123.javamon.logic.RandomNumberGenerator;
 import com.github.danice123.javamon.logic.entity.Player;
 import com.github.danice123.javamon.logic.menu.BattleMenuHandler;
+
+import dev.dankins.javamon.data.monster.Stat;
+import dev.dankins.javamon.data.monster.Status;
+import dev.dankins.javamon.data.monster.instance.MonsterInstance;
+import dev.dankins.javamon.data.monster.instance.MonsterInstance.Levelup;
 
 public class Battlesystem implements Runnable {
 
@@ -48,11 +46,11 @@ public class Battlesystem implements Runnable {
 		return enemy;
 	}
 
-	public PokeInstance getPlayerPokemon() {
+	public MonsterInstance getPlayerPokemon() {
 		return player.getParty().getPokemon(pUsed[0]);
 	}
 
-	public PokeInstance getEnemyPokemon() {
+	public MonsterInstance getEnemyPokemon() {
 		return enemy.getParty().getPokemon(pUsed[1]);
 	}
 
@@ -70,7 +68,7 @@ public class Battlesystem implements Runnable {
 		menu.printnw("Go! " + getPlayerPokemon().getName() + "!!");
 		// menu.playerThrowPokemon();
 
-		((Player) getPlayer()).getPokeData().seen(getEnemyPokemon().getPokemon().number);
+		((Player) getPlayer()).getPokeData().seen(getEnemyPokemon().monster.number);
 
 		BattleResult result = null;
 		do {
@@ -104,8 +102,7 @@ public class Battlesystem implements Runnable {
 					pUsed[1]++;
 					getEnemyPokemon().battleStatus = new BattleStatus();
 					menu.print("Trainer threw out " + getEnemyPokemon().getName() + "!");
-					((Player) getPlayer()).getPokeData()
-							.seen(getEnemyPokemon().getPokemon().number);
+					((Player) getPlayer()).getPokeData().seen(getEnemyPokemon().monster.number);
 				} else {
 					result = BattleResult.Win;
 					break;
@@ -117,7 +114,7 @@ public class Battlesystem implements Runnable {
 		case Catch:
 			menu.print(getPlayer().getName() + " caught the " + getEnemyPokemon().getName() + "!");
 			getPlayer().getParty().add(getEnemyPokemon());
-			((Player) getPlayer()).getPokeData().caught(getEnemyPokemon().getPokemon().number);
+			((Player) getPlayer()).getPokeData().caught(getEnemyPokemon().monster.number);
 			break;
 		case Lose:
 			menu.print(getPlayer().getName() + " is out of useable Pokemon!");
@@ -132,8 +129,7 @@ public class Battlesystem implements Runnable {
 				menu.print(getPlayer().getName() + " defeated " + getEnemy().getName() + "!");
 				menu.print(getEnemy().getTrainerLossQuip());
 				getPlayer().modifyMoney(getEnemy().getWinnings());
-				menu.print(getPlayer().getName() + " got $" + getEnemy().getWinnings()
-						+ " for winning!");
+				menu.print(getPlayer().getName() + " got $" + getEnemy().getWinnings() + " for winning!");
 			}
 			break;
 		default:
@@ -156,12 +152,13 @@ public class Battlesystem implements Runnable {
 				break;
 			case Item:
 				menu.print(getPlayer().getName() + " used " + menuResponse.item.getName() + "!");
-				final Action action = menuResponse.item.getEffect().get();
-				action.use(menu, getPlayerPokemon(), getEnemyPokemon(), new ItemMove());
-
-				if (getEnemyPokemon().battleStatus.getFlag("isCaught")) {
-					return;
-				}
+				// final Action action = menuResponse.item.getEffect().get();
+				// action.use(menu, getPlayerPokemon(), getEnemyPokemon(), new
+				// ItemMove());
+				//
+				// if (getEnemyPokemon().battleStatus.getFlag("isCaught")) {
+				// return;
+				// }
 				break;
 			case Switch:
 				menu.print(getPlayerPokemon().getName() + "! Enough! Come back!");
@@ -212,42 +209,35 @@ public class Battlesystem implements Runnable {
 
 			// HACKS
 			// disable
-			if (getPlayerPokemon().battleStatus.getFlag("isDisabled")
-					&& !getPlayerPokemon().battleStatus.getFlag("DisabledMoveChosen")) {
-				getPlayerPokemon().battleStatus.setCounter("DisabledMove",
-						getPlayerPokemon().battleStatus.lastMove);
+			if (getPlayerPokemon().battleStatus.getFlag("isDisabled") && !getPlayerPokemon().battleStatus.getFlag("DisabledMoveChosen")) {
+				getPlayerPokemon().battleStatus.setCounter("DisabledMove", getPlayerPokemon().battleStatus.lastMove);
 				getPlayerPokemon().battleStatus.setFlag("DisabledMoveChosen", true);
 			}
-			if (getEnemyPokemon().battleStatus.getFlag("isDisabled")
-					&& !getEnemyPokemon().battleStatus.getFlag("DisabledMoveChosen")) {
-				getEnemyPokemon().battleStatus.setCounter("DisabledMove",
-						getEnemyPokemon().battleStatus.lastMove);
+			if (getEnemyPokemon().battleStatus.getFlag("isDisabled") && !getEnemyPokemon().battleStatus.getFlag("DisabledMoveChosen")) {
+				getEnemyPokemon().battleStatus.setCounter("DisabledMove", getEnemyPokemon().battleStatus.lastMove);
 				getEnemyPokemon().battleStatus.setFlag("DisabledMoveChosen", true);
 			}
 		} while (true);
 	}
 
-	private boolean checkFainted(final PokeInstance p) {
-		return p.status == Status.Fainted;
+	private boolean checkFainted(final MonsterInstance p) {
+		return p.status == Status.FAINTED;
 	}
 
-	private boolean isFaster(final PokeInstance one, final int oneM, final PokeInstance two,
-			final int twoM) {
-		if (one.getMove(oneM).getSpeed() == two.getMove(twoM).getSpeed()) {
+	private boolean isFaster(final MonsterInstance one, final int oneM, final MonsterInstance two, final int twoM) {
+		if (one.moves[oneM].priority == two.moves[twoM].priority) {
 			return one.getSpeed() > two.getSpeed();
 		} else {
-			return one.getMove(oneM).getSpeed() > two.getMove(twoM).getSpeed();
+			return one.moves[oneM].priority > two.moves[twoM].priority;
 		}
 	}
 
 	private void handleLeveling() {
-		final int exp = (int) Math
-				.round(getEnemyPokemon().getPokemon().baseExp * getEnemyPokemon().getLevel() / 7.0);
+		final int exp = (int) Math.round(getEnemyPokemon().monster.baseExp * getEnemyPokemon().getLevel() / 7.0);
 		menu.print(getPlayerPokemon().getName() + " gained " + exp + " EXP. Points!");
 		for (final Stat v : Stat.values()) {
-			if (getEnemyPokemon().getPokemon().effort.containsKey(v)) {
-				getPlayerPokemon().EV.put(v, getPlayerPokemon().EV.get(v)
-						+ getEnemyPokemon().getPokemon().effort.get(v));
+			if (getEnemyPokemon().monster.effort.containsKey(v)) {
+				getPlayerPokemon().EV.put(v, getPlayerPokemon().EV.get(v) + getEnemyPokemon().monster.effort.get(v));
 			}
 		}
 
@@ -257,8 +247,8 @@ public class Battlesystem implements Runnable {
 			if (levelup.movesToLearn != null) {
 				for (final String moveToLearn : levelup.movesToLearn) {
 					if (getPlayerPokemon().getMoveAmount() < 4) {
-						getPlayerPokemon().changeMove(getPlayerPokemon().getMoveAmount(),
-								Move.getMove(moveToLearn));
+						// getPlayerPokemon().changeMove(getPlayerPokemon().getMoveAmount(),
+						// Attack.getMove(moveToLearn));
 						menu.print(getPlayerPokemon().getName() + " learned " + moveToLearn + "!");
 					} else {
 						replaceMove(moveToLearn);
@@ -269,15 +259,13 @@ public class Battlesystem implements Runnable {
 	}
 
 	private void replaceMove(final String moveToLearn) {
-		if (menu.ask(getPlayerPokemon().getName() + " wants to learn " + moveToLearn + " but "
-				+ getPlayerPokemon().getName()
-				+ " already knows 4 moves! Should a move be forgotten to make space for "
-				+ moveToLearn + "?")) {
+		if (menu.ask(getPlayerPokemon().getName() + " wants to learn " + moveToLearn + " but " + getPlayerPokemon().getName()
+				+ " already knows 4 moves! Should a move be forgotten to make space for " + moveToLearn + "?")) {
 			final int ask = menu.ask("Which move should be forgotten?", getPlayerPokemon().moves);
-			final String oldMove = getPlayerPokemon().getMove(ask).getName();
-			getPlayerPokemon().changeMove(ask, Move.getMove(moveToLearn));
-			menu.print("1, 2 and... Poof! " + getPlayerPokemon().getName() + " forgot " + oldMove
-					+ " and... " + getPlayerPokemon().getName() + "learned " + moveToLearn + "!");
+			final String oldMove = getPlayerPokemon().moves[ask].name;
+			// getPlayerPokemon().changeMove(ask, Attack.getMove(moveToLearn));
+			menu.print("1, 2 and... Poof! " + getPlayerPokemon().getName() + " forgot " + oldMove + " and... " + getPlayerPokemon().getName() + "learned "
+					+ moveToLearn + "!");
 		} else if (menu.ask("Stop learning " + moveToLearn + "?")) {
 			menu.print(getPlayerPokemon().getName() + " did not learn " + moveToLearn + ".");
 		} else {
