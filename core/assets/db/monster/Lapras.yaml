@@ -1,0 +1,59 @@
+---
+number: 131
+name: Lapras
+types:
+- WATER
+- ICE
+baseStats:
+  HEALTH: 130
+  ATTACK: 85
+  DEFENSE: 80
+  SPECIAL_ATTACK: 85
+  SPECIAL_DEFENSE: 95
+  SPEED: 60
+abilities:
+- Water Absorb
+- Shell Armor
+dreamAbility: Hydration
+learnableAttacks:
+  16:
+  - Sing
+  1:
+  - Growl
+  - Water Gun
+  20:
+  - Mist
+  38:
+  - Ice Beam
+  25:
+  - Body Slam
+  46:
+  - Hydro Pump
+  31:
+  - Confuse Ray
+genderRatio: HALF_FEMALE
+genus:
+- Monster
+- Water
+hatchCounter: 40
+baseExp: 187
+effort:
+  HEALTH: 2
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Slow
+species: Transport
+description: |-
+  It loves crossing the sea with
+  people and Pok�mon on its back.
+  It understands human speech.
+height: 25
+weight: 2200
+color: Blue
+shape: Fish
+habitat: Sea

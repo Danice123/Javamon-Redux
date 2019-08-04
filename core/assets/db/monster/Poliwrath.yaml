@@ -1,0 +1,52 @@
+---
+number: 62
+name: Poliwrath
+types:
+- WATER
+- FIGHTING
+baseStats:
+  HEALTH: 90
+  ATTACK: 85
+  DEFENSE: 95
+  SPECIAL_ATTACK: 70
+  SPECIAL_DEFENSE: 90
+  SPEED: 70
+abilities:
+- Water Absorb
+- Damp
+dreamAbility: Swift Swim
+learnableAttacks:
+  16:
+  - Hypnosis
+  1:
+  - Double Slap
+  - Body Slam
+  - Water Gun
+  - Hypnosis
+  19:
+  - Water Gun
+genderRatio: HALF_FEMALE
+genus:
+- Water
+hatchCounter: 20
+baseExp: 225
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 3
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium_slow
+species: Tadpole
+description: |-
+  With its extremely tough muscles,
+  it can keep swimming in the Pacific
+  Ocean without resting.
+height: 13
+weight: 540
+color: Blue
+shape: Humanoid
+habitat: Waters_Edge

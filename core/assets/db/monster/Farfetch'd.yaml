@@ -1,0 +1,57 @@
+---
+number: 83
+name: Farfetch'd
+types:
+- NORMAL
+- FLYING
+baseStats:
+  HEALTH: 52
+  ATTACK: 65
+  DEFENSE: 55
+  SPECIAL_ATTACK: 58
+  SPECIAL_DEFENSE: 62
+  SPEED: 60
+abilities:
+- Keen Eye
+- Inner Focus
+dreamAbility: Defiant
+learnableAttacks:
+  1:
+  - Sand Attack
+  - Peck
+  39:
+  - Slash
+  23:
+  - Swords Dance
+  7:
+  - Leer
+  31:
+  - Agility
+  15:
+  - Fury Attack
+genderRatio: HALF_FEMALE
+genus:
+- Flying
+- Field
+hatchCounter: 20
+baseExp: 123
+effort:
+  HEALTH: 0
+  ATTACK: 1
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium
+species: Wild Duck
+description: |-
+  It can�t live without the stalk it
+  holds. That�s why it defends the
+  stalk from attackers with its life.
+height: 8
+weight: 150
+color: Brown
+shape: Wings
+habitat: Grassland

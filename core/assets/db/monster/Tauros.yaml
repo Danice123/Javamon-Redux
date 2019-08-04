@@ -1,0 +1,54 @@
+---
+number: 128
+name: Tauros
+types:
+- NORMAL
+baseStats:
+  HEALTH: 75
+  ATTACK: 100
+  DEFENSE: 95
+  SPECIAL_ATTACK: 40
+  SPECIAL_DEFENSE: 70
+  SPEED: 110
+abilities:
+- Intimidate
+- Anger Point
+dreamAbility: Sheer Force
+learnableAttacks:
+  1:
+  - Tackle
+  51:
+  - Take Down
+  35:
+  - Leer
+  21:
+  - Stomp
+  28:
+  - Tail Whip
+  44:
+  - Rage
+genderRatio: NEVER_FEMALE
+genus:
+- Field
+hatchCounter: 20
+baseExp: 172
+effort:
+  HEALTH: 0
+  ATTACK: 1
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 1
+captureRate: 45
+baseHappiness: 70
+growthRate: Slow
+species: Wild Bull
+description: |-
+  Once it takes aim at its foe, it
+  makes a headlong charge. It is
+  famous for its violent nature.
+height: 14
+weight: 884
+color: Brown
+shape: Quadruped
+habitat: Grassland

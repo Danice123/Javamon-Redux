@@ -1,0 +1,15 @@
+---
+name: Pin Missile
+type: BUG
+uses: 20
+accuracy: 95
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Multiple
+  min: 2
+  max: 5
+  effects:
+  - effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+    power: 25
+    damageType: PHYSICAL

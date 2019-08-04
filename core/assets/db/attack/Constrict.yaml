@@ -1,0 +1,19 @@
+---
+name: Constrict
+type: NORMAL
+uses: 35
+accuracy: 100
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+  power: 10
+  damageType: PHYSICAL
+  contact: true
+- effect: dev.dankins.javamon.data.monster.attack.effect.Chance
+  chance: 10
+  effects:
+  - effect: dev.dankins.javamon.data.monster.attack.effect.StatEffect
+    target: TARGET
+    stat: SPEED
+    level: -1

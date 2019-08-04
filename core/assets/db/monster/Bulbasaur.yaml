@@ -1,0 +1,60 @@
+---
+number: 1
+name: Bulbasaur
+types:
+- GRASS
+- POISON
+baseStats:
+  HEALTH: 45
+  ATTACK: 49
+  DEFENSE: 49
+  SPECIAL_ATTACK: 65
+  SPECIAL_DEFENSE: 65
+  SPEED: 45
+abilities:
+- Overgrow
+dreamAbility: Chlorophyll
+learnableAttacks:
+  48:
+  - Solar Beam
+  1:
+  - Tackle
+  - Growl
+  34:
+  - Growth
+  20:
+  - Poison Powder
+  7:
+  - Leech Seed
+  41:
+  - Sleep Powder
+  27:
+  - Razor Leaf
+  13:
+  - Vine Whip
+genderRatio: FEMALE_18
+genus:
+- Monster
+- Grass
+hatchCounter: 20
+baseExp: 64
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 1
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium_slow
+species: Seed
+description: |-
+  For some time after its birth, it
+  grows by gaining nourishment from
+  the seed on its back.
+height: 7
+weight: 69
+color: Green
+shape: Quadruped
+habitat: Grassland

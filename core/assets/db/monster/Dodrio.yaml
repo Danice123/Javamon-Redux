@@ -1,0 +1,59 @@
+---
+number: 85
+name: Dodrio
+types:
+- NORMAL
+- FLYING
+baseStats:
+  HEALTH: 60
+  ATTACK: 110
+  DEFENSE: 70
+  SPECIAL_ATTACK: 60
+  SPECIAL_DEFENSE: 60
+  SPEED: 100
+abilities:
+- Run Away
+- Early Bird
+dreamAbility: Tangled Feet
+learnableAttacks:
+  1:
+  - Fury Attack
+  - Growl
+  - Peck
+  51:
+  - Agility
+  20:
+  - Growl
+  39:
+  - Rage
+  24:
+  - Fury Attack
+  45:
+  - Tri Attack
+  30:
+  - Drill Peck
+genderRatio: HALF_FEMALE
+genus:
+- Flying
+hatchCounter: 20
+baseExp: 161
+effort:
+  HEALTH: 0
+  ATTACK: 2
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium
+species: Triple Bird
+description: |-
+  When Doduo evolves into this odd
+  breed, one of its heads splits into
+  two. It runs at nearly 40 mph.
+height: 18
+weight: 852
+color: Brown
+shape: Legs
+habitat: Grassland

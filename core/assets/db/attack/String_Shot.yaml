@@ -1,0 +1,12 @@
+---
+name: String Shot
+type: BUG
+uses: 40
+accuracy: 95
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.StatEffect
+  target: TARGET
+  stat: SPEED
+  level: -1

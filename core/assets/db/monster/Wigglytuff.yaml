@@ -1,0 +1,46 @@
+---
+number: 40
+name: Wigglytuff
+types:
+- NORMAL
+baseStats:
+  HEALTH: 140
+  ATTACK: 70
+  DEFENSE: 45
+  SPECIAL_ATTACK: 75
+  SPECIAL_DEFENSE: 50
+  SPEED: 45
+abilities:
+- Cute Charm
+dreamAbility: Frisk
+learnableAttacks:
+  1:
+  - Double Slap
+  - Sing
+  - Disable
+  - Defense Curl
+genderRatio: FEMALE_34
+genus:
+- Fairy
+hatchCounter: 10
+baseExp: 191
+effort:
+  HEALTH: 3
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 50
+baseHappiness: 70
+growthRate: Fast
+species: Balloon
+description: |-
+  Its fine fur feels sublime to the
+  touch. It can expand its body by
+  inhaling air.
+height: 10
+weight: 120
+color: Pink
+shape: Humanoid
+habitat: Grassland

@@ -1,0 +1,57 @@
+---
+number: 53
+name: Persian
+types:
+- NORMAL
+baseStats:
+  HEALTH: 65
+  ATTACK: 70
+  DEFENSE: 60
+  SPECIAL_ATTACK: 65
+  SPECIAL_DEFENSE: 65
+  SPEED: 115
+abilities:
+- Limber
+- Technician
+dreamAbility: Unnerve
+learnableAttacks:
+  17:
+  - Pay Day
+  1:
+  - Scratch
+  - Bite
+  - Growl
+  - Screech
+  51:
+  - Slash
+  37:
+  - Fury Swipes
+  24:
+  - Screech
+  12:
+  - Bite
+genderRatio: HALF_FEMALE
+genus:
+- Field
+hatchCounter: 20
+baseExp: 154
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 2
+captureRate: 90
+baseHappiness: 70
+growthRate: Medium
+species: Classy Cat
+description: |-
+  A very haughty Pok�mon. Among
+  fans, the size of the jewel in its
+  forehead is a topic of much talk.
+height: 10
+weight: 320
+color: Yellow
+shape: Quadruped
+habitat: Urban

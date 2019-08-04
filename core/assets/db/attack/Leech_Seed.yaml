@@ -1,0 +1,12 @@
+---
+name: Leech Seed
+type: GRASS
+uses: 10
+accuracy: 90
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.SetFlag
+  target: TARGET
+  flag: isSeeded
+  text: $target has been seeded!

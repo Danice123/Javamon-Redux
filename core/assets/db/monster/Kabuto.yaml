@@ -1,0 +1,55 @@
+---
+number: 140
+name: Kabuto
+types:
+- ROCK
+- WATER
+baseStats:
+  HEALTH: 30
+  ATTACK: 80
+  DEFENSE: 90
+  SPECIAL_ATTACK: 55
+  SPECIAL_DEFENSE: 45
+  SPEED: 55
+abilities:
+- Swift Swim
+- Battle Armor
+dreamAbility: Weak Armor
+learnableAttacks:
+  1:
+  - Scratch
+  - Harden
+  49:
+  - Hydro Pump
+  34:
+  - Absorb
+  39:
+  - Slash
+  44:
+  - Leer
+genderRatio: FEMALE_18
+genus:
+- Water
+- Shellfish
+hatchCounter: 30
+baseExp: 71
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 1
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium
+species: Shellfish
+description: |-
+  It is thought to have inhabited
+  beaches 300 million years ago.
+  It is protected by a stiff shell.
+height: 5
+weight: 115
+color: Brown
+shape: Armor
+habitat: Sea

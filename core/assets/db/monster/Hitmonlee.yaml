@@ -1,0 +1,55 @@
+---
+number: 106
+name: Hitmonlee
+types:
+- FIGHTING
+baseStats:
+  HEALTH: 50
+  ATTACK: 120
+  DEFENSE: 53
+  SPECIAL_ATTACK: 35
+  SPECIAL_DEFENSE: 110
+  SPEED: 87
+abilities:
+- Limber
+- Reckless
+dreamAbility: Unburden
+learnableAttacks:
+  48:
+  - Hi Jump Kick
+  1:
+  - Double Kick
+  - Meditate
+  33:
+  - Rolling Kick
+  53:
+  - Mega Kick
+  38:
+  - Jump Kick
+  43:
+  - Focus Energy
+genderRatio: NEVER_FEMALE
+genus:
+- Humanoid
+hatchCounter: 25
+baseExp: 159
+effort:
+  HEALTH: 0
+  ATTACK: 2
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium
+species: Kicking
+description: |-
+  Its legs can stretch double.
+  First-time foes are startled by
+  its extensible reach.
+height: 15
+weight: 498
+color: Brown
+shape: Humanoid
+habitat: Urban

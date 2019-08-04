@@ -1,0 +1,58 @@
+---
+number: 5
+name: Charmeleon
+types:
+- FIRE
+baseStats:
+  HEALTH: 58
+  ATTACK: 64
+  DEFENSE: 58
+  SPECIAL_ATTACK: 80
+  SPECIAL_DEFENSE: 65
+  SPEED: 80
+abilities:
+- Blaze
+dreamAbility: Solar Power
+learnableAttacks:
+  1:
+  - Scratch
+  - Growl
+  - Ember
+  33:
+  - Slash
+  24:
+  - Rage
+  56:
+  - Fire Spin
+  9:
+  - Ember
+  42:
+  - Flamethrower
+  15:
+  - Leer
+genderRatio: FEMALE_18
+genus:
+- Monster
+- Dragon
+hatchCounter: 20
+baseExp: 142
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 1
+  SPECIAL_DEFENSE: 0
+  SPEED: 1
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium_slow
+species: Flame
+description: |-
+  In the rocky mountains where
+  Charmeleon live, their fiery
+  tails shine at night like stars.
+height: 11
+weight: 190
+color: Red
+shape: Upright
+habitat: Mountain

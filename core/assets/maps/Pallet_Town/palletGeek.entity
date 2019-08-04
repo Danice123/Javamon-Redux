@@ -1,0 +1,12 @@
+---
+x: 10
+y: 3
+layer: 1
+facing: South
+name: PalletGeek
+type: NPC
+spriteset: fat_man
+script: $Talk
+strings:
+  text: Technology is incredible!/nYou can now store and recall items and Pokemon as data via PC!
+behavior: WanderSmall

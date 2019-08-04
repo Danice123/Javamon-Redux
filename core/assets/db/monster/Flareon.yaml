@@ -1,0 +1,63 @@
+---
+number: 136
+name: Flareon
+types:
+- FIRE
+baseStats:
+  HEALTH: 65
+  ATTACK: 130
+  DEFENSE: 60
+  SPECIAL_ATTACK: 95
+  SPECIAL_DEFENSE: 110
+  SPEED: 65
+abilities:
+- Flash Fire
+- Flash Fire
+dreamAbility: Guts
+learnableAttacks:
+  48:
+  - Rage
+  1:
+  - Sand Attack
+  - Tackle
+  - Ember
+  - Quick Attack
+  37:
+  - Tail Whip
+  54:
+  - Flamethrower
+  40:
+  - Bite
+  42:
+  - Leer
+  27:
+  - Quick Attack
+  44:
+  - Fire Spin
+  31:
+  - Ember
+genderRatio: FEMALE_18
+genus:
+- Field
+hatchCounter: 35
+baseExp: 184
+effort:
+  HEALTH: 0
+  ATTACK: 2
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium
+species: Flame
+description: |-
+  Inhaled air is heated in the flame
+  sac in its body to an intense fire
+  over 3,000 degrees Fahrenheit.
+height: 9
+weight: 250
+color: Red
+shape: Quadruped
+habitat: Urban

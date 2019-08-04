@@ -1,0 +1,60 @@
+---
+number: 49
+name: Venomoth
+types:
+- BUG
+- POISON
+baseStats:
+  HEALTH: 70
+  ATTACK: 65
+  DEFENSE: 60
+  SPECIAL_ATTACK: 90
+  SPECIAL_DEFENSE: 75
+  SPEED: 90
+abilities:
+- Shield Dust
+- Tinted Lens
+dreamAbility: Wonder Skin
+learnableAttacks:
+  1:
+  - Tackle
+  - Disable
+  - Poison Powder
+  - Leech Life
+  50:
+  - Psychic
+  38:
+  - Psybeam
+  24:
+  - Poison Powder
+  43:
+  - Sleep Powder
+  27:
+  - Leech Life
+  30:
+  - Stun Spore
+genderRatio: HALF_FEMALE
+genus:
+- Bug
+hatchCounter: 20
+baseExp: 158
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 1
+  SPECIAL_DEFENSE: 0
+  SPEED: 1
+captureRate: 75
+baseHappiness: 70
+growthRate: Medium
+species: Poison Moth
+description: |-
+  It flutters its wings to scatter
+  dustlike scales. The scales leach
+  toxins if they contact skin.
+height: 15
+weight: 125
+color: Purple
+shape: Bug_Wings
+habitat: Forest

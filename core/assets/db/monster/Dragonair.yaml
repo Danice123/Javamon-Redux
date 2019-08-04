@@ -1,0 +1,56 @@
+---
+number: 148
+name: Dragonair
+types:
+- DRAGON
+baseStats:
+  HEALTH: 61
+  ATTACK: 84
+  DEFENSE: 65
+  SPECIAL_ATTACK: 70
+  SPECIAL_DEFENSE: 70
+  SPEED: 70
+abilities:
+- Shed Skin
+dreamAbility: Marvel Scale
+learnableAttacks:
+  1:
+  - Wrap
+  - Leer
+  - Thunder Wave
+  35:
+  - Slam
+  20:
+  - Agility
+  55:
+  - Hyper Beam
+  10:
+  - Thunder Wave
+  45:
+  - Dragon Rage
+genderRatio: HALF_FEMALE
+genus:
+- Water
+- Dragon
+hatchCounter: 40
+baseExp: 147
+effort:
+  HEALTH: 0
+  ATTACK: 2
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 35
+growthRate: Slow
+species: Dragon
+description: |-
+  If its body takes on an aura, the
+  weather changes instantly. It is
+  said to live in seas and lakes.
+height: 40
+weight: 165
+color: Blue
+shape: Squiggle
+habitat: Waters_Edge

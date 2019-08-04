@@ -1,0 +1,8 @@
+---
+name: Splash
+type: NORMAL
+uses: 40
+missable: false
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Nothing

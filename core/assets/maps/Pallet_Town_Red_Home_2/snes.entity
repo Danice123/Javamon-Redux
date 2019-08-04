@@ -1,0 +1,8 @@
+---
+x: 4
+y: 3
+layer: 0
+name: SNES
+type: SIGN
+strings:
+  text: $playerName$ is playing the SNES!/n...Okay! It's time to go!

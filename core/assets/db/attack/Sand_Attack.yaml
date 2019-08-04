@@ -1,0 +1,12 @@
+---
+name: Sand Attack
+type: GROUND
+uses: 15
+accuracy: 100
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.StatEffect
+  target: TARGET
+  stat: ACCURACY
+  level: -1

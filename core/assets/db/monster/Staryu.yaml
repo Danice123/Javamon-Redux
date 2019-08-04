@@ -1,0 +1,58 @@
+---
+number: 120
+name: Staryu
+types:
+- WATER
+baseStats:
+  HEALTH: 30
+  ATTACK: 45
+  DEFENSE: 55
+  SPECIAL_ATTACK: 70
+  SPECIAL_DEFENSE: 55
+  SPEED: 85
+abilities:
+- Illuminate
+- Natural Cure
+dreamAbility: Analytic
+learnableAttacks:
+  32:
+  - Swift
+  17:
+  - Water Gun
+  1:
+  - Tackle
+  37:
+  - Minimize
+  22:
+  - Harden
+  42:
+  - Light Screen
+  27:
+  - Recover
+  47:
+  - Hydro Pump
+genderRatio: GENDERLESS
+genus:
+- Shellfish
+hatchCounter: 20
+baseExp: 68
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 1
+captureRate: 225
+baseHappiness: 70
+growthRate: Slow
+species: Star Shape
+description: |-
+  If its body is torn, it can grow
+  back if the red core remains.
+  The core flashes at midnight.
+height: 8
+weight: 345
+color: Brown
+shape: Blob
+habitat: Sea

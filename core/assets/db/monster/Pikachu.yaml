@@ -1,0 +1,55 @@
+---
+number: 25
+name: Pikachu
+types:
+- ELECTRIC
+baseStats:
+  HEALTH: 35
+  ATTACK: 55
+  DEFENSE: 30
+  SPECIAL_ATTACK: 50
+  SPECIAL_DEFENSE: 40
+  SPEED: 90
+abilities:
+- Static
+dreamAbility: Lightningrod
+learnableAttacks:
+  16:
+  - Quick Attack
+  1:
+  - Growl
+  - Thunder Shock
+  33:
+  - Agility
+  9:
+  - Thunder Wave
+  26:
+  - Swift
+  43:
+  - Thunder
+genderRatio: HALF_FEMALE
+genus:
+- Field
+- Fairy
+hatchCounter: 10
+baseExp: 105
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 2
+captureRate: 190
+baseHappiness: 70
+growthRate: Medium
+species: Mouse
+description: |-
+  It occasionally uses an electric
+  shock to recharge a fellow Pikachu
+  that is in a weakened state.
+height: 4
+weight: 60
+color: Yellow
+shape: Quadruped
+habitat: Forest

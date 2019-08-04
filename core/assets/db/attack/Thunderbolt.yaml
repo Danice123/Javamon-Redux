@@ -1,0 +1,17 @@
+---
+name: Thunderbolt
+type: ELECTRIC
+uses: 15
+accuracy: 100
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+  power: 90
+  damageType: SPECIAL
+- effect: dev.dankins.javamon.data.monster.attack.effect.Chance
+  chance: 10
+  effects:
+  - effect: dev.dankins.javamon.data.monster.attack.effect.StatusEffect
+    target: TARGET
+    status: PARALYSIS

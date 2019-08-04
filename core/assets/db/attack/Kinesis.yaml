@@ -1,0 +1,12 @@
+---
+name: Kinesis
+type: PSYCHIC
+uses: 15
+accuracy: 80
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.StatEffect
+  target: TARGET
+  stat: ACCURACY
+  level: -1

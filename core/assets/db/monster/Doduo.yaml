@@ -1,0 +1,57 @@
+---
+number: 84
+name: Doduo
+types:
+- NORMAL
+- FLYING
+baseStats:
+  HEALTH: 35
+  ATTACK: 85
+  DEFENSE: 45
+  SPECIAL_ATTACK: 35
+  SPECIAL_DEFENSE: 35
+  SPEED: 75
+abilities:
+- Run Away
+- Early Bird
+dreamAbility: Tangled Feet
+learnableAttacks:
+  1:
+  - Peck
+  20:
+  - Growl
+  36:
+  - Rage
+  24:
+  - Fury Attack
+  40:
+  - Tri Attack
+  44:
+  - Agility
+  30:
+  - Drill Peck
+genderRatio: HALF_FEMALE
+genus:
+- Flying
+hatchCounter: 20
+baseExp: 62
+effort:
+  HEALTH: 0
+  ATTACK: 1
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 190
+baseHappiness: 70
+growthRate: Medium
+species: Twin Bird
+description: |-
+  The brains in its two heads appear
+  to communicate emotions to each
+  other with a telepathic power.
+height: 14
+weight: 392
+color: Brown
+shape: Legs
+habitat: Grassland

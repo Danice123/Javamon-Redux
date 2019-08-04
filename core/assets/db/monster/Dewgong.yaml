@@ -1,0 +1,58 @@
+---
+number: 87
+name: Dewgong
+types:
+- WATER
+- ICE
+baseStats:
+  HEALTH: 90
+  ATTACK: 70
+  DEFENSE: 80
+  SPECIAL_ATTACK: 70
+  SPECIAL_DEFENSE: 95
+  SPEED: 70
+abilities:
+- Thick Fat
+- Hydration
+dreamAbility: Ice Body
+learnableAttacks:
+  1:
+  - Headbutt
+  - Growl
+  - Aurora Beam
+  50:
+  - Take Down
+  35:
+  - Aurora Beam
+  56:
+  - Ice Beam
+  44:
+  - Rest
+  30:
+  - Growl
+genderRatio: HALF_FEMALE
+genus:
+- Water
+- Field
+hatchCounter: 20
+baseExp: 166
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 2
+  SPEED: 0
+captureRate: 75
+baseHappiness: 70
+growthRate: Medium
+species: Sea Lion
+description: |-
+  In snow, the pure white coat
+  covering its body obscures it from
+  predators.
+height: 17
+weight: 1200
+color: White
+shape: Fish
+habitat: Sea

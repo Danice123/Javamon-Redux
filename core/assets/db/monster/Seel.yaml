@@ -1,0 +1,55 @@
+---
+number: 86
+name: Seel
+types:
+- WATER
+baseStats:
+  HEALTH: 65
+  ATTACK: 45
+  DEFENSE: 55
+  SPECIAL_ATTACK: 45
+  SPECIAL_DEFENSE: 70
+  SPEED: 45
+abilities:
+- Thick Fat
+- Hydration
+dreamAbility: Ice Body
+learnableAttacks:
+  1:
+  - Headbutt
+  50:
+  - Ice Beam
+  35:
+  - Aurora Beam
+  40:
+  - Rest
+  45:
+  - Take Down
+  30:
+  - Growl
+genderRatio: HALF_FEMALE
+genus:
+- Water
+- Field
+hatchCounter: 20
+baseExp: 65
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 1
+  SPEED: 0
+captureRate: 190
+baseHappiness: 70
+growthRate: Medium
+species: Sea Lion
+description: |-
+  A Pok�mon that lives on icebergs.
+  It swims in the sea using the point
+  on its head to break up ice.
+height: 11
+weight: 900
+color: White
+shape: Fish
+habitat: Sea

@@ -1,0 +1,54 @@
+---
+number: 109
+name: Koffing
+types:
+- POISON
+baseStats:
+  HEALTH: 40
+  ATTACK: 65
+  DEFENSE: 95
+  SPECIAL_ATTACK: 60
+  SPECIAL_DEFENSE: 45
+  SPEED: 35
+abilities:
+- Levitate
+dreamAbility: null
+learnableAttacks:
+  32:
+  - Sludge
+  48:
+  - Explosion
+  1:
+  - Tackle
+  - Smog
+  37:
+  - SmokeScreen
+  40:
+  - Self-Destruct
+  45:
+  - Haze
+genderRatio: HALF_FEMALE
+genus:
+- Amorphous
+hatchCounter: 20
+baseExp: 68
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 1
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 190
+baseHappiness: 70
+growthRate: Medium
+species: Poison Gas
+description: |-
+  Lighter-than-air gases in its body
+  keep it aloft. The gases not only
+  smell, they are also explosive.
+height: 6
+weight: 10
+color: Purple
+shape: Ball
+habitat: Urban

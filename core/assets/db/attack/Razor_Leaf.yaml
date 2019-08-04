@@ -1,0 +1,12 @@
+---
+name: Razor Leaf
+type: GRASS
+uses: 25
+accuracy: 95
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+  power: 55
+  damageType: PHYSICAL
+  crit: 1

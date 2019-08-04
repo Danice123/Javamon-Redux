@@ -1,0 +1,16 @@
+---
+name: Double Kick
+type: FIGHTING
+uses: 30
+accuracy: 100
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Multiple
+  min: 2
+  max: 2
+  effects:
+  - effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+    power: 30
+    damageType: PHYSICAL
+    contact: true

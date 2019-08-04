@@ -1,0 +1,58 @@
+---
+number: 29
+name: NidoranF
+types:
+- POISON
+baseStats:
+  HEALTH: 55
+  ATTACK: 47
+  DEFENSE: 52
+  SPECIAL_ATTACK: 40
+  SPECIAL_DEFENSE: 40
+  SPEED: 41
+abilities:
+- Poison Point
+- Rivalry
+dreamAbility: Hustle
+learnableAttacks:
+  1:
+  - Tackle
+  - Growl
+  36:
+  - Fury Swipes
+  21:
+  - Tail Whip
+  8:
+  - Scratch
+  43:
+  - Double Kick
+  29:
+  - Bite
+  14:
+  - Poison Sting
+genderRatio: ALWAYS_FEMALE
+genus:
+- Monster
+- Field
+hatchCounter: 20
+baseExp: 55
+effort:
+  HEALTH: 1
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 235
+baseHappiness: 70
+growthRate: Medium_slow
+species: Poison Pin
+description: |-
+  While it does not prefer to fight,
+  even one drop of the poison it
+  secretes from barbs can be fatal.
+height: 4
+weight: 70
+color: Blue
+shape: Quadruped
+habitat: Grassland

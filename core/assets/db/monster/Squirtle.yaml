@@ -1,0 +1,57 @@
+---
+number: 7
+name: Squirtle
+types:
+- WATER
+baseStats:
+  HEALTH: 44
+  ATTACK: 48
+  DEFENSE: 65
+  SPECIAL_ATTACK: 50
+  SPECIAL_DEFENSE: 64
+  SPEED: 43
+abilities:
+- Torrent
+dreamAbility: Rain Dish
+learnableAttacks:
+  1:
+  - Tackle
+  - Tail Whip
+  35:
+  - Skull Bash
+  22:
+  - Bite
+  8:
+  - Bubble
+  42:
+  - Hydro Pump
+  28:
+  - Withdraw
+  15:
+  - Water Gun
+genderRatio: FEMALE_18
+genus:
+- Monster
+- Water
+hatchCounter: 20
+baseExp: 63
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 1
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium_slow
+species: Tiny Turtle
+description: |-
+  It shelters itself in its shell,
+  then strikes back with spouts of
+  water at every opportunity.
+height: 5
+weight: 90
+color: Blue
+shape: Upright
+habitat: Waters_Edge

@@ -1,0 +1,17 @@
+---
+name: Rock Slide
+type: ROCK
+uses: 10
+accuracy: 90
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+  power: 75
+  damageType: PHYSICAL
+- effect: dev.dankins.javamon.data.monster.attack.effect.Chance
+  chance: 30
+  effects:
+  - effect: dev.dankins.javamon.data.monster.attack.effect.SetFlag
+    target: TARGET
+    flag: isFlinching

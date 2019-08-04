@@ -1,0 +1,56 @@
+---
+number: 139
+name: Omastar
+types:
+- ROCK
+- WATER
+baseStats:
+  HEALTH: 70
+  ATTACK: 60
+  DEFENSE: 125
+  SPECIAL_ATTACK: 115
+  SPECIAL_DEFENSE: 70
+  SPEED: 55
+abilities:
+- Swift Swim
+- Shell Armor
+dreamAbility: Weak Armor
+learnableAttacks:
+  1:
+  - Horn Attack
+  - Water Gun
+  - Withdraw
+  49:
+  - Hydro Pump
+  34:
+  - Horn Attack
+  39:
+  - Leer
+  44:
+  - Spike Cannon
+genderRatio: FEMALE_18
+genus:
+- Water
+- Shellfish
+hatchCounter: 30
+baseExp: 173
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 2
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium
+species: Spiral
+description: |-
+  It is thought that this Pok�mon
+  became extinct because its spiral
+  shell grew too large.
+height: 10
+weight: 350
+color: Blue
+shape: Tenticles
+habitat: Sea

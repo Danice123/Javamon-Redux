@@ -1,0 +1,57 @@
+---
+number: 4
+name: Charmander
+types:
+- FIRE
+baseStats:
+  HEALTH: 39
+  ATTACK: 52
+  DEFENSE: 43
+  SPECIAL_ATTACK: 60
+  SPECIAL_DEFENSE: 50
+  SPEED: 65
+abilities:
+- Blaze
+dreamAbility: Solar Power
+learnableAttacks:
+  1:
+  - Scratch
+  - Growl
+  38:
+  - Flamethrower
+  22:
+  - Rage
+  9:
+  - Ember
+  46:
+  - Fire Spin
+  30:
+  - Slash
+  15:
+  - Leer
+genderRatio: FEMALE_18
+genus:
+- Monster
+- Dragon
+hatchCounter: 20
+baseExp: 62
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 1
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium_slow
+species: Lizard
+description: |-
+  The fire on the tip of its tail is a
+  measure of its life. If HEALTHy,
+  its tail burns intensely.
+height: 6
+weight: 85
+color: Red
+shape: Upright
+habitat: Mountain

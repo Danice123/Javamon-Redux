@@ -1,0 +1,56 @@
+---
+number: 15
+name: Beedrill
+types:
+- BUG
+- POISON
+baseStats:
+  HEALTH: 65
+  ATTACK: 80
+  DEFENSE: 40
+  SPECIAL_ATTACK: 45
+  SPECIAL_DEFENSE: 80
+  SPEED: 75
+abilities:
+- Swarm
+dreamAbility: Sniper
+learnableAttacks:
+  16:
+  - Focus Energy
+  1:
+  - Fury Attack
+  35:
+  - Agility
+  20:
+  - Twineedle
+  25:
+  - Rage
+  12:
+  - Fury Attack
+  30:
+  - Pin Missile
+genderRatio: HALF_FEMALE
+genus:
+- Bug
+hatchCounter: 15
+baseExp: 173
+effort:
+  HEALTH: 0
+  ATTACK: 2
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 1
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium
+species: Poison Bee
+description: |-
+  Its best attack involves flying
+  around at high speed, striking with
+  poison needles, then flying off.
+height: 10
+weight: 295
+color: Yellow
+shape: Bug_Wings
+habitat: Forest

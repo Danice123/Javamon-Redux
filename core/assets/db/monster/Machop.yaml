@@ -1,0 +1,54 @@
+---
+number: 66
+name: Machop
+types:
+- FIGHTING
+baseStats:
+  HEALTH: 70
+  ATTACK: 80
+  DEFENSE: 50
+  SPECIAL_ATTACK: 35
+  SPECIAL_DEFENSE: 35
+  SPEED: 35
+abilities:
+- Guts
+- No Guard
+dreamAbility: Steadfast
+learnableAttacks:
+  32:
+  - Focus Energy
+  1:
+  - Karate Chop
+  20:
+  - Low Kick
+  39:
+  - Seismic Toss
+  25:
+  - Leer
+  46:
+  - Submission
+genderRatio: FEMALE_14
+genus:
+- Humanoid
+hatchCounter: 20
+baseExp: 61
+effort:
+  HEALTH: 0
+  ATTACK: 1
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 180
+baseHappiness: 70
+growthRate: Medium_slow
+species: Superpower
+description: |-
+  Though small in stature, it is
+  powerful enough to easily heft and
+  throw a number of Geodude at once.
+height: 8
+weight: 195
+color: Gray
+shape: Upright
+habitat: Mountain

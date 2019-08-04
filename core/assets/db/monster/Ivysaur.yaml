@@ -1,0 +1,61 @@
+---
+number: 2
+name: Ivysaur
+types:
+- GRASS
+- POISON
+baseStats:
+  HEALTH: 60
+  ATTACK: 62
+  DEFENSE: 63
+  SPECIAL_ATTACK: 80
+  SPECIAL_DEFENSE: 80
+  SPEED: 60
+abilities:
+- Overgrow
+dreamAbility: Chlorophyll
+learnableAttacks:
+  1:
+  - Tackle
+  - Growl
+  - Leech Seed
+  38:
+  - Growth
+  54:
+  - Solar Beam
+  22:
+  - Poison Powder
+  7:
+  - Leech Seed
+  13:
+  - Vine Whip
+  46:
+  - Sleep Powder
+  30:
+  - Razor Leaf
+genderRatio: FEMALE_18
+genus:
+- Monster
+- Grass
+hatchCounter: 20
+baseExp: 142
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 1
+  SPECIAL_DEFENSE: 1
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium_slow
+species: Seed
+description: |-
+  When the bud on its back starts
+  swelling, a sweet aroma wafts to
+  indicate the flower�s coming bloom.
+height: 10
+weight: 130
+color: Green
+shape: Quadruped
+habitat: Grassland

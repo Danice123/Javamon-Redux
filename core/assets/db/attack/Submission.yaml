@@ -1,0 +1,13 @@
+---
+name: Submission
+type: FIGHTING
+uses: 25
+accuracy: 80
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+  power: 80
+  damageType: PHYSICAL
+  contact: true
+  recoil: 25

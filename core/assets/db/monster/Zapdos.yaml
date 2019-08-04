@@ -1,0 +1,51 @@
+---
+number: 145
+name: Zapdos
+types:
+- ELECTRIC
+- FLYING
+baseStats:
+  HEALTH: 90
+  ATTACK: 90
+  DEFENSE: 85
+  SPECIAL_ATTACK: 125
+  SPECIAL_DEFENSE: 90
+  SPEED: 100
+abilities:
+- Pressure
+dreamAbility: Lightningrod
+learnableAttacks:
+  1:
+  - Drill Peck
+  - Thunder Shock
+  51:
+  - Thunder
+  55:
+  - Agility
+  60:
+  - Light Screen
+genderRatio: GENDERLESS
+genus:
+- Undiscovered
+hatchCounter: 80
+baseExp: 261
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 3
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 3
+baseHappiness: 35
+growthRate: Slow
+species: Electric
+description: |-
+  A legendary Pok�mon that is said
+  to live in thunderclouds. It freely
+  controls lightning bolts.
+height: 16
+weight: 526
+color: Yellow
+shape: Wings
+habitat: Rare

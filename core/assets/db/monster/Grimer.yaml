@@ -1,0 +1,57 @@
+---
+number: 88
+name: Grimer
+types:
+- POISON
+baseStats:
+  HEALTH: 80
+  ATTACK: 80
+  DEFENSE: 50
+  SPECIAL_ATTACK: 40
+  SPECIAL_DEFENSE: 50
+  SPEED: 25
+abilities:
+- Stench
+- Sticky Hold
+dreamAbility: Poison Touch
+learnableAttacks:
+  48:
+  - Screech
+  1:
+  - Pound
+  - Disable
+  33:
+  - Minimize
+  37:
+  - Sludge
+  55:
+  - Acid Armor
+  42:
+  - Harden
+  30:
+  - Poison Gas
+genderRatio: HALF_FEMALE
+genus:
+- Amorphous
+hatchCounter: 20
+baseExp: 65
+effort:
+  HEALTH: 1
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 190
+baseHappiness: 70
+growthRate: Medium
+species: Sludge
+description: |-
+  It was born when sludge in a dirty
+  stream was exposed to the moon�s
+  X-rays. It appears among filth.
+height: 9
+weight: 300
+color: Purple
+shape: Arms
+habitat: Urban

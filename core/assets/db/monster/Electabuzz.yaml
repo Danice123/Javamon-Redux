@@ -1,0 +1,54 @@
+---
+number: 125
+name: Electabuzz
+types:
+- ELECTRIC
+baseStats:
+  HEALTH: 65
+  ATTACK: 83
+  DEFENSE: 57
+  SPECIAL_ATTACK: 95
+  SPECIAL_DEFENSE: 85
+  SPEED: 105
+abilities:
+- Static
+dreamAbility: Vital Spirit
+learnableAttacks:
+  1:
+  - Leer
+  - Quick Attack
+  49:
+  - Light Screen
+  34:
+  - Thunder Shock
+  37:
+  - Screech
+  54:
+  - Thunder
+  42:
+  - Thunder Punch
+genderRatio: FEMALE_14
+genus:
+- Humanoid
+hatchCounter: 25
+baseExp: 172
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 2
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium
+species: Electric
+description: |-
+  It windmills its arms to slightly
+  boost its punches. Foes have been
+  known to escape in the meantime.
+height: 11
+weight: 300
+color: Yellow
+shape: Upright
+habitat: Grassland

@@ -1,0 +1,55 @@
+---
+number: 90
+name: Shellder
+types:
+- WATER
+baseStats:
+  HEALTH: 30
+  ATTACK: 65
+  DEFENSE: 100
+  SPECIAL_ATTACK: 45
+  SPECIAL_DEFENSE: 25
+  SPEED: 40
+abilities:
+- Shell Armor
+- Skill Link
+dreamAbility: Overcoat
+learnableAttacks:
+  1:
+  - Tackle
+  - Withdraw
+  50:
+  - Ice Beam
+  18:
+  - Supersonic
+  39:
+  - Leer
+  23:
+  - Clamp
+  30:
+  - Aurora Beam
+genderRatio: HALF_FEMALE
+genus:
+- Shellfish
+hatchCounter: 20
+baseExp: 61
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 1
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 190
+baseHappiness: 70
+growthRate: Slow
+species: Bivalve
+description: |-
+  It swims backward by opening and
+  closing its two shells. Its large
+  tongue is always kept hanging out.
+height: 3
+weight: 40
+color: Purple
+shape: Ball
+habitat: Sea

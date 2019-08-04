@@ -1,0 +1,12 @@
+---
+name: Leer
+type: NORMAL
+uses: 30
+accuracy: 100
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.StatEffect
+  target: TARGET
+  stat: DEFENSE
+  level: -1

@@ -1,0 +1,59 @@
+---
+number: 82
+name: Magneton
+types:
+- ELECTRIC
+- STEEL
+baseStats:
+  HEALTH: 50
+  ATTACK: 60
+  DEFENSE: 95
+  SPECIAL_ATTACK: 120
+  SPECIAL_DEFENSE: 70
+  SPEED: 70
+abilities:
+- Magnet Pull
+- Sturdy
+dreamAbility: Analytic
+learnableAttacks:
+  1:
+  - Tackle
+  - Sonic Boom
+  - Thunder Shock
+  21:
+  - Sonic Boom
+  38:
+  - Thunder Wave
+  54:
+  - Screech
+  25:
+  - Thunder Shock
+  29:
+  - Supersonic
+  46:
+  - Swift
+genderRatio: GENDERLESS
+genus:
+- Mineral
+hatchCounter: 20
+baseExp: 163
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 2
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 60
+baseHappiness: 70
+growthRate: Medium
+species: Magnet
+description: |-
+  Many mysteriously appear when more
+  sunspots dot the sun. They stop
+  TV sets from displaying properly.
+height: 10
+weight: 600
+color: Gray
+shape: Heads
+habitat: Rough_Terrain

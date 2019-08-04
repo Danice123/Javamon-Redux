@@ -1,0 +1,44 @@
+---
+number: 14
+name: Kakuna
+types:
+- BUG
+- POISON
+baseStats:
+  HEALTH: 45
+  ATTACK: 25
+  DEFENSE: 50
+  SPECIAL_ATTACK: 25
+  SPECIAL_DEFENSE: 25
+  SPEED: 35
+abilities:
+- Shed Skin
+dreamAbility: Shed Skin
+learnableAttacks:
+  1:
+  - Harden
+genderRatio: HALF_FEMALE
+genus:
+- Bug
+hatchCounter: 15
+baseExp: 72
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 2
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 120
+baseHappiness: 70
+growthRate: Medium
+species: Cocoon
+description: |-
+  While awaiting evolution, it
+  hides from predators under
+  leaves and in nooks of branches.
+height: 6
+weight: 100
+color: Yellow
+shape: Squiggle
+habitat: Forest

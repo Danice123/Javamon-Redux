@@ -1,0 +1,57 @@
+---
+number: 74
+name: Geodude
+types:
+- ROCK
+- GROUND
+baseStats:
+  HEALTH: 40
+  ATTACK: 80
+  DEFENSE: 100
+  SPECIAL_ATTACK: 30
+  SPECIAL_DEFENSE: 30
+  SPEED: 20
+abilities:
+- Rock Head
+- Sturdy
+dreamAbility: Sand Veil
+learnableAttacks:
+  16:
+  - Rock Throw
+  1:
+  - Tackle
+  36:
+  - Explosion
+  21:
+  - Self-Destruct
+  26:
+  - Harden
+  11:
+  - Defense Curl
+  31:
+  - Earthquake
+genderRatio: HALF_FEMALE
+genus:
+- Mineral
+hatchCounter: 15
+baseExp: 60
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 1
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 255
+baseHappiness: 70
+growthRate: Medium_slow
+species: Rock
+description: |-
+  At rest, it looks just like a rock.
+  Carelessly stepping on it will make
+  it swing its fists angrily.
+height: 4
+weight: 200
+color: Brown
+shape: Arms
+habitat: Mountain

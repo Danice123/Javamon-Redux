@@ -1,0 +1,8 @@
+---
+name: Antidote
+cost: 100
+stackable: true
+tossable: true
+usableInBattle: true
+usableInField: true
+consumedOnUse: true

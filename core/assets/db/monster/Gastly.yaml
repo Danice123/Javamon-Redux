@@ -1,0 +1,50 @@
+---
+number: 92
+name: Gastly
+types:
+- GHOST
+- POISON
+baseStats:
+  HEALTH: 30
+  ATTACK: 35
+  DEFENSE: 30
+  SPECIAL_ATTACK: 100
+  SPECIAL_DEFENSE: 35
+  SPEED: 80
+abilities:
+- Levitate
+dreamAbility: null
+learnableAttacks:
+  1:
+  - Night Shade
+  - Confuse Ray
+  - Lick
+  35:
+  - Dream Eater
+  27:
+  - Hypnosis
+genderRatio: HALF_FEMALE
+genus:
+- Amorphous
+hatchCounter: 20
+baseExp: 62
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 1
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 190
+baseHappiness: 70
+growthRate: Medium_slow
+species: Gas
+description: |-
+  Born from gases, anyone would
+  faint if engulfed by its gaseous
+  body, which contains poison.
+height: 13
+weight: 1
+color: Purple
+shape: Ball
+habitat: Cave

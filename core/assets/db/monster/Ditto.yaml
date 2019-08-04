@@ -1,0 +1,43 @@
+---
+number: 132
+name: Ditto
+types:
+- NORMAL
+baseStats:
+  HEALTH: 48
+  ATTACK: 48
+  DEFENSE: 48
+  SPECIAL_ATTACK: 48
+  SPECIAL_DEFENSE: 48
+  SPEED: 48
+abilities:
+- Limber
+dreamAbility: Imposter
+learnableAttacks:
+  1:
+  - Transform
+genderRatio: GENDERLESS
+genus:
+- Ditto
+hatchCounter: 20
+baseExp: 101
+effort:
+  HEALTH: 1
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 35
+baseHappiness: 70
+growthRate: Medium
+species: Transform
+description: |-
+  It has the ability to reconstitute
+  its entire cellular structure to
+  transform into whatever it sees.
+height: 3
+weight: 40
+color: Purple
+shape: Ball
+habitat: Urban

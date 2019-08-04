@@ -1,0 +1,14 @@
+---
+name: Explosion
+type: NORMAL
+uses: 5
+accuracy: 100
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+  power: 250
+  damageType: PHYSICAL
+- effect: dev.dankins.javamon.data.monster.attack.effect.StatusEffect
+  target: USER
+  status: FAINTED

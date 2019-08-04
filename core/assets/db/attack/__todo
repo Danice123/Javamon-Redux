@@ -1,0 +1,50 @@
+Bide
+Conversion
+Counter
+Light Screen
+Low Kick
+Metronome
+Mimic
+Mirror Move
+Pay Day
+Rage
+Reflect
+Roar
+Substitute
+Transform
+Whirlwind
+
+Multi-turn handling
+- Bind
+- Clamp
+- Fire Spin
+- Wrap
+
+Flinching
+- Bite
+
+Miss recoil
+- Hi Jump Kick
+- Jump Kick
+
+Text Parsing and attack result output
+
+move contact and damageType to damage
+
+flag timeout for moves that might miss
+- Dig
+- Fly
+
+look at disable code?
+
+Earthquake hits underground
+Gust hits flying
+
+leveldamage random
+- Psywave
+
+Rest turn counter
+
+struggle recoil
+
+tri attack multirandom

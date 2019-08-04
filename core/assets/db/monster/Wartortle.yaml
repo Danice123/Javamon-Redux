@@ -1,0 +1,58 @@
+---
+number: 8
+name: Wartortle
+types:
+- WATER
+baseStats:
+  HEALTH: 59
+  ATTACK: 63
+  DEFENSE: 80
+  SPECIAL_ATTACK: 65
+  SPECIAL_DEFENSE: 80
+  SPEED: 58
+abilities:
+- Torrent
+dreamAbility: Rain Dish
+learnableAttacks:
+  1:
+  - Tackle
+  - Tail Whip
+  - Bubble
+  39:
+  - Skull Bash
+  8:
+  - Bubble
+  24:
+  - Bite
+  47:
+  - Hydro Pump
+  31:
+  - Withdraw
+  15:
+  - Water Gun
+genderRatio: FEMALE_18
+genus:
+- Monster
+- Water
+hatchCounter: 20
+baseExp: 142
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 1
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 1
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium_slow
+species: Turtle
+description: |-
+  It is said to live 10,000 years.
+  Its furry tail is popular as a
+  symbol of longevity.
+height: 10
+weight: 225
+color: Blue
+shape: Upright
+habitat: Waters_Edge

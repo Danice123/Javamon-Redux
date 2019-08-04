@@ -1,0 +1,24 @@
+---
+name: Psybeam
+type: PSYCHIC
+uses: 20
+accuracy: 100
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+  power: 65
+  damageType: SPECIAL
+- effect: dev.dankins.javamon.data.monster.attack.effect.Chance
+  chance: 10
+  effects:
+  - effect: dev.dankins.javamon.data.monster.attack.effect.SetFlag
+    target: TARGET
+    flag: isConfused
+    text: $target has become confused!
+  - effect: dev.dankins.javamon.data.monster.attack.effect.SetCounter
+    target: TARGET
+    counter: ConfusionCounter
+    type: RANDOM
+    min: 2
+    max: 5

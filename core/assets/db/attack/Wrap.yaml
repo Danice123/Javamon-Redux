@@ -1,0 +1,21 @@
+---
+name: Wrap
+type: NORMAL
+uses: 20
+accuracy: 90
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+  power: 15
+  damageType: PHYSICAL
+  contact: true
+- effect: dev.dankins.javamon.data.monster.attack.effect.SetFlag
+  target: USER
+  flag: MultiTurnMove
+- effect: dev.dankins.javamon.data.monster.attack.effect.SetCounter
+  target: USER
+  counter: MultiTurnCounter
+  type: RANDOM
+  min: 2
+  max: 5

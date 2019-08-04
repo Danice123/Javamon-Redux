@@ -1,0 +1,56 @@
+---
+number: 127
+name: Pinsir
+types:
+- BUG
+baseStats:
+  HEALTH: 65
+  ATTACK: 125
+  DEFENSE: 100
+  SPECIAL_ATTACK: 55
+  SPECIAL_DEFENSE: 70
+  SPEED: 85
+abilities:
+- Hyper Cutter
+- Mold Breaker
+dreamAbility: Moxie
+learnableAttacks:
+  1:
+  - Vice Grip
+  49:
+  - Slash
+  36:
+  - Focus Energy
+  54:
+  - Swords Dance
+  25:
+  - Seismic Toss
+  43:
+  - Harden
+  30:
+  - Guillotine
+genderRatio: HALF_FEMALE
+genus:
+- Bug
+hatchCounter: 25
+baseExp: 175
+effort:
+  HEALTH: 0
+  ATTACK: 2
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Slow
+species: Stag Beetle
+description: |-
+  It grips prey with its pincers
+  until the prey is torn in half.
+  What it can�t tear, it tosses far.
+height: 15
+weight: 550
+color: Brown
+shape: Humanoid
+habitat: Forest

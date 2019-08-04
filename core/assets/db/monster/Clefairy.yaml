@@ -1,0 +1,57 @@
+---
+number: 35
+name: Clefairy
+types:
+- NORMAL
+baseStats:
+  HEALTH: 70
+  ATTACK: 45
+  DEFENSE: 48
+  SPECIAL_ATTACK: 60
+  SPECIAL_DEFENSE: 65
+  SPEED: 35
+abilities:
+- Cute Charm
+- Magic Guard
+dreamAbility: Friend Guard
+learnableAttacks:
+  48:
+  - Light Screen
+  1:
+  - Pound
+  - Growl
+  18:
+  - Double Slap
+  39:
+  - Defense Curl
+  24:
+  - Minimize
+  13:
+  - Sing
+  31:
+  - Metronome
+genderRatio: FEMALE_34
+genus:
+- Fairy
+hatchCounter: 10
+baseExp: 113
+effort:
+  HEALTH: 2
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 150
+baseHappiness: 140
+growthRate: Fast
+species: Fairy
+description: |-
+  It is said that happiness will come
+  to those who see a gathering of
+  Clefairy dancing under a full moon.
+height: 6
+weight: 75
+color: Pink
+shape: Upright
+habitat: Mountain

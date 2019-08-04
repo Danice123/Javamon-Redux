@@ -1,0 +1,57 @@
+---
+number: 123
+name: Scyther
+types:
+- BUG
+- FLYING
+baseStats:
+  HEALTH: 70
+  ATTACK: 110
+  DEFENSE: 80
+  SPECIAL_ATTACK: 55
+  SPECIAL_DEFENSE: 80
+  SPEED: 105
+abilities:
+- Swarm
+- Technician
+dreamAbility: Steadfast
+learnableAttacks:
+  17:
+  - Leer
+  1:
+  - Quick Attack
+  35:
+  - Swords Dance
+  20:
+  - Focus Energy
+  24:
+  - Double Team
+  42:
+  - Agility
+  29:
+  - Slash
+genderRatio: HALF_FEMALE
+genus:
+- Bug
+hatchCounter: 25
+baseExp: 100
+effort:
+  HEALTH: 0
+  ATTACK: 1
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium
+species: Mantis
+description: |-
+  The sharp scythes on its forearms
+  become increasingly sharp by
+  cutting through hard objects.
+height: 15
+weight: 560
+color: Green
+shape: Bug_Wings
+habitat: Grassland

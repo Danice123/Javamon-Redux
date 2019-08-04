@@ -1,0 +1,17 @@
+---
+name: Bone Club
+type: GROUND
+uses: 20
+accuracy: 85
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+  power: 65
+  damageType: PHYSICAL
+- effect: dev.dankins.javamon.data.monster.attack.effect.Chance
+  chance: 10
+  effects:
+  - effect: dev.dankins.javamon.data.monster.attack.effect.SetFlag
+    target: TARGET
+    flag: isFlinching

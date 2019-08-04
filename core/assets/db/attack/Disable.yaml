@@ -1,0 +1,23 @@
+---
+name: Disable
+type: NORMAL
+uses: 20
+accuracy: 100
+missable: true
+priority: 0
+requirements:
+- requirement: dev.dankins.javamon.data.monster.attack.require.CheckLastMove
+  valid: true
+- requirement: dev.dankins.javamon.data.monster.attack.require.CheckEnemy
+  disabled: true
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.SetFlag
+  target: TARGET
+  flag: isDisabled
+  text: $target's $lastMove has been disabled!
+- effect: dev.dankins.javamon.data.monster.attack.effect.SetCounter
+  target: TARGET
+  counter: DisableCounter
+  type: RANDOM
+  min: 4
+  max: 7

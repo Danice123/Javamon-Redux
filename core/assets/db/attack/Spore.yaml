@@ -1,0 +1,11 @@
+---
+name: Spore
+type: GRASS
+uses: 15
+accuracy: 100
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.StatusEffect
+  target: TARGET
+  status: SLEEP

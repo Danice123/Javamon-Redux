@@ -1,0 +1,53 @@
+---
+number: 71
+name: Victreebel
+types:
+- GRASS
+- POISON
+baseStats:
+  HEALTH: 80
+  ATTACK: 105
+  DEFENSE: 65
+  SPECIAL_ATTACK: 100
+  SPECIAL_DEFENSE: 60
+  SPEED: 70
+abilities:
+- Chlorophyll
+dreamAbility: Gluttony
+learnableAttacks:
+  1:
+  - Acid
+  - Razor Leaf
+  - Stun Spore
+  - Sleep Powder
+  18:
+  - Sleep Powder
+  13:
+  - Wrap
+  15:
+  - Poison Powder
+genderRatio: HALF_FEMALE
+genus:
+- Grass
+hatchCounter: 20
+baseExp: 216
+effort:
+  HEALTH: 0
+  ATTACK: 3
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium_slow
+species: Flycatcher
+description: |-
+  It pools in its mouth a fluid with
+  a honeylike scent, which is really
+  an acid that dissolves anything.
+height: 17
+weight: 155
+color: Green
+shape: Blob
+habitat: Forest

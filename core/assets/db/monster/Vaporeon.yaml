@@ -1,0 +1,63 @@
+---
+number: 134
+name: Vaporeon
+types:
+- WATER
+baseStats:
+  HEALTH: 130
+  ATTACK: 65
+  DEFENSE: 60
+  SPECIAL_ATTACK: 110
+  SPECIAL_DEFENSE: 95
+  SPEED: 65
+abilities:
+- Water Absorb
+- Water Absorb
+dreamAbility: Hydration
+learnableAttacks:
+  48:
+  - Mist
+  1:
+  - Sand Attack
+  - Tackle
+  - Water Gun
+  - Quick Attack
+  37:
+  - Tail Whip
+  54:
+  - Hydro Pump
+  40:
+  - Bite
+  42:
+  - Acid Armor
+  27:
+  - Quick Attack
+  44:
+  - Haze
+  31:
+  - Water Gun
+genderRatio: FEMALE_18
+genus:
+- Field
+hatchCounter: 35
+baseExp: 184
+effort:
+  HEALTH: 2
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium
+species: Bubble Jet
+description: |-
+  Its cell composition is similar
+  to water molecules. As a result,
+  it can melt away into water.
+height: 10
+weight: 290
+color: Blue
+shape: Quadruped
+habitat: Urban

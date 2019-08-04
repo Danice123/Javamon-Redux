@@ -1,0 +1,11 @@
+---
+name: Egg Bomb
+type: NORMAL
+uses: 10
+accuracy: 75
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+  power: 100
+  damageType: PHYSICAL

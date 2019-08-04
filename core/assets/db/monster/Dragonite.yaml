@@ -1,0 +1,58 @@
+---
+number: 149
+name: Dragonite
+types:
+- DRAGON
+- FLYING
+baseStats:
+  HEALTH: 91
+  ATTACK: 134
+  DEFENSE: 95
+  SPECIAL_ATTACK: 100
+  SPECIAL_DEFENSE: 100
+  SPEED: 80
+abilities:
+- Inner Focus
+dreamAbility: Multiscale
+learnableAttacks:
+  1:
+  - Wrap
+  - Leer
+  - Thunder Wave
+  - Agility
+  35:
+  - Slam
+  20:
+  - Agility
+  10:
+  - Thunder Wave
+  60:
+  - Hyper Beam
+  45:
+  - Dragon Rage
+genderRatio: HALF_FEMALE
+genus:
+- Water
+- Dragon
+hatchCounter: 40
+baseExp: 270
+effort:
+  HEALTH: 0
+  ATTACK: 3
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 35
+growthRate: Slow
+species: Dragon
+description: |-
+  It is said to make its home
+  somewhere in the sea. It guides
+  crews of shipwrecks to shore.
+height: 22
+weight: 2100
+color: Brown
+shape: Upright
+habitat: Waters_Edge

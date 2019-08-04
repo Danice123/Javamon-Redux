@@ -1,0 +1,54 @@
+---
+number: 31
+name: Nidoqueen
+types:
+- POISON
+- GROUND
+baseStats:
+  HEALTH: 90
+  ATTACK: 82
+  DEFENSE: 87
+  SPECIAL_ATTACK: 75
+  SPECIAL_DEFENSE: 85
+  SPEED: 76
+abilities:
+- Poison Point
+- Rivalry
+dreamAbility: Sheer Force
+learnableAttacks:
+  1:
+  - Scratch
+  - Tackle
+  - Body Slam
+  - Tail Whip
+  23:
+  - Body Slam
+  8:
+  - Scratch
+  14:
+  - Poison Sting
+genderRatio: ALWAYS_FEMALE
+genus:
+- Undiscovered
+hatchCounter: 20
+baseExp: 223
+effort:
+  HEALTH: 3
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium_slow
+species: Drill
+description: |-
+  Its entire body is armored with
+  hard scales. It will protect the
+  young in its burrow with its life.
+height: 13
+weight: 600
+color: Blue
+shape: Upright
+habitat: Grassland

@@ -1,0 +1,11 @@
+---
+name: Sleep Powder
+type: GRASS
+uses: 15
+accuracy: 75
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.StatusEffect
+  target: TARGET
+  status: SLEEP

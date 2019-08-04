@@ -1,0 +1,8 @@
+---
+x: 11
+y: 12
+layer: 1
+name: RivalHouseSign
+type: SIGN
+strings:
+  text: $rivalName$'s house

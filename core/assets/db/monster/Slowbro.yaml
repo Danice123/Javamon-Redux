@@ -1,0 +1,62 @@
+---
+number: 80
+name: Slowbro
+types:
+- WATER
+- PSYCHIC
+baseStats:
+  HEALTH: 95
+  ATTACK: 75
+  DEFENSE: 110
+  SPECIAL_ATTACK: 100
+  SPECIAL_DEFENSE: 80
+  SPEED: 30
+abilities:
+- Oblivious
+- Own Tempo
+dreamAbility: Regenerator
+learnableAttacks:
+  1:
+  - Headbutt
+  - Disable
+  - Confusion
+  33:
+  - Water Gun
+  18:
+  - Disable
+  37:
+  - Withdraw
+  22:
+  - Headbutt
+  55:
+  - Psychic
+  27:
+  - Growl
+  44:
+  - Amnesia
+genderRatio: HALF_FEMALE
+genus:
+- Monster
+- Water
+hatchCounter: 20
+baseExp: 172
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 2
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 75
+baseHappiness: 70
+growthRate: Medium
+species: Hermit Crab
+description: |-
+  Though usually dim witted, it
+  seems to become inspired if the
+  Shellder on its tail bites down.
+height: 16
+weight: 785
+color: Pink
+shape: Upright
+habitat: Waters_Edge

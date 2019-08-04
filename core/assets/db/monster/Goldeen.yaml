@@ -1,0 +1,57 @@
+---
+number: 118
+name: Goldeen
+types:
+- WATER
+baseStats:
+  HEALTH: 45
+  ATTACK: 67
+  DEFENSE: 60
+  SPECIAL_ATTACK: 35
+  SPECIAL_DEFENSE: 50
+  SPEED: 63
+abilities:
+- Swift Swim
+- Water Veil
+dreamAbility: Lightningrod
+learnableAttacks:
+  1:
+  - Tail Whip
+  - Peck
+  19:
+  - Supersonic
+  37:
+  - Waterfall
+  54:
+  - Agility
+  24:
+  - Horn Attack
+  45:
+  - Horn Drill
+  30:
+  - Fury Attack
+genderRatio: HALF_FEMALE
+genus:
+- Fish
+hatchCounter: 20
+baseExp: 64
+effort:
+  HEALTH: 0
+  ATTACK: 1
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 225
+baseHappiness: 70
+growthRate: Medium
+species: Goldfish
+description: |-
+  Though it appears very elegant
+  when swimming with fins unfurled, it
+  can jab powerfully with its horn.
+height: 6
+weight: 150
+color: Red
+shape: Fish
+habitat: Waters_Edge

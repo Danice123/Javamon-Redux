@@ -1,0 +1,58 @@
+---
+number: 17
+name: Pidgeotto
+types:
+- NORMAL
+- FLYING
+baseStats:
+  HEALTH: 63
+  ATTACK: 60
+  DEFENSE: 55
+  SPECIAL_ATTACK: 50
+  SPECIAL_DEFENSE: 50
+  SPEED: 71
+abilities:
+- Keen Eye
+- Tangled Feet
+dreamAbility: Big Pecks
+learnableAttacks:
+  1:
+  - Gust
+  - Sand Attack
+  49:
+  - Mirror Move
+  21:
+  - Whirlwind
+  5:
+  - Sand Attack
+  40:
+  - Agility
+  12:
+  - Quick Attack
+  31:
+  - Wing Attack
+genderRatio: HALF_FEMALE
+genus:
+- Flying
+hatchCounter: 15
+baseExp: 122
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 2
+captureRate: 120
+baseHappiness: 70
+growthRate: Medium_slow
+species: Bird
+description: |-
+  It flies over its wide territory in
+  search of prey, downing it
+  with its highly developed claws.
+height: 11
+weight: 300
+color: Brown
+shape: Wings
+habitat: Forest

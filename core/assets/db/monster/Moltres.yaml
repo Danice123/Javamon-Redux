@@ -1,0 +1,51 @@
+---
+number: 146
+name: Moltres
+types:
+- FIRE
+- FLYING
+baseStats:
+  HEALTH: 90
+  ATTACK: 100
+  DEFENSE: 90
+  SPECIAL_ATTACK: 125
+  SPECIAL_DEFENSE: 85
+  SPEED: 90
+abilities:
+- Pressure
+dreamAbility: Flame Body
+learnableAttacks:
+  1:
+  - Peck
+  - Fire Spin
+  51:
+  - Leer
+  55:
+  - Agility
+  60:
+  - Sky Attack
+genderRatio: GENDERLESS
+genus:
+- Undiscovered
+hatchCounter: 80
+baseExp: 261
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 3
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 3
+baseHappiness: 35
+growthRate: Slow
+species: Flame
+description: |-
+  One of the legendary bird Pok�mon.
+  It is said that its appearance
+  indicates the coming of spring.
+height: 20
+weight: 600
+color: Yellow
+shape: Wings
+habitat: Rare

@@ -1,0 +1,63 @@
+---
+number: 73
+name: Tentacruel
+types:
+- WATER
+- POISON
+baseStats:
+  HEALTH: 80
+  ATTACK: 70
+  DEFENSE: 65
+  SPECIAL_ATTACK: 80
+  SPECIAL_DEFENSE: 120
+  SPEED: 100
+abilities:
+- Clear Body
+- Liquid Ooze
+dreamAbility: Rain Dish
+learnableAttacks:
+  1:
+  - Wrap
+  - Supersonic
+  - Acid
+  50:
+  - Hydro Pump
+  18:
+  - Poison Sting
+  35:
+  - Barrier
+  22:
+  - Water Gun
+  7:
+  - Supersonic
+  43:
+  - Screech
+  27:
+  - Constrict
+  13:
+  - Wrap
+genderRatio: HALF_FEMALE
+genus:
+- Shellfish
+hatchCounter: 20
+baseExp: 180
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 2
+  SPEED: 0
+captureRate: 60
+baseHappiness: 70
+growthRate: Slow
+species: Jellyfish
+description: |-
+  It extends its 80 tentacles to
+  form an encircling poisonous net
+  that is difficult to escape.
+height: 16
+weight: 550
+color: Blue
+shape: Tenticles
+habitat: Sea

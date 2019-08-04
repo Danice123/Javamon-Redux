@@ -1,0 +1,56 @@
+---
+number: 95
+name: Onix
+types:
+- ROCK
+- GROUND
+baseStats:
+  HEALTH: 35
+  ATTACK: 45
+  DEFENSE: 160
+  SPECIAL_ATTACK: 30
+  SPECIAL_DEFENSE: 45
+  SPEED: 70
+abilities:
+- Rock Head
+- Sturdy
+dreamAbility: Weak Armor
+learnableAttacks:
+  1:
+  - Tackle
+  - Screech
+  33:
+  - Slam
+  19:
+  - Rock Throw
+  25:
+  - Rage
+  43:
+  - Harden
+  15:
+  - Bind
+genderRatio: HALF_FEMALE
+genus:
+- Mineral
+hatchCounter: 25
+baseExp: 77
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 1
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium
+species: Rock Snake
+description: |-
+  It burrows through the ground
+  at a speed of 50 mph while
+  feeding on large boulders.
+height: 88
+weight: 2100
+color: Gray
+shape: Squiggle
+habitat: Cave

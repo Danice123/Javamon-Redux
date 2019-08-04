@@ -1,0 +1,54 @@
+---
+number: 142
+name: Aerodactyl
+types:
+- ROCK
+- FLYING
+baseStats:
+  HEALTH: 80
+  ATTACK: 105
+  DEFENSE: 65
+  SPECIAL_ATTACK: 60
+  SPECIAL_DEFENSE: 75
+  SPEED: 130
+abilities:
+- Rock Head
+- Pressure
+dreamAbility: Unnerve
+learnableAttacks:
+  1:
+  - Wing Attack
+  - Agility
+  33:
+  - Supersonic
+  38:
+  - Bite
+  54:
+  - Hyper Beam
+  45:
+  - Take Down
+genderRatio: FEMALE_18
+genus:
+- Flying
+hatchCounter: 35
+baseExp: 180
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 2
+captureRate: 45
+baseHappiness: 70
+growthRate: Slow
+species: Fossil
+description: |-
+  A Pok�mon that roamed the skies
+  in the dinosaur era. Its teeth are
+  like saw blades.
+height: 18
+weight: 590
+color: Purple
+shape: Wings
+habitat: Mountain

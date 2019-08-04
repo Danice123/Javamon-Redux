@@ -1,0 +1,61 @@
+---
+number: 112
+name: Rhydon
+types:
+- GROUND
+- ROCK
+baseStats:
+  HEALTH: 105
+  ATTACK: 130
+  DEFENSE: 120
+  SPECIAL_ATTACK: 45
+  SPECIAL_DEFENSE: 45
+  SPEED: 40
+abilities:
+- Lightningrod
+- Rock Head
+dreamAbility: Reckless
+learnableAttacks:
+  48:
+  - Horn Drill
+  64:
+  - Take Down
+  1:
+  - Stomp
+  - Horn Attack
+  - Fury Attack
+  - Tail Whip
+  35:
+  - Tail Whip
+  55:
+  - Leer
+  40:
+  - Fury Attack
+  30:
+  - Stomp
+genderRatio: HALF_FEMALE
+genus:
+- Monster
+- Field
+hatchCounter: 20
+baseExp: 170
+effort:
+  HEALTH: 0
+  ATTACK: 2
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 60
+baseHappiness: 70
+growthRate: Slow
+species: Drill
+description: |-
+  Standing on its hind legs freed its
+  forelegs and made it smarter. It is
+  very forgetful, however.
+height: 19
+weight: 1200
+color: Gray
+shape: Upright
+habitat: Rough_Terrain

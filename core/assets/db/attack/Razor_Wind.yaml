@@ -1,0 +1,16 @@
+---
+name: Razor Wind
+type: NORMAL
+uses: 10
+missable: false
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.SetFlag
+  target: USER
+  flag: MultiTurnMove
+  text: $target is charging up!
+- effect: dev.dankins.javamon.data.monster.attack.effect.SetCounter
+  target: USER
+  counter: MultiTurnCounter
+  type: SET
+  n: 1

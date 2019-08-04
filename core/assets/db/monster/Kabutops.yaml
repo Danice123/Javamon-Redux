@@ -1,0 +1,56 @@
+---
+number: 141
+name: Kabutops
+types:
+- ROCK
+- WATER
+baseStats:
+  HEALTH: 60
+  ATTACK: 115
+  DEFENSE: 105
+  SPECIAL_ATTACK: 65
+  SPECIAL_DEFENSE: 70
+  SPEED: 80
+abilities:
+- Swift Swim
+- Battle Armor
+dreamAbility: Weak Armor
+learnableAttacks:
+  1:
+  - Scratch
+  - Absorb
+  - Harden
+  34:
+  - Absorb
+  53:
+  - Hydro Pump
+  39:
+  - Slash
+  46:
+  - Leer
+genderRatio: FEMALE_18
+genus:
+- Water
+- Shellfish
+hatchCounter: 30
+baseExp: 173
+effort:
+  HEALTH: 0
+  ATTACK: 2
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium
+species: Shellfish
+description: |-
+  It is thought that this Pok�mon
+  came onto land because its
+  prey adapted to life on land.
+height: 13
+weight: 405
+color: Brown
+shape: Upright
+habitat: Sea

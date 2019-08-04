@@ -1,0 +1,58 @@
+---
+number: 124
+name: Jynx
+types:
+- ICE
+- PSYCHIC
+baseStats:
+  HEALTH: 65
+  ATTACK: 50
+  DEFENSE: 35
+  SPECIAL_ATTACK: 115
+  SPECIAL_DEFENSE: 95
+  SPEED: 95
+abilities:
+- Oblivious
+- Forewarn
+dreamAbility: Dry Skin
+learnableAttacks:
+  1:
+  - Pound
+  - Lovely Kiss
+  18:
+  - Lick
+  39:
+  - Body Slam
+  23:
+  - Double Slap
+  58:
+  - Blizzard
+  47:
+  - Thrash
+  31:
+  - Ice Punch
+genderRatio: ALWAYS_FEMALE
+genus:
+- Humanoid
+hatchCounter: 25
+baseExp: 159
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 2
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium
+species: Human Shape
+description: |-
+  Its cries sound like human speech.
+  However, it is impossible to tell
+  what it is trying to say.
+height: 14
+weight: 406
+color: Red
+shape: Humanoid
+habitat: Urban

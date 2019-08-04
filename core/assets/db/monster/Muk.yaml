@@ -1,0 +1,58 @@
+---
+number: 89
+name: Muk
+types:
+- POISON
+baseStats:
+  HEALTH: 105
+  ATTACK: 105
+  DEFENSE: 75
+  SPECIAL_ATTACK: 65
+  SPECIAL_DEFENSE: 100
+  SPEED: 50
+abilities:
+- Stench
+- Sticky Hold
+dreamAbility: Poison Touch
+learnableAttacks:
+  1:
+  - Pound
+  - Disable
+  - Poison Gas
+  33:
+  - Minimize
+  53:
+  - Screech
+  37:
+  - Sludge
+  60:
+  - Acid Armor
+  45:
+  - Harden
+  30:
+  - Poison Gas
+genderRatio: HALF_FEMALE
+genus:
+- Amorphous
+hatchCounter: 20
+baseExp: 175
+effort:
+  HEALTH: 1
+  ATTACK: 1
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 75
+baseHappiness: 70
+growthRate: Medium
+species: Sludge
+description: |-
+  A toxic fluid seeps from its body.
+  The fluid instantly kills plants and
+  trees on contact.
+height: 12
+weight: 300
+color: Purple
+shape: Arms
+habitat: Urban

@@ -1,0 +1,44 @@
+---
+number: 10
+name: Caterpie
+types:
+- BUG
+baseStats:
+  HEALTH: 45
+  ATTACK: 30
+  DEFENSE: 35
+  SPECIAL_ATTACK: 20
+  SPECIAL_DEFENSE: 20
+  SPEED: 45
+abilities:
+- Shield Dust
+dreamAbility: Run Away
+learnableAttacks:
+  1:
+  - Tackle
+  - String Shot
+genderRatio: HALF_FEMALE
+genus:
+- Bug
+hatchCounter: 15
+baseExp: 39
+effort:
+  HEALTH: 1
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 255
+baseHappiness: 70
+growthRate: Medium
+species: Worm
+description: |-
+  It releases a stench from its red
+  antenna to repel enemies. It
+  grows by molting repeatedly.
+height: 3
+weight: 29
+color: Green
+shape: Squiggle
+habitat: Forest

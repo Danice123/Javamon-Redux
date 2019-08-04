@@ -1,0 +1,58 @@
+---
+number: 111
+name: Rhyhorn
+types:
+- GROUND
+- ROCK
+baseStats:
+  HEALTH: 80
+  ATTACK: 85
+  DEFENSE: 95
+  SPECIAL_ATTACK: 30
+  SPECIAL_DEFENSE: 30
+  SPEED: 25
+abilities:
+- Lightningrod
+- Rock Head
+dreamAbility: Reckless
+learnableAttacks:
+  1:
+  - Horn Attack
+  50:
+  - Leer
+  35:
+  - Tail Whip
+  55:
+  - Take Down
+  40:
+  - Fury Attack
+  45:
+  - Horn Drill
+  30:
+  - Stomp
+genderRatio: HALF_FEMALE
+genus:
+- Monster
+- Field
+hatchCounter: 20
+baseExp: 69
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 1
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 120
+baseHappiness: 70
+growthRate: Slow
+species: Spikes
+description: |-
+  Its powerful tackles can destroy
+  anything. However, it is too
+  slow witted to help people work.
+height: 10
+weight: 1150
+color: Gray
+shape: Quadruped
+habitat: Rough_Terrain

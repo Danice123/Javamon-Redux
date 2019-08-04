@@ -1,0 +1,15 @@
+---
+name: Bonemerang
+type: GROUND
+uses: 10
+accuracy: 90
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Multiple
+  min: 2
+  max: 2
+  effects:
+  - effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+    power: 50
+    damageType: PHYSICAL

@@ -1,0 +1,58 @@
+---
+number: 119
+name: Seaking
+types:
+- WATER
+baseStats:
+  HEALTH: 80
+  ATTACK: 92
+  DEFENSE: 65
+  SPECIAL_ATTACK: 65
+  SPECIAL_DEFENSE: 80
+  SPEED: 68
+abilities:
+- Swift Swim
+- Water Veil
+dreamAbility: Lightningrod
+learnableAttacks:
+  48:
+  - Horn Drill
+  1:
+  - Tail Whip
+  - Supersonic
+  - Peck
+  19:
+  - Supersonic
+  54:
+  - Agility
+  39:
+  - Waterfall
+  24:
+  - Horn Attack
+  30:
+  - Fury Attack
+genderRatio: HALF_FEMALE
+genus:
+- Fish
+hatchCounter: 20
+baseExp: 158
+effort:
+  HEALTH: 0
+  ATTACK: 2
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 60
+baseHappiness: 70
+growthRate: Medium
+species: Goldfish
+description: |-
+  In autumn, its body becomes more
+  fatty in preparing to propose to a
+  mate. It takes on beautiful colors.
+height: 13
+weight: 390
+color: Red
+shape: Fish
+habitat: Waters_Edge

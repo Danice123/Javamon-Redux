@@ -1,0 +1,11 @@
+---
+name: Mist
+type: ICE
+uses: 30
+missable: false
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.SetFlag
+  target: USER
+  flag: mist
+  text: A mist arose on this side of the field!

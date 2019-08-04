@@ -1,0 +1,46 @@
+---
+number: 129
+name: Magikarp
+types:
+- WATER
+baseStats:
+  HEALTH: 20
+  ATTACK: 10
+  DEFENSE: 55
+  SPECIAL_ATTACK: 15
+  SPECIAL_DEFENSE: 20
+  SPEED: 80
+abilities:
+- Swift Swim
+dreamAbility: Rattled
+learnableAttacks:
+  1:
+  - Splash
+  15:
+  - Tackle
+genderRatio: HALF_FEMALE
+genus:
+- Fish
+- Dragon
+hatchCounter: 5
+baseExp: 40
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 1
+captureRate: 255
+baseHappiness: 70
+growthRate: Slow
+species: Fish
+description: |-
+  A Magikarp living for many years
+  can leap a mountain using Splash.
+  The move remains useless, though.
+height: 9
+weight: 100
+color: Red
+shape: Fish
+habitat: Waters_Edge

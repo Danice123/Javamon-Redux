@@ -1,0 +1,59 @@
+---
+number: 78
+name: Rapidash
+types:
+- FIRE
+baseStats:
+  HEALTH: 65
+  ATTACK: 100
+  DEFENSE: 70
+  SPECIAL_ATTACK: 80
+  SPECIAL_DEFENSE: 80
+  SPEED: 105
+abilities:
+- Run Away
+- Flash Fire
+dreamAbility: Flame Body
+learnableAttacks:
+  32:
+  - Stomp
+  1:
+  - Stomp
+  - Tail Whip
+  - Growl
+  - Ember
+  35:
+  - Growl
+  55:
+  - Agility
+  39:
+  - Fire Spin
+  30:
+  - Tail Whip
+  47:
+  - Take Down
+genderRatio: HALF_FEMALE
+genus:
+- Field
+hatchCounter: 20
+baseExp: 175
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 2
+captureRate: 60
+baseHappiness: 70
+growthRate: Medium
+species: Fire Horse
+description: |-
+  When at an all-out gallop, its
+  blazing mane sparkles, enhancing
+  its beautiful appearance.
+height: 17
+weight: 950
+color: Yellow
+shape: Quadruped
+habitat: Grassland

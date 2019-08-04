@@ -1,0 +1,7 @@
+---
+name: Roar
+type: NORMAL
+uses: 20
+missable: false
+priority: -6
+effects:

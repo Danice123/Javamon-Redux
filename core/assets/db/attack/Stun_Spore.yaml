@@ -1,0 +1,11 @@
+---
+name: Stun Spore
+type: GRASS
+uses: 30
+accuracy: 75
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.StatusEffect
+  target: TARGET
+  status: PARALYSIS

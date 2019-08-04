@@ -1,0 +1,12 @@
+---
+name: Psywave
+type: PSYCHIC
+uses: 15
+accuracy: 80
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.LevelDamage
+  random: true
+  max: 15
+  min: 5

@@ -1,0 +1,57 @@
+---
+number: 102
+name: Exeggcute
+types:
+- GRASS
+- PSYCHIC
+baseStats:
+  HEALTH: 60
+  ATTACK: 40
+  DEFENSE: 80
+  SPECIAL_ATTACK: 60
+  SPECIAL_DEFENSE: 45
+  SPEED: 40
+abilities:
+- Chlorophyll
+dreamAbility: Harvest
+learnableAttacks:
+  32:
+  - Stun Spore
+  48:
+  - Sleep Powder
+  1:
+  - Hypnosis
+  - Barrage
+  37:
+  - Poison Powder
+  25:
+  - Reflect
+  42:
+  - Solar Beam
+  28:
+  - Leech Seed
+genderRatio: HALF_FEMALE
+genus:
+- Grass
+hatchCounter: 20
+baseExp: 65
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 1
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 90
+baseHappiness: 70
+growthRate: Slow
+species: Egg
+description: |-
+  Its six eggs converse using
+  telepathy. They can quickly gather
+  if they become separated.
+height: 4
+weight: 25
+color: Pink
+shape: Heads
+habitat: Forest

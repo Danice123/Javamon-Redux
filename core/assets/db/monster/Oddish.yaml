@@ -1,0 +1,56 @@
+---
+number: 43
+name: Oddish
+types:
+- GRASS
+- POISON
+baseStats:
+  HEALTH: 45
+  ATTACK: 50
+  DEFENSE: 55
+  SPECIAL_ATTACK: 75
+  SPECIAL_DEFENSE: 65
+  SPEED: 30
+abilities:
+- Chlorophyll
+dreamAbility: Run Away
+learnableAttacks:
+  17:
+  - Stun Spore
+  1:
+  - Absorb
+  33:
+  - Petal Dance
+  19:
+  - Sleep Powder
+  24:
+  - Acid
+  46:
+  - Solar Beam
+  15:
+  - Poison Powder
+genderRatio: HALF_FEMALE
+genus:
+- Grass
+hatchCounter: 20
+baseExp: 64
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 1
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 255
+baseHappiness: 70
+growthRate: Medium_slow
+species: Weed
+description: |-
+  It often plants its root feet in the
+  ground during the day and sows
+  seeds as it walks about at night.
+height: 5
+weight: 54
+color: Blue
+shape: Legs
+habitat: Grassland

@@ -1,0 +1,54 @@
+---
+number: 37
+name: Vulpix
+types:
+- FIRE
+baseStats:
+  HEALTH: 38
+  ATTACK: 41
+  DEFENSE: 40
+  SPECIAL_ATTACK: 50
+  SPECIAL_DEFENSE: 65
+  SPEED: 65
+abilities:
+- Flash Fire
+dreamAbility: Drought
+learnableAttacks:
+  16:
+  - Quick Attack
+  1:
+  - Tail Whip
+  - Ember
+  35:
+  - Flamethrower
+  21:
+  - Roar
+  42:
+  - Fire Spin
+  28:
+  - Confuse Ray
+genderRatio: FEMALE_34
+genus:
+- Field
+hatchCounter: 20
+baseExp: 60
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 1
+captureRate: 190
+baseHappiness: 70
+growthRate: Medium
+species: Fox
+description: |-
+  It controls balls of fire. As it
+  grows, its six tails split from
+  their tips to make more tails.
+height: 6
+weight: 99
+color: Brown
+shape: Quadruped
+habitat: Grassland

@@ -1,0 +1,58 @@
+---
+number: 130
+name: Gyarados
+types:
+- WATER
+- FLYING
+baseStats:
+  HEALTH: 95
+  ATTACK: 125
+  DEFENSE: 79
+  SPECIAL_ATTACK: 60
+  SPECIAL_DEFENSE: 100
+  SPEED: 81
+abilities:
+- Intimidate
+dreamAbility: Moxie
+learnableAttacks:
+  32:
+  - Leer
+  1:
+  - Leer
+  - Bite
+  - Hydro Pump
+  - Dragon Rage
+  20:
+  - Bite
+  52:
+  - Hyper Beam
+  25:
+  - Dragon Rage
+  41:
+  - Hydro Pump
+genderRatio: HALF_FEMALE
+genus:
+- Fish
+- Dragon
+hatchCounter: 5
+baseExp: 189
+effort:
+  HEALTH: 0
+  ATTACK: 2
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Slow
+species: Atrocious
+description: |-
+  Once it begins to rampage, a
+  Gyarados will burn everything
+  down, even in a harsh storm.
+height: 65
+weight: 2350
+color: Blue
+shape: Squiggle
+habitat: Waters_Edge

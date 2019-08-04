@@ -1,0 +1,58 @@
+---
+number: 32
+name: NidoranM
+types:
+- POISON
+baseStats:
+  HEALTH: 46
+  ATTACK: 57
+  DEFENSE: 40
+  SPECIAL_ATTACK: 40
+  SPECIAL_DEFENSE: 40
+  SPEED: 50
+abilities:
+- Poison Point
+- Rivalry
+dreamAbility: Hustle
+learnableAttacks:
+  1:
+  - Tackle
+  - Leer
+  36:
+  - Horn Drill
+  21:
+  - Focus Energy
+  8:
+  - Horn Attack
+  43:
+  - Double Kick
+  29:
+  - Fury Attack
+  14:
+  - Poison Sting
+genderRatio: NEVER_FEMALE
+genus:
+- Monster
+- Field
+hatchCounter: 20
+baseExp: 55
+effort:
+  HEALTH: 0
+  ATTACK: 1
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 235
+baseHappiness: 70
+growthRate: Medium_slow
+species: Poison Pin
+description: |-
+  It scans its surroundings by
+  raising its ears out of the grass.
+  Its toxic horn is for protection.
+height: 5
+weight: 90
+color: Purple
+shape: Quadruped
+habitat: Grassland

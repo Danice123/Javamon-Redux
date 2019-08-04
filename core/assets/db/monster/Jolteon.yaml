@@ -1,0 +1,63 @@
+---
+number: 135
+name: Jolteon
+types:
+- ELECTRIC
+baseStats:
+  HEALTH: 65
+  ATTACK: 65
+  DEFENSE: 60
+  SPECIAL_ATTACK: 110
+  SPECIAL_DEFENSE: 95
+  SPEED: 130
+abilities:
+- Volt Absorb
+- Volt Absorb
+dreamAbility: Quick Feet
+learnableAttacks:
+  48:
+  - Pin Missile
+  1:
+  - Sand Attack
+  - Tackle
+  - Thunder Shock
+  - Quick Attack
+  37:
+  - Tail Whip
+  54:
+  - Thunder
+  40:
+  - Thunder Wave
+  42:
+  - Double Kick
+  27:
+  - Quick Attack
+  44:
+  - Agility
+  31:
+  - Thunder Shock
+genderRatio: FEMALE_18
+genus:
+- Field
+hatchCounter: 35
+baseExp: 184
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 2
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium
+species: Lightning
+description: |-
+  If agitated, it uses electricity to
+  straighten out its fur and launch
+  it in small bunches.
+height: 8
+weight: 245
+color: Yellow
+shape: Quadruped
+habitat: Urban

@@ -1,0 +1,56 @@
+---
+number: 101
+name: Electrode
+types:
+- ELECTRIC
+baseStats:
+  HEALTH: 60
+  ATTACK: 50
+  DEFENSE: 70
+  SPECIAL_ATTACK: 80
+  SPECIAL_DEFENSE: 80
+  SPEED: 140
+abilities:
+- Soundproof
+- Static
+dreamAbility: Aftermath
+learnableAttacks:
+  17:
+  - Sonic Boom
+  1:
+  - Tackle
+  - Sonic Boom
+  - Screech
+  50:
+  - Explosion
+  22:
+  - Self-Destruct
+  40:
+  - Swift
+  29:
+  - Light Screen
+genderRatio: GENDERLESS
+genus:
+- Mineral
+hatchCounter: 20
+baseExp: 168
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 2
+captureRate: 60
+baseHappiness: 70
+growthRate: Medium
+species: Ball
+description: |-
+  It is known to drift on winds if it
+  is bloated to bursting with stored
+  electricity.
+height: 12
+weight: 666
+color: Red
+shape: Ball
+habitat: Urban

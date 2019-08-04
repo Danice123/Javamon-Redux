@@ -1,0 +1,55 @@
+---
+number: 58
+name: Growlithe
+types:
+- FIRE
+baseStats:
+  HEALTH: 55
+  ATTACK: 70
+  DEFENSE: 45
+  SPECIAL_ATTACK: 70
+  SPECIAL_DEFENSE: 50
+  SPEED: 60
+abilities:
+- Intimidate
+- Flash Fire
+dreamAbility: Justified
+learnableAttacks:
+  1:
+  - Bite
+  - Roar
+  50:
+  - Flamethrower
+  18:
+  - Ember
+  39:
+  - Agility
+  23:
+  - Leer
+  30:
+  - Take Down
+genderRatio: FEMALE_14
+genus:
+- Field
+hatchCounter: 20
+baseExp: 70
+effort:
+  HEALTH: 0
+  ATTACK: 1
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 190
+baseHappiness: 70
+growthRate: Slow
+species: Puppy
+description: |-
+  A Pok�mon with a loyal nature.
+  It will remain motionless until it is
+  given an order by its Trainer.
+height: 7
+weight: 190
+color: Brown
+shape: Quadruped
+habitat: Grassland

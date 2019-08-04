@@ -1,0 +1,6 @@
+---
+name: Town Map
+stackable: false
+tossable: false
+usableInBattle: false
+usableInField: true

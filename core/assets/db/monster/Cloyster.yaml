@@ -1,0 +1,50 @@
+---
+number: 91
+name: Cloyster
+types:
+- WATER
+- ICE
+baseStats:
+  HEALTH: 50
+  ATTACK: 95
+  DEFENSE: 180
+  SPECIAL_ATTACK: 85
+  SPECIAL_DEFENSE: 45
+  SPEED: 70
+abilities:
+- Shell Armor
+- Skill Link
+dreamAbility: Overcoat
+learnableAttacks:
+  1:
+  - Supersonic
+  - Aurora Beam
+  - Withdraw
+  - Clamp
+  50:
+  - Spike Cannon
+genderRatio: HALF_FEMALE
+genus:
+- Shellfish
+hatchCounter: 20
+baseExp: 184
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 2
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 60
+baseHappiness: 70
+growthRate: Slow
+species: Bivalve
+description: |-
+  It fights by keeping its shell
+  tightly shut for protection and
+  by shooting spikes to repel foes.
+height: 15
+weight: 1325
+color: Purple
+shape: Ball
+habitat: Sea

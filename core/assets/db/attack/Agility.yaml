@@ -1,0 +1,11 @@
+---
+name: Agility
+type: PSYCHIC
+uses: 30
+missable: false
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.StatEffect
+  target: USER
+  stat: SPEED
+  level: 2

@@ -1,0 +1,16 @@
+---
+name: Comet Punch
+type: NORMAL
+uses: 15
+accuracy: 85
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Multiple
+  min: 2
+  max: 5
+  effects:
+  - effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+    power: 18
+    damageType: PHYSICAL
+    contact: true

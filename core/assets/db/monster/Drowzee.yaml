@@ -1,0 +1,57 @@
+---
+number: 96
+name: Drowzee
+types:
+- PSYCHIC
+baseStats:
+  HEALTH: 60
+  ATTACK: 48
+  DEFENSE: 45
+  SPECIAL_ATTACK: 43
+  SPECIAL_DEFENSE: 90
+  SPEED: 42
+abilities:
+- Insomnia
+- Forewarn
+dreamAbility: Inner Focus
+learnableAttacks:
+  32:
+  - Psychic
+  17:
+  - Confusion
+  1:
+  - Pound
+  - Hypnosis
+  37:
+  - Meditate
+  24:
+  - Headbutt
+  12:
+  - Disable
+  29:
+  - Poison Gas
+genderRatio: HALF_FEMALE
+genus:
+- Humanoid
+hatchCounter: 20
+baseExp: 66
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 1
+  SPEED: 0
+captureRate: 190
+baseHappiness: 70
+growthRate: Medium
+species: Hypnosis
+description: |-
+  It can tell what people are
+  dreaming by sniffing with its big
+  nose. It loves fun dreams.
+height: 10
+weight: 324
+color: Yellow
+shape: Humanoid
+habitat: Grassland

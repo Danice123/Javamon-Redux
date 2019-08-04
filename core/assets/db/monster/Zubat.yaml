@@ -1,0 +1,54 @@
+---
+number: 41
+name: Zubat
+types:
+- POISON
+- FLYING
+baseStats:
+  HEALTH: 40
+  ATTACK: 45
+  DEFENSE: 35
+  SPECIAL_ATTACK: 30
+  SPECIAL_DEFENSE: 40
+  SPEED: 55
+abilities:
+- Inner Focus
+dreamAbility: Infiltrator
+learnableAttacks:
+  1:
+  - Leech Life
+  36:
+  - Haze
+  21:
+  - Confuse Ray
+  10:
+  - Supersonic
+  28:
+  - Wing Attack
+  15:
+  - Bite
+genderRatio: HALF_FEMALE
+genus:
+- Flying
+hatchCounter: 15
+baseExp: 49
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 1
+captureRate: 255
+baseHappiness: 70
+growthRate: Medium
+species: Bat
+description: |-
+  It checks its surroundings and
+  location using reflections of the
+  ultrasonic waves from its mouth.
+height: 8
+weight: 75
+color: Purple
+shape: Wings
+habitat: Cave

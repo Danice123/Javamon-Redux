@@ -1,0 +1,47 @@
+---
+number: 103
+name: Exeggutor
+types:
+- GRASS
+- PSYCHIC
+baseStats:
+  HEALTH: 95
+  ATTACK: 95
+  DEFENSE: 85
+  SPECIAL_ATTACK: 125
+  SPECIAL_DEFENSE: 65
+  SPEED: 55
+abilities:
+- Chlorophyll
+dreamAbility: Harvest
+learnableAttacks:
+  1:
+  - Hypnosis
+  - Barrage
+  28:
+  - Stomp
+genderRatio: HALF_FEMALE
+genus:
+- Grass
+hatchCounter: 20
+baseExp: 182
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 2
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Slow
+species: Coconut
+description: |-
+  It is called �The Walking Jungle.�
+  If a head grows too big, it falls
+  off and becomes an Exeggcute.
+height: 20
+weight: 1200
+color: Yellow
+shape: Legs
+habitat: Forest

@@ -1,0 +1,53 @@
+---
+number: 133
+name: Eevee
+types:
+- NORMAL
+baseStats:
+  HEALTH: 55
+  ATTACK: 55
+  DEFENSE: 50
+  SPECIAL_ATTACK: 45
+  SPECIAL_DEFENSE: 65
+  SPEED: 55
+abilities:
+- Run Away
+- Adaptability
+dreamAbility: Anticipation
+learnableAttacks:
+  1:
+  - Sand Attack
+  - Tackle
+  37:
+  - Bite
+  27:
+  - Quick Attack
+  45:
+  - Take Down
+  31:
+  - Tail Whip
+genderRatio: FEMALE_18
+genus:
+- Field
+hatchCounter: 35
+baseExp: 65
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 1
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium
+species: Evolution
+description: |-
+  Because its genetic makeup is
+  irregular, it quickly changes its
+  form due to a variety of causes.
+height: 3
+weight: 65
+color: Brown
+shape: Quadruped
+habitat: Urban

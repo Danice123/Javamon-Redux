@@ -1,0 +1,13 @@
+---
+name: Take Down
+type: NORMAL
+uses: 20
+accuracy: 85
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+  power: 90
+  damageType: PHYSICAL
+  contact: true
+  recoil: 25

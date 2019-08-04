@@ -1,0 +1,59 @@
+---
+number: 33
+name: Nidorino
+types:
+- POISON
+baseStats:
+  HEALTH: 61
+  ATTACK: 72
+  DEFENSE: 57
+  SPECIAL_ATTACK: 55
+  SPECIAL_DEFENSE: 55
+  SPEED: 65
+abilities:
+- Poison Point
+- Rivalry
+dreamAbility: Hustle
+learnableAttacks:
+  32:
+  - Fury Attack
+  1:
+  - Horn Attack
+  - Tackle
+  - Leer
+  50:
+  - Double Kick
+  23:
+  - Focus Energy
+  8:
+  - Horn Attack
+  41:
+  - Horn Drill
+  14:
+  - Poison Sting
+genderRatio: NEVER_FEMALE
+genus:
+- Monster
+- Field
+hatchCounter: 20
+baseExp: 128
+effort:
+  HEALTH: 0
+  ATTACK: 2
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 120
+baseHappiness: 70
+growthRate: Medium_slow
+species: Poison Pin
+description: |-
+  It has a violent disposition and
+  stabs foes with its horn, which
+  oozes poison upon impact.
+height: 9
+weight: 195
+color: Purple
+shape: Quadruped
+habitat: Grassland

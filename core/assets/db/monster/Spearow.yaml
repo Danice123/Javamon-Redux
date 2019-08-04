@@ -1,0 +1,55 @@
+---
+number: 21
+name: Spearow
+types:
+- NORMAL
+- FLYING
+baseStats:
+  HEALTH: 40
+  ATTACK: 60
+  DEFENSE: 30
+  SPECIAL_ATTACK: 31
+  SPECIAL_DEFENSE: 31
+  SPEED: 70
+abilities:
+- Keen Eye
+dreamAbility: Sniper
+learnableAttacks:
+  1:
+  - Growl
+  - Peck
+  36:
+  - Agility
+  22:
+  - Mirror Move
+  9:
+  - Leer
+  29:
+  - Drill Peck
+  15:
+  - Fury Attack
+genderRatio: HALF_FEMALE
+genus:
+- Flying
+hatchCounter: 15
+baseExp: 52
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 1
+captureRate: 255
+baseHappiness: 70
+growthRate: Medium
+species: Tiny Bird
+description: |-
+  It flaps its small wings busily to
+  fly. Using its beak, it searches
+  in grass for prey.
+height: 3
+weight: 20
+color: Brown
+shape: Wings
+habitat: Rough_Terrain

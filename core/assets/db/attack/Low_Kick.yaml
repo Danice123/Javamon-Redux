@@ -1,0 +1,8 @@
+---
+name: Low Kick
+type: FIGHTING
+uses: 20
+accuracy: 100
+missable: true
+priority: 0
+effects:

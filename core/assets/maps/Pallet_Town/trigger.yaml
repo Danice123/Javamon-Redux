@@ -1,0 +1,41 @@
+---
+triggers:
+- x: 5
+  y: 12
+  layer: 1
+  script: $Warp
+  arguments:
+    mapName: Pallet_Town_Red_Home
+    x: 3
+    y: 1
+    layer: 1
+- x: 13
+  y: 12
+  layer: 1
+  script: $Warp
+  arguments:
+    mapName: Pallet_Town_Rival_Home
+    x: 3
+    y: 1
+    layer: 1
+- x: 12
+  y: 6
+  layer: 1
+  script: $Warp
+  arguments:
+    mapName: Pallet_Town_Lab
+    x: 5
+    y: 1
+    layer: 1
+- x: 10
+  y: 16
+  layer: 1
+  script: Oak_Enc
+  arguments:
+    Side: Left
+- x: 11
+  y: 16
+  layer: 1
+  script: Oak_Enc
+  arguments:
+    Side: Right

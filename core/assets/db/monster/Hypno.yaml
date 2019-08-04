@@ -1,0 +1,59 @@
+---
+number: 97
+name: Hypno
+types:
+- PSYCHIC
+baseStats:
+  HEALTH: 85
+  ATTACK: 73
+  DEFENSE: 70
+  SPECIAL_ATTACK: 73
+  SPECIAL_DEFENSE: 115
+  SPEED: 67
+abilities:
+- Insomnia
+- Forewarn
+dreamAbility: Inner Focus
+learnableAttacks:
+  17:
+  - Confusion
+  1:
+  - Pound
+  - Disable
+  - Confusion
+  - Hypnosis
+  33:
+  - Poison Gas
+  37:
+  - Psychic
+  24:
+  - Headbutt
+  43:
+  - Meditate
+  12:
+  - Disable
+genderRatio: HALF_FEMALE
+genus:
+- Humanoid
+hatchCounter: 20
+baseExp: 169
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 2
+  SPEED: 0
+captureRate: 75
+baseHappiness: 70
+growthRate: Medium
+species: Hypnosis
+description: |-
+  Seeing its swinging pendulum can
+  induce sleep in three seconds,
+  even in someone who just woke up.
+height: 16
+weight: 756
+color: Yellow
+shape: Humanoid
+habitat: Grassland

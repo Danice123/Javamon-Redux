@@ -1,0 +1,12 @@
+---
+name: Rest
+type: PSYCHIC
+uses: 10
+missable: false
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.StatusEffect
+  target: USER
+  status: SLEEP
+- effect: dev.dankins.javamon.data.monster.attack.effect.Heal
+  percent: 100

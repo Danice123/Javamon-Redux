@@ -1,0 +1,46 @@
+---
+number: 26
+name: Raichu
+types:
+- ELECTRIC
+baseStats:
+  HEALTH: 60
+  ATTACK: 90
+  DEFENSE: 55
+  SPECIAL_ATTACK: 90
+  SPECIAL_DEFENSE: 80
+  SPEED: 100
+abilities:
+- Static
+dreamAbility: Lightningrod
+learnableAttacks:
+  1:
+  - Growl
+  - Thunder Shock
+  - Thunder Wave
+genderRatio: HALF_FEMALE
+genus:
+- Field
+- Fairy
+hatchCounter: 10
+baseExp: 214
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 3
+captureRate: 75
+baseHappiness: 70
+growthRate: Medium
+species: Mouse
+description: |-
+  Its tail discharges electricity into
+  the ground, protecting it from
+  getting shocked.
+height: 8
+weight: 300
+color: Yellow
+shape: Upright
+habitat: Forest

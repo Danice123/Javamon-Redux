@@ -1,0 +1,55 @@
+---
+number: 108
+name: Lickitung
+types:
+- NORMAL
+baseStats:
+  HEALTH: 90
+  ATTACK: 55
+  DEFENSE: 75
+  SPECIAL_ATTACK: 60
+  SPECIAL_DEFENSE: 75
+  SPEED: 30
+abilities:
+- Own Tempo
+- Oblivious
+dreamAbility: Cloud Nine
+learnableAttacks:
+  1:
+  - Wrap
+  - Supersonic
+  39:
+  - Screech
+  23:
+  - Defense Curl
+  7:
+  - Stomp
+  31:
+  - Slam
+  15:
+  - Disable
+genderRatio: HALF_FEMALE
+genus:
+- Monster
+hatchCounter: 20
+baseExp: 77
+effort:
+  HEALTH: 2
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium
+species: Licking
+description: |-
+  When it extends its over-six-foot-
+  long tongue, its tail quivers. There
+  is a possibility they are connected.
+height: 12
+weight: 655
+color: Pink
+shape: Upright
+habitat: Grassland

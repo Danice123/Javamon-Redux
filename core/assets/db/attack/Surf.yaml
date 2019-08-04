@@ -1,0 +1,11 @@
+---
+name: Surf
+type: WATER
+uses: 15
+accuracy: 100
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+  power: 95
+  damageType: SPECIAL

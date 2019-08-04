@@ -1,0 +1,56 @@
+---
+number: 117
+name: Seadra
+types:
+- WATER
+baseStats:
+  HEALTH: 55
+  ATTACK: 65
+  DEFENSE: 95
+  SPECIAL_ATTACK: 95
+  SPECIAL_DEFENSE: 45
+  SPEED: 85
+abilities:
+- Poison Point
+- Sniper
+dreamAbility: Damp
+learnableAttacks:
+  1:
+  - SmokeScreen
+  - Bubble
+  19:
+  - SmokeScreen
+  52:
+  - Hydro Pump
+  24:
+  - Leer
+  41:
+  - Agility
+  30:
+  - Water Gun
+genderRatio: HALF_FEMALE
+genus:
+- Water
+- Dragon
+hatchCounter: 20
+baseExp: 154
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 1
+  SPECIAL_ATTACK: 1
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 75
+baseHappiness: 70
+growthRate: Medium
+species: Dragon
+description: |-
+  Its spines provide protection.
+  Its fins and bones are prized as
+  traditional medicine ingredients.
+height: 12
+weight: 250
+color: Blue
+shape: Blob
+habitat: Sea

@@ -1,0 +1,25 @@
+---
+name: Dizzy Punch
+type: NORMAL
+uses: 10
+accuracy: 100
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+  power: 70
+  damageType: PHYSICAL
+  contact: true
+- effect: dev.dankins.javamon.data.monster.attack.effect.Chance
+  chance: 20
+  effects:
+  - effect: dev.dankins.javamon.data.monster.attack.effect.SetFlag
+    target: TARGET
+    flag: isConfused
+    text: $target has become confused!
+  - effect: dev.dankins.javamon.data.monster.attack.effect.SetCounter
+    target: TARGET
+    counter: ConfusionCounter
+    type: RANDOM
+    min: 2
+    max: 5

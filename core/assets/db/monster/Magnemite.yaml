@@ -1,0 +1,57 @@
+---
+number: 81
+name: Magnemite
+types:
+- ELECTRIC
+- STEEL
+baseStats:
+  HEALTH: 25
+  ATTACK: 35
+  DEFENSE: 70
+  SPECIAL_ATTACK: 95
+  SPECIAL_DEFENSE: 55
+  SPEED: 45
+abilities:
+- Magnet Pull
+- Sturdy
+dreamAbility: Analytic
+learnableAttacks:
+  1:
+  - Tackle
+  35:
+  - Thunder Wave
+  21:
+  - Sonic Boom
+  25:
+  - Thunder Shock
+  41:
+  - Swift
+  29:
+  - Supersonic
+  47:
+  - Screech
+genderRatio: GENDERLESS
+genus:
+- Mineral
+hatchCounter: 20
+baseExp: 65
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 1
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 190
+baseHappiness: 70
+growthRate: Medium
+species: Magnet
+description: |-
+  The faster the units at its sides
+  rotate, the greater the magnetic
+  force they generate.
+height: 3
+weight: 60
+color: Gray
+shape: Arms
+habitat: Rough_Terrain

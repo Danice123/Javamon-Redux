@@ -1,0 +1,17 @@
+---
+name: Blizzard
+type: ICE
+uses: 5
+accuracy: 70
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+  power: 120
+  damageType: SPECIAL
+- effect: dev.dankins.javamon.data.monster.attack.effect.Chance
+  chance: 10
+  effects:
+  - effect: dev.dankins.javamon.data.monster.attack.effect.StatusEffect
+    target: TARGET
+    status: FREEZE

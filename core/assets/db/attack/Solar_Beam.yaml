@@ -1,0 +1,16 @@
+---
+name: Solar Beam
+type: GRASS
+uses: 10
+missable: false
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.SetFlag
+  target: USER
+  flag: MultiTurnMove
+  text: $target is gathering sunlight!
+- effect: dev.dankins.javamon.data.monster.attack.effect.SetCounter
+  target: USER
+  counter: MultiTurnCounter
+  type: SET
+  n: 1

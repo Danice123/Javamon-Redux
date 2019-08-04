@@ -1,0 +1,11 @@
+---
+name: Struggle
+type: NORMAL
+missable: false
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+  power: 50
+  damageType: PHYSICAL
+  contact: true
+  recoil: 25

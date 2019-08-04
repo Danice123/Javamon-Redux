@@ -1,0 +1,15 @@
+---
+name: Focus Energy
+type: NORMAL
+uses: 30
+missable: false
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.SetFlag
+  target: USER
+  flag: CriticalRateBoost
+- effect: dev.dankins.javamon.data.monster.attack.effect.SetCounter
+  target: USER
+  counter: CriticalRateBoost
+  type: MODIFY
+  n: 2

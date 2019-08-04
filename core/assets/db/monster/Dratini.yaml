@@ -1,0 +1,55 @@
+---
+number: 147
+name: Dratini
+types:
+- DRAGON
+baseStats:
+  HEALTH: 41
+  ATTACK: 64
+  DEFENSE: 45
+  SPECIAL_ATTACK: 50
+  SPECIAL_DEFENSE: 50
+  SPEED: 50
+abilities:
+- Shed Skin
+dreamAbility: Marvel Scale
+learnableAttacks:
+  1:
+  - Wrap
+  - Leer
+  50:
+  - Hyper Beam
+  20:
+  - Agility
+  40:
+  - Dragon Rage
+  10:
+  - Thunder Wave
+  30:
+  - Slam
+genderRatio: HALF_FEMALE
+genus:
+- Water
+- Dragon
+hatchCounter: 40
+baseExp: 60
+effort:
+  HEALTH: 0
+  ATTACK: 1
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 35
+growthRate: Slow
+species: Dragon
+description: |-
+  It is called the �Mirage Pok�mon�
+  because so few have seen it.
+  Its shed skin has been found.
+height: 18
+weight: 33
+color: Blue
+shape: Squiggle
+habitat: Waters_Edge

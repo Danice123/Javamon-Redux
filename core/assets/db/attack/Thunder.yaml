@@ -1,0 +1,17 @@
+---
+name: Thunder
+type: ELECTRIC
+uses: 10
+accuracy: 70
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+  power: 110
+  damageType: SPECIAL
+- effect: dev.dankins.javamon.data.monster.attack.effect.Chance
+  chance: 30
+  effects:
+  - effect: dev.dankins.javamon.data.monster.attack.effect.StatusEffect
+    target: TARGET
+    status: PARALYSIS

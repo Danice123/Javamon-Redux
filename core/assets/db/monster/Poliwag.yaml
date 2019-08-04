@@ -1,0 +1,56 @@
+---
+number: 60
+name: Poliwag
+types:
+- WATER
+baseStats:
+  HEALTH: 40
+  ATTACK: 50
+  DEFENSE: 40
+  SPECIAL_ATTACK: 40
+  SPECIAL_DEFENSE: 40
+  SPEED: 90
+abilities:
+- Water Absorb
+- Damp
+dreamAbility: Swift Swim
+learnableAttacks:
+  16:
+  - Hypnosis
+  1:
+  - Bubble
+  19:
+  - Water Gun
+  38:
+  - Amnesia
+  25:
+  - Double Slap
+  45:
+  - Hydro Pump
+  31:
+  - Body Slam
+genderRatio: HALF_FEMALE
+genus:
+- Water
+hatchCounter: 20
+baseExp: 60
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 1
+captureRate: 255
+baseHappiness: 70
+growthRate: Medium_slow
+species: Tadpole
+description: |-
+  Its skin is so thin, its internal
+  organs are visible. It has trouble
+  walking on its newly grown feet.
+height: 6
+weight: 124
+color: Blue
+shape: Legs
+habitat: Waters_Edge

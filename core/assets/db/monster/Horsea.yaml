@@ -1,0 +1,55 @@
+---
+number: 116
+name: Horsea
+types:
+- WATER
+baseStats:
+  HEALTH: 30
+  ATTACK: 40
+  DEFENSE: 70
+  SPECIAL_ATTACK: 70
+  SPECIAL_DEFENSE: 25
+  SPEED: 60
+abilities:
+- Swift Swim
+- Sniper
+dreamAbility: Damp
+learnableAttacks:
+  1:
+  - Bubble
+  19:
+  - SmokeScreen
+  37:
+  - Agility
+  24:
+  - Leer
+  45:
+  - Hydro Pump
+  30:
+  - Water Gun
+genderRatio: HALF_FEMALE
+genus:
+- Water
+- Dragon
+hatchCounter: 20
+baseExp: 59
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 1
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 225
+baseHappiness: 70
+growthRate: Medium
+species: Dragon
+description: |-
+  It makes its nest in the shade of
+  corals. If it senses danger, it
+  spits murky ink and flees.
+height: 4
+weight: 80
+color: Blue
+shape: Blob
+habitat: Sea

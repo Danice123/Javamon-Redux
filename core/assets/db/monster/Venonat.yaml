@@ -1,0 +1,58 @@
+---
+number: 48
+name: Venonat
+types:
+- BUG
+- POISON
+baseStats:
+  HEALTH: 60
+  ATTACK: 55
+  DEFENSE: 50
+  SPECIAL_ATTACK: 40
+  SPECIAL_DEFENSE: 55
+  SPEED: 45
+abilities:
+- Compoundeyes
+- Tinted Lens
+dreamAbility: Run Away
+learnableAttacks:
+  1:
+  - Tackle
+  - Disable
+  35:
+  - Psybeam
+  38:
+  - Sleep Powder
+  24:
+  - Poison Powder
+  43:
+  - Psychic
+  27:
+  - Leech Life
+  30:
+  - Stun Spore
+genderRatio: HALF_FEMALE
+genus:
+- Bug
+hatchCounter: 20
+baseExp: 61
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 1
+  SPEED: 0
+captureRate: 190
+baseHappiness: 70
+growthRate: Medium
+species: Insect
+description: |-
+  Its big eyes are actually clusters
+  of tiny eyes. At night, its kind is
+  drawn by light.
+height: 10
+weight: 300
+color: Purple
+shape: Humanoid
+habitat: Forest

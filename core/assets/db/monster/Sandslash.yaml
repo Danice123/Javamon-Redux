@@ -1,0 +1,54 @@
+---
+number: 28
+name: Sandslash
+types:
+- GROUND
+baseStats:
+  HEALTH: 75
+  ATTACK: 100
+  DEFENSE: 110
+  SPECIAL_ATTACK: 45
+  SPECIAL_DEFENSE: 55
+  SPEED: 65
+abilities:
+- Sand Veil
+dreamAbility: Sand Rush
+learnableAttacks:
+  17:
+  - Slash
+  1:
+  - Scratch
+  - Sand Attack
+  36:
+  - Swift
+  10:
+  - Sand Attack
+  27:
+  - Poison Sting
+  47:
+  - Fury Swipes
+genderRatio: HALF_FEMALE
+genus:
+- Field
+hatchCounter: 20
+baseExp: 158
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 2
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 90
+baseHappiness: 70
+growthRate: Medium
+species: Mouse
+description: |-
+  It curls up, then rolls into foes
+  with its back. Its sharp spines
+  inflict severe damage.
+height: 10
+weight: 295
+color: Yellow
+shape: Upright
+habitat: Rough_Terrain

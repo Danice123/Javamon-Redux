@@ -1,0 +1,55 @@
+---
+number: 34
+name: Nidoking
+types:
+- POISON
+- GROUND
+baseStats:
+  HEALTH: 81
+  ATTACK: 92
+  DEFENSE: 77
+  SPECIAL_ATTACK: 85
+  SPECIAL_DEFENSE: 75
+  SPEED: 85
+abilities:
+- Poison Point
+- Rivalry
+dreamAbility: Sheer Force
+learnableAttacks:
+  1:
+  - Horn Attack
+  - Tackle
+  - Thrash
+  - Poison Sting
+  23:
+  - Thrash
+  8:
+  - Horn Attack
+  14:
+  - Poison Sting
+genderRatio: NEVER_FEMALE
+genus:
+- Monster
+- Field
+hatchCounter: 20
+baseExp: 223
+effort:
+  HEALTH: 0
+  ATTACK: 3
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium_slow
+species: Drill
+description: |-
+  One swing of its mighty tail can
+  snap a telephone pole as if it were
+  a matchstick.
+height: 14
+weight: 620
+color: Purple
+shape: Upright
+habitat: Grassland

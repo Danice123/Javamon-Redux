@@ -1,0 +1,10 @@
+---
+name: Poke Ball
+cost: 200
+stackable: true
+tossable: true
+usableInBattle: true
+usableInField: false
+consumedOnUse: true
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Catch

@@ -1,0 +1,55 @@
+---
+number: 110
+name: Weezing
+types:
+- POISON
+baseStats:
+  HEALTH: 65
+  ATTACK: 90
+  DEFENSE: 120
+  SPECIAL_ATTACK: 85
+  SPECIAL_DEFENSE: 70
+  SPEED: 60
+abilities:
+- Levitate
+dreamAbility: null
+learnableAttacks:
+  32:
+  - Sludge
+  1:
+  - Tackle
+  - Smog
+  - Sludge
+  49:
+  - Haze
+  53:
+  - Explosion
+  39:
+  - SmokeScreen
+  43:
+  - Self-Destruct
+genderRatio: HALF_FEMALE
+genus:
+- Amorphous
+hatchCounter: 20
+baseExp: 172
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 2
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 60
+baseHappiness: 70
+growthRate: Medium
+species: Poison Gas
+description: |-
+  It grows by feeding on gases
+  released by garbage. Though very
+  rare, triplets have been found.
+height: 12
+weight: 95
+color: Purple
+shape: Heads
+habitat: Urban

@@ -1,0 +1,56 @@
+---
+number: 67
+name: Machoke
+types:
+- FIGHTING
+baseStats:
+  HEALTH: 80
+  ATTACK: 100
+  DEFENSE: 70
+  SPECIAL_ATTACK: 50
+  SPECIAL_DEFENSE: 60
+  SPEED: 45
+abilities:
+- Guts
+- No Guard
+dreamAbility: Steadfast
+learnableAttacks:
+  1:
+  - Karate Chop
+  - Leer
+  - Low Kick
+  20:
+  - Low Kick
+  36:
+  - Focus Energy
+  52:
+  - Submission
+  25:
+  - Leer
+  44:
+  - Seismic Toss
+genderRatio: FEMALE_14
+genus:
+- Humanoid
+hatchCounter: 20
+baseExp: 142
+effort:
+  HEALTH: 0
+  ATTACK: 2
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 90
+baseHappiness: 70
+growthRate: Medium_slow
+species: Superpower
+description: |-
+  It happily carries heavy cargo to
+  toughen up. It willingly does hard
+  work for people.
+height: 15
+weight: 705
+color: Gray
+shape: Humanoid
+habitat: Mountain

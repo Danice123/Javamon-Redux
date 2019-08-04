@@ -1,0 +1,58 @@
+---
+number: 61
+name: Poliwhirl
+types:
+- WATER
+baseStats:
+  HEALTH: 65
+  ATTACK: 65
+  DEFENSE: 65
+  SPECIAL_ATTACK: 50
+  SPECIAL_DEFENSE: 50
+  SPEED: 90
+abilities:
+- Water Absorb
+- Damp
+dreamAbility: Swift Swim
+learnableAttacks:
+  16:
+  - Hypnosis
+  1:
+  - Water Gun
+  - Hypnosis
+  - Bubble
+  49:
+  - Hydro Pump
+  33:
+  - Body Slam
+  19:
+  - Water Gun
+  41:
+  - Amnesia
+  26:
+  - Double Slap
+genderRatio: HALF_FEMALE
+genus:
+- Water
+hatchCounter: 20
+baseExp: 135
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 2
+captureRate: 120
+baseHappiness: 70
+growthRate: Medium_slow
+species: Tadpole
+description: |-
+  The spiral pattern on its belly
+  subtly undulates. Staring at it
+  gradually causes drowsiness.
+height: 10
+weight: 200
+color: Blue
+shape: Humanoid
+habitat: Waters_Edge

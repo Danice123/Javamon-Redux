@@ -1,0 +1,14 @@
+---
+name: Hyper Beam
+type: NORMAL
+uses: 5
+accuracy: 90
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+  power: 150
+  damageType: SPECIAL
+- effect: dev.dankins.javamon.data.monster.attack.effect.SetFlag
+  target: USER
+  flag: isCharging

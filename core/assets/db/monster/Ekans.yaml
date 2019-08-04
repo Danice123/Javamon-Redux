@@ -1,0 +1,56 @@
+---
+number: 23
+name: Ekans
+types:
+- POISON
+baseStats:
+  HEALTH: 35
+  ATTACK: 60
+  DEFENSE: 44
+  SPECIAL_ATTACK: 40
+  SPECIAL_DEFENSE: 54
+  SPEED: 55
+abilities:
+- Intimidate
+- Shed Skin
+dreamAbility: Unnerve
+learnableAttacks:
+  17:
+  - Bite
+  1:
+  - Wrap
+  - Leer
+  38:
+  - Acid
+  24:
+  - Glare
+  10:
+  - Poison Sting
+  31:
+  - Screech
+genderRatio: HALF_FEMALE
+genus:
+- Field
+- Dragon
+hatchCounter: 20
+baseExp: 58
+effort:
+  HEALTH: 0
+  ATTACK: 1
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 255
+baseHappiness: 70
+growthRate: Medium
+species: Snake
+description: |-
+  It sneaks through grass without
+  making a sound and strikes
+  unsuspecting prey from behind.
+height: 20
+weight: 69
+color: Purple
+shape: Squiggle
+habitat: Grassland

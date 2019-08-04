@@ -1,0 +1,12 @@
+---
+name: Hi Jump Kick
+type: FIGHTING
+uses: 10
+accuracy: 90
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+  power: 130
+  damageType: PHYSICAL
+  contact: true

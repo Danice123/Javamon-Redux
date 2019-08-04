@@ -1,0 +1,44 @@
+---
+number: 63
+name: Abra
+types:
+- PSYCHIC
+baseStats:
+  HEALTH: 25
+  ATTACK: 20
+  DEFENSE: 15
+  SPECIAL_ATTACK: 105
+  SPECIAL_DEFENSE: 55
+  SPEED: 90
+abilities:
+- Synchronize
+- Inner Focus
+dreamAbility: Magic Guard
+learnableAttacks:
+  1:
+  - Teleport
+genderRatio: FEMALE_14
+genus:
+- Humanoid
+hatchCounter: 20
+baseExp: 62
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 1
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 200
+baseHappiness: 70
+growthRate: Medium_slow
+species: Psi
+description: |-
+  Using its psychic power is such a
+  strain on its brain that it needs
+  to sleep for 18 hours a day.
+height: 9
+weight: 195
+color: Brown
+shape: Upright
+habitat: Urban

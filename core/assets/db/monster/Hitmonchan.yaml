@@ -1,0 +1,55 @@
+---
+number: 107
+name: Hitmonchan
+types:
+- FIGHTING
+baseStats:
+  HEALTH: 50
+  ATTACK: 105
+  DEFENSE: 79
+  SPECIAL_ATTACK: 35
+  SPECIAL_DEFENSE: 110
+  SPEED: 76
+abilities:
+- Keen Eye
+- Iron Fist
+dreamAbility: Inner Focus
+learnableAttacks:
+  48:
+  - Mega Punch
+  1:
+  - Comet Punch
+  - Agility
+  33:
+  - Fire Punch
+  53:
+  - Counter
+  38:
+  - Ice Punch
+  43:
+  - Thunder Punch
+genderRatio: NEVER_FEMALE
+genus:
+- Humanoid
+hatchCounter: 25
+baseExp: 159
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 2
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium
+species: Punching
+description: |-
+  The arm-twisting punches it throws
+  pulverize even concrete. It rests
+  after three minutes of fighting.
+height: 14
+weight: 502
+color: Brown
+shape: Humanoid
+habitat: Urban

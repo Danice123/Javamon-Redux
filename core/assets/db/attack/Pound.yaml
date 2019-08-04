@@ -1,0 +1,12 @@
+---
+name: Pound
+type: NORMAL
+uses: 35
+accuracy: 100
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+  power: 40
+  damageType: PHYSICAL
+  contact: true

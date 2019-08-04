@@ -1,0 +1,47 @@
+---
+number: 121
+name: Starmie
+types:
+- WATER
+- PSYCHIC
+baseStats:
+  HEALTH: 60
+  ATTACK: 75
+  DEFENSE: 85
+  SPECIAL_ATTACK: 100
+  SPECIAL_DEFENSE: 85
+  SPEED: 115
+abilities:
+- Illuminate
+- Natural Cure
+dreamAbility: Analytic
+learnableAttacks:
+  1:
+  - Tackle
+  - Water Gun
+  - Harden
+genderRatio: GENDERLESS
+genus:
+- Shellfish
+hatchCounter: 20
+baseExp: 182
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 2
+captureRate: 60
+baseHappiness: 70
+growthRate: Slow
+species: Mysterious
+description: |-
+  At the center of its body is a red
+  core, which sends mysterious
+  radio signals into the night sky.
+height: 11
+weight: 800
+color: Purple
+shape: Blob
+habitat: Sea

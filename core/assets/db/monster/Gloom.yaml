@@ -1,0 +1,58 @@
+---
+number: 44
+name: Gloom
+types:
+- GRASS
+- POISON
+baseStats:
+  HEALTH: 60
+  ATTACK: 65
+  DEFENSE: 70
+  SPECIAL_ATTACK: 85
+  SPECIAL_DEFENSE: 75
+  SPEED: 40
+abilities:
+- Chlorophyll
+dreamAbility: Stench
+learnableAttacks:
+  17:
+  - Stun Spore
+  1:
+  - Absorb
+  - Poison Powder
+  - Stun Spore
+  19:
+  - Sleep Powder
+  52:
+  - Solar Beam
+  38:
+  - Petal Dance
+  28:
+  - Acid
+  15:
+  - Poison Powder
+genderRatio: HALF_FEMALE
+genus:
+- Grass
+hatchCounter: 20
+baseExp: 138
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 2
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 120
+baseHappiness: 70
+growthRate: Medium_slow
+species: Weed
+description: |-
+  The honey it drools from its mouth
+  smells so atrocious, it can curl
+  noses more than a mile away.
+height: 8
+weight: 86
+color: Blue
+shape: Humanoid
+habitat: Grassland

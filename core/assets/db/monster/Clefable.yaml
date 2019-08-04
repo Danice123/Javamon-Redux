@@ -1,0 +1,47 @@
+---
+number: 36
+name: Clefable
+types:
+- NORMAL
+baseStats:
+  HEALTH: 95
+  ATTACK: 70
+  DEFENSE: 73
+  SPECIAL_ATTACK: 85
+  SPECIAL_DEFENSE: 90
+  SPEED: 60
+abilities:
+- Cute Charm
+- Magic Guard
+dreamAbility: Unaware
+learnableAttacks:
+  1:
+  - Double Slap
+  - Sing
+  - Minimize
+  - Metronome
+genderRatio: FEMALE_34
+genus:
+- Fairy
+hatchCounter: 10
+baseExp: 213
+effort:
+  HEALTH: 3
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 25
+baseHappiness: 140
+growthRate: Fast
+species: Fairy
+description: |-
+  It is very wary and rarely shows
+  itself to people. Its ears can hear
+  a pin drop over half a mile away.
+height: 13
+weight: 400
+color: Pink
+shape: Upright
+habitat: Mountain

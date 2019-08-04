@@ -1,0 +1,10 @@
+---
+name: Sonic Boom
+type: NORMAL
+uses: 20
+accuracy: 90
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.StaticDamage
+  damage: 20

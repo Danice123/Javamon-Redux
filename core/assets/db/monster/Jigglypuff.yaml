@@ -1,0 +1,57 @@
+---
+number: 39
+name: Jigglypuff
+types:
+- NORMAL
+baseStats:
+  HEALTH: 115
+  ATTACK: 45
+  DEFENSE: 20
+  SPECIAL_ATTACK: 45
+  SPECIAL_DEFENSE: 25
+  SPEED: 20
+abilities:
+- Cute Charm
+dreamAbility: Friend Guard
+learnableAttacks:
+  1:
+  - Sing
+  34:
+  - Body Slam
+  19:
+  - Defense Curl
+  39:
+  - Double-Edge
+  24:
+  - Double Slap
+  9:
+  - Pound
+  29:
+  - Rest
+  14:
+  - Disable
+genderRatio: FEMALE_34
+genus:
+- Fairy
+hatchCounter: 10
+baseExp: 95
+effort:
+  HEALTH: 2
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 170
+baseHappiness: 70
+growthRate: Fast
+species: Balloon
+description: |-
+  When it wavers its big, round
+  eyes, it begins singing a lullaby
+  that makes everyone drowsy.
+height: 5
+weight: 55
+color: Pink
+shape: Humanoid
+habitat: Grassland

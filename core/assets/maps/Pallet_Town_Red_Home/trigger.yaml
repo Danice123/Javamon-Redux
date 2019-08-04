@@ -1,0 +1,29 @@
+---
+triggers:
+- x: 8
+  y: 7
+  layer: 1
+  script: $Warp
+  arguments:
+    mapName: Pallet_Town_Red_Home_2
+    x: 8
+    y: 7
+    layer: 0
+- x: 3
+  y: 1
+  layer: 1
+  script: $DWarp
+  arguments:
+    mapName: Pallet_Town
+    x: 5
+    y: 12
+    layer: 1
+- x: 4
+  y: 1
+  layer: 1
+  script: $DWarp
+  arguments:
+    mapName: Pallet_Town
+    x: 5
+    y: 12
+    layer: 1

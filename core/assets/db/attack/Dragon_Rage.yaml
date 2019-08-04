@@ -1,0 +1,10 @@
+---
+name: Dragon Rage
+type: DRAGON
+uses: 10
+accuracy: 100
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.StaticDamage
+  damage: 40

@@ -1,0 +1,56 @@
+---
+number: 77
+name: Ponyta
+types:
+- FIRE
+baseStats:
+  HEALTH: 50
+  ATTACK: 85
+  DEFENSE: 55
+  SPECIAL_ATTACK: 65
+  SPECIAL_DEFENSE: 65
+  SPEED: 90
+abilities:
+- Run Away
+- Flash Fire
+dreamAbility: Flame Body
+learnableAttacks:
+  32:
+  - Stomp
+  48:
+  - Agility
+  1:
+  - Ember
+  35:
+  - Growl
+  39:
+  - Fire Spin
+  43:
+  - Take Down
+  30:
+  - Tail Whip
+genderRatio: HALF_FEMALE
+genus:
+- Field
+hatchCounter: 20
+baseExp: 82
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 1
+captureRate: 190
+baseHappiness: 70
+growthRate: Medium
+species: Fire Horse
+description: |-
+  As a newborn, it can barely stand.
+  However, through galloping, its
+  legs are made tougher and faster.
+height: 10
+weight: 300
+color: Yellow
+shape: Quadruped
+habitat: Grassland

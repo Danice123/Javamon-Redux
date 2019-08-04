@@ -1,0 +1,17 @@
+---
+name: Poison Sting
+type: POISON
+uses: 30
+accuracy: 100
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+  power: 15
+  damageType: PHYSICAL
+- effect: dev.dankins.javamon.data.monster.attack.effect.Chance
+  chance: 30
+  effects:
+  - effect: dev.dankins.javamon.data.monster.attack.effect.StatusEffect
+    target: TARGET
+    status: POISON

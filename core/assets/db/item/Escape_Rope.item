@@ -1,9 +1,0 @@
-<Item>
-	<name>Escape Rope</name>
-	<isStackable>true</isStackable>
-	<isTossable>true</isTossable>
-	<isUsableInField>true</isUsableInField>
-	<isUsableInBattle>false</isUsableInBattle>
-	<isConsumedOnUse>true</isConsumedOnUse>
-	<cost>550</cost>
-</Item>

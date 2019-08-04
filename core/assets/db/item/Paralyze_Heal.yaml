@@ -1,0 +1,8 @@
+---
+name: Paralyze Heal
+cost: 200
+stackable: true
+tossable: true
+usableInBattle: true
+usableInField: true
+consumedOnUse: true

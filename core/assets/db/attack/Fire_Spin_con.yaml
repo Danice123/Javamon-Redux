@@ -1,0 +1,10 @@
+---
+name: Fire Spin
+type: FIRE
+uses: 15
+missable: false
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.StaticDamage
+  pDamage: true
+  percent: 6

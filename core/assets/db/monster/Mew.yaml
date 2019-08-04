@@ -1,0 +1,51 @@
+---
+number: 151
+name: Mew
+types:
+- PSYCHIC
+baseStats:
+  HEALTH: 100
+  ATTACK: 100
+  DEFENSE: 100
+  SPECIAL_ATTACK: 100
+  SPECIAL_DEFENSE: 100
+  SPEED: 100
+abilities:
+- Synchronize
+dreamAbility: null
+learnableAttacks:
+  1:
+  - Pound
+  20:
+  - Mega Punch
+  40:
+  - Psychic
+  10:
+  - Transform
+  30:
+  - Metronome
+genderRatio: GENDERLESS
+genus:
+- Undiscovered
+hatchCounter: 120
+baseExp: 270
+effort:
+  HEALTH: 3
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 100
+growthRate: Medium_slow
+species: New Species
+description: |-
+  Because it can use all kinds of
+  moves, many scientists believe Mew
+  to be the ancestor of Pok�mon.
+height: 4
+weight: 40
+color: Pink
+shape: Upright
+habitat: Rare

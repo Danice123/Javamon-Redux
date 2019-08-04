@@ -1,0 +1,58 @@
+---
+number: 79
+name: Slowpoke
+types:
+- WATER
+- PSYCHIC
+baseStats:
+  HEALTH: 90
+  ATTACK: 65
+  DEFENSE: 65
+  SPECIAL_ATTACK: 40
+  SPECIAL_DEFENSE: 40
+  SPEED: 15
+abilities:
+- Oblivious
+- Own Tempo
+dreamAbility: Regenerator
+learnableAttacks:
+  48:
+  - Psychic
+  1:
+  - Confusion
+  33:
+  - Water Gun
+  18:
+  - Disable
+  22:
+  - Headbutt
+  40:
+  - Amnesia
+  27:
+  - Growl
+genderRatio: HALF_FEMALE
+genus:
+- Monster
+- Water
+hatchCounter: 20
+baseExp: 63
+effort:
+  HEALTH: 1
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 190
+baseHappiness: 70
+growthRate: Medium
+species: Dopey
+description: |-
+  Although slow, it is skilled at
+  fishing with its tail. It does not
+  feel pain if its tail is bitten.
+height: 12
+weight: 360
+color: Pink
+shape: Quadruped
+habitat: Waters_Edge

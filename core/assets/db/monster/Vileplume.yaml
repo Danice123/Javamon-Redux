@@ -1,0 +1,53 @@
+---
+number: 45
+name: Vileplume
+types:
+- GRASS
+- POISON
+baseStats:
+  HEALTH: 75
+  ATTACK: 80
+  DEFENSE: 85
+  SPECIAL_ATTACK: 100
+  SPECIAL_DEFENSE: 90
+  SPEED: 50
+abilities:
+- Chlorophyll
+dreamAbility: Effect Spore
+learnableAttacks:
+  17:
+  - Stun Spore
+  1:
+  - Acid
+  - Stun Spore
+  - Sleep Powder
+  - Petal Dance
+  19:
+  - Sleep Powder
+  15:
+  - Poison Powder
+genderRatio: HALF_FEMALE
+genus:
+- Grass
+hatchCounter: 20
+baseExp: 216
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 3
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium_slow
+species: Flower
+description: |-
+  Its petals are the largest in the
+  world. As it walks, it scatters
+  extremely allergenic pollen.
+height: 12
+weight: 186
+color: Red
+shape: Humanoid
+habitat: Grassland

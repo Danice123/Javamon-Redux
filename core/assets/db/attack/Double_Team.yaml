@@ -1,0 +1,11 @@
+---
+name: Double Team
+type: NORMAL
+uses: 15
+missable: false
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.StatEffect
+  target: USER
+  stat: EVASION
+  level: 1

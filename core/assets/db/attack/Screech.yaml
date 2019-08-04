@@ -1,0 +1,12 @@
+---
+name: Screech
+type: NORMAL
+uses: 40
+accuracy: 85
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.StatEffect
+  target: TARGET
+  stat: DEFENSE
+  level: -2

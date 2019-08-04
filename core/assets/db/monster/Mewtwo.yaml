@@ -1,0 +1,56 @@
+---
+number: 150
+name: Mewtwo
+types:
+- PSYCHIC
+baseStats:
+  HEALTH: 106
+  ATTACK: 110
+  DEFENSE: 90
+  SPECIAL_ATTACK: 154
+  SPECIAL_DEFENSE: 90
+  SPEED: 130
+abilities:
+- Pressure
+dreamAbility: Unnerve
+learnableAttacks:
+  1:
+  - Disable
+  - Confusion
+  - Psychic
+  - Swift
+  81:
+  - Amnesia
+  66:
+  - Psychic
+  70:
+  - Recover
+  75:
+  - Mist
+  63:
+  - Barrier
+genderRatio: GENDERLESS
+genus:
+- Undiscovered
+hatchCounter: 120
+baseExp: 306
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 3
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 3
+baseHappiness: 0
+growthRate: Slow
+species: Genetic
+description: |-
+  A Pok�mon created by recombining
+  Mew�s genes. It�s said to have the
+  most savage heart among Pok�mon.
+height: 20
+weight: 1220
+color: Purple
+shape: Upright
+habitat: Rare

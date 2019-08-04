@@ -1,0 +1,7 @@
+---
+name: Conversion
+type: NORMAL
+uses: 30
+missable: false
+priority: 0
+effects:

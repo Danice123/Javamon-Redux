@@ -1,0 +1,55 @@
+---
+number: 115
+name: Kangaskhan
+types:
+- NORMAL
+baseStats:
+  HEALTH: 105
+  ATTACK: 95
+  DEFENSE: 80
+  SPECIAL_ATTACK: 40
+  SPECIAL_DEFENSE: 80
+  SPEED: 90
+abilities:
+- Early Bird
+- Scrappy
+dreamAbility: Inner Focus
+learnableAttacks:
+  1:
+  - Comet Punch
+  - Rage
+  36:
+  - Mega Punch
+  41:
+  - Leer
+  26:
+  - Bite
+  46:
+  - Dizzy Punch
+  31:
+  - Tail Whip
+genderRatio: ALWAYS_FEMALE
+genus:
+- Monster
+hatchCounter: 20
+baseExp: 172
+effort:
+  HEALTH: 2
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium
+species: Parent
+description: |-
+  It raises its offspring in its belly
+  pouch. It lets the baby out to
+  play only when it feels safe.
+height: 22
+weight: 800
+color: Brown
+shape: Upright
+habitat: Grassland

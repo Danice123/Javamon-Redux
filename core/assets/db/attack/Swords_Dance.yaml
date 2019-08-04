@@ -1,0 +1,11 @@
+---
+name: Swords Dance
+type: NORMAL
+uses: 20
+missable: false
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.StatEffect
+  target: USER
+  stat: ATTACK
+  level: 2

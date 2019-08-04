@@ -1,0 +1,7 @@
+---
+name: Light Screen
+type: PSYCHIC
+uses: 30
+missable: false
+priority: 0
+effects:

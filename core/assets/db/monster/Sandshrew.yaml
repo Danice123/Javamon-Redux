@@ -1,0 +1,53 @@
+---
+number: 27
+name: Sandshrew
+types:
+- GROUND
+baseStats:
+  HEALTH: 50
+  ATTACK: 75
+  DEFENSE: 85
+  SPECIAL_ATTACK: 20
+  SPECIAL_DEFENSE: 30
+  SPEED: 40
+abilities:
+- Sand Veil
+dreamAbility: Sand Rush
+learnableAttacks:
+  17:
+  - Slash
+  1:
+  - Scratch
+  38:
+  - Fury Swipes
+  24:
+  - Poison Sting
+  10:
+  - Sand Attack
+  31:
+  - Swift
+genderRatio: HALF_FEMALE
+genus:
+- Field
+hatchCounter: 20
+baseExp: 60
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 1
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 255
+baseHappiness: 70
+growthRate: Medium
+species: Mouse
+description: |-
+  To protect itself from attackers,
+  it curls up into a ball. It lives in
+  arid regions with minimal rainfall.
+height: 6
+weight: 120
+color: Yellow
+shape: Upright
+habitat: Rough_Terrain

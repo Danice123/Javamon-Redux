@@ -1,0 +1,11 @@
+---
+name: Razor Wind
+type: NORMAL
+uses: 10
+accuracy: 100
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+  power: 80
+  damageType: SPECIAL

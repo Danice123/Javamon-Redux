@@ -1,0 +1,11 @@
+---
+name: Sing
+type: NORMAL
+uses: 15
+accuracy: 55
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.StatusEffect
+  target: TARGET
+  status: SLEEP

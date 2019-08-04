@@ -1,0 +1,54 @@
+---
+number: 143
+name: Snorlax
+types:
+- NORMAL
+baseStats:
+  HEALTH: 160
+  ATTACK: 110
+  DEFENSE: 65
+  SPECIAL_ATTACK: 65
+  SPECIAL_DEFENSE: 110
+  SPEED: 30
+abilities:
+- Immunity
+- Thick Fat
+dreamAbility: Gluttony
+learnableAttacks:
+  48:
+  - Double-Edge
+  1:
+  - Headbutt
+  - Amnesia
+  - Rest
+  35:
+  - Body Slam
+  56:
+  - Hyper Beam
+  41:
+  - Harden
+genderRatio: FEMALE_18
+genus:
+- Monster
+hatchCounter: 40
+baseExp: 189
+effort:
+  HEALTH: 2
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 25
+baseHappiness: 70
+growthRate: Slow
+species: Sleeping
+description: |-
+  When its belly is full, it becomes
+  too lethargic to even lift a finger,
+  so it is safe to bounce on its belly.
+height: 21
+weight: 4600
+color: Black
+shape: Humanoid
+habitat: Mountain

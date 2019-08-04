@@ -1,0 +1,55 @@
+---
+number: 52
+name: Meowth
+types:
+- NORMAL
+baseStats:
+  HEALTH: 40
+  ATTACK: 45
+  DEFENSE: 35
+  SPECIAL_ATTACK: 40
+  SPECIAL_DEFENSE: 40
+  SPEED: 90
+abilities:
+- Pickup
+- Technician
+dreamAbility: Unnerve
+learnableAttacks:
+  17:
+  - Pay Day
+  1:
+  - Scratch
+  - Growl
+  33:
+  - Fury Swipes
+  24:
+  - Screech
+  12:
+  - Bite
+  44:
+  - Slash
+genderRatio: HALF_FEMALE
+genus:
+- Field
+hatchCounter: 20
+baseExp: 58
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 1
+captureRate: 255
+baseHappiness: 70
+growthRate: Medium
+species: Scratch Cat
+description: |-
+  It is nocturnal in nature. If it
+  spots something shiny, its eyes
+  glitter brightly.
+height: 4
+weight: 42
+color: Yellow
+shape: Quadruped
+habitat: Urban

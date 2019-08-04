@@ -1,0 +1,55 @@
+---
+number: 126
+name: Magmar
+types:
+- FIRE
+baseStats:
+  HEALTH: 65
+  ATTACK: 95
+  DEFENSE: 57
+  SPECIAL_ATTACK: 100
+  SPECIAL_DEFENSE: 85
+  SPEED: 93
+abilities:
+- Flame Body
+dreamAbility: Vital Spirit
+learnableAttacks:
+  48:
+  - SmokeScreen
+  1:
+  - Ember
+  36:
+  - Leer
+  52:
+  - Smog
+  55:
+  - Flamethrower
+  39:
+  - Confuse Ray
+  43:
+  - Fire Punch
+genderRatio: FEMALE_14
+genus:
+- Humanoid
+hatchCounter: 25
+baseExp: 173
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 2
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium
+species: Spitfire
+description: |-
+  When it breathes deeply, heat
+  waves form around its body, making
+  it hard to see clearly.
+height: 13
+weight: 445
+color: Red
+shape: Upright
+habitat: Mountain

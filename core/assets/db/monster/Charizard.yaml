@@ -1,0 +1,60 @@
+---
+number: 6
+name: Charizard
+types:
+- FIRE
+- FLYING
+baseStats:
+  HEALTH: 78
+  ATTACK: 84
+  DEFENSE: 78
+  SPECIAL_ATTACK: 109
+  SPECIAL_DEFENSE: 85
+  SPEED: 100
+abilities:
+- Blaze
+dreamAbility: Solar Power
+learnableAttacks:
+  1:
+  - Scratch
+  - Leer
+  - Growl
+  - Ember
+  36:
+  - Slash
+  55:
+  - Fire Spin
+  24:
+  - Rage
+  9:
+  - Ember
+  46:
+  - Flamethrower
+  15:
+  - Leer
+genderRatio: FEMALE_18
+genus:
+- Monster
+- Dragon
+hatchCounter: 20
+baseExp: 240
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 3
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium_slow
+species: Flame
+description: |-
+  It is said that Charizard�s fire
+  burns hotter if it has
+  experienced harsh battles.
+height: 17
+weight: 905
+color: Red
+shape: Upright
+habitat: Mountain

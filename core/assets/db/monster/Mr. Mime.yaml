@@ -1,0 +1,55 @@
+---
+number: 122
+name: Mr. Mime
+types:
+- PSYCHIC
+baseStats:
+  HEALTH: 40
+  ATTACK: 45
+  DEFENSE: 65
+  SPECIAL_ATTACK: 100
+  SPECIAL_DEFENSE: 120
+  SPEED: 90
+abilities:
+- Soundproof
+- Filter
+dreamAbility: Technician
+learnableAttacks:
+  1:
+  - Confusion
+  - Barrier
+  39:
+  - Meditate
+  23:
+  - Light Screen
+  47:
+  - Substitute
+  31:
+  - Double Slap
+  15:
+  - Confusion
+genderRatio: HALF_FEMALE
+genus:
+- Humanoid
+hatchCounter: 25
+baseExp: 161
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 2
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium
+species: Barrier
+description: |-
+  It shapes an invisible wall in midair
+  by minutely vibrating its fingertips
+  to stop molecules in the air.
+height: 13
+weight: 545
+color: Pink
+shape: Humanoid
+habitat: Urban

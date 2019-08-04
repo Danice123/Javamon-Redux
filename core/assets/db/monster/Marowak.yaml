@@ -1,0 +1,57 @@
+---
+number: 105
+name: Marowak
+types:
+- GROUND
+baseStats:
+  HEALTH: 60
+  ATTACK: 80
+  DEFENSE: 110
+  SPECIAL_ATTACK: 50
+  SPECIAL_DEFENSE: 80
+  SPEED: 45
+abilities:
+- Rock Head
+- Lightningrod
+dreamAbility: Battle Armor
+learnableAttacks:
+  48:
+  - Bonemerang
+  1:
+  - Leer
+  - Growl
+  - Focus Energy
+  - Bone Club
+  33:
+  - Focus Energy
+  55:
+  - Rage
+  25:
+  - Leer
+  41:
+  - Thrash
+genderRatio: HALF_FEMALE
+genus:
+- Monster
+hatchCounter: 20
+baseExp: 149
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 2
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 75
+baseHappiness: 70
+growthRate: Medium
+species: Bone Keeper
+description: |-
+  From its birth, this savage Pok�mon
+  constantly holds bones. It is
+  skilled in using them as weapons.
+height: 10
+weight: 450
+color: Brown
+shape: Upright
+habitat: Mountain

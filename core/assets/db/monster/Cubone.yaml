@@ -1,0 +1,55 @@
+---
+number: 104
+name: Cubone
+types:
+- GROUND
+baseStats:
+  HEALTH: 50
+  ATTACK: 50
+  DEFENSE: 95
+  SPECIAL_ATTACK: 40
+  SPECIAL_DEFENSE: 50
+  SPEED: 35
+abilities:
+- Rock Head
+- Lightningrod
+dreamAbility: Battle Armor
+learnableAttacks:
+  1:
+  - Growl
+  - Bone Club
+  38:
+  - Thrash
+  25:
+  - Leer
+  43:
+  - Bonemerang
+  46:
+  - Rage
+  31:
+  - Focus Energy
+genderRatio: HALF_FEMALE
+genus:
+- Monster
+hatchCounter: 20
+baseExp: 64
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 1
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 190
+baseHappiness: 70
+growthRate: Medium
+species: Lonely
+description: |-
+  When it thinks of its dead mother,
+  it cries. Its crying makes the
+  skull it wears rattle hollowly.
+height: 4
+weight: 65
+color: Brown
+shape: Upright
+habitat: Mountain

@@ -1,0 +1,57 @@
+---
+number: 114
+name: Tangela
+types:
+- GRASS
+baseStats:
+  HEALTH: 65
+  ATTACK: 55
+  DEFENSE: 115
+  SPECIAL_ATTACK: 100
+  SPECIAL_DEFENSE: 40
+  SPEED: 60
+abilities:
+- Chlorophyll
+- Leaf Guard
+dreamAbility: Regenerator
+learnableAttacks:
+  32:
+  - Poison Powder
+  1:
+  - Bind
+  - Constrict
+  49:
+  - Growth
+  36:
+  - Stun Spore
+  39:
+  - Sleep Powder
+  29:
+  - Absorb
+  45:
+  - Slam
+genderRatio: HALF_FEMALE
+genus:
+- Grass
+hatchCounter: 20
+baseExp: 87
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 1
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium
+species: Vine
+description: |-
+  The blue vines shrouding its body
+  are covered in a growth of fine
+  hair. It is known to be ticklish.
+height: 10
+weight: 350
+color: Blue
+shape: Legs
+habitat: Grassland

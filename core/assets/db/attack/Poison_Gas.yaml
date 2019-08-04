@@ -1,0 +1,11 @@
+---
+name: Poison Gas
+type: POISON
+uses: 40
+accuracy: 80
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.StatusEffect
+  target: TARGET
+  status: POISON

@@ -1,0 +1,9 @@
+---
+name: Recover
+type: NORMAL
+uses: 10
+missable: false
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Heal
+  percent: 50

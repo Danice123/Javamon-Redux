@@ -1,0 +1,12 @@
+---
+name: Horn Attack
+type: NORMAL
+uses: 25
+accuracy: 100
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+  power: 65
+  damageType: PHYSICAL
+  contact: true

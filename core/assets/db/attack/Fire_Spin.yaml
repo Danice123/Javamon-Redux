@@ -1,0 +1,20 @@
+---
+name: Fire Spin
+type: FIRE
+uses: 15
+accuracy: 85
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+  power: 35
+  damageType: SPECIAL
+- effect: dev.dankins.javamon.data.monster.attack.effect.SetFlag
+  target: USER
+  flag: MultiTurnMove
+- effect: dev.dankins.javamon.data.monster.attack.effect.SetCounter
+  target: USER
+  counter: MultiTurnCounter
+  type: RANDOM
+  min: 2
+  max: 5

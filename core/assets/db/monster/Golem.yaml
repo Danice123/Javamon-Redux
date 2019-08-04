@@ -1,0 +1,58 @@
+---
+number: 76
+name: Golem
+types:
+- ROCK
+- GROUND
+baseStats:
+  HEALTH: 80
+  ATTACK: 110
+  DEFENSE: 130
+  SPECIAL_ATTACK: 55
+  SPECIAL_DEFENSE: 65
+  SPEED: 45
+abilities:
+- Rock Head
+- Sturdy
+dreamAbility: Sand Veil
+learnableAttacks:
+  16:
+  - Rock Throw
+  1:
+  - Tackle
+  - Defense Curl
+  36:
+  - Earthquake
+  21:
+  - Self-Destruct
+  43:
+  - Explosion
+  11:
+  - Defense Curl
+  29:
+  - Harden
+genderRatio: HALF_FEMALE
+genus:
+- Mineral
+hatchCounter: 15
+baseExp: 218
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 3
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium_slow
+species: Megaton
+description: |-
+  Even dynamite can�t harm its hard,
+  boulderlike body. It sheds its hide
+  just once a year.
+height: 14
+weight: 3000
+color: Brown
+shape: Humanoid
+habitat: Mountain

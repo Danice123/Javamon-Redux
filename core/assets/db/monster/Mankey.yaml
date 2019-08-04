@@ -1,0 +1,55 @@
+---
+number: 56
+name: Mankey
+types:
+- FIGHTING
+baseStats:
+  HEALTH: 40
+  ATTACK: 80
+  DEFENSE: 35
+  SPECIAL_ATTACK: 35
+  SPECIAL_DEFENSE: 45
+  SPEED: 70
+abilities:
+- Vital Spirit
+- Anger Point
+dreamAbility: Defiant
+learnableAttacks:
+  1:
+  - Scratch
+  - Leer
+  33:
+  - Seismic Toss
+  21:
+  - Fury Swipes
+  39:
+  - Thrash
+  27:
+  - Focus Energy
+  15:
+  - Karate Chop
+genderRatio: HALF_FEMALE
+genus:
+- Field
+hatchCounter: 20
+baseExp: 61
+effort:
+  HEALTH: 0
+  ATTACK: 1
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 190
+baseHappiness: 70
+growthRate: Medium
+species: Pig Monkey
+description: |-
+  It lives in treetop colonies.
+  If one becomes enraged, the whole
+  colony rampages for no reason.
+height: 5
+weight: 280
+color: Brown
+shape: Upright
+habitat: Mountain

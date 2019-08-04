@@ -1,0 +1,50 @@
+---
+number: 94
+name: Gengar
+types:
+- GHOST
+- POISON
+baseStats:
+  HEALTH: 60
+  ATTACK: 65
+  DEFENSE: 60
+  SPECIAL_ATTACK: 130
+  SPECIAL_DEFENSE: 75
+  SPEED: 110
+abilities:
+- Levitate
+dreamAbility: null
+learnableAttacks:
+  1:
+  - Night Shade
+  - Confuse Ray
+  - Lick
+  38:
+  - Dream Eater
+  29:
+  - Hypnosis
+genderRatio: HALF_FEMALE
+genus:
+- Amorphous
+hatchCounter: 20
+baseExp: 225
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 3
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium_slow
+species: Shadow
+description: |-
+  The leer that floats in darkness
+  belongs to a Gengar delighting in
+  casting curses on people.
+height: 15
+weight: 405
+color: Purple
+shape: Upright
+habitat: Cave

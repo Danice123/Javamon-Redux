@@ -1,0 +1,19 @@
+---
+name: Fly
+type: FLYING
+uses: 15
+missable: false
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.SetFlag
+  target: USER
+  flag: MultiTurnMove
+- effect: dev.dankins.javamon.data.monster.attack.effect.SetFlag
+  target: USER
+  flag: isInTheSky
+  text: $target flew up high!
+- effect: dev.dankins.javamon.data.monster.attack.effect.SetCounter
+  target: USER
+  counter: MultiTurnCounter
+  type: SET
+  n: 1

@@ -1,0 +1,62 @@
+---
+number: 3
+name: Venusaur
+types:
+- GRASS
+- POISON
+baseStats:
+  HEALTH: 80
+  ATTACK: 82
+  DEFENSE: 83
+  SPECIAL_ATTACK: 100
+  SPECIAL_DEFENSE: 100
+  SPEED: 80
+abilities:
+- Overgrow
+dreamAbility: Chlorophyll
+learnableAttacks:
+  1:
+  - Vine Whip
+  - Tackle
+  - Growl
+  - Leech Seed
+  65:
+  - Solar Beam
+  22:
+  - Poison Powder
+  55:
+  - Sleep Powder
+  7:
+  - Leech Seed
+  43:
+  - Growth
+  13:
+  - Vine Whip
+  30:
+  - Razor Leaf
+genderRatio: FEMALE_18
+genus:
+- Monster
+- Grass
+hatchCounter: 20
+baseExp: 236
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 2
+  SPECIAL_DEFENSE: 1
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium_slow
+species: Seed
+description: |-
+  After a rainy day, the flower on
+  its back smells stronger. The
+  scent attracts other Pok�mon.
+height: 20
+weight: 1000
+color: Green
+shape: Quadruped
+habitat: Grassland

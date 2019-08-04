@@ -1,0 +1,59 @@
+---
+number: 69
+name: Bellsprout
+types:
+- GRASS
+- POISON
+baseStats:
+  HEALTH: 50
+  ATTACK: 75
+  DEFENSE: 35
+  SPECIAL_ATTACK: 70
+  SPECIAL_DEFENSE: 30
+  SPEED: 40
+abilities:
+- Chlorophyll
+dreamAbility: Gluttony
+learnableAttacks:
+  1:
+  - Vine Whip
+  - Growth
+  33:
+  - Razor Leaf
+  18:
+  - Sleep Powder
+  21:
+  - Stun Spore
+  42:
+  - Slam
+  26:
+  - Acid
+  13:
+  - Wrap
+  15:
+  - Poison Powder
+genderRatio: HALF_FEMALE
+genus:
+- Grass
+hatchCounter: 20
+baseExp: 60
+effort:
+  HEALTH: 0
+  ATTACK: 1
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 255
+baseHappiness: 70
+growthRate: Medium_slow
+species: Flower
+description: |-
+  It prefers hot and humid
+  environments. It is quick at
+  capturing prey with its vines.
+height: 7
+weight: 40
+color: Green
+shape: Humanoid
+habitat: Forest

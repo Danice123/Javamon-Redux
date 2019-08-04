@@ -1,0 +1,56 @@
+---
+number: 68
+name: Machamp
+types:
+- FIGHTING
+baseStats:
+  HEALTH: 90
+  ATTACK: 130
+  DEFENSE: 80
+  SPECIAL_ATTACK: 65
+  SPECIAL_DEFENSE: 85
+  SPEED: 55
+abilities:
+- Guts
+- No Guard
+dreamAbility: Steadfast
+learnableAttacks:
+  1:
+  - Karate Chop
+  - Leer
+  - Low Kick
+  20:
+  - Low Kick
+  36:
+  - Focus Energy
+  52:
+  - Submission
+  25:
+  - Leer
+  44:
+  - Seismic Toss
+genderRatio: FEMALE_14
+genus:
+- Humanoid
+hatchCounter: 20
+baseExp: 227
+effort:
+  HEALTH: 0
+  ATTACK: 3
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium_slow
+species: Superpower
+description: |-
+  Its four muscled arms slam foes
+  with powerful punches and chops
+  at blinding speed.
+height: 16
+weight: 1300
+color: Gray
+shape: Humanoid
+habitat: Mountain

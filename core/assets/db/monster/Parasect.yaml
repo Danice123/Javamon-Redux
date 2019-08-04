@@ -1,0 +1,58 @@
+---
+number: 47
+name: Parasect
+types:
+- BUG
+- GRASS
+baseStats:
+  HEALTH: 60
+  ATTACK: 95
+  DEFENSE: 80
+  SPECIAL_ATTACK: 60
+  SPECIAL_DEFENSE: 80
+  SPEED: 30
+abilities:
+- Effect Spore
+- Dry Skin
+dreamAbility: Damp
+learnableAttacks:
+  48:
+  - Growth
+  1:
+  - Scratch
+  - Stun Spore
+  - Leech Life
+  20:
+  - Leech Life
+  39:
+  - Slash
+  13:
+  - Stun Spore
+  30:
+  - Spore
+genderRatio: HALF_FEMALE
+genus:
+- Bug
+- Grass
+hatchCounter: 20
+baseExp: 142
+effort:
+  HEALTH: 0
+  ATTACK: 2
+  DEFENSE: 1
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 75
+baseHappiness: 70
+growthRate: Medium
+species: Mushroom
+description: |-
+  A mushroom grown larger than the
+  host�s body controls Parasect.
+  It scatters poisonous spores.
+height: 10
+weight: 295
+color: Red
+shape: Armor
+habitat: Forest

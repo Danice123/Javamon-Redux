@@ -1,0 +1,11 @@
+---
+name: Hydro Pump
+type: WATER
+uses: 5
+accuracy: 80
+missable: true
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+  power: 120
+  damageType: SPECIAL

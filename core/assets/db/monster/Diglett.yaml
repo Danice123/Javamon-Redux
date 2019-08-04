@@ -1,0 +1,54 @@
+---
+number: 50
+name: Diglett
+types:
+- GROUND
+baseStats:
+  HEALTH: 10
+  ATTACK: 55
+  DEFENSE: 25
+  SPECIAL_ATTACK: 35
+  SPECIAL_DEFENSE: 45
+  SPEED: 95
+abilities:
+- Sand Veil
+- Arena Trap
+dreamAbility: Sand Force
+learnableAttacks:
+  1:
+  - Scratch
+  19:
+  - Dig
+  24:
+  - Sand Attack
+  40:
+  - Earthquake
+  31:
+  - Slash
+  15:
+  - Growl
+genderRatio: HALF_FEMALE
+genus:
+- Field
+hatchCounter: 20
+baseExp: 53
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 1
+captureRate: 255
+baseHappiness: 70
+growthRate: Medium
+species: Mole
+description: |-
+  A Pok�mon that lives underground.
+  Because of its dark habitat, it is
+  repelled by bright sunlight.
+height: 2
+weight: 8
+color: Brown
+shape: Blob
+habitat: Cave

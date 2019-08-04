@@ -1,0 +1,8 @@
+---
+name: Burn Heal
+cost: 250
+stackable: true
+tossable: true
+usableInBattle: true
+usableInField: true
+consumedOnUse: true

@@ -1,0 +1,57 @@
+---
+number: 57
+name: Primeape
+types:
+- FIGHTING
+baseStats:
+  HEALTH: 65
+  ATTACK: 105
+  DEFENSE: 60
+  SPECIAL_ATTACK: 60
+  SPECIAL_DEFENSE: 70
+  SPEED: 95
+abilities:
+- Vital Spirit
+- Anger Point
+dreamAbility: Defiant
+learnableAttacks:
+  1:
+  - Karate Chop
+  - Scratch
+  - Leer
+  - Fury Swipes
+  21:
+  - Fury Swipes
+  37:
+  - Seismic Toss
+  27:
+  - Focus Energy
+  46:
+  - Thrash
+  15:
+  - Karate Chop
+genderRatio: HALF_FEMALE
+genus:
+- Field
+hatchCounter: 20
+baseExp: 159
+effort:
+  HEALTH: 0
+  ATTACK: 2
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 75
+baseHappiness: 70
+growthRate: Medium
+species: Pig Monkey
+description: |-
+  It grows angry if you see its eyes
+  and gets angrier if you run. If you
+  beat it, it gets even madder.
+height: 10
+weight: 320
+color: Brown
+shape: Upright
+habitat: Mountain

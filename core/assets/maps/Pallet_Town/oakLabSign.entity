@@ -1,0 +1,8 @@
+---
+x: 13
+y: 4
+layer: 1
+name: OakLabSign
+type: SIGN
+strings:
+  text: Oak Pokemon Research Lab

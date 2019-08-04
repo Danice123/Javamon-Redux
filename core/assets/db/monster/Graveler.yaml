@@ -1,0 +1,58 @@
+---
+number: 75
+name: Graveler
+types:
+- ROCK
+- GROUND
+baseStats:
+  HEALTH: 55
+  ATTACK: 95
+  DEFENSE: 115
+  SPECIAL_ATTACK: 45
+  SPECIAL_DEFENSE: 45
+  SPEED: 35
+abilities:
+- Rock Head
+- Sturdy
+dreamAbility: Sand Veil
+learnableAttacks:
+  16:
+  - Rock Throw
+  1:
+  - Tackle
+  - Defense Curl
+  36:
+  - Earthquake
+  21:
+  - Self-Destruct
+  43:
+  - Explosion
+  11:
+  - Defense Curl
+  29:
+  - Harden
+genderRatio: HALF_FEMALE
+genus:
+- Mineral
+hatchCounter: 15
+baseExp: 137
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 2
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 120
+baseHappiness: 70
+growthRate: Medium_slow
+species: Rock
+description: |-
+  It rolls on mountain paths to move.
+  Once it builds momentum, no Pok�mon
+  can stop it without difficulty.
+height: 10
+weight: 1050
+color: Brown
+shape: Humanoid
+habitat: Mountain

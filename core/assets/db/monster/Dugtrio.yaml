@@ -1,0 +1,56 @@
+---
+number: 51
+name: Dugtrio
+types:
+- GROUND
+baseStats:
+  HEALTH: 35
+  ATTACK: 80
+  DEFENSE: 50
+  SPECIAL_ATTACK: 50
+  SPECIAL_DEFENSE: 70
+  SPEED: 120
+abilities:
+- Sand Veil
+- Arena Trap
+dreamAbility: Sand Force
+learnableAttacks:
+  1:
+  - Scratch
+  - Growl
+  - Dig
+  35:
+  - Slash
+  19:
+  - Dig
+  24:
+  - Sand Attack
+  47:
+  - Earthquake
+  15:
+  - Growl
+genderRatio: HALF_FEMALE
+genus:
+- Field
+hatchCounter: 20
+baseExp: 142
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 2
+captureRate: 50
+baseHappiness: 70
+growthRate: Medium
+species: Mole
+description: |-
+  Its three heads move alternately,
+  driving it through tough soil to
+  depths of over 60 miles.
+height: 7
+weight: 333
+color: Brown
+shape: Heads
+habitat: Cave

@@ -1,0 +1,51 @@
+---
+number: 144
+name: Articuno
+types:
+- ICE
+- FLYING
+baseStats:
+  HEALTH: 90
+  ATTACK: 85
+  DEFENSE: 100
+  SPECIAL_ATTACK: 95
+  SPECIAL_DEFENSE: 125
+  SPEED: 85
+abilities:
+- Pressure
+dreamAbility: Snow Cloak
+learnableAttacks:
+  1:
+  - Ice Beam
+  - Peck
+  51:
+  - Blizzard
+  55:
+  - Agility
+  60:
+  - Mist
+genderRatio: GENDERLESS
+genus:
+- Undiscovered
+hatchCounter: 80
+baseExp: 261
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 3
+  SPEED: 0
+captureRate: 3
+baseHappiness: 35
+growthRate: Slow
+species: Freeze
+description: |-
+  A legendary bird Pok�mon.
+  It can create blizzards by
+  freezing moisture in the air.
+height: 17
+weight: 554
+color: Blue
+shape: Wings
+habitat: Rare

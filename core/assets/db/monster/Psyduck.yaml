@@ -1,0 +1,55 @@
+---
+number: 54
+name: Psyduck
+types:
+- WATER
+baseStats:
+  HEALTH: 50
+  ATTACK: 52
+  DEFENSE: 48
+  SPECIAL_ATTACK: 65
+  SPECIAL_DEFENSE: 50
+  SPEED: 55
+abilities:
+- Damp
+- Cloud Nine
+dreamAbility: Swift Swim
+learnableAttacks:
+  1:
+  - Scratch
+  36:
+  - Confusion
+  52:
+  - Hydro Pump
+  43:
+  - Fury Swipes
+  28:
+  - Tail Whip
+  31:
+  - Disable
+genderRatio: HALF_FEMALE
+genus:
+- Water
+- Field
+hatchCounter: 20
+baseExp: 64
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 1
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 190
+baseHappiness: 70
+growthRate: Medium
+species: Duck
+description: |-
+  Overwhelmed by enigmatic abilities,
+  it suffers a constant headache. It
+  sometimes uses mysterious powers.
+height: 8
+weight: 196
+color: Yellow
+shape: Upright
+habitat: Waters_Edge

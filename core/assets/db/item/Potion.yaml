@@ -1,0 +1,11 @@
+---
+name: Potion
+cost: 300
+stackable: true
+tossable: true
+usableInBattle: true
+usableInField: true
+consumedOnUse: true
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Heal
+  rawValue: 20

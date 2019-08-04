@@ -1,0 +1,7 @@
+---
+name: Oak's Parcel
+stackable: false
+tossable: false
+usableInBattle: false
+usableInField: false
+script: Oak_Parcel

@@ -1,0 +1,7 @@
+---
+name: Mirror Move
+type: FLYING
+uses: 20
+missable: false
+priority: 0
+effects:

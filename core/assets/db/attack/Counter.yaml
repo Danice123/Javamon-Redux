@@ -1,0 +1,8 @@
+---
+name: Counter
+type: FIGHTING
+uses: 20
+accuracy: 100
+missable: true
+priority: -5
+effects:

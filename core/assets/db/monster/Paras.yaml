@@ -1,0 +1,56 @@
+---
+number: 46
+name: Paras
+types:
+- BUG
+- GRASS
+baseStats:
+  HEALTH: 35
+  ATTACK: 70
+  DEFENSE: 55
+  SPECIAL_ATTACK: 45
+  SPECIAL_DEFENSE: 55
+  SPEED: 25
+abilities:
+- Effect Spore
+- Dry Skin
+dreamAbility: Damp
+learnableAttacks:
+  1:
+  - Scratch
+  34:
+  - Slash
+  20:
+  - Leech Life
+  41:
+  - Growth
+  27:
+  - Spore
+  13:
+  - Stun Spore
+genderRatio: HALF_FEMALE
+genus:
+- Bug
+- Grass
+hatchCounter: 20
+baseExp: 57
+effort:
+  HEALTH: 0
+  ATTACK: 1
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 190
+baseHappiness: 70
+growthRate: Medium
+species: Mushroom
+description: |-
+  Mushrooms named tochukaso grow
+  on its back. They grow along
+  with the host Paras.
+height: 3
+weight: 54
+color: Red
+shape: Armor
+habitat: Forest

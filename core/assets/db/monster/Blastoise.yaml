@@ -1,0 +1,59 @@
+---
+number: 9
+name: Blastoise
+types:
+- WATER
+baseStats:
+  HEALTH: 79
+  ATTACK: 83
+  DEFENSE: 100
+  SPECIAL_ATTACK: 85
+  SPECIAL_DEFENSE: 105
+  SPEED: 78
+abilities:
+- Torrent
+dreamAbility: Rain Dish
+learnableAttacks:
+  1:
+  - Tackle
+  - Tail Whip
+  - Water Gun
+  - Bubble
+  52:
+  - Hydro Pump
+  8:
+  - Bubble
+  24:
+  - Bite
+  42:
+  - Skull Bash
+  31:
+  - Withdraw
+  15:
+  - Water Gun
+genderRatio: FEMALE_18
+genus:
+- Monster
+- Water
+hatchCounter: 20
+baseExp: 239
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 3
+  SPEED: 0
+captureRate: 45
+baseHappiness: 70
+growthRate: Medium_slow
+species: Shellfish
+description: |-
+  The jets of water it spouts from
+  the rocket cannons on its shell
+  can punch through thick steel.
+height: 16
+weight: 855
+color: Blue
+shape: Upright
+habitat: Waters_Edge

@@ -1,0 +1,58 @@
+---
+number: 30
+name: Nidorina
+types:
+- POISON
+baseStats:
+  HEALTH: 70
+  ATTACK: 62
+  DEFENSE: 67
+  SPECIAL_ATTACK: 55
+  SPECIAL_DEFENSE: 55
+  SPEED: 56
+abilities:
+- Poison Point
+- Rivalry
+dreamAbility: Hustle
+learnableAttacks:
+  32:
+  - Bite
+  1:
+  - Scratch
+  - Tackle
+  - Growl
+  50:
+  - Double Kick
+  23:
+  - Tail Whip
+  8:
+  - Scratch
+  41:
+  - Fury Swipes
+  14:
+  - Poison Sting
+genderRatio: ALWAYS_FEMALE
+genus:
+- Undiscovered
+hatchCounter: 20
+baseExp: 128
+effort:
+  HEALTH: 2
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 120
+baseHappiness: 70
+growthRate: Medium_slow
+species: Poison Pin
+description: |-
+  When it senses danger, it raises
+  all the barbs on its body. These
+  barbs grow slower than Nidorino�s.
+height: 8
+weight: 200
+color: Blue
+shape: Quadruped
+habitat: Grassland

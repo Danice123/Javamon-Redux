@@ -1,0 +1,8 @@
+---
+x: 4
+y: 7
+layer: 1
+name: tv
+type: SIGN
+strings:
+  text: There's a movie on TV. Four boys are walking on railroad tracks./nI better go too.

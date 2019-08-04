@@ -1,0 +1,57 @@
+---
+number: 113
+name: Chansey
+types:
+- NORMAL
+baseStats:
+  HEALTH: 250
+  ATTACK: 5
+  DEFENSE: 5
+  SPECIAL_ATTACK: 35
+  SPECIAL_DEFENSE: 105
+  SPEED: 50
+abilities:
+- Natural Cure
+- Serene Grace
+dreamAbility: Healer
+learnableAttacks:
+  48:
+  - Light Screen
+  1:
+  - Pound
+  - Double Slap
+  38:
+  - Minimize
+  54:
+  - Double-Edge
+  24:
+  - Sing
+  44:
+  - Defense Curl
+  30:
+  - Growl
+genderRatio: ALWAYS_FEMALE
+genus:
+- Fairy
+hatchCounter: 40
+baseExp: 395
+effort:
+  HEALTH: 2
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 0
+captureRate: 30
+baseHappiness: 140
+growthRate: Fast
+species: Egg
+description: |-
+  A kindly Pok�mon that lays highly
+  nutritious eggs and shares them
+  with injured Pok�mon or people.
+height: 11
+weight: 346
+color: Pink
+shape: Upright
+habitat: Urban

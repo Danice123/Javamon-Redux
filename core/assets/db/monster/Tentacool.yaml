@@ -1,0 +1,61 @@
+---
+number: 72
+name: Tentacool
+types:
+- WATER
+- POISON
+baseStats:
+  HEALTH: 40
+  ATTACK: 40
+  DEFENSE: 35
+  SPECIAL_ATTACK: 50
+  SPECIAL_DEFENSE: 100
+  SPEED: 70
+abilities:
+- Clear Body
+- Liquid Ooze
+dreamAbility: Rain Dish
+learnableAttacks:
+  48:
+  - Hydro Pump
+  1:
+  - Acid
+  33:
+  - Barrier
+  18:
+  - Poison Sting
+  22:
+  - Water Gun
+  7:
+  - Supersonic
+  40:
+  - Screech
+  27:
+  - Constrict
+  13:
+  - Wrap
+genderRatio: HALF_FEMALE
+genus:
+- Shellfish
+hatchCounter: 20
+baseExp: 67
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 1
+  SPEED: 0
+captureRate: 190
+baseHappiness: 70
+growthRate: Slow
+species: Jellyfish
+description: |-
+  Because its body is almost entirely
+  composed of water, it shrivels up if
+  it is washed ashore.
+height: 9
+weight: 455
+color: Blue
+shape: Tenticles
+habitat: Sea

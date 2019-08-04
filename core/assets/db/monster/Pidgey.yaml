@@ -1,0 +1,57 @@
+---
+number: 16
+name: Pidgey
+types:
+- NORMAL
+- FLYING
+baseStats:
+  HEALTH: 40
+  ATTACK: 45
+  DEFENSE: 40
+  SPECIAL_ATTACK: 35
+  SPECIAL_DEFENSE: 35
+  SPEED: 56
+abilities:
+- Keen Eye
+- Tangled Feet
+dreamAbility: Big Pecks
+learnableAttacks:
+  1:
+  - Gust
+  19:
+  - Whirlwind
+  36:
+  - Agility
+  5:
+  - Sand Attack
+  12:
+  - Quick Attack
+  28:
+  - Wing Attack
+  44:
+  - Mirror Move
+genderRatio: HALF_FEMALE
+genus:
+- Flying
+hatchCounter: 15
+baseExp: 50
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 1
+captureRate: 255
+baseHappiness: 70
+growthRate: Medium_slow
+species: Tiny Bird
+description: |-
+  It is docile and prefers to avoid
+  conflict. If disturbed, however,
+  it can ferociously strike back.
+height: 3
+weight: 18
+color: Brown
+shape: Wings
+habitat: Forest

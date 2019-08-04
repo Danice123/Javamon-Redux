@@ -1,0 +1,15 @@
+---
+name: Dream Eater
+type: PSYCHIC
+uses: 15
+accuracy: 100
+missable: true
+priority: 0
+requirements:
+- requirement: dev.dankins.javamon.data.monster.attack.require.CheckEnemy
+  isAsleep: true
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.Damage
+  power: 100
+  damageType: SPECIAL
+  drain: 50

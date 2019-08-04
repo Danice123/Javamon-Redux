@@ -1,0 +1,11 @@
+---
+name: Acid Armor
+type: POISON
+uses: 40
+missable: false
+priority: 0
+effects:
+- effect: dev.dankins.javamon.data.monster.attack.effect.StatEffect
+  target: USER
+  stat: DEFENSE
+  level: 2

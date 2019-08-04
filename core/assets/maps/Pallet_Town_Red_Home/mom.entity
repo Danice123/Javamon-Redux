@@ -1,0 +1,10 @@
+---
+x: 6
+y: 4
+layer: 1
+facing: West
+name: mom
+type: NPC
+spriteset: mom
+script: mom
+behavior: FaceWest

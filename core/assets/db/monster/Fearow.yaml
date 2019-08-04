@@ -1,0 +1,56 @@
+---
+number: 22
+name: Fearow
+types:
+- NORMAL
+- FLYING
+baseStats:
+  HEALTH: 65
+  ATTACK: 90
+  DEFENSE: 65
+  SPECIAL_ATTACK: 61
+  SPECIAL_DEFENSE: 61
+  SPEED: 100
+abilities:
+- Keen Eye
+dreamAbility: Sniper
+learnableAttacks:
+  1:
+  - Leer
+  - Growl
+  - Peck
+  34:
+  - Drill Peck
+  25:
+  - Mirror Move
+  9:
+  - Leer
+  43:
+  - Agility
+  15:
+  - Fury Attack
+genderRatio: HALF_FEMALE
+genus:
+- Flying
+hatchCounter: 15
+baseExp: 155
+effort:
+  HEALTH: 0
+  ATTACK: 0
+  DEFENSE: 0
+  SPECIAL_ATTACK: 0
+  SPECIAL_DEFENSE: 0
+  SPEED: 2
+captureRate: 90
+baseHappiness: 70
+growthRate: Medium
+species: Beak
+description: |-
+  It has the stamina to fly all
+  day on its broad wings. It
+  fights by using its sharp beak.
+height: 12
+weight: 380
+color: Brown
+shape: Wings
+habitat: Rough_Terrain
