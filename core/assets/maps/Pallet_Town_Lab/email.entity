@@ -1,0 +1,8 @@
+---
+x: 1
+y: 11
+layer: 2
+name: email
+type: SIGN
+strings:
+  text: "There's an email message here!/n.../nCalling all Pokemon trainers!/nThe elite trainers of Pokemon League are ready to take on all comers!/nBring your best Pokemon and see how you rate as a trainer!/nPokemon League HQ Indigo Plateau/nPS: Prof. Oak please visit us! ..."

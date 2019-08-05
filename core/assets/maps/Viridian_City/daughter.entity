@@ -1,0 +1,10 @@
+---
+x: 17
+y: 26
+layer: 1
+facing: East
+name: Daughter
+type: NPC
+spriteset: girl1
+script: daughter
+behavior: FaceEast

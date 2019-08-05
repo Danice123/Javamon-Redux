@@ -1,0 +1,20 @@
+---
+triggers:
+- x: 2
+  y: 0
+  layer: 1
+  script: $DWarp
+  arguments:
+    mapName: Viridian_City
+    x: 21
+    y: 26
+    layer: 1
+- x: 3
+  y: 0
+  layer: 1
+  script: $DWarp
+  arguments:
+    mapName: Viridian_City
+    x: 21
+    y: 26
+    layer: 1

@@ -1,0 +1,9 @@
+---
+x: 3
+y: 5
+layer: 1
+facing: East
+name: rivalSister
+type: NPC
+spriteset: girl2
+script: Pallet_Town_Rival_Sister

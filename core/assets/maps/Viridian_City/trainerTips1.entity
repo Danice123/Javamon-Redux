@@ -1,0 +1,8 @@
+---
+x: 21
+y: 6
+layer: 1
+name: TrainerTips1
+type: SIGN
+strings:
+  text: Trainer Tips/nThe battle moves of Pokemon are limited by their Power Points, PP/nTo replenish PP, rest your tired Pokemon at a Pokemon Center!

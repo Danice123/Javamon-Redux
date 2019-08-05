@@ -1,0 +1,8 @@
+---
+x: 27
+y: 28
+layer: 1
+name: ViridianCityGymSign
+type: SIGN
+strings:
+  text: Viridian City Pokemon Gym

@@ -1,0 +1,8 @@
+---
+x: 7
+y: 6
+layer: 1
+name: bookcase3
+type: SIGN
+strings:
+  text: Crammed full of Pokemon books!

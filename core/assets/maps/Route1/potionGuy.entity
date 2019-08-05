@@ -1,0 +1,10 @@
+---
+x: 11
+y: 10
+layer: 1
+facing: South
+name: Potion_Guy
+type: NPC
+spriteset: boy1
+script: FreePotion
+behavior: WalkVertical

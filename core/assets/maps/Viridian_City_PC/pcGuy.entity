@@ -1,0 +1,12 @@
+---
+x: 10
+y: 4
+layer: 1
+facing: North
+name: PC_Guy
+type: NPC
+spriteset: businessman
+script: $Talk
+strings:
+  text: You can use that PC in the corner./nThe receptionist told me. So kind!
+behavior: WalkVertical

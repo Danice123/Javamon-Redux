@@ -1,0 +1,12 @@
+---
+x: 21
+y: 22
+layer: 1
+facing: South
+name: Ledge_Guy
+type: NPC
+spriteset: boy1
+script: $Talk
+strings:
+  text: See those ledges along the road?/nIt's a bit scary, but you can jump from them./nYou can get back to Pallet Town quicker that way.
+behavior: WalkHorizontal

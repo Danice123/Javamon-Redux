@@ -1,0 +1,8 @@
+---
+x: 15
+y: 8
+layer: 1
+name: RouteSign
+type: SIGN
+strings:
+  text: Route 1 Pallet Town - Viridian City

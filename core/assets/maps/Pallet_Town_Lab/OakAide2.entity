@@ -1,0 +1,12 @@
+---
+x: 7
+y: 2
+layer: 1
+facing: West
+name: OakAide
+type: NPC
+spriteset: scientist1
+behavior: LookAround
+script: $Talk
+strings:
+  text: I study Pokemon as Prof. Oak's Aide.

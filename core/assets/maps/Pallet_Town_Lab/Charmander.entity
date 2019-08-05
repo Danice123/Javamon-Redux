@@ -1,0 +1,10 @@
+---
+x: 7
+y: 9
+layer: 2
+name: pokeballChar
+type: OBJECT
+spriteset: pokeball
+script: Pokeball
+strings:
+  pokemon: Charmander

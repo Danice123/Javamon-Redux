@@ -1,0 +1,7 @@
+---
+x: 3
+y: 5
+layer: 1
+name: PC_Desk
+type: OBJECT
+script: $Heal

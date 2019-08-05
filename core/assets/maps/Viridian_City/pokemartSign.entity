@@ -1,0 +1,8 @@
+---
+x: 30
+y: 16
+layer: 1
+name: ViridianCityPokeMart
+type: SIGN
+strings:
+  text: All your item needs fulfilled! Pokemon Mart

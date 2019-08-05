@@ -1,0 +1,10 @@
+---
+x: 6
+y: 10
+layer: 1
+facing: South
+hidden: true
+name: Oak
+type: NPC
+spriteset: Oak
+script: Oak

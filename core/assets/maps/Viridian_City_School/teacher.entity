@@ -1,0 +1,12 @@
+---
+x: 4
+y: 6
+layer: 1
+facing: South
+name: Teacher
+type: NPC
+spriteset: ponytail_girl
+script: $Talk
+strings:
+  text: Okay!/nBe sure to read the blackboard carefully!
+behavior: FaceSouth

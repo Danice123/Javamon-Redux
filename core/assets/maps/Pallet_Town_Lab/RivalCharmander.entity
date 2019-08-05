@@ -1,0 +1,16 @@
+---
+x: 0
+y: 0
+layer: 0
+facing: South
+hidden: true
+name: RivalCharmanderTrainer
+type: TRAINER
+spriteset: Blue
+trainer:
+  party:
+  - name: Charmander
+    level: 5
+  trainerName: Rival
+  trainerLossQuip: "Blue: WHAT? Unbelievable! I picked the wrong Pokemon!"
+  winnings: 175

@@ -1,0 +1,8 @@
+---
+x: 6
+y: 12
+layer: 2
+name: info
+type: SIGN
+strings:
+  text: The Save option is on the Menu screen.

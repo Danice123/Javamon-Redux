@@ -1,0 +1,12 @@
+---
+x: 30
+y: 27
+layer: 1
+facing: North
+name: Gym_Guy
+type: NPC
+spriteset: old_man
+script: $Talk
+strings:
+  text: This Pokemon Gym is always closed./nI wonder who the Leader is?
+behavior: WalkHorizontal

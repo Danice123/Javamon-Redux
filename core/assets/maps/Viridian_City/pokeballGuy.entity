@@ -1,0 +1,12 @@
+---
+x: 10
+y: 16
+layer: 1
+facing: South
+name: Pokeball_Guy
+type: NPC
+spriteset: boy1
+script: $Talk
+strings:
+  text: Those Poke Balls at your waist! You have Pokemon!/nIt's great that you can carry and use Pokemon any time, anywhere!
+behavior: WanderSmall

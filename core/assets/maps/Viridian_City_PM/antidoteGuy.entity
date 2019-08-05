@@ -1,0 +1,12 @@
+---
+x: 5
+y: 2
+layer: 1
+facing: South
+name: Antidote_Guy
+type: NPC
+spriteset: boy1
+script: $Talk
+strings:
+  text: This shop sells many Antidotes.
+behavior: WalkVertical

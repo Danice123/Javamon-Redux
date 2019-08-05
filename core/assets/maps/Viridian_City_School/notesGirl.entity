@@ -1,0 +1,12 @@
+---
+x: 3
+y: 2
+layer: 1
+facing: North
+name: Notes_Girl
+type: NPC
+spriteset: bun_girl
+script: $Talk
+strings:
+  text: Whew! I'm trying to memorize all my notes.
+behavior: FaceNorth

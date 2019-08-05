@@ -2,32 +2,53 @@
 !Goto:Continue
 @OakInLab
 !Unhide:Oak
+
 @Continue
 !Branch:FirstRivalBattle BlueNotInLab
 !Goto:Continue2
 @BlueNotInLab
 !Hide:Blue
+
 @Continue2
+!Branch:BlueLabBattle BlueAtPokeballs
+!Goto:Continue3
+@BlueAtPokeballs
+!Branch:ChoseBulbasaur BlueAtChar
+!Branch:ChoseCharmander BlueAtSquirt
+!Branch:ChoseSquirtle BlueAtBulb
+!Goto:Continue3
+@BlueAtChar
+!Move:Blue 7 8 1
+!Goto:Continue3
+@BlueAtSquirt
+!Move:Blue 8 8 1
+!Goto:Continue3
+@BlueAtBulb
+!Move:Blue 9 8 1
+!Goto:Continue3
+
+@Continue3
 !Branch:ChoseBulbasaur HideBulb
 !Branch:ChoseCharmander HideChar
 !Branch:ChoseSquirtle HideSquirt
-!Goto:Continue3
+!Goto:Continue4
 @HideSquirt
 !Hide:pokeballBulb
 !Hide:pokeballSquir
-!Goto:Continue3
+!Goto:Continue4
 @HideBulb
 !Hide:pokeballBulb
 !Hide:pokeballChar
-!Goto:Continue3
+!Goto:Continue4
 @HideChar
 !Hide:pokeballChar
 !Hide:pokeballSquir
-@Continue3
+@Continue4
+
 !Branch:HasPokedex HasPokedex
-!Goto:Continue4
+!Goto:Continue5
 @HasPokedex
 !Hide:pokedex1
 !Hide:pokedex2
-@Continue4
+@Continue5
 !Stop:

@@ -1,0 +1,10 @@
+---
+x: 9
+y: 9
+layer: 2
+name: pokeballBulb
+type: OBJECT
+spriteset: pokeball
+script: Pokeball
+strings:
+  pokemon: Bulbasaur

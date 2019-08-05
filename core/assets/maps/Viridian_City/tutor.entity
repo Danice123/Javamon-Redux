@@ -1,0 +1,9 @@
+---
+x: 19
+y: 30
+layer: 1
+facing: West
+name: Tutor
+type: NPC
+spriteset: old_man
+script: tutor

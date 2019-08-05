@@ -1,0 +1,11 @@
+---
+x: 4
+y: 11
+layer: 2
+facing: North
+name: pokedex2
+type: NPC
+spriteset: note
+script: $Sign
+strings:
+  text: It's encyclopedia-like, but the pages are blank!

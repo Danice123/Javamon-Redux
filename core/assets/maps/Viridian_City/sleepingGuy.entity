@@ -1,0 +1,8 @@
+---
+x: 6
+y: 12
+layer: 1
+facing: South
+name: Sleeping_Guy
+type: NPC
+spriteset: fat_man

@@ -1,0 +1,12 @@
+---
+x: 3
+y: 2
+layer: 1
+facing: West
+name: Spearow
+type: NPC
+spriteset: bird
+script: $Talk
+strings:
+  text: "Speary: Tetweet!"
+behavior: WalkHorizontal

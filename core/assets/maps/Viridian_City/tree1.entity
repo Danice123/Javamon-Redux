@@ -1,0 +1,8 @@
+---
+x: 8
+y: 13
+layer: 1
+name: ViridianCityTree1
+type: OBJECT
+spriteset: tree
+script: $Tree

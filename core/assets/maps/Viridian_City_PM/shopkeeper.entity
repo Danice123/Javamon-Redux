@@ -1,0 +1,8 @@
+---
+x: 0
+y: 2
+layer: 1
+facing: East
+name: Shopkeeper
+type: NPC
+spriteset: shopkeeper

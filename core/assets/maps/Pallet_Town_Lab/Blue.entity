@@ -1,0 +1,9 @@
+---
+x: 5
+y: 9
+layer: 1
+facing: South
+name: Blue
+type: NPC
+spriteset: Blue
+script: Blue

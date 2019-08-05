@@ -1,0 +1,7 @@
+---
+x: 3
+y: 3
+layer: 1
+name: notes
+type: OBJECT
+script: Notes

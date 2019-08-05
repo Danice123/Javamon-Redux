@@ -1,0 +1,12 @@
+---
+x: 1
+y: 5
+layer: 1
+facing: South
+name: Child
+type: NPC
+spriteset: child_girl
+script: $Talk
+strings:
+  text: My Daddy loves Pokemon too.
+behavior: WalkVertical

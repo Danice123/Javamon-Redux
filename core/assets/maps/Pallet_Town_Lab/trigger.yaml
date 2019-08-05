@@ -1,0 +1,32 @@
+---
+triggers:
+- x: 5
+  y: 1
+  layer: 1
+  script: $DWarp
+  arguments:
+    mapName: Pallet_Town
+    x: 18
+    y: 6
+    layer: 1
+- x: 6
+  y: 1
+  layer: 1
+  script: $DWarp
+  arguments:
+    mapName: Pallet_Town
+    x: 18
+    y: 6
+    layer: 1
+- x: 6
+  y: 6
+  layer: 1
+  script: Barrier
+  arguments:
+    Side: Right
+- x: 5
+  y: 6
+  layer: 1
+  script: Barrier
+  arguments:
+    Side: Left

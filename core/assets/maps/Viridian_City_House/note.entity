@@ -1,0 +1,9 @@
+---
+x: 4
+y: 7
+layer: 1
+name: Note
+type: SIGN
+spriteset: note
+strings:
+  text: "Spearow Name: Speary"

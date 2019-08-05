@@ -1,0 +1,8 @@
+---
+x: 19
+y: 34
+layer: 1
+name: TrainerTips2
+type: SIGN
+strings:
+  text: Trainer Tips/nCatch Pokemon and expand your collection!/nThe more you have, the easier it is to fight!

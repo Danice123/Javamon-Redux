@@ -1,0 +1,9 @@
+---
+x: 4
+y: 5
+layer: 2
+name: Map
+type: SIGN
+spriteset: book
+strings:
+  text: It's a big map! This is useful!

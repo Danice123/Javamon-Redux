@@ -1,0 +1,24 @@
+---
+typeChance:
+  Grass: 20
+encounters:
+- encounterType: Grass
+  monster: Rattata
+  minLevel: 2
+  maxLevel: 4
+  chance: 50
+- encounterType: Grass
+  monster: Spearow
+  minLevel: 3
+  maxLevel: 4
+  chance: 10
+- encounterType: Grass
+  monster: NidoranF
+  minLevel: 3
+  maxLevel: 5
+  chance: 5
+- encounterType: Grass
+  monster: NidoranM
+  minLevel: 3
+  maxLevel: 4
+  chance: 35

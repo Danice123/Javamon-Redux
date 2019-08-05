@@ -1,0 +1,10 @@
+---
+x: 8
+y: 9
+layer: 2
+name: pokeballSquir
+type: OBJECT
+spriteset: pokeball
+script: Pokeball
+strings:
+  pokemon: Squirtle

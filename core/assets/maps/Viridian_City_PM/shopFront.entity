@@ -1,0 +1,12 @@
+---
+x: 1
+y: 2
+layer: 1
+name: ShopFront
+type: OBJECT
+script: Viridian_Shop
+strings:
+  item0: Poke_Ball
+  item1: Antidote
+  item2: Paralyze_Heal
+  item3: Burn_Heal 

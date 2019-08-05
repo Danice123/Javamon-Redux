@@ -1,6 +1,6 @@
 ---
 triggers:
-- x: 5
+- x: 11
   y: 12
   layer: 1
   script: $Warp
@@ -9,7 +9,7 @@ triggers:
     x: 3
     y: 1
     layer: 1
-- x: 13
+- x: 19
   y: 12
   layer: 1
   script: $Warp
@@ -18,7 +18,7 @@ triggers:
     x: 3
     y: 1
     layer: 1
-- x: 12
+- x: 18
   y: 6
   layer: 1
   script: $Warp
@@ -27,13 +27,13 @@ triggers:
     x: 5
     y: 1
     layer: 1
-- x: 10
+- x: 16
   y: 16
   layer: 1
   script: Oak_Enc
   arguments:
     Side: Left
-- x: 11
+- x: 17
   y: 16
   layer: 1
   script: Oak_Enc

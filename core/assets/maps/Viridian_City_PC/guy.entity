@@ -1,0 +1,12 @@
+---
+x: 4
+y: 4
+layer: 1
+facing: North
+name: Guy_By_Desk
+type: NPC
+spriteset: boy2
+script: $Talk
+strings:
+  text: There's a Pokemon Center in every town ahead./nThey don't charge any money either!
+behavior: LookAround
