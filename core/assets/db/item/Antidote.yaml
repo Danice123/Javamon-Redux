@@ -1,5 +1,6 @@
 ---
 name: Antidote
+tag: Antidote
 cost: 100
 stackable: true
 tossable: true

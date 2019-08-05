@@ -1,5 +1,6 @@
 ---
 name: Paralyze Heal
+tag: Paralyze_Heal
 cost: 200
 stackable: true
 tossable: true

@@ -1,5 +1,6 @@
 ---
 name: Poke Ball
+tag: Poke_Ball
 cost: 200
 stackable: true
 tossable: true

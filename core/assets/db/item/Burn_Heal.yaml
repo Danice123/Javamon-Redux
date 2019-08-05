@@ -1,5 +1,6 @@
 ---
 name: Burn Heal
+tag: Burn_Heal
 cost: 250
 stackable: true
 tossable: true

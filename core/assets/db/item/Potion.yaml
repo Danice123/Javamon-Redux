@@ -1,5 +1,6 @@
 ---
 name: Potion
+tag: Potion
 cost: 300
 stackable: true
 tossable: true
