@@ -1,11 +1,14 @@
 package dev.dankins.javamon.data.monster.instance;
 
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.stream.Collectors;
 
+import com.badlogic.gdx.assets.AssetManager;
 import com.github.danice123.javamon.logic.RandomNumberGenerator;
 import com.github.danice123.javamon.logic.battlesystem.BattleStatus;
 import com.google.common.collect.Lists;
@@ -22,6 +25,7 @@ public class MonsterInstance {
 	public final Monster monster;
 	public final Gender gender;
 	public final Map<Stat, Integer> IV;
+	public final Map<Stat, Integer> EV;
 	public final String originalTrainer;
 	public final long idNumber;
 
@@ -30,19 +34,11 @@ public class MonsterInstance {
 
 	private int level; // Generated from exp amount?
 	private int experience;
-	public Map<Stat, Integer> EV;
-
-	public final Attack[] moves;
-	private final int[] PP = new int[4];
+	public final AttackSet attacks;
 
 	private int currentHealth;
-	public int[] CPP = new int[4];
-
 	public Status status = Status.NONE;
 	public int sleepCounter;
-
-	// public Holdable heldItem;
-
 	public transient BattleStatus battleStatus;
 
 	public MonsterInstance(final Monster baseMonster, final int level, final String playerName, final long playerId) {
@@ -74,15 +70,26 @@ public class MonsterInstance {
 		EV.put(Stat.SPECIAL_DEFENSE, 0);
 		EV.put(Stat.SPEED, 0);
 
-		moves = baseMonster.getTopFourMoves(level);
-
-		for (int i = 0; i < 4; i++) {
-			if (moves[i] != null) {
-				PP[i] = moves[i].uses;
-				CPP[i] = moves[i].uses;
-			}
-		}
+		attacks = new AttackSet(Arrays.stream(baseMonster.getTopFourMoves(level)).filter(attack -> attack != null).map(attack -> new AttackInstance(attack))
+				.collect(Collectors.toList()));
 		currentHealth = getHealth();
+	}
+
+	public MonsterInstance(final AssetManager assets, final MonsterSerialized monster) {
+		this.monster = assets.get(monster.monster, Monster.class);
+		gender = monster.gender;
+		IV = monster.IV;
+		EV = monster.EV;
+		originalTrainer = monster.originalTrainer;
+		idNumber = monster.idNumber;
+		attacks = new AttackSet(monster.attacks.stream().map(attack -> new AttackInstance(assets, attack)).collect(Collectors.toList()));
+		name = monster.name;
+		customName = monster.customName;
+		level = monster.level;
+		experience = monster.experience;
+		currentHealth = monster.currentHealth;
+		status = monster.status;
+		sleepCounter = monster.sleepCounter;
 	}
 
 	public String getName() {
@@ -135,20 +142,6 @@ public class MonsterInstance {
 		return (iv + 2 * base + ev / 4) * level / 100;
 	}
 
-	public int getMoveAmount() {
-		int n = 0;
-		for (int i = 0; i < moves.length; i++) {
-			if (moves[i] != null) {
-				n++;
-			}
-		}
-		return n;
-	}
-
-	public int getPP(final int i) {
-		return PP[i];
-	}
-
 	public int getCurrentHealth() {
 		return currentHealth;
 	}
@@ -172,16 +165,10 @@ public class MonsterInstance {
 		EV.put(stat, EV.get(stat) + amount);
 	}
 
-	public void changeMove(final int i, final Attack move) {
-		moves[i] = move;
-		PP[i] = move.uses;
-		CPP[i] = move.uses;
-	}
-
 	public void heal() {
 		currentHealth = getHealth();
-		for (int i = 0; i < getMoveAmount(); i++) {
-			CPP[i] = PP[i];
+		for (final AttackInstance attack : attacks) {
+			attack.currentUsage = attack.maxUsage;
 		}
 		status = Status.NONE;
 	}
@@ -197,7 +184,8 @@ public class MonsterInstance {
 			level++;
 			final Levelup levelup = new Levelup();
 			levelup.level = level;
-			levelup.movesToLearn = monster.learnableAttacks.get(level);
+			levelup.movesToLearn = monster.learnableAttacks.get(level).stream().map(attackName -> monster.cachedAttacks.get(attackName))
+					.collect(Collectors.toList());
 			levelsGained.add(levelup);
 		}
 		return levelsGained;
@@ -206,6 +194,6 @@ public class MonsterInstance {
 	public class Levelup {
 
 		public int level;
-		public List<String> movesToLearn;
+		public List<Attack> movesToLearn;
 	}
 }

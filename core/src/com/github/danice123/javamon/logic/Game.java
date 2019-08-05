@@ -19,6 +19,7 @@ import com.github.danice123.javamon.logic.map.MapHandler;
 import com.github.danice123.javamon.logic.menu.GameMenuHandler;
 import com.github.danice123.javamon.logic.script.ScriptHandler;
 
+import dev.dankins.javamon.data.SaveFile;
 import dev.dankins.javamon.data.monster.MonsterList;
 
 public class Game implements Runnable {
@@ -106,13 +107,8 @@ public class Game implements Runnable {
 		String mapName = null;
 		switch (gameMenuHandler.getAction()) {
 		case LoadGame:
-			SaveFile sf;
-			try {
-				sf = assets.objectMapper.readValue(new File("Player.yaml"), SaveFile.class);
-				mapName = player.load(assets, sf);
-			} catch (final IOException e) {
-				e.printStackTrace();
-			}
+			final SaveFile saveFile = assets.get("Player.yaml", SaveFile.class);
+			mapName = player.load(assets, saveFile);
 			break;
 		case NewGame:
 			new ScriptHandler(this, assets.get("assets/scripts/Start.ps"), null).run();

@@ -13,6 +13,7 @@ import dev.dankins.javamon.data.script.Script;
 public class Item {
 
 	private final String name;
+	private final String tag;
 	private final Integer cost;
 	private final boolean stackable;
 	private final boolean tossable;
@@ -24,6 +25,7 @@ public class Item {
 
 	@JsonCreator
 	public Item(@JsonProperty("name") final String name,
+		@JsonProperty("tag") final String tag,
 		@JsonProperty("cost") final Integer cost,
 		@JsonProperty("stackable") final boolean stackable,
 		@JsonProperty("tossable") final boolean tossable,
@@ -33,6 +35,7 @@ public class Item {
 		@JsonProperty("effects") final List<Effect> effects,
 		@JsonProperty("script") final String script) {
 		this.name = name;
+		this.tag = tag;
 		this.cost = cost;
 		this.stackable = stackable;
 		this.tossable = tossable;
@@ -45,6 +48,7 @@ public class Item {
 
 	protected Item(final Item copy) {
 		name = copy.name;
+		tag = copy.tag;
 		cost = copy.cost;
 		stackable = copy.stackable;
 		tossable = copy.tossable;
@@ -57,6 +61,10 @@ public class Item {
 
 	public String getName() {
 		return name;
+	}
+
+	public String getTag() {
+		return tag;
 	}
 
 	public int getCost() {
@@ -87,6 +95,13 @@ public class Item {
 		return Optional.ofNullable(effects);
 	}
 
+	public Optional<String> getScriptPath() {
+		if (script == null) {
+			return Optional.empty();
+		}
+		return Optional.of("assets/db/item/" + script + ".ps");
+	}
+
 	public Optional<Script> getScript(final AssetManager assetManager) {
 		if (script == null) {
 			return Optional.empty();
@@ -97,7 +112,7 @@ public class Item {
 	@Override
 	public boolean equals(final Object obj) {
 		if (obj instanceof Item) {
-			return name.equals(((Item) obj).name);
+			return tag.equals(((Item) obj).tag);
 		}
 		return false;
 	}

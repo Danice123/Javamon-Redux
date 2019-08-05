@@ -35,9 +35,10 @@ public class BagHandler extends MenuHandler implements EffectHandler {
 
 	private BagMenu buildBagMenu(final Screen parent) {
 		try {
-			return bagMenuClass.getConstructor(Screen.class, BagMenuType.class).newInstance(parent, BagMenuType.View);
-		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException
-				| SecurityException e) {
+			return bagMenuClass.getConstructor(Screen.class, BagMenuType.class).newInstance(parent,
+					BagMenuType.View);
+		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException
+				| InvocationTargetException | NoSuchMethodException | SecurityException e) {
 			throw new RuntimeException("No/Bad Bag Menu class found");
 		}
 	}
@@ -64,13 +65,14 @@ public class BagHandler extends MenuHandler implements EffectHandler {
 				// Item with effect
 				final Optional<List<Effect>> effect = item.getEffects();
 				if (effect.isPresent()) {
-					final ChoosePokemonHandler choosePokemonHandler = new ChoosePokemonHandler(game, null, PartyMenuType.UseItem, true);
+					final ChoosePokemonHandler choosePokemonHandler = new ChoosePokemonHandler(game,
+							null, PartyMenuType.UseItem, true);
 					choosePokemonHandler.waitAndHandle();
 					if (choosePokemonHandler.getChosenPokemon() == null) {
 						return true;
 					}
 
-					final MonsterInstance target = game.getPlayer().getParty().getPokemon(choosePokemonHandler.getChosenPokemon());
+					final MonsterInstance target = choosePokemonHandler.getChosenPokemon();
 					// effect.get().use(this, target, target, new ItemMove());
 
 					if (item.isConsumedOnUse()) {
@@ -86,7 +88,8 @@ public class BagHandler extends MenuHandler implements EffectHandler {
 					}
 				}
 			} else {
-				final ChatboxHandler chatboxHandler = new ChatboxHandler(game, "You can't use that now!");
+				final ChatboxHandler chatboxHandler = new ChatboxHandler(game,
+						"You can't use that now!");
 				chatboxHandler.waitAndHandle();
 			}
 
@@ -104,7 +107,8 @@ public class BagHandler extends MenuHandler implements EffectHandler {
 					playerInventory.removeItem(item);
 				}
 			} else {
-				final ChatboxHandler chatboxHandler = new ChatboxHandler(game, "That's too important to toss!");
+				final ChatboxHandler chatboxHandler = new ChatboxHandler(game,
+						"That's too important to toss!");
 				chatboxHandler.waitAndHandle();
 				ThreadUtils.sleep(10);
 			}

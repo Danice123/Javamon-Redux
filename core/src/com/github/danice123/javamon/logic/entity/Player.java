@@ -1,6 +1,5 @@
 package com.github.danice123.javamon.logic.entity;
 
-import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -9,22 +8,20 @@ import com.badlogic.gdx.graphics.Texture;
 import com.github.danice123.javamon.display.sprite.Spriteset;
 import com.github.danice123.javamon.logic.Coord;
 import com.github.danice123.javamon.logic.RandomNumberGenerator;
-import com.github.danice123.javamon.logic.SaveFile;
-import com.github.danice123.javamon.logic.battlesystem.Party;
 import com.github.danice123.javamon.logic.battlesystem.Trainer;
 import com.google.common.collect.Maps;
 
 import dev.dankins.javamon.data.CollectionLibrary;
 import dev.dankins.javamon.data.Inventory;
-import dev.dankins.javamon.data.monster.Status;
-import dev.dankins.javamon.data.monster.instance.MonsterInstance;
+import dev.dankins.javamon.data.SaveFile;
+import dev.dankins.javamon.data.monster.instance.Party;
 
 public class Player extends WalkableHandler implements Trainer {
 
 	private Map<String, Boolean> flag;
 	private Map<String, String> strings;
 	private CollectionLibrary pokeData;
-	private final Party party;
+	private Party party;
 	private Inventory inventory;
 	private Inventory itemStorage;
 	private int money;
@@ -107,7 +104,7 @@ public class Player extends WalkableHandler implements Trainer {
 		s.flag = flag;
 		s.strings = strings;
 		s.pokeData = pokeData;
-		s.party = party.getParty();
+		s.party = party.serialize();
 		s.inventory = inventory.serializeInventory();
 		s.itemStorage = itemStorage.serializeInventory();
 		s.facing = entity.getFacing();
@@ -123,9 +120,7 @@ public class Player extends WalkableHandler implements Trainer {
 		flag = s.flag;
 		strings = s.strings;
 		pokeData = s.pokeData;
-		for (final MonsterInstance i : s.party) {
-			party.add(i);
-		}
+		party = new Party(assetManager, s.party);
 		inventory = new Inventory(assetManager, s.inventory);
 		itemStorage = new Inventory(assetManager, s.itemStorage);
 		entity.setFacing(s.facing);
@@ -136,26 +131,6 @@ public class Player extends WalkableHandler implements Trainer {
 	@Override
 	public String getName() {
 		return strings.get("playerName");
-	}
-
-	@Override
-	public List<String> getPokemonTextures() {
-		return party.getPokemonTextures();
-	}
-
-	@Override
-	public int firstPokemon() {
-		for (int i = 0; i < party.getSize(); i++) {
-			if (!party.getPokemon(i).status.equals(Status.FAINTED)) {
-				return i;
-			}
-		}
-		return 0;
-	}
-
-	@Override
-	public boolean hasPokemonLeft() {
-		return party.hasPokemonLeft();
 	}
 
 	@Override

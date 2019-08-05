@@ -32,8 +32,10 @@ public class TriggerList {
 			} else {
 				scriptMap[trigger.layer][trigger.x][trigger.y] = new Script(assets.get("assets/maps/" + mapName + "/" + trigger.script + ".ps", Script.class));
 			}
-			for (final String key : trigger.arguments.keySet()) {
-				scriptMap[trigger.layer][trigger.x][trigger.y].strings.put(key, trigger.arguments.get(key));
+			if (trigger.arguments != null) {
+				for (final String key : trigger.arguments.keySet()) {
+					scriptMap[trigger.layer][trigger.x][trigger.y].strings.put(key, trigger.arguments.get(key));
+				}
 			}
 		}
 		return scriptMap;

@@ -43,8 +43,8 @@ public class Gen1PlayerBattle extends PlayerBattleMenu {
 
 		if (isMoveMenuOpen) {
 			ri.border.drawBox(batch, 50 * ri.getScale(), 0, ri.screenWidth - 50 * ri.getScale(), 50 * ri.getScale());
-			for (int i = 0; i < pokemon.getMoveAmount(); i++) {
-				ri.font.draw(batch, pokemon.moves[i].name, (50 + 20) * ri.getScale(), (15 + 9 * (3 - i)) * ri.getScale());
+			for (int i = 0; i < pokemon.attacks.size(); i++) {
+				ri.font.draw(batch, pokemon.attacks.get(i).attack.name, (50 + 20) * ri.getScale(), (15 + 9 * (3 - i)) * ri.getScale());
 			}
 			batch.draw(ri.arrow.rightArrow, (50 + 9) * ri.getScale(), (6 + 9 * (3 - mindex)) * ri.getScale(),
 					ri.arrow.rightArrow.getRegionWidth() * ri.getScale(), ri.arrow.rightArrow.getRegionHeight() * ri.getScale());

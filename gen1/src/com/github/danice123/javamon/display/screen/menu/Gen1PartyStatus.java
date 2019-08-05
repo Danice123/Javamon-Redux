@@ -12,17 +12,13 @@ import com.github.danice123.javamon.logic.ControlProcessor.Key;
 import com.github.danice123.javamon.logic.ThreadUtils;
 
 import dev.dankins.javamon.data.monster.Growth;
-import dev.dankins.javamon.data.monster.Monster;
 import dev.dankins.javamon.data.monster.Stat;
-import dev.dankins.javamon.data.monster.attack.Attack;
 import dev.dankins.javamon.data.monster.instance.MonsterInstance;
 
 public class Gen1PartyStatus extends PartyStatusMenu {
 
 	private MonsterInstance pokemon;
 	private EnumMap<Stat, Integer> stats;
-	private Monster basePokemon;
-	private Attack[] moves;
 	private int expToNextLevel;
 
 	private Texture image;
@@ -46,11 +42,6 @@ public class Gen1PartyStatus extends PartyStatusMenu {
 		stats.put(Stat.SPECIAL_DEFENSE, pokemon.getSpecialDefense());
 		stats.put(Stat.SPEED, pokemon.getSpeed());
 		stats.put(Stat.HEALTH, pokemon.getHealth());
-		basePokemon = pokemon.monster;
-		moves = new Attack[pokemon.getMoveAmount()];
-		for (int i = 0; i < moves.length; i++) {
-			moves[i] = pokemon.moves[i];
-		}
 		expToNextLevel = Growth.getExpNeeded(pokemon.monster.growthRate, pokemon.getLevel() + 1) - pokemon.getExp();
 
 		initializeWait = false;
@@ -59,8 +50,8 @@ public class Gen1PartyStatus extends PartyStatusMenu {
 
 	@Override
 	protected void init(final AssetManager assets) {
-		loadTexture(assets, "assets/pokemon/" + basePokemon.number + ".png");
-		image = assets.get("assets/pokemon/" + basePokemon.number + ".png");
+		loadTexture(assets, "assets/pokemon/" + pokemon.monster.number + ".png");
+		image = assets.get("assets/pokemon/" + pokemon.monster.number + ".png");
 	}
 
 	@Override
@@ -89,7 +80,7 @@ public class Gen1PartyStatus extends PartyStatusMenu {
 		shape.end();
 		batch.begin();
 		ri.font.draw(batch, pokemon.getName(), ri.screenWidth - 135 * ri.getScale(), 155 * ri.getScale());
-		ri.font.draw(batch, "No." + basePokemon.getFormattedNumber(), 10 * ri.getScale(), 90 * ri.getScale());
+		ri.font.draw(batch, "No." + pokemon.monster.getFormattedNumber(), 10 * ri.getScale(), 90 * ri.getScale());
 
 		batch.draw(image, 30 * ri.getScale(), ri.screenHeight - 60 * ri.getScale(), image.getWidth() * ri.getScale(), image.getHeight() * ri.getScale(), 0, 0,
 				image.getWidth(), image.getHeight(), true, false);
@@ -139,9 +130,9 @@ public class Gen1PartyStatus extends PartyStatusMenu {
 				break;
 			}
 
-			ri.font.draw(batch, "Type1/ " + basePokemon.types.get(0).name, 112 * ri.getScale(), (73 - 0 * 14) * ri.getScale());
-			if (basePokemon.isDualType()) {
-				ri.font.draw(batch, "Type2/ " + basePokemon.types.get(1).name, 112 * ri.getScale(), (73 - 1 * 14) * ri.getScale());
+			ri.font.draw(batch, "Type1/ " + pokemon.monster.types.get(0).name, 112 * ri.getScale(), (73 - 0 * 14) * ri.getScale());
+			if (pokemon.monster.isDualType()) {
+				ri.font.draw(batch, "Type2/ " + pokemon.monster.types.get(1).name, 112 * ri.getScale(), (73 - 1 * 14) * ri.getScale());
 			}
 			ri.font.draw(batch, "ID/ " + pokemon.idNumber, 112 * ri.getScale(), (73 - 2 * 14) * ri.getScale());
 			ri.font.draw(batch, "OT/ " + pokemon.originalTrainer, 112 * ri.getScale(), (73 - 3 * 14) * ri.getScale());
@@ -154,12 +145,13 @@ public class Gen1PartyStatus extends PartyStatusMenu {
 			ri.font.draw(batch, expToNextLevel + " to :L" + (pokemon.getLevel() + 1), ri.screenWidth - 125 * ri.getScale(), 107 * ri.getScale());
 
 			for (int i = 0; i < 4; i++) {
-				if (i >= moves.length) {
+				if (i >= pokemon.attacks.size()) {
 					ri.font.draw(batch, "-", 10 * ri.getScale(), (72 - i * 17) * ri.getScale());
 					ri.font.draw(batch, "--", ri.screenWidth - 80 * ri.getScale(), (72 - i * 17) * ri.getScale());
 				} else {
-					ri.font.draw(batch, moves[i].name, 10 * ri.getScale(), (72 - i * 17) * ri.getScale());
-					ri.font.draw(batch, "pp " + pokemon.CPP[i] + "/" + moves[i].uses, ri.screenWidth - 80 * ri.getScale(), (72 - i * 17) * ri.getScale());
+					ri.font.draw(batch, pokemon.attacks.get(i).attack.name, 10 * ri.getScale(), (72 - i * 17) * ri.getScale());
+					ri.font.draw(batch, "pp " + pokemon.attacks.get(i).currentUsage + "/" + pokemon.attacks.get(i).maxUsage,
+							ri.screenWidth - 80 * ri.getScale(), (72 - i * 17) * ri.getScale());
 				}
 			}
 		}

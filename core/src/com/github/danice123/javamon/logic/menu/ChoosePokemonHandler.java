@@ -7,9 +7,9 @@ import com.github.danice123.javamon.display.screen.menu.PartyMenu;
 import com.github.danice123.javamon.display.screen.menu.PartyMenu.PartyMenuType;
 import com.github.danice123.javamon.logic.Game;
 import com.github.danice123.javamon.logic.ThreadUtils;
-import com.github.danice123.javamon.logic.battlesystem.Party;
 
 import dev.dankins.javamon.data.monster.instance.MonsterInstance;
+import dev.dankins.javamon.data.monster.instance.Party;
 
 public class ChoosePokemonHandler extends MenuHandler {
 
@@ -18,7 +18,7 @@ public class ChoosePokemonHandler extends MenuHandler {
 	private final PartyMenu partyMenu;
 	private final Party party;
 
-	private Integer chosenPokemon = null;
+	private MonsterInstance chosenPokemon = null;
 	private final MonsterInstance currentPokemon;
 	private final boolean canCancel;
 
@@ -52,19 +52,20 @@ public class ChoosePokemonHandler extends MenuHandler {
 		switch (partyMenu.getMenuAction()) {
 		case View:
 			final PartyStatusHandler partyStatusHandler = new PartyStatusHandler(game,
-					party.getPokemon(partyMenu.getPokemonChoice()));
+					party.get(partyMenu.getPokemonChoice()));
 			partyStatusHandler.waitAndHandle();
 			return true;
 		case Switch:
-			if (party.getPokemon(partyMenu.getPokemonChoice()).equals(currentPokemon)) {
+			final MonsterInstance chosenPokemon = party.get(partyMenu.getPokemonChoice());
+			if (chosenPokemon.equals(currentPokemon)) {
 				final ChatboxHandler chatboxHandler = new ChatboxHandler(game,
 						"That Pokemon is already fighting!");
 				chatboxHandler.waitAndHandle();
 				ThreadUtils.sleep(10);
 				return true;
 			}
-			if (party.getPokemon(partyMenu.getPokemonChoice()).getCurrentHealth() > 0) {
-				chosenPokemon = partyMenu.getPokemonChoice();
+			if (chosenPokemon.getCurrentHealth() > 0) {
+				this.chosenPokemon = chosenPokemon;
 				partyMenu.disposeMe();
 				return false;
 			}
@@ -84,7 +85,7 @@ public class ChoosePokemonHandler extends MenuHandler {
 		}
 	}
 
-	public Integer getChosenPokemon() {
+	public MonsterInstance getChosenPokemon() {
 		return chosenPokemon;
 	}
 }

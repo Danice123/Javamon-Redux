@@ -8,8 +8,8 @@ import com.badlogic.gdx.assets.AssetManager;
 import com.google.common.collect.Lists;
 
 import dev.dankins.javamon.data.item.Item;
+import dev.dankins.javamon.data.item.ItemSerialized;
 import dev.dankins.javamon.data.item.ItemStack;
-import dev.dankins.javamon.data.item.SerializedItem;
 
 public class Inventory {
 
@@ -18,9 +18,9 @@ public class Inventory {
 	public Inventory() {
 	}
 
-	public Inventory(final AssetManager assetManager, final List<SerializedItem> items) {
-		for (final SerializedItem item : items) {
-			final AssetDescriptor<Item> asset = new AssetDescriptor<>(item.name, Item.class);
+	public Inventory(final AssetManager assetManager, final List<ItemSerialized> items) {
+		for (final ItemSerialized item : items) {
+			final AssetDescriptor<Item> asset = new AssetDescriptor<>(item.tag, Item.class);
 			if (!assetManager.isLoaded(asset)) {
 				assetManager.load(asset);
 				assetManager.finishLoadingAsset(asset);
@@ -84,18 +84,18 @@ public class Inventory {
 		return items;
 	}
 
-	public boolean hasItem(final String itemName) {
+	public boolean hasItem(final String itemTag) {
 		for (final Item item : items) {
-			if (item.getName().equals(itemName)) {
+			if (item.getTag().equals(itemTag)) {
 				return true;
 			}
 		}
 		return false;
 	}
 
-	public List<SerializedItem> serializeInventory() {
+	public List<ItemSerialized> serializeInventory() {
 		return items.stream()
-				.map(item -> item instanceof ItemStack ? new SerializedItem(item.getName(), ((ItemStack) item).size()) : new SerializedItem(item.getName(), 1))
+				.map(item -> item instanceof ItemStack ? new ItemSerialized(item.getTag(), ((ItemStack) item).size()) : new ItemSerialized(item.getTag(), 1))
 				.collect(Collectors.toList());
 	}
 

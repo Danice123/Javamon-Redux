@@ -22,7 +22,7 @@ public class UnsetFlag extends Effect {
 		if (text != null) {
 			text = text.replace("$target", p.getName());
 			if (p.battleStatus.lastMove != -1) {
-				text = text.replace("$lastMove", p.moves[p.battleStatus.lastMove].name);
+				text = text.replace("$lastMove", p.attacks.get(p.battleStatus.lastMove).attack.name);
 			}
 			// menu.print(text);
 		}

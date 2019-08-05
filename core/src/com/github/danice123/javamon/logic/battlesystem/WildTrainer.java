@@ -1,12 +1,10 @@
 package com.github.danice123.javamon.logic.battlesystem;
 
-import java.util.List;
-
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Texture;
-import com.google.common.collect.Lists;
 
 import dev.dankins.javamon.data.monster.instance.MonsterInstance;
+import dev.dankins.javamon.data.monster.instance.Party;
 
 public class WildTrainer implements Trainer {
 
@@ -25,16 +23,6 @@ public class WildTrainer implements Trainer {
 	}
 
 	@Override
-	public int firstPokemon() {
-		return 0;
-	}
-
-	@Override
-	public boolean hasPokemonLeft() {
-		return false;
-	}
-
-	@Override
 	public String getName() {
 		return wildPokemon.getName();
 	}
@@ -47,11 +35,6 @@ public class WildTrainer implements Trainer {
 	@Override
 	public Texture getBackImage(final AssetManager assets) {
 		return null;
-	}
-
-	@Override
-	public List<String> getPokemonTextures() {
-		return Lists.newArrayList(Integer.toString(wildPokemon.monster.number));
 	}
 
 	@Override

@@ -42,7 +42,7 @@ public class MapData {
 
 	private final Map<Dir, String> adjMaps;
 	private final Map<Dir, Integer> tweaks;
-	private final Map<Dir, String> layerChange;
+	private final Map<Dir, Integer> layerChange;
 
 	public MapData(final String mapName,
 		final MapHandler mapHandler,
@@ -78,7 +78,7 @@ public class MapData {
 
 		final Object collideBool = map.getProperties().get("BorderCollide");
 		if (collideBool != null) {
-			borderCollides = Boolean.parseBoolean((String) collideBool);
+			borderCollides = (boolean) collideBool;
 		}
 
 		tweaks = Maps.newHashMap();
@@ -87,26 +87,29 @@ public class MapData {
 		if (map.getProperties().get("Up") != null) {
 			adjMaps.put(Dir.North, (String) map.getProperties().get("Up"));
 			tweaks.put(Dir.North, getIntFromMapProperties(map.getProperties().get("UpTweak")));
-			layerChange.put(Dir.North, (String) map.getProperties().get("UpLayer"));
+			layerChange.put(Dir.North, getIntFromMapProperties(map.getProperties().get("UpLayer")));
 		}
 		if (map.getProperties().get("Down") != null) {
 			adjMaps.put(Dir.South, (String) map.getProperties().get("Down"));
 			tweaks.put(Dir.South, getIntFromMapProperties(map.getProperties().get("DownTweak")));
-			layerChange.put(Dir.South, (String) map.getProperties().get("DownLayer"));
+			layerChange.put(Dir.South, getIntFromMapProperties(map.getProperties().get("DownLayer")));
 		}
 		if (map.getProperties().get("Left") != null) {
 			adjMaps.put(Dir.West, (String) map.getProperties().get("Left"));
 			tweaks.put(Dir.West, getIntFromMapProperties(map.getProperties().get("LeftTweak")));
-			layerChange.put(Dir.West, (String) map.getProperties().get("LeftLayer"));
+			layerChange.put(Dir.West, getIntFromMapProperties(map.getProperties().get("LeftLayer")));
 		}
 		if (map.getProperties().get("Right") != null) {
 			adjMaps.put(Dir.East, (String) map.getProperties().get("Right"));
 			tweaks.put(Dir.East, getIntFromMapProperties(map.getProperties().get("RightTweak")));
-			layerChange.put(Dir.East, (String) map.getProperties().get("RightLayer"));
+			layerChange.put(Dir.East, getIntFromMapProperties(map.getProperties().get("RightLayer")));
 		}
 	}
 
 	private Integer getIntFromMapProperties(final Object property) {
+		if (property == null) {
+			return null;
+		}
 		if (property instanceof Integer) {
 			return (Integer) property;
 		}
@@ -145,7 +148,7 @@ public class MapData {
 		if (layerChange.get(dir) == null) {
 			return null;
 		}
-		return Integer.parseInt(layerChange.get(dir));
+		return layerChange.get(dir);
 	}
 
 	public void render(final OrthographicCamera camera, final Player player) {

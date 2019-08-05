@@ -8,12 +8,10 @@ import com.github.danice123.javamon.display.screen.menu.PlayerBattleMenu;
 import com.github.danice123.javamon.logic.Game;
 import com.github.danice123.javamon.logic.ThreadUtils;
 import com.github.danice123.javamon.logic.battlesystem.BattleAction;
-import com.github.danice123.javamon.logic.battlesystem.BattleAction.BattleActionEnum;
+import com.github.danice123.javamon.logic.battlesystem.Battlesystem;
 
 import dev.dankins.javamon.data.item.Item;
 import dev.dankins.javamon.data.item.ItemStack;
-
-import com.github.danice123.javamon.logic.battlesystem.Battlesystem;
 
 public class PlayerBattleHandler extends MenuHandler {
 
@@ -28,14 +26,14 @@ public class PlayerBattleHandler extends MenuHandler {
 		super(game);
 		this.system = system;
 		battleMenu = buildPlayerBattleMenuMenu(game.getLatestScreen());
-		battleMenu.setupMenu(system.getPlayerPokemon());
+		battleMenu.setupMenu(system.getPlayerMonster());
 	}
 
 	private PlayerBattleMenu buildPlayerBattleMenuMenu(final Screen parent) {
 		try {
 			return playerBattleMenuClass.getConstructor(Screen.class).newInstance(parent);
-		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException
-				| InvocationTargetException | NoSuchMethodException | SecurityException e) {
+		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException
+				| SecurityException e) {
 			throw new RuntimeException("No/Bad Battle Menu class found");
 		}
 	}
@@ -49,8 +47,7 @@ public class PlayerBattleHandler extends MenuHandler {
 	protected boolean handleResponse() {
 		switch (battleMenu.getAction().action) {
 		case Item:
-			final ChooseItemHandler chooseItemHandler = new ChooseItemHandler(game,
-					game.getPlayer().getInventory());
+			final ChooseItemHandler chooseItemHandler = new ChooseItemHandler(game, game.getPlayer().getInventory());
 			chooseItemHandler.waitAndHandle();
 			if (chooseItemHandler.wasCancelled()) {
 				return true;
@@ -68,32 +65,28 @@ public class PlayerBattleHandler extends MenuHandler {
 						game.getPlayer().getInventory().removeItem(chosenItem);
 					}
 				}
-				chosenAction = new BattleAction(BattleActionEnum.Item, chosenItem);
+				chosenAction = new BattleAction(chosenItem);
 				battleMenu.disposeMe();
 				return false;
 			} else {
-				final ChatboxHandler chatboxHandler = new ChatboxHandler(game,
-						"You can't use that now!");
+				final ChatboxHandler chatboxHandler = new ChatboxHandler(game, "You can't use that now!");
 				chatboxHandler.waitAndHandle();
 			}
 			return true;
 		case Switch:
-			final ChoosePokemonHandler choosePokemonInBattleHandler = new ChoosePokemonHandler(game,
-					system.getPlayerPokemon(), PartyMenuType.Switch, true);
+			final ChoosePokemonHandler choosePokemonInBattleHandler = new ChoosePokemonHandler(game, system.getPlayerMonster(), PartyMenuType.Switch, true);
 			choosePokemonInBattleHandler.waitAndHandle();
 			ThreadUtils.sleep(10);
 			if (choosePokemonInBattleHandler.getChosenPokemon() != null) {
-				chosenAction = new BattleAction(BattleActionEnum.Switch,
-						choosePokemonInBattleHandler.getChosenPokemon());
+				chosenAction = new BattleAction(choosePokemonInBattleHandler.getChosenPokemon());
 				battleMenu.disposeMe();
 				return false;
 			} else {
 				return true;
 			}
 		case Attack:
-			if (system.getPlayerPokemon().CPP[battleMenu.getAction().info] <= 0) {
-				final ChatboxHandler chatboxHandler = new ChatboxHandler(game,
-						"That move doesn't have any PP!");
+			if (system.getPlayerMonster().attacks.get(battleMenu.getAction().info).currentUsage <= 0) {
+				final ChatboxHandler chatboxHandler = new ChatboxHandler(game, "That move doesn't have any PP!");
 				chatboxHandler.waitAndHandle();
 				return true;
 			} else {

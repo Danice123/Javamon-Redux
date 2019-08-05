@@ -22,7 +22,7 @@ public class CheckLastMove extends Require {
 				// menu.print("The move failed...");
 				return false;
 			}
-			if (target.getPP(target.battleStatus.lastMove) == 0) {
+			if (target.attacks.get(target.battleStatus.lastMove).currentUsage == 0) {
 				// menu.print("The move failed...");
 				return false;
 			}

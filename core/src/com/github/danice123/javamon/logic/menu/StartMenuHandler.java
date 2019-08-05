@@ -16,7 +16,7 @@ public class StartMenuHandler extends MenuHandler {
 
 	public StartMenuHandler(final Game game) {
 		super(game);
-		hasPokemon = game.getPlayer().getParty().getSize() > 0;
+		hasPokemon = game.getPlayer().getParty().size() > 0;
 		hasPokedex = game.getPlayer().getFlag("HasPokedex");
 		startMenu = buildStartMenu(game.getLatestScreen());
 		startMenu.setupMenu(hasPokemon, hasPokedex);

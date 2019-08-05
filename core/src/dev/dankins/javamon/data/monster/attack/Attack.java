@@ -5,6 +5,7 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.github.danice123.javamon.logic.RandomNumberGenerator;
+import com.google.common.collect.Lists;
 
 import dev.dankins.javamon.data.monster.Type;
 import dev.dankins.javamon.data.monster.attack.effect.Effect;
@@ -27,14 +28,12 @@ public class Attack {
 	public final List<Effect> effects;
 
 	@JsonCreator
-	public Attack(@JsonProperty("name") final String name,
-		@JsonProperty("type") final Type type,
-		@JsonProperty("uses") final int uses,
-		@JsonProperty("accuracy") final int accuracy,
-		@JsonProperty("missable") final boolean missable,
-		@JsonProperty("priority") final int priority,
-		@JsonProperty("requirements") final List<Require> requirements,
-		@JsonProperty("effects") final List<Effect> effects) {
+	public Attack(@JsonProperty("name") final String name, @JsonProperty("type") final Type type,
+			@JsonProperty("uses") final int uses, @JsonProperty("accuracy") final int accuracy,
+			@JsonProperty("missable") final boolean missable,
+			@JsonProperty("priority") final int priority,
+			@JsonProperty("requirements") final List<Require> requirements,
+			@JsonProperty("effects") final List<Effect> effects) {
 		this.name = name;
 		this.type = type;
 		this.uses = uses;
@@ -42,8 +41,8 @@ public class Attack {
 		this.missable = missable;
 		this.priority = priority;
 
-		this.requirements = requirements;
-		this.effects = effects;
+		this.requirements = requirements == null ? Lists.newArrayList() : requirements;
+		this.effects = effects == null ? Lists.newArrayList() : effects;
 	}
 
 	public AttackResult use(final MonsterInstance user, final MonsterInstance target) {
@@ -64,10 +63,12 @@ public class Attack {
 	}
 
 	private boolean missCalc(final MonsterInstance user, final MonsterInstance target) {
-		if (target.battleStatus.getFlag("isUnderground") || target.battleStatus.getFlag("isInTheSky")) {
+		if (target.battleStatus.getFlag("isUnderground")
+				|| target.battleStatus.getFlag("isInTheSky")) {
 			return false;
 		}
-		final int chance = accuracy * user.battleStatus.getAccuracy() * target.battleStatus.getEvasion();
+		final int chance = accuracy * user.battleStatus.getAccuracy()
+				* target.battleStatus.getEvasion();
 		if (RandomNumberGenerator.random.nextInt(100) <= chance) {
 			return false;
 		}

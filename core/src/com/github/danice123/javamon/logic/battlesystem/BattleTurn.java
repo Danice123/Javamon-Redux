@@ -6,7 +6,6 @@ import com.github.danice123.javamon.logic.menu.BattleMenuHandler;
 
 import dev.dankins.javamon.data.monster.Stat;
 import dev.dankins.javamon.data.monster.Status;
-import dev.dankins.javamon.data.monster.attack.Attack;
 import dev.dankins.javamon.data.monster.instance.MonsterInstance;
 
 public class BattleTurn {
@@ -54,11 +53,11 @@ public class BattleTurn {
 		if (user.battleStatus.getFlag("isDisabled")) {
 			if (user.battleStatus.getCounter("DisableCounter") <= 0) {
 				user.battleStatus.setFlag("isDisabled", false);
-				menu.print(user.getName() + "'s " + user.moves[user.battleStatus.getCounter("DisabledMove")].name + " has been un-disabled!");
+				menu.print(user.getName() + "'s " + user.attacks.get(user.battleStatus.getCounter("DisabledMove")).attack.name + " has been un-disabled!");
 				user.battleStatus.setFlag("DisabledMoveChosen", false);
 				user.battleStatus.setCounter("DisabledMove", 0);
 			} else if (move == user.battleStatus.getCounter("DisabledMove")) {
-				menu.print(user.moves[user.battleStatus.getCounter("DisabledMove")].name + " is disabled!");
+				menu.print(user.attacks.get(user.battleStatus.getCounter("DisabledMove")).attack.name + " is disabled!");
 				attack = false;
 				user.battleStatus.decrementCounter("DisableCounter");
 			}
@@ -101,29 +100,32 @@ public class BattleTurn {
 
 		// move-------------------------------------------------------------------
 		if (attack) {
-			user.CPP[move]--;
+			user.attacks.get(move).currentUsage--;
 			// Continue Attack Modifier
-			if (user.battleStatus.getFlag("MultiTurnMove")) {
-				final Attack cont = Attack.getMove(user.moves[user.battleStatus.lastMove].name + "_con");
-				menu.print(user.getName() + " uses " + cont.name + "!");
-				cont.use(user, target);
-				user.battleStatus.decrementCounter("MultiTurnCounter");
-				if (user.battleStatus.getCounter("MultiTurnCounter") <= 0) {
-					user.battleStatus.setFlag("MultiTurnMove", false);
-
-					// Confuse after end Modifier
-					if (user.battleStatus.getFlag("ConfusesUserOnFinish")) {
-						user.battleStatus.setFlag("isConfused", true);
-						user.battleStatus.setCounter("ConfusionCounter", random.nextInt(3) + 2);
-						menu.print(user.getName() + " became confused from exhustion!");
-						user.battleStatus.setFlag("ConfusesUserOnFinish", false);
-					}
-				}
-			} else {
-				menu.print(user.getName() + " uses " + user.moves[move].name + "!");
-				user.moves[move].use(user, target);
-				user.battleStatus.lastMove = move;
-			}
+			// if (user.battleStatus.getFlag("MultiTurnMove")) {
+			// final Attack cont =
+			// Attack.getMove(user.moves[user.battleStatus.lastMove].name +
+			// "_con");
+			// menu.print(user.getName() + " uses " + cont.name + "!");
+			// cont.use(user, target);
+			// user.battleStatus.decrementCounter("MultiTurnCounter");
+			// if (user.battleStatus.getCounter("MultiTurnCounter") <= 0) {
+			// user.battleStatus.setFlag("MultiTurnMove", false);
+			//
+			// // Confuse after end Modifier
+			// if (user.battleStatus.getFlag("ConfusesUserOnFinish")) {
+			// user.battleStatus.setFlag("isConfused", true);
+			// user.battleStatus.setCounter("ConfusionCounter",
+			// random.nextInt(3) + 2);
+			// menu.print(user.getName() + " became confused from exhustion!");
+			// user.battleStatus.setFlag("ConfusesUserOnFinish", false);
+			// }
+			// }
+			// } else {
+			menu.print(user.getName() + " uses " + user.attacks.get(move).attack.name + "!");
+			user.attacks.get(move).attack.use(user, target);
+			user.battleStatus.lastMove = move;
+			// }
 
 			// Successful Move checks
 			if (user.battleStatus.getFlag("isDisabled")) {

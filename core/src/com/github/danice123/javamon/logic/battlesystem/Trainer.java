@@ -1,9 +1,9 @@
 package com.github.danice123.javamon.logic.battlesystem;
 
-import java.util.List;
-
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Texture;
+
+import dev.dankins.javamon.data.monster.instance.Party;
 
 public interface Trainer {
 
@@ -11,15 +11,9 @@ public interface Trainer {
 
 	Party getParty();
 
-	int firstPokemon();
-
-	boolean hasPokemonLeft();
-
 	Texture getImage(AssetManager assets);
 
 	Texture getBackImage(AssetManager assets);
-
-	List<String> getPokemonTextures();
 
 	boolean isTrainerBattle();
 

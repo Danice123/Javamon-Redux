@@ -1,7 +1,8 @@
 package com.github.danice123.javamon.display.screen.menu;
 
 import com.github.danice123.javamon.display.screen.Screen;
-import com.github.danice123.javamon.logic.battlesystem.Party;
+
+import dev.dankins.javamon.data.monster.instance.Party;
 
 public abstract class PartyMenu extends AbstractMenu {
 

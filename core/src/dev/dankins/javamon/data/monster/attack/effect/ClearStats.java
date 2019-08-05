@@ -27,7 +27,7 @@ public class ClearStats extends Effect {
 		if (text != null) {
 			text = text.replace("$target", target.getName());
 			if (target.battleStatus.lastMove != -1) {
-				text = text.replace("$lastMove", target.moves[target.battleStatus.lastMove].name);
+				text = text.replace("$lastMove", target.attacks.get(target.battleStatus.lastMove).attack.name);
 			}
 			// menu.print(text);
 		}

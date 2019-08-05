@@ -1,15 +1,13 @@
 package com.github.danice123.javamon.logic.entity;
 
-import java.util.List;
 import java.util.Optional;
 
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Texture;
 import com.github.danice123.javamon.display.sprite.Spriteset;
-import com.github.danice123.javamon.logic.battlesystem.Party;
 import com.github.danice123.javamon.logic.battlesystem.Trainer;
 
-import dev.dankins.javamon.data.monster.Status;
+import dev.dankins.javamon.data.monster.instance.Party;
 
 public class TrainerHandler extends WalkableHandler implements Trainer {
 
@@ -38,26 +36,6 @@ public class TrainerHandler extends WalkableHandler implements Trainer {
 	@Override
 	public Party getParty() {
 		return party;
-	}
-
-	@Override
-	public List<String> getPokemonTextures() {
-		return party.getPokemonTextures();
-	}
-
-	@Override
-	public int firstPokemon() {
-		return 0;
-	}
-
-	@Override
-	public boolean hasPokemonLeft() {
-		for (int i = 0; i < party.getSize(); i++) {
-			if (party.getPokemon(i).status != Status.FAINTED) {
-				return true;
-			}
-		}
-		return false;
 	}
 
 	@Override

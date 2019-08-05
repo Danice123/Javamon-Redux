@@ -47,12 +47,12 @@ public class Gen1Battle extends BattleMenu {
 	protected void init(final AssetManager assets) {
 		// TODO: Load with assetManager
 		playerPokemonTex = Maps.newHashMap();
-		player.getPokemonTextures().forEach(number -> {
+		player.getParty().getMonsterTextures().forEach(number -> {
 			playerPokemonTex.put(Integer.parseInt(number), new Texture("assets/pokemon/back/" + number + ".png"));
 		});
 
 		enemyPokemonTex = Maps.newHashMap();
-		enemy.getPokemonTextures().forEach(number -> {
+		enemy.getParty().getMonsterTextures().forEach(number -> {
 			enemyPokemonTex.put(Integer.parseInt(number), new Texture("assets/pokemon/" + number + ".png"));
 		});
 	}
@@ -67,13 +67,13 @@ public class Gen1Battle extends BattleMenu {
 		shape.begin(ShapeType.Filled);
 		batch.begin();
 
-		renderPlayerHealthBar(ri, system.getPlayerPokemon());
-		renderEnemyHealthBar(ri, system.getEnemyPokemon());
+		renderPlayerHealthBar(ri, system.getPlayerMonster());
+		renderEnemyHealthBar(ri, system.getEnemyMonster());
 
-		final Texture playerTex = playerPokemonTex.get(system.getPlayerPokemon().monster.number);
+		final Texture playerTex = playerPokemonTex.get(system.getPlayerMonster().monster.number);
 		batch.draw(playerTex, 20 * ri.getScale(), 35 * ri.getScale(), playerTex.getWidth() * 3 * ri.getScale(), playerTex.getHeight() * 3 * ri.getScale());
 
-		final Texture enemyTex = enemyPokemonTex.get(system.getEnemyPokemon().monster.number);
+		final Texture enemyTex = enemyPokemonTex.get(system.getEnemyMonster().monster.number);
 		batch.draw(enemyTex, 160 * ri.getScale(), 100 * ri.getScale(), enemyTex.getWidth() * ri.getScale(), enemyTex.getHeight() * ri.getScale());
 
 		ri.border.drawBox(batch, 0, 0, ri.screenWidth, 50 * ri.getScale());

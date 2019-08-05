@@ -39,11 +39,11 @@ public class MonsterLoader extends SynchronousAssetLoader<Monster, MonsterLoader
 	@Override
 	public Array<AssetDescriptor> getDependencies(final String fileName, final FileHandle file, final Parameters parameter) {
 		final Monster monster = loadMonster(file);
-		final List<AssetDescriptor<Attack>> attacksToLoad = Lists.newArrayList();
+		final List<AssetDescriptor> deps = Lists.newArrayList();
 		for (final String attackName : getMonsterAttackNames(monster)) {
-			attacksToLoad.add(new AssetDescriptor<Attack>(attackName, Attack.class));
+			deps.add(new AssetDescriptor<Attack>(attackName, Attack.class));
 		}
-		return Array.with(attacksToLoad.toArray(new AssetDescriptor[0]));
+		return Array.with(deps.toArray(new AssetDescriptor[0]));
 	}
 
 	private Monster loadMonster(final FileHandle file) {

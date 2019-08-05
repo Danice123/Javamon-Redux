@@ -9,7 +9,8 @@ import com.github.danice123.javamon.display.screen.Screen;
 import com.github.danice123.javamon.display.screen.battle.Gen1HealthBar;
 import com.github.danice123.javamon.logic.ControlProcessor.Key;
 import com.github.danice123.javamon.logic.ThreadUtils;
-import com.github.danice123.javamon.logic.battlesystem.Party;
+
+import dev.dankins.javamon.data.monster.instance.Party;
 
 public class Gen1Party extends PartyMenu {
 
@@ -34,9 +35,9 @@ public class Gen1Party extends PartyMenu {
 	@Override
 	public void setupMenu(final Party party) {
 		this.party = party;
-		health = new int[party.getSize()];
-		for (int i = 0; i < party.getSize(); i++) {
-			health[i] = party.getPokemon(i).getHealth();
+		health = new int[party.size()];
+		for (int i = 0; i < party.size(); i++) {
+			health[i] = party.get(i).getHealth();
 		}
 		pokemonToSwitchIndex = -99;
 	}
@@ -48,42 +49,34 @@ public class Gen1Party extends PartyMenu {
 	@Override
 	protected void renderScreen(final RenderInfo ri, final float delta) {
 		shape.begin(ShapeType.Filled);
-		for (int i = 0; i < party.getSize(); i++) {
-			healthBar.render(ri, shape, party.getPokemon(i).getCurrentHealthPercent(),
-					55 * ri.getScale(), ri.screenHeight - (19 + 20 * i) * ri.getScale(),
+		for (int i = 0; i < party.size(); i++) {
+			healthBar.render(ri, shape, party.get(i).getCurrentHealthPercent(), 55 * ri.getScale(), ri.screenHeight - (19 + 20 * i) * ri.getScale(),
 					80 * ri.getScale(), 6 * ri.getScale());
 		}
 		shape.end();
 		batch.begin();
-		for (int i = 0; i < party.getSize(); i++) {
-			ri.font.draw(batch, party.getPokemon(i).getName(), 30 * ri.getScale(),
-					ri.screenHeight - (2 + 20 * i) * ri.getScale());
-			ri.font.draw(batch, ":L" + party.getPokemon(i).getLevel(), 120 * ri.getScale(),
-					ri.screenHeight - (2 + 20 * i) * ri.getScale());
-			ri.font.draw(batch, party.getPokemon(i).getCurrentHealth() + "/ " + health[i],
-					170 * ri.getScale(), ri.screenHeight - (12 + 20 * i) * ri.getScale());
-			ri.font.draw(batch, "HP:", 30 * ri.getScale(),
-					ri.screenHeight - (12 + 20 * i) * ri.getScale());
+		for (int i = 0; i < party.size(); i++) {
+			ri.font.draw(batch, party.get(i).getName(), 30 * ri.getScale(), ri.screenHeight - (2 + 20 * i) * ri.getScale());
+			ri.font.draw(batch, ":L" + party.get(i).getLevel(), 120 * ri.getScale(), ri.screenHeight - (2 + 20 * i) * ri.getScale());
+			ri.font.draw(batch, party.get(i).getCurrentHealth() + "/ " + health[i], 170 * ri.getScale(), ri.screenHeight - (12 + 20 * i) * ri.getScale());
+			ri.font.draw(batch, "HP:", 30 * ri.getScale(), ri.screenHeight - (12 + 20 * i) * ri.getScale());
 		}
 
 		TextureRegion a = ri.arrow.rightArrow;
 		if (isSubmenuOpen) {
 			a = ri.arrow.rightArrowAlt;
 		}
-		batch.draw(a, 2 * ri.getScale(), ri.screenHeight - (10 + 20 * pokemonIndex) * ri.getScale(),
-				a.getRegionWidth() * ri.getScale(), a.getRegionHeight() * ri.getScale());
+		batch.draw(a, 2 * ri.getScale(), ri.screenHeight - (10 + 20 * pokemonIndex) * ri.getScale(), a.getRegionWidth() * ri.getScale(),
+				a.getRegionHeight() * ri.getScale());
 
 		if (pokemonToSwitchIndex != -99) {
-			batch.draw(ri.arrow.rightArrowAlt, 2 * ri.getScale(),
-					ri.screenHeight - (10 + 20 * pokemonToSwitchIndex) * ri.getScale(),
-					ri.arrow.rightArrowAlt.getRegionWidth() * ri.getScale(),
-					ri.arrow.rightArrowAlt.getRegionHeight() * ri.getScale());
+			batch.draw(ri.arrow.rightArrowAlt, 2 * ri.getScale(), ri.screenHeight - (10 + 20 * pokemonToSwitchIndex) * ri.getScale(),
+					ri.arrow.rightArrowAlt.getRegionWidth() * ri.getScale(), ri.arrow.rightArrowAlt.getRegionHeight() * ri.getScale());
 		}
 
 		// chatbox
 		ri.border.drawBox(batch, 0, 0, ri.screenWidth, 40 * ri.getScale());
-		ri.font.draw(batch, text, ri.border.WIDTH + 2, 40 * ri.getScale() - ri.border.HEIGHT,
-				ri.screenWidth - 2 * (ri.border.WIDTH + 2), Align.left, true);
+		ri.font.draw(batch, text, ri.border.WIDTH + 2, 40 * ri.getScale() - ri.border.HEIGHT, ri.screenWidth - 2 * (ri.border.WIDTH + 2), Align.left, true);
 
 		if (isSubmenuOpen) {
 			renderSubmenu(ri);
@@ -92,35 +85,25 @@ public class Gen1Party extends PartyMenu {
 	}
 
 	private void renderSubmenu(final RenderInfo ri) {
-		ri.border.drawBox(batch, ri.screenWidth - 75 * ri.getScale(), 0, 75 * ri.getScale(),
-				50 * ri.getScale());
+		ri.border.drawBox(batch, ri.screenWidth - 75 * ri.getScale(), 0, 75 * ri.getScale(), 50 * ri.getScale());
 		switch (getMenuType()) {
 		case View:
-			ri.font.draw(batch, "Status", ri.screenWidth - 60 * ri.getScale(),
-					(15 + 14 * (2 - 0)) * ri.getScale());
-			ri.font.draw(batch, "Switch", ri.screenWidth - 60 * ri.getScale(),
-					(15 + 14 * (2 - 1)) * ri.getScale());
+			ri.font.draw(batch, "Status", ri.screenWidth - 60 * ri.getScale(), (15 + 14 * (2 - 0)) * ri.getScale());
+			ri.font.draw(batch, "Switch", ri.screenWidth - 60 * ri.getScale(), (15 + 14 * (2 - 1)) * ri.getScale());
 			break;
 		case Switch:
-			ri.font.draw(batch, "Switch", ri.screenWidth - 60 * ri.getScale(),
-					(15 + 14 * (2 - 0)) * ri.getScale());
-			ri.font.draw(batch, "Status", ri.screenWidth - 60 * ri.getScale(),
-					(15 + 14 * (2 - 1)) * ri.getScale());
+			ri.font.draw(batch, "Switch", ri.screenWidth - 60 * ri.getScale(), (15 + 14 * (2 - 0)) * ri.getScale());
+			ri.font.draw(batch, "Status", ri.screenWidth - 60 * ri.getScale(), (15 + 14 * (2 - 1)) * ri.getScale());
 			break;
 		case UseItem:
-			ri.font.draw(batch, "Use", ri.screenWidth - 60 * ri.getScale(),
-					(15 + 14 * (2 - 0)) * ri.getScale());
-			ri.font.draw(batch, "Status", ri.screenWidth - 60 * ri.getScale(),
-					(15 + 14 * (2 - 1)) * ri.getScale());
+			ri.font.draw(batch, "Use", ri.screenWidth - 60 * ri.getScale(), (15 + 14 * (2 - 0)) * ri.getScale());
+			ri.font.draw(batch, "Status", ri.screenWidth - 60 * ri.getScale(), (15 + 14 * (2 - 1)) * ri.getScale());
 			break;
 		}
-		ri.font.draw(batch, "Cancel", ri.screenWidth - 60 * ri.getScale(),
-				(15 + 14 * (2 - 2)) * ri.getScale());
+		ri.font.draw(batch, "Cancel", ri.screenWidth - 60 * ri.getScale(), (15 + 14 * (2 - 2)) * ri.getScale());
 
-		batch.draw(ri.arrow.rightArrow, ri.screenWidth - 70 * ri.getScale(),
-				(7 + 14 * (2 - submenuIndex)) * ri.getScale(),
-				ri.arrow.rightArrow.getRegionWidth() * ri.getScale(),
-				ri.arrow.rightArrow.getRegionHeight() * ri.getScale());
+		batch.draw(ri.arrow.rightArrow, ri.screenWidth - 70 * ri.getScale(), (7 + 14 * (2 - submenuIndex)) * ri.getScale(),
+				ri.arrow.rightArrow.getRegionWidth() * ri.getScale(), ri.arrow.rightArrow.getRegionHeight() * ri.getScale());
 	}
 
 	@Override
@@ -138,21 +121,21 @@ public class Gen1Party extends PartyMenu {
 			if (pokemonIndex > 0) {
 				pokemonIndex--;
 			} else {
-				pokemonIndex = party.getSize() - 1;
+				pokemonIndex = party.size() - 1;
 			}
 
 			if (pokemonIndex == pokemonToSwitchIndex) {
 				pokemonIndex--;
 			}
 			if (pokemonIndex == -1) {
-				pokemonIndex = party.getSize() - 1;
+				pokemonIndex = party.size() - 1;
 			}
 			if (pokemonIndex == pokemonToSwitchIndex) {
 				pokemonIndex--;
 			}
 			break;
 		case down:
-			if (pokemonIndex < party.getSize() - 1) {
+			if (pokemonIndex < party.size() - 1) {
 				pokemonIndex++;
 			} else {
 				pokemonIndex = 0;
@@ -161,7 +144,7 @@ public class Gen1Party extends PartyMenu {
 			if (pokemonIndex == pokemonToSwitchIndex) {
 				pokemonIndex++;
 			}
-			if (pokemonIndex == party.getSize()) {
+			if (pokemonIndex == party.size()) {
 				pokemonIndex = 0;
 			}
 			if (pokemonIndex == pokemonToSwitchIndex) {
@@ -221,7 +204,7 @@ public class Gen1Party extends PartyMenu {
 				case View:
 					pokemonToSwitchIndex = pokemonIndex;
 					pokemonIndex++;
-					if (pokemonIndex == party.getSize()) {
+					if (pokemonIndex == party.size()) {
 						pokemonIndex = 0;
 					}
 					isSubmenuOpen = false;

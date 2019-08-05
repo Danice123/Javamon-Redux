@@ -50,27 +50,24 @@ public class Monster {
 
 	@JsonCreator
 	public Monster(@JsonProperty("number") final int number,
-		@JsonProperty("name") final String name,
-		@JsonProperty("types") final List<Type> types,
-		@JsonProperty("baseStats") final Map<Stat, Integer> baseStats,
-		@JsonProperty("abilities") final List<String> abilities,
-		@JsonProperty("dreamAbility") final String dreamAbility,
-		@JsonProperty("learnableAttacks") final Map<Integer, List<String>> learnableAttacks,
-		@JsonProperty("genderRatio") final GenderRatio genderRatio,
-		@JsonProperty("genus") final List<Genus> genus,
-		@JsonProperty("hatchCounter") final int hatchCounter,
-		@JsonProperty("baseExp") final int baseExp,
-		@JsonProperty("effort") final Map<Stat, Integer> effort,
-		@JsonProperty("captureRate") final int captureRate,
-		@JsonProperty("baseHappiness") final int baseHappiness,
-		@JsonProperty("growthRate") final Growth growthRate,
-		@JsonProperty("species") final String species,
-		@JsonProperty("description") final String description,
-		@JsonProperty("height") final int height,
-		@JsonProperty("weight") final int weight,
-		@JsonProperty("color") final Color color,
-		@JsonProperty("shape") final Shape shape,
-		@JsonProperty("habitat") final Habitat habitat) {
+			@JsonProperty("name") final String name, @JsonProperty("types") final List<Type> types,
+			@JsonProperty("baseStats") final Map<Stat, Integer> baseStats,
+			@JsonProperty("abilities") final List<String> abilities,
+			@JsonProperty("dreamAbility") final String dreamAbility,
+			@JsonProperty("learnableAttacks") final Map<Integer, List<String>> learnableAttacks,
+			@JsonProperty("genderRatio") final GenderRatio genderRatio,
+			@JsonProperty("genus") final List<Genus> genus,
+			@JsonProperty("hatchCounter") final int hatchCounter,
+			@JsonProperty("baseExp") final int baseExp,
+			@JsonProperty("effort") final Map<Stat, Integer> effort,
+			@JsonProperty("captureRate") final int captureRate,
+			@JsonProperty("baseHappiness") final int baseHappiness,
+			@JsonProperty("growthRate") final Growth growthRate,
+			@JsonProperty("species") final String species,
+			@JsonProperty("description") final String description,
+			@JsonProperty("height") final int height, @JsonProperty("weight") final int weight,
+			@JsonProperty("color") final Color color, @JsonProperty("shape") final Shape shape,
+			@JsonProperty("habitat") final Habitat habitat) {
 		this.number = number;
 		this.name = name;
 		this.types = types;
@@ -143,7 +140,8 @@ public class Monster {
 
 	@JsonIgnore
 	public Attack[] getTopFourMoves(final int currectLevel) {
-		final List<Integer> orderedLevelList = Lists.newArrayList(learnableAttacks.keySet()).stream().filter(level -> level <= currectLevel)
+		final List<Integer> orderedLevelList = Lists.newArrayList(learnableAttacks.keySet())
+				.stream().filter(level -> level <= currectLevel)
 				.sorted((i, j) -> Integer.compare(j, i)).collect(Collectors.toList());
 
 		final Attack[] attacks = new Attack[4];

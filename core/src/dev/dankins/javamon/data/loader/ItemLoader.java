@@ -12,6 +12,7 @@ import com.badlogic.gdx.utils.Array;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import dev.dankins.javamon.data.item.Item;
+import dev.dankins.javamon.data.script.Script;
 
 public class ItemLoader extends SynchronousAssetLoader<Item, ItemLoader.Parameters> {
 
@@ -24,18 +25,28 @@ public class ItemLoader extends SynchronousAssetLoader<Item, ItemLoader.Paramete
 
 	@Override
 	public Item load(final AssetManager assetManager, final String fileName, final FileHandle file, final Parameters parameter) {
-		try {
-			return mapper.readValue(file.file(), Item.class);
-		} catch (final IOException e) {
-			e.printStackTrace();
-			return null;
-		}
+		return loadItem(file);
 	}
 
 	@SuppressWarnings("rawtypes")
 	@Override
 	public Array<AssetDescriptor> getDependencies(final String fileName, final FileHandle file, final Parameters parameter) {
+		final Item item = loadItem(file);
+
+		if (item.getScriptPath().isPresent()) {
+			return Array.with(new AssetDescriptor<Script>(item.getScriptPath().get(), Script.class));
+		}
 		return null;
+	}
+
+	private Item loadItem(final FileHandle file) {
+		try {
+			return mapper.readValue(file.file(), Item.class);
+		} catch (final IOException e) {
+			System.out.println("Error reading item data: " + file.path());
+			e.printStackTrace();
+			return null;
+		}
 	}
 
 	static public class Parameters extends AssetLoaderParameters<Item> {
@@ -44,8 +55,8 @@ public class ItemLoader extends SynchronousAssetLoader<Item, ItemLoader.Paramete
 	static private class ItemFileResolver implements FileHandleResolver {
 
 		@Override
-		public FileHandle resolve(final String itemName) {
-			return new FileHandle("assets/db/item/" + itemName.replace(' ', '_') + ".yaml");
+		public FileHandle resolve(final String itemTag) {
+			return new FileHandle("assets/db/item/" + itemTag + ".yaml");
 		}
 
 	}

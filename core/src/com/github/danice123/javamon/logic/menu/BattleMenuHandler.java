@@ -113,9 +113,9 @@ public class BattleMenuHandler extends MenuHandler implements EffectHandler {
 		return playerBattleHandler.getChosenAction();
 	}
 
-	public int switchToNewPokemon() {
+	public MonsterInstance switchToNewPokemon() {
 		final ChoosePokemonHandler choosePokemonInBattleHandler = new ChoosePokemonHandler(game,
-				battlesystem.getPlayerPokemon(), PartyMenuType.Switch, false);
+				battlesystem.getPlayerMonster(), PartyMenuType.Switch, false);
 		choosePokemonInBattleHandler.waitAndHandle();
 		ThreadUtils.sleep(10);
 		return choosePokemonInBattleHandler.getChosenPokemon();
@@ -123,9 +123,8 @@ public class BattleMenuHandler extends MenuHandler implements EffectHandler {
 
 	public void respawnPlayer() {
 		game.getPlayer().modifyMoney(game.getPlayer().getMoney() / -2);
-
-		for (int i = 0; i < game.getPlayer().getParty().getSize(); i++) {
-			game.getPlayer().getParty().getPokemon(i).heal();
+		for (final MonsterInstance monster : game.getPlayer().getParty()) {
+			monster.heal();
 		}
 
 		final String[] respawn = game.getPlayer().getString("respawnPoint").split(":");
