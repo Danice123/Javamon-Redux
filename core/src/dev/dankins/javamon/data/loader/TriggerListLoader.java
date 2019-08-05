@@ -41,7 +41,7 @@ public class TriggerListLoader extends SynchronousAssetLoader<TriggerList, Trigg
 			if (trigger.script.startsWith("$")) {
 				assetsToLoad.add(new AssetDescriptor<Script>("assets/scripts/" + trigger.script.substring(1) + ".ps", Script.class));
 			} else {
-				assetsToLoad.add(new AssetDescriptor<Script>("assets/maps/" + fileName + "/" + trigger.script + ".ps", Script.class));
+				assetsToLoad.add(new AssetDescriptor<Script>(file.parent().child(trigger.script + ".ps"), Script.class));
 			}
 		}
 		return Array.with(assetsToLoad.toArray(new AssetDescriptor[0]));
@@ -63,7 +63,7 @@ public class TriggerListLoader extends SynchronousAssetLoader<TriggerList, Trigg
 
 		@Override
 		public FileHandle resolve(final String mapName) {
-			return new FileHandle("assets/maps/" + mapName + "/trigger.yaml");
+			return new FileHandle("assets/maps/" + mapName.split("-")[0] + "/trigger.yaml");
 		}
 
 	}

@@ -1,0 +1,12 @@
+---
+x: 3
+y: 5
+layer: 1
+facing: South
+name: boy
+type: NPC
+spriteset: boy2
+script: $Talk
+strings:
+  text: Many Pokemon live only in forests and caves./nYou need to look everywhere to get different kinds!
+behavior: LookAround

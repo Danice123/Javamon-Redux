@@ -45,7 +45,7 @@ public class EncounterListLoader extends SynchronousAssetLoader<EncounterList, E
 
 		@Override
 		public FileHandle resolve(final String mapName) {
-			return new FileHandle("assets/maps/" + mapName + "/encounter.yaml");
+			return new FileHandle("assets/maps/" + mapName.split("-")[0] + "/encounter.yaml");
 		}
 
 	}

@@ -1,12 +1,12 @@
 ---
 triggers:
-- x: 31
+- x: 34
   y: 22
   layer: 1
   script: Rival
   arguments:
     Side: Bottom
-- x: 31
+- x: 34
   y: 23
   layer: 1
   script: Rival

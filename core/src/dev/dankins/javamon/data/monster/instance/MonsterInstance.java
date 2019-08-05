@@ -184,8 +184,10 @@ public class MonsterInstance {
 			level++;
 			final Levelup levelup = new Levelup();
 			levelup.level = level;
-			levelup.movesToLearn = monster.learnableAttacks.get(level).stream().map(attackName -> monster.cachedAttacks.get(attackName))
-					.collect(Collectors.toList());
+			if (monster.learnableAttacks.get(level) != null) {
+				levelup.movesToLearn = monster.learnableAttacks.get(level).stream().map(attackName -> monster.cachedAttacks.get(attackName))
+						.collect(Collectors.toList());
+			}
 			levelsGained.add(levelup);
 		}
 		return levelsGained;

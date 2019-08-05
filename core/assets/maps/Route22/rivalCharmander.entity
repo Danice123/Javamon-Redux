@@ -1,0 +1,18 @@
+---
+x: 0
+y: 0
+layer: 0
+facing: South
+name: RivalCharmanderTrainer
+type: TRAINER
+spriteset: Blue
+hidden: true
+trainer:
+  party:
+  - name: Pidgey
+    level: 9
+  - name: Charmander
+    level: 8
+  trainerName: Rival
+  trainerLossQuip: "Blue: WHAT? Unbelievable! I picked the wrong Pokemon!"
+  winnings: 175

@@ -1,0 +1,12 @@
+---
+x: 2
+y: 2
+layer: 1
+facing: East
+name: oldwoman
+type: NPC
+spriteset: old_woman
+script: $Talk
+strings:
+  text: Have you noticed the bushes on the roadside?/nThey can be cut down by a special Pokemon move.
+behavior: LookAround

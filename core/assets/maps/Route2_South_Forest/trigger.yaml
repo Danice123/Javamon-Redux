@@ -1,0 +1,29 @@
+---
+triggers:
+- x: 4
+  y: 0
+  layer: 1
+  script: $DWarp
+  arguments:
+    mapName: Route2
+    x: 13
+    y: 28
+    layer: 1
+- x: 5
+  y: 0
+  layer: 1
+  script: $DWarp
+  arguments:
+    mapName: Route2
+    x: 13
+    y: 28
+    layer: 1
+- x: 5
+  y: 7
+  layer: 1
+  script: $Warp
+  arguments:
+    mapName: Viridian_Forest
+    x: 17
+    y: 0
+    layer: 1

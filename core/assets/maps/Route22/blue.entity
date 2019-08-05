@@ -1,0 +1,9 @@
+---
+x: 25
+y: 22
+layer: 1
+facing: South
+name: Blue
+type: NPC
+spriteset: Blue
+hidden: true

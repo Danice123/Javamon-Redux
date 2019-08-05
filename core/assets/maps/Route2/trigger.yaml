@@ -1,0 +1,20 @@
+---
+triggers:
+- x: 13
+  y: 28
+  layer: 1
+  script: $Warp
+  arguments:
+    mapName: Route2_South_Forest
+    x: 4
+    y: 0
+    layer: 1
+- x: 13
+  y: 59
+  layer: 1
+  script: $Warp
+  arguments:
+    mapName: Route2_North_Forest
+    x: 5
+    y: 7
+    layer: 1

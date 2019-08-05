@@ -1,0 +1,8 @@
+---
+x: 22
+y: 11
+layer: 1
+name: Tree
+type: OBJECT
+spriteset: tree
+script: $tree

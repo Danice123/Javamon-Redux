@@ -1,0 +1,19 @@
+---
+typeChance:
+  Grass: 20
+encounters:
+- encounterType: Grass
+  monster: Weedle
+  minLevel: 3
+  maxLevel: 5
+  chance: 15
+- encounterType: Grass
+  monster: Rattata
+  minLevel: 2
+  maxLevel: 5
+  chance: 45
+- encounterType: Grass
+  monster: Pidgey
+  minLevel: 3
+  maxLevel: 5
+  chance: 40

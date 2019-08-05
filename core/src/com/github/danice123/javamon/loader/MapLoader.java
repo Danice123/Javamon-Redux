@@ -48,10 +48,10 @@ public class MapLoader extends SynchronousAssetLoader<MapData, MapLoader.Paramet
 				}
 			}
 			if (child.name().equals("trigger.yaml")) {
-				triggerList = manager.get(file.name(), TriggerList.class);
+				triggerList = manager.get(file.name() + "-trigger", TriggerList.class);
 			}
 			if (child.name().equals("encounter.yaml")) {
-				encounterList = manager.get(file.name(), EncounterList.class);
+				encounterList = manager.get(file.name() + "-encounter", EncounterList.class);
 			}
 			if (child.extension().equals("entity")) {
 				entityList.add(manager.get(child.path(), EntityHandler.class));
@@ -77,10 +77,10 @@ public class MapLoader extends SynchronousAssetLoader<MapData, MapLoader.Paramet
 		}
 
 		if (file.child("trigger.yaml").exists()) {
-			dep.add(new AssetDescriptor<TriggerList>(file.name(), TriggerList.class));
+			dep.add(new AssetDescriptor<TriggerList>(file.name() + "-trigger", TriggerList.class));
 		}
 		if (file.child("encounter.yaml").exists()) {
-			dep.add(new AssetDescriptor<EncounterList>(file.name(), EncounterList.class));
+			dep.add(new AssetDescriptor<EncounterList>(file.name() + "-encounter", EncounterList.class));
 		}
 
 		return new Array(dep.toArray(new AssetDescriptor[0]));

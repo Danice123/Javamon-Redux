@@ -1,0 +1,77 @@
+---
+layer: 1
+x: 20
+y: 58
+mapName: Route2
+facing: South
+id: 419022
+money: 3350
+party:
+- monster: Squirtle
+  name: Squirtle
+  customName: false
+  gender: Male
+  IV:
+    HEALTH: 21
+    ATTACK: 6
+    DEFENSE: 15
+    SPECIAL_ATTACK: 12
+    SPECIAL_DEFENSE: 20
+    SPEED: 19
+  originalTrainer: Red
+  idNumber: 419022
+  level: 14
+  experience: 1661
+  EV:
+    HEALTH: 0
+    ATTACK: 1
+    DEFENSE: 0
+    SPECIAL_ATTACK: 2
+    SPECIAL_DEFENSE: 0
+    SPEED: 11
+  attacks:
+  - attack: Tackle
+    maxUsage: 35
+    currentUsage: 30
+  - attack: Tail Whip
+    maxUsage: 30
+    currentUsage: 30
+  - attack: Bubble
+    maxUsage: 30
+    currentUsage: 30
+  currentHealth: 29
+  status: NONE
+  sleepCounter: 0
+inventory:
+- tag: Potion
+  amount: 2
+- tag: Town_Map
+  amount: 1
+itemStorage: []
+pokeData:
+  16: SEEN
+  32: SEEN
+  1: SEEN
+  19: SEEN
+  7: CAUGHT
+flag:
+  BlueLabBattle: false
+  OakPalletEncounter: true
+  ChoosePokemon: false
+  FirstRivalBattle: true
+  ChoseSquirtle: true
+  choice3: false
+  choice4: false
+  choice1: true
+  PotionSpawned: true
+  choice2: true
+  GotFreePotion: true
+  given_parcel: true
+  HasPokedex: true
+  HasTownMap: true
+  Catch_Tutorial: false
+  SecondRivalBattle: true
+strings:
+  rivalName: Blue
+  respawnPoint: Viridian_City_PC:3:4:1
+  playerName: Red
