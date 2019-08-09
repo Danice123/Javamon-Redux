@@ -1,0 +1,20 @@
+---
+triggers:
+- x: 2
+  y: 0
+  layer: 1
+  script: $DWarp
+  arguments:
+    mapName: Pewter_City
+    x: 10
+    y: 6
+    layer: 1
+- x: 3
+  y: 0
+  layer: 1
+  script: $DWarp
+  arguments:
+    mapName: Pewter_City
+    x: 10
+    y: 6
+    layer: 1

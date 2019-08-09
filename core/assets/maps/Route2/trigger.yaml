@@ -1,6 +1,6 @@
 ---
 triggers:
-- x: 13
+- x: 16
   y: 28
   layer: 1
   script: $Warp
@@ -9,7 +9,7 @@ triggers:
     x: 4
     y: 0
     layer: 1
-- x: 13
+- x: 16
   y: 59
   layer: 1
   script: $Warp

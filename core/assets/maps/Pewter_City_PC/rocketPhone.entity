@@ -1,0 +1,12 @@
+---
+x: 11
+y: 0
+layer: 1
+facing: East
+name: phoneguy
+type: NPC
+spriteset: businessman
+script: $Talk
+strings:
+  text: What!?/nTeam Rocket is at Mt. Moon? Huh? I'm on the phone!/nScram!
+behavior: FaceEast

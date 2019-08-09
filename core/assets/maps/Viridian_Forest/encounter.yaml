@@ -1,0 +1,27 @@
+---
+typeChance:
+  Grass: 20
+encounters:
+- encounterType: Grass
+  monster: Caterpie
+  minLevel: 3
+  chance: 5
+- encounterType: Grass
+  monster: Metapod
+  minLevel: 4
+  chance: 5
+- encounterType: Grass
+  monster: Weedle
+  minLevel: 3
+  maxLevel: 5
+  chance: 50
+- encounterType: Grass
+  monster: Kakuna
+  minLevel: 4
+  maxLevel: 6
+  chance: 35
+- encounterType: Grass
+  monster: Pikachu
+  minLevel: 3
+  maxLevel: 5
+  chance: 5

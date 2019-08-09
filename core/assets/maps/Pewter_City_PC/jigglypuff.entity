@@ -1,0 +1,10 @@
+---
+x: 1
+y: 4
+layer: 1
+facing: South
+name: Jigglypuff
+type: NPC
+spriteset: clefairy
+script: jiggly
+behavior: FaceSouth

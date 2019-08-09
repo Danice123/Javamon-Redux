@@ -1,0 +1,11 @@
+---
+x: 25
+y: 36
+layer: 1
+name: Viridian_Forest_Antidote
+type: OBJECT
+spriteset: pokeball
+script: $Item
+strings:
+  item: Antidote
+  pretty_item: Antidote

@@ -1,0 +1,8 @@
+---
+x: 36
+y: 16
+layer: 1
+name: PoliceSign
+type: SIGN
+strings:
+  text: Notice!/nThieves have been stealing Pokemon fossils at Mt. Moon! Please call Pewter Police with any info!

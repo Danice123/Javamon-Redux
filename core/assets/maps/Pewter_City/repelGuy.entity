@@ -1,0 +1,10 @@
+---
+x: 29
+y: 10
+layer: 1
+facing: South
+name: Repel_Guy
+type: NPC
+spriteset: boy2
+script: repel_guy
+behavior: WalkHorizontal

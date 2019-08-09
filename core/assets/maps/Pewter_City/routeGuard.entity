@@ -1,0 +1,10 @@
+---
+x: 38
+y: 19
+layer: 1
+facing: South
+name: route3guard
+type: NPC
+spriteset: boy1
+script: routeguard
+behavior: FaceSouth

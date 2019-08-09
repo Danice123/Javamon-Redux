@@ -1,0 +1,12 @@
+---
+x: 7
+y: 2
+layer: 1
+facing: South
+name: Space_Exhibit
+type: NPC
+spriteset: scientist1
+script: $Talk
+strings:
+  text: We have a space exhibit now.
+behavior: FaceSouth

@@ -1,0 +1,8 @@
+---
+x: 24
+y: 7
+layer: 1
+name: TrainerTips2
+type: SIGN
+strings:
+  text: Trainer Tips/nIf you want to avoid battles, stay away from grassy areas!

@@ -1,0 +1,37 @@
+---
+triggers:
+- x: 10
+  y: 0
+  layer: 1
+  script: $DWarp
+  arguments:
+    mapName: Pewter_City
+    x: 17
+    y: 28
+    layer: 1
+- x: 11
+  y: 0
+  layer: 1
+  script: $DWarp
+  arguments:
+    mapName: Pewter_City
+    x: 17
+    y: 28
+    layer: 1
+- x: 7
+  y: 0
+  layer: 1
+  script: $Warp
+  arguments:
+    mapName: Pewter_City_Museum_2
+    x: 7
+    y: 0
+    layer: 1
+- x: 10
+  y: 3
+  layer: 1
+  script: entrance_fee
+- x: 9
+  y: 3
+  layer: 1
+  script: entrance_fee

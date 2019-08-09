@@ -1,0 +1,10 @@
+---
+x: 30
+y: 18
+layer: 1
+facing: South
+name: museumguy
+type: NPC
+spriteset: boy3
+script: museum_guy
+behavior: LookAround

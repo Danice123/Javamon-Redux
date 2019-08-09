@@ -1,0 +1,8 @@
+---
+x: 11
+y: 3
+layer: 1
+name: Fee_Desk
+type: SIGN
+strings:
+  text: Take plenty of time to look!

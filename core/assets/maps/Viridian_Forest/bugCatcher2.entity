@@ -1,0 +1,24 @@
+---
+x: 30
+y: 28
+layer: 1
+facing: West
+name: Viridian_Forest_Bug_Catcher_2
+type: TRAINER
+spriteset: boy1
+script: $Trainer
+strings:
+  text: Yo! You can't jam out if you're a Pokemon trainer!
+  defeat: Darn! I'm going to catch some stronger ones!
+trainer:
+  party:
+  - name: Weedle
+    level: 7
+  - name: Kakuna
+    level: 7
+  - name: Weedle
+    level: 7
+  trainerName: Bug Catcher
+  trainerLossQuip: "Bug Catcher: Huh? I ran out of Pokemon!"
+  winnings: 70
+  trainerRange: 4

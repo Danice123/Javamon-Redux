@@ -1,0 +1,8 @@
+---
+x: 28
+y: 12
+layer: 1
+name: CitySign
+type: SIGN
+strings:
+  text: Pewter City/nA Stone Gray City

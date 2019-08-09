@@ -1,0 +1,8 @@
+---
+x: 18
+y: 2
+layer: 1
+name: TrainerTips1
+type: SIGN
+strings:
+  text: Trainer Tips/nWeaken Pokemon before attempting capture!/nWhen healthy, they may escape!

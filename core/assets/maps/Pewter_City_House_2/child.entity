@@ -1,0 +1,12 @@
+---
+x: 3
+y: 2
+layer: 1
+facing: East
+name: child
+type: NPC
+spriteset: child_girl
+script: $Talk
+strings:
+  text: Nidoran sit!
+behavior: FaceEast

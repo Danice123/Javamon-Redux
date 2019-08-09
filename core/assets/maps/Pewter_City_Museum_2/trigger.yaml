@@ -1,0 +1,11 @@
+---
+triggers:
+- x: 7
+  y: 0
+  layer: 1
+  script: $Warp
+  arguments:
+    mapName: Pewter_City_Museum
+    x: 7
+    y: 0
+    layer: 1

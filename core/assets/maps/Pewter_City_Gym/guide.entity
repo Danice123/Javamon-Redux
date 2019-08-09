@@ -1,0 +1,10 @@
+---
+x: 7
+y: 3
+layer: 0
+facing: South
+name: Pewter_Gym_Guide
+type: NPC
+spriteset: guide
+script: guide
+behavior: FaceSouth

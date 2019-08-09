@@ -1,0 +1,8 @@
+---
+x: 27
+y: 18
+layer: 1
+name: PokemartSign
+type: SIGN
+strings:
+  text: All your item needs fulfilled! Pokemon Mart

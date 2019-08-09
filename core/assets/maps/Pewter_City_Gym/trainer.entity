@@ -1,0 +1,22 @@
+---
+x: 3
+y: 7
+layer: 0
+facing: East
+name: Pewter_Gym_Trainer
+type: TRAINER
+spriteset: boy2
+script: $Trainer
+strings:
+  text: Stop right there, kid!/nYou're still light years from facing Brock!
+  defeat: You're pretty hot, but not as hot as Brock!
+trainer:
+  party:
+  - name: Diglett
+    level: 11
+  - name: Sandshrew
+    level: 11
+  trainerName: Jr. Trainer
+  trainerLossQuip: "Jr. Trainer: Darn!/nLight years isn't time! It measures distance!"
+  winnings: 220
+  trainerRange: 4

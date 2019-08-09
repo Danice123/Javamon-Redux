@@ -1,0 +1,8 @@
+---
+x: 18
+y: 26
+layer: 1
+name: MuseumSign
+type: SIGN
+strings:
+  text: Pewter Museum of Science

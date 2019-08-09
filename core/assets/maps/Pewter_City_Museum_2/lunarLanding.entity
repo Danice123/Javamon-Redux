@@ -1,0 +1,12 @@
+---
+x: 0
+y: 2
+layer: 1
+facing: South
+name: Lunar_Landing
+type: NPC
+spriteset: old_woman
+script: $Talk
+strings:
+  text: July 20, 1969!/nThe 1st lunar landing!/nI bought a color TV to watch it!
+behavior: FaceSouth

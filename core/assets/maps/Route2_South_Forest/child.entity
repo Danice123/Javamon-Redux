@@ -1,0 +1,12 @@
+---
+x: 2
+y: 3
+layer: 1
+facing: South
+name: child
+type: NPC
+spriteset: child_girl
+script: $Talk
+strings:
+  text: Rattata may be small, but its bite is wicked! Did you get one?
+behavior: WalkVertical

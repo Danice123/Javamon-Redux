@@ -1,0 +1,19 @@
+---
+x: 4
+y: 12
+layer: 0
+facing: South
+name: Brock
+type: TRAINER
+spriteset: boy3
+script: brock
+behavior: FaceSouth
+trainer:
+  party:
+  - name: Geodude
+    level: 12
+  - name: Onix
+    level: 14
+  trainerName: Brock
+  trainerLossQuip: "Brock: I took you for granted./nAs proof of your victory, here's the Boulder Badge!"
+  winnings: 1386

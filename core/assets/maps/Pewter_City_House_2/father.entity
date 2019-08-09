@@ -1,0 +1,12 @@
+---
+x: 1
+y: 5
+layer: 1
+facing: South
+name: Father
+type: NPC
+spriteset: father
+script: $Talk
+strings:
+  text: Our Pokemon's an outsider, so it's hard to handle./nAn outsider is a Pokemon that you get in a trade./nIt grows fast, but it may ignore an unskilled trainer in battle!/nIf only we had some Badges...
+behavior: LookAround

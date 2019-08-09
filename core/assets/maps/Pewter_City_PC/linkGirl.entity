@@ -1,0 +1,9 @@
+---
+x: 11
+y: 5
+layer: 1
+facing: South
+name: Link_Girl
+type: NPC
+spriteset: link_girl
+script: $Link

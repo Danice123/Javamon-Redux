@@ -1,0 +1,33 @@
+!Branch:hasMuseumTicket nothing
+!Lock:
+!Display:1
+!Choose:2 yes/no Choice
+!Branch:Choice yes
+!Goto:exitMuseum
+
+@yes
+!ModifyMoney:-50 canAffordMuseum
+!Branch:canAffordMuseum enterMuseum
+!Display:4
+!Goto:exitMuseum
+
+@enterMuseum
+!Display:3
+!Set:hasMuseumTicket
+!Unlock:
+!Stop:
+
+@exitMuseum
+!Display:5
+!Walk:p S
+!Unlock:
+!Stop:
+
+@nothing
+!Stop:
+
+$1: It's $50 for a child's ticket.
+$2: Would you like to come in?
+$3: Right, $50! Thank you!
+$4: You don't have enough money.
+$5: Come again!

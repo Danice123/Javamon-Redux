@@ -1,0 +1,9 @@
+---
+x: 12
+y: 3
+layer: 1
+facing: West
+name: Fee_Man
+type: NPC
+spriteset: scientist1
+behavior: FaceWest

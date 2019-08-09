@@ -1,0 +1,12 @@
+---
+x: 4
+y: 2
+layer: 1
+facing: West
+name: nidoran
+type: NPC
+spriteset: pokemon
+script: $Talk
+strings:
+  text: "Nidoran: Bowbow!"
+behavior: FaceWest

@@ -1,0 +1,11 @@
+---
+x: 1
+y: 16
+layer: 1
+name: Viridian_Forest_Pokeball
+type: OBJECT
+spriteset: pokeball
+script: $Item
+strings:
+  item: Poke_Ball
+  pretty_item: Poke Ball

@@ -1,0 +1,74 @@
+---
+triggers:
+- x: 10
+  y: 6
+  layer: 1
+  script: $Warp
+  arguments:
+    mapName: Pewter_City_House_1
+    x: 2
+    y: 0
+    layer: 1
+- x: 32
+  y: 22
+  layer: 1
+  script: $Warp
+  arguments:
+    mapName: Pewter_City_House_2
+    x: 2
+    y: 0
+    layer: 1
+- x: 17
+  y: 28
+  layer: 1
+  script: $Warp
+  arguments:
+    mapName: Pewter_City_Museum
+    x: 10
+    y: 0
+    layer: 1
+- x: 19
+  y: 18
+  layer: 1
+  script: $Warp
+  arguments:
+    mapName: Pewter_City_Gym
+    x: 4
+    y: 0
+    layer: 0
+- x: 16
+  y: 10
+  layer: 1
+  script: $Warp
+  arguments:
+    mapName: Pewter_City_PC
+    x: 3
+    y: 0
+    layer: 1
+- x: 26
+  y: 18
+  layer: 1
+  script: $Warp
+  arguments:
+    mapName: Pewter_City_PM
+    x: 3
+    y: 0
+    layer: 1
+- x: 38
+  y: 18
+  layer: 1
+  script: routeguardtrigger
+  arguments:
+    y: 1
+- x: 38
+  y: 17
+  layer: 1
+  script: routeguardtrigger
+  arguments:
+    y: 2
+- x: 38
+  y: 16
+  layer: 1
+  script: routeguardtrigger
+  arguments:
+    y: 3

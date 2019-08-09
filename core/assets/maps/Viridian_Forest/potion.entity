@@ -1,0 +1,11 @@
+---
+x: 12
+y: 18
+layer: 1
+name: Viridian_Forest_Potion
+type: OBJECT
+spriteset: pokeball
+script: $Item
+strings:
+  item: Potion
+  pretty_item: Potion

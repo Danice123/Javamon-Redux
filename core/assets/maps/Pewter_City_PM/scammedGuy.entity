@@ -1,0 +1,12 @@
+---
+x: 3
+y: 4
+layer: 1
+facing: South
+name: Fish_Guy
+type: NPC
+spriteset: boy1
+script: $Talk
+strings:
+  text: A shady, old man got me to buy this really weird fish Pokemon!/nIt's totally weak and it cost 500!
+behavior: WalkVertical

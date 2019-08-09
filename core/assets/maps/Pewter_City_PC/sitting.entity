@@ -1,0 +1,8 @@
+---
+x: 0
+y: 3
+layer: 1
+name: Sitting
+type: SIGN
+strings:
+  text: Yawn!/nWhen Jigglypuff sings, Pokemon get drowsy.../n...Me too... Snore...

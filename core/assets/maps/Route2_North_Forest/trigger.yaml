@@ -24,6 +24,6 @@ triggers:
   script: $Warp
   arguments:
     mapName: Route2
-    x: 13
+    x: 16
     y: 60
     layer: 1

@@ -6,7 +6,7 @@ triggers:
   script: $DWarp
   arguments:
     mapName: Route2
-    x: 13
+    x: 16
     y: 28
     layer: 1
 - x: 5
@@ -15,7 +15,7 @@ triggers:
   script: $DWarp
   arguments:
     mapName: Route2
-    x: 13
+    x: 16
     y: 28
     layer: 1
 - x: 5

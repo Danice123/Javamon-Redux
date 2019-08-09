@@ -1,0 +1,12 @@
+---
+x: 4
+y: 2
+layer: 1
+facing: South
+name: Boy
+type: NPC
+spriteset: boy1
+script: $Talk
+strings:
+  text: Pokemon become easier to catch when they are hurt or asleep!/nBut, it's not a sure thing!
+behavior: LookAround

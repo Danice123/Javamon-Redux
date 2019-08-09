@@ -1,0 +1,11 @@
+---
+x: 8
+y: 3
+layer: 1
+facing: West
+name: girl
+type: NPC
+spriteset: girl1
+script: $Talk
+strings:
+  text: Are you going to Viridian Forest? Be careful, it's a natural maze!

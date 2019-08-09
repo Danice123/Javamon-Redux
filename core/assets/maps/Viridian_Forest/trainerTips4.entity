@@ -1,0 +1,8 @@
+---
+x: 4
+y: 23
+layer: 1
+name: TrainerTips4
+type: SIGN
+strings:
+  text: Trainer Tips/nNo stealing of Pokemon from other trainers! Catch only wild Pokemon!

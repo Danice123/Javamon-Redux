@@ -1,0 +1,12 @@
+---
+x: 27
+y: 7
+layer: 1
+facing: South
+name: noPokeballs
+type: NPC
+spriteset: boy1
+script: $Talk
+strings:
+  text: I ran out of Poke Balls to catch Pokemon with!/nYou should carry extras!
+behavior: LookAround

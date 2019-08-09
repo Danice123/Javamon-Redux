@@ -1,0 +1,8 @@
+---
+x: 14
+y: 18
+layer: 1
+name: GymSign
+type: SIGN
+strings:
+  text: "Pewter City Pokemon Gym Leader: Brock/nThe Rock Solid Pokemon Trainer!"

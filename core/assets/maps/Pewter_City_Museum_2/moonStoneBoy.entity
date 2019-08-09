@@ -1,0 +1,12 @@
+---
+x: 1
+y: 0
+layer: 1
+facing: South
+name: Moon_Stone_Boy
+type: NPC
+spriteset: boy1
+script: $Talk
+strings:
+  text: Moon Stone?/nWhat's so special about it?
+behavior: WalkHorizontal

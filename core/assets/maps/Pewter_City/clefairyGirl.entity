@@ -1,0 +1,12 @@
+---
+x: 11
+y: 20
+layer: 1
+facing: South
+name: clefairy_girl
+type: NPC
+spriteset: ponytail_girl
+script: $Talk
+strings:
+  text: It's rumored that Clefairys came from the moon!/nThey appeared after Moon Stone fell on Mt. Moon.
+behavior: LookAround

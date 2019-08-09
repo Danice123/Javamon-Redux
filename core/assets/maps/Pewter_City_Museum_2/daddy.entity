@@ -1,0 +1,12 @@
+---
+x: 12
+y: 2
+layer: 1
+facing: South
+name: Daddy
+type: NPC
+spriteset: brawler
+script: $Talk
+strings:
+  text: Yeah, a Pikachu soon, I promise!
+behavior: FaceSouth

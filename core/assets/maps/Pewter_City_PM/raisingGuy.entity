@@ -1,0 +1,12 @@
+---
+x: 5
+y: 2
+layer: 1
+facing: South
+name: Raising_Guy
+type: NPC
+spriteset: boy3
+script: $Talk
+strings:
+  text: Good things can happen if you raise Pokemon diligently, even the weak ones!
+behavior: LookAround

@@ -1,0 +1,8 @@
+---
+x: 2
+y: 2
+layer: 1
+name: Moon_Stone
+type: SIGN
+strings: 
+  text: Meteorite that fell on Mt. Moon. (Moon Stone?)

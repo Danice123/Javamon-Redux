@@ -1,0 +1,22 @@
+---
+x: 30
+y: 14
+layer: 1
+facing: West
+name: Viridian_Forest_Bug_Catcher_1
+type: TRAINER
+spriteset: boy1
+script: $Trainer
+strings:
+  text: Hey! You have Pokemon! Come on! Let's battle'em!
+  defeat: Ssh! You'll scare the bugs away!
+trainer:
+  party:
+  - name: Weedle
+    level: 6
+  - name: Caterpie
+    level: 6
+  trainerName: Bug Catcher
+  trainerLossQuip: "Bug Catcher: No! Caterpie can't cut it!"
+  winnings: 60
+  trainerRange: 6

@@ -1,0 +1,15 @@
+---
+x: 1
+y: 2
+layer: 1
+name: ShopFront
+type: OBJECT
+script: $Shop
+strings:
+  item0: Poke_Ball
+  item1: Potion
+  item2: Escape_Rope
+  item3: Antidote
+  item4: Burn_Heal 
+  item5: Awakening
+  item6: Paralyze_Heal

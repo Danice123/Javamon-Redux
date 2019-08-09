@@ -1,0 +1,8 @@
+---
+x: 22
+y: 6
+layer: 1
+name: TrainerTips
+type: SIGN
+strings:
+  text: Trainer Tips/nAny Pokemon that takes part in battle, however short, earns EXP!

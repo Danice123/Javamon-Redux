@@ -1,0 +1,12 @@
+---
+x: 2
+y: 4
+layer: 1
+facing: East
+name: OldMan
+type: NPC
+spriteset: old_man
+script: $Talk
+strings:
+  text: Pokemon learn new techniques as they grow!/nBut, some moves must be taught by the trainer!
+behavior: FaceEast

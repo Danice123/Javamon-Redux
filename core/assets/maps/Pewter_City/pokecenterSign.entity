@@ -1,0 +1,8 @@
+---
+x: 17
+y: 10
+layer: 1
+name: PokecenterSign
+type: SIGN
+strings:
+  text: Heal Your Pokemon! Pokemon Center

@@ -1,0 +1,12 @@
+---
+x: 11
+y: 2
+layer: 1
+facing: South
+name: Want_Pikachu
+type: NPC
+spriteset: bun_girl
+script: $Talk
+strings:
+  text: I want a Pikachu! It's so cute!/nI asked my Daddy to catch me one!
+behavior: LookAround

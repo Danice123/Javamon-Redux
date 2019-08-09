@@ -1,0 +1,12 @@
+---
+x: 20
+y: 10
+layer: 1
+facing: South
+name: Serious_Trainer_Guy
+type: NPC
+spriteset: boy2
+script: $Talk
+strings:
+  text: There aren't many serious Pokemon trainers here!/nThey're all like Bug Catchers, but Pewter Gym's Brock is totally into it!
+behavior: LookAround

@@ -1,0 +1,8 @@
+---
+x: 16
+y: 15
+layer: 1
+name: PoisonSign
+type: SIGN
+strings:
+  text: For poison, use an Antidote! Get it at Pokemon Marts!

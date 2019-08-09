@@ -1,0 +1,8 @@
+---
+x: 11
+y: 5
+layer: 1
+name: Space_Ship
+type: SIGN
+strings: 
+  text: Space Shuttle Columbia

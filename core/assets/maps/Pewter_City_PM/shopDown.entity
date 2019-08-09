@@ -1,0 +1,15 @@
+---
+x: 0
+y: 1
+layer: 1
+name: ShopDown
+type: OBJECT
+script: $Shop
+strings:
+  item0: Poke_Ball
+  item1: Potion
+  item2: Escape_Rope
+  item3: Antidote
+  item4: Burn_Heal 
+  item5: Awakening
+  item6: Paralyze_Heal
