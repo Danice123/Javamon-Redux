@@ -2,7 +2,6 @@ package com.github.danice123.javamon.logic.menu;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
-import java.util.List;
 
 import com.github.danice123.javamon.display.screen.Screen;
 import com.github.danice123.javamon.display.screen.menu.BattleMenu;
@@ -14,6 +13,7 @@ import com.github.danice123.javamon.logic.battlesystem.BattleAction;
 import com.github.danice123.javamon.logic.battlesystem.Battlesystem;
 import com.github.danice123.javamon.logic.battlesystem.Trainer;
 import com.github.danice123.javamon.logic.battlesystem.WildTrainer;
+import com.google.common.collect.Lists;
 
 import dev.dankins.javamon.data.monster.instance.MonsterInstance;
 
@@ -74,20 +74,17 @@ public class BattleMenuHandler extends MenuHandler implements EffectHandler {
 
 	public boolean ask(final String string) {
 		final ChoiceboxHandler choiceboxHandler = new ChoiceboxHandler(game, string,
-				new String[] { "yes/no", "choice1" });
-		choiceboxHandler.waitAndHandle();
-		return game.getPlayer().getFlag("choice1");
+				Lists.newArrayList("Yes", "No"));
+		return choiceboxHandler.waitForResponse().equals("Yes");
 	}
 
 	public int ask(final String string, final String[] args) {
-		final List<String> asList = Arrays.asList(args);
-		asList.add(0, "choice");
 		final ChoiceboxHandler choiceboxHandler = new ChoiceboxHandler(game, string,
-				asList.toArray(new String[0]));
-		choiceboxHandler.waitAndHandle();
+				Arrays.asList(args));
+		final String res = choiceboxHandler.waitForResponse();
 
 		for (int i = 0; i < args.length; i++) {
-			if (game.getPlayer().getFlag("choice" + (i + 1))) {
+			if (res.equals(args[i])) {
 				return i;
 			}
 		}
@@ -127,7 +124,7 @@ public class BattleMenuHandler extends MenuHandler implements EffectHandler {
 			monster.heal();
 		}
 
-		final String[] respawn = game.getPlayer().getString("respawnPoint").split(":");
+		final String[] respawn = game.getPlayer().getStrings().get("respawnPoint").split(":");
 		ThreadUtils.makeAnonThread(() -> {
 			game.getMapHandler().loadMap(respawn[0]);
 			game.getPlayer().setCoord(

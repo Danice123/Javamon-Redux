@@ -7,7 +7,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import com.fasterxml.jackson.dataformat.yaml.YAMLGenerator.Feature;
 import com.github.danice123.javamon.display.sprite.Animation;
-import com.github.danice123.javamon.logic.entity.EntityHandler;
 import com.github.danice123.javamon.logic.map.MapData;
 
 import dev.dankins.javamon.data.SaveFile;
@@ -27,6 +26,7 @@ import dev.dankins.javamon.data.monster.Monster;
 import dev.dankins.javamon.data.monster.MonsterList;
 import dev.dankins.javamon.data.monster.attack.Attack;
 import dev.dankins.javamon.data.script.Script;
+import dev.dankins.javamon.logic.entity.EntityHandler;
 
 public class MainLoader extends AssetManager {
 

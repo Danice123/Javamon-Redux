@@ -14,7 +14,6 @@ import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.utils.Array;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.github.danice123.javamon.logic.entity.EntityHandler;
 import com.google.common.collect.Lists;
 
 import dev.dankins.javamon.data.map.EntitySerialized;
@@ -22,6 +21,7 @@ import dev.dankins.javamon.data.map.EntitySerialized.Type;
 import dev.dankins.javamon.data.map.TrainerMonsterSerialized;
 import dev.dankins.javamon.data.monster.Monster;
 import dev.dankins.javamon.data.script.Script;
+import dev.dankins.javamon.logic.entity.EntityHandler;
 
 public class EntityLoader extends SynchronousAssetLoader<EntityHandler, EntityLoader.Parameters> {
 

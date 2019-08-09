@@ -15,18 +15,18 @@ import com.badlogic.gdx.math.Matrix4;
 import com.github.danice123.javamon.logic.Coord;
 import com.github.danice123.javamon.logic.Dir;
 import com.github.danice123.javamon.logic.Game;
-import com.github.danice123.javamon.logic.entity.EntityHandler;
 import com.github.danice123.javamon.logic.entity.Player;
 import com.github.danice123.javamon.logic.entity.TrainerHandler;
 import com.github.danice123.javamon.logic.entity.WalkableHandler;
 import com.github.danice123.javamon.logic.entity.behavior.EntityBehaviorThread;
-import com.github.danice123.javamon.logic.script.ScriptHandler;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
 import dev.dankins.javamon.data.map.EncounterList;
 import dev.dankins.javamon.data.map.TriggerList;
 import dev.dankins.javamon.data.script.Script;
+import dev.dankins.javamon.logic.entity.EntityHandler;
+import dev.dankins.javamon.logic.script.ScriptHandler;
 
 public class MapData {
 
@@ -44,13 +44,9 @@ public class MapData {
 	private final Map<Dir, Integer> tweaks;
 	private final Map<Dir, Integer> layerChange;
 
-	public MapData(final String mapName,
-		final MapHandler mapHandler,
-		final TiledMap mapData,
-		final List<EntityHandler> entityList,
-		final TriggerList triggerList,
-		final EncounterList encounterList,
-		final Optional<Script> mapScript) {
+	public MapData(final String mapName, final MapHandler mapHandler, final TiledMap mapData,
+			final List<EntityHandler> entityList, final TriggerList triggerList,
+			final EncounterList encounterList, final Optional<Script> mapScript) {
 		this.mapName = mapName;
 		map = mapData;
 		entities = entityList;
@@ -67,7 +63,8 @@ public class MapData {
 				final WalkableHandler walkable = (WalkableHandler) entity;
 				if (walkable.getBehavior().isPresent()) {
 					walkable.getBehavior().get().setMapHandler(mapHandler);
-					final EntityBehaviorThread thread = new EntityBehaviorThread(walkable.getBehavior().get(), walkable);
+					final EntityBehaviorThread thread = new EntityBehaviorThread(
+							walkable.getBehavior().get(), walkable);
 					entityThreads.add(thread);
 				}
 			}
@@ -92,17 +89,20 @@ public class MapData {
 		if (map.getProperties().get("Down") != null) {
 			adjMaps.put(Dir.South, (String) map.getProperties().get("Down"));
 			tweaks.put(Dir.South, getIntFromMapProperties(map.getProperties().get("DownTweak")));
-			layerChange.put(Dir.South, getIntFromMapProperties(map.getProperties().get("DownLayer")));
+			layerChange.put(Dir.South,
+					getIntFromMapProperties(map.getProperties().get("DownLayer")));
 		}
 		if (map.getProperties().get("Left") != null) {
 			adjMaps.put(Dir.West, (String) map.getProperties().get("Left"));
 			tweaks.put(Dir.West, getIntFromMapProperties(map.getProperties().get("LeftTweak")));
-			layerChange.put(Dir.West, getIntFromMapProperties(map.getProperties().get("LeftLayer")));
+			layerChange.put(Dir.West,
+					getIntFromMapProperties(map.getProperties().get("LeftLayer")));
 		}
 		if (map.getProperties().get("Right") != null) {
 			adjMaps.put(Dir.East, (String) map.getProperties().get("Right"));
 			tweaks.put(Dir.East, getIntFromMapProperties(map.getProperties().get("RightTweak")));
-			layerChange.put(Dir.East, getIntFromMapProperties(map.getProperties().get("RightLayer")));
+			layerChange.put(Dir.East,
+					getIntFromMapProperties(map.getProperties().get("RightLayer")));
 		}
 	}
 
@@ -296,7 +296,7 @@ public class MapData {
 
 	public void executeMapScript(final Game game) {
 		if (mapScript.isPresent()) {
-			new Thread(new ScriptHandler(game, mapScript.get(), null)).start();
+			new Thread(new ScriptHandler(game, mapScript.get())).start();
 		}
 	}
 
@@ -307,13 +307,15 @@ public class MapData {
 
 				if (entity.getY() == coord.y
 						&& (entity.getX() - coord.x > 0 && entity.getFacing().equals(Dir.West)
-								|| entity.getX() - coord.x < 0 && entity.getFacing().equals(Dir.East))
+								|| entity.getX() - coord.x < 0
+										&& entity.getFacing().equals(Dir.East))
 						&& Math.abs(entity.getX() - coord.x) <= trainer.getRange()) {
 					return Optional.of(trainer);
 				}
 				if (entity.getX() == coord.x
 						&& (entity.getY() - coord.y > 0 && entity.getFacing().equals(Dir.South)
-								|| entity.getY() - coord.y < 0 && entity.getFacing().equals(Dir.North))
+								|| entity.getY() - coord.y < 0
+										&& entity.getFacing().equals(Dir.North))
 						&& Math.abs(entity.getY() - coord.y) <= trainer.getRange()) {
 					return Optional.of(trainer);
 				}

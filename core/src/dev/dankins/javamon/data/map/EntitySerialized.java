@@ -11,7 +11,6 @@ import com.github.danice123.javamon.display.sprite.Spriteset;
 import com.github.danice123.javamon.logic.Coord;
 import com.github.danice123.javamon.logic.Dir;
 import com.github.danice123.javamon.logic.RandomNumberGenerator;
-import com.github.danice123.javamon.logic.entity.EntityHandler;
 import com.github.danice123.javamon.logic.entity.TrainerHandler;
 import com.github.danice123.javamon.logic.entity.WalkableHandler;
 import com.github.danice123.javamon.logic.entity.behavior.BehaviorFactory;
@@ -21,6 +20,7 @@ import dev.dankins.javamon.data.monster.Monster;
 import dev.dankins.javamon.data.monster.instance.MonsterInstance;
 import dev.dankins.javamon.data.monster.instance.Party;
 import dev.dankins.javamon.data.script.Script;
+import dev.dankins.javamon.logic.entity.EntityHandler;
 
 public class EntitySerialized {
 
@@ -66,8 +66,11 @@ public class EntitySerialized {
 	public EntityHandler buildEntity(final AssetManager assets, final String localScriptPath) {
 		final EntityHandler entity = entityFactory(assets, localScriptPath);
 		entity.setCoord(new Coord(x, y), layer);
-		entity.addStrings(translateStrings());
 		entity.setVisible(!hidden); // TODO: FIX THIS
+		if (script != null) {
+			entity.setScript(getScript(assets, localScriptPath, script));
+		}
+		entity.setStrings(getStrings());
 		return entity;
 	}
 
@@ -75,12 +78,10 @@ public class EntitySerialized {
 		switch (type) {
 		case SIGN:
 			final EntityHandler sign = new EntityHandler(name, getSpriteset(assets, spriteset));
-			sign.setScript(
-					Optional.of(new Script(assets.get("assets/scripts/Sign.ps", Script.class))));
+			sign.setScript(assets.get("assets/scripts/Sign.ps", Script.class));
 			return sign;
 		case NPC:
 			final WalkableHandler npc = new WalkableHandler(name, getSpriteset(assets, spriteset));
-			npc.setScript(getScript(assets, localScriptPath, script));
 			npc.setFacing(facing);
 			npc.setBehavior(BehaviorFactory.getBehavior(behavior, new Coord(x, y)));
 			return npc;
@@ -95,17 +96,14 @@ public class EntitySerialized {
 
 			final TrainerHandler t = new TrainerHandler(name, getSpriteset(assets, spriteset),
 					trainer.trainerName, trainer.trainerLossQuip, trainer.winnings, party);
-			t.setScript(getScript(assets, localScriptPath, script));
-			t.setFacing(facing);
-			t.setBehavior(BehaviorFactory.getBehavior(behavior, new Coord(x, y)));
 			if (trainer.trainerRange != null) {
 				t.setRange(trainer.trainerRange);
 			}
+			t.setFacing(facing);
+			t.setBehavior(BehaviorFactory.getBehavior(behavior, new Coord(x, y)));
 			return t;
 		case OBJECT:
-			final EntityHandler object = new EntityHandler(name, getSpriteset(assets, spriteset));
-			object.setScript(getScript(assets, localScriptPath, script));
-			return object;
+			return new EntityHandler(name, getSpriteset(assets, spriteset));
 		default:
 			return null;
 		}
@@ -119,36 +117,22 @@ public class EntitySerialized {
 				.of(new Spriteset((Texture) assets.get("assets/entity/sprites/" + name + ".png")));
 	}
 
-	private Optional<Script> getScript(final AssetManager assets, final String localScriptPath,
+	private Script getScript(final AssetManager assets, final String localScriptPath,
 			final String name) {
-		if (name == null || name == "") {
-			return Optional.empty();
-		}
-
 		if (name.startsWith("$")) {
-			return Optional.of(new Script(
-					assets.get("assets/scripts/" + name.substring(1) + ".ps", Script.class)));
+			return assets.get("assets/scripts/" + name.substring(1) + ".ps", Script.class);
 		} else {
-			return Optional
-					.of(new Script(assets.get(localScriptPath + "/" + name + ".ps", Script.class)));
+			return assets.get(localScriptPath + "/" + name + ".ps", Script.class);
 		}
 	}
 
-	private Map<String, String> translateStrings() {
-		final Map<String, String> newStrings = Maps.newHashMap();
-		newStrings.put("name", name);
-		if (strings == null) {
-			return newStrings;
+	private Map<String, String> getStrings() {
+		final Map<String, String> strings = Maps.newHashMap();
+		strings.put("name", name);
+		if (this.strings != null) {
+			strings.putAll(this.strings);
 		}
-		for (final String key : strings.keySet()) {
-			String value = strings.get(key);
-			for (int i = value.indexOf('$'); i != -1; i = value.indexOf('$')) {
-				value = value.replaceFirst("\\$", "<");
-				value = value.replaceFirst("\\$", ">");
-			}
-			newStrings.put(key, value);
-		}
-		return newStrings;
+		return strings;
 	}
 
 	public enum Type {

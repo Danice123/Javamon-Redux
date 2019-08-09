@@ -7,17 +7,17 @@ import com.github.danice123.javamon.logic.map.MapHandler;
 
 public class WalkAxis implements EntityBehavior {
 
-	private boolean isVertical;
+	private final boolean isVertical;
 	private MapHandler map;
 
-	public WalkAxis(boolean isVertical) {
+	public WalkAxis(final boolean isVertical) {
 		this.isVertical = isVertical;
 	}
 
 	@Override
-	public void takeAction(WalkableHandler handler) {
-		if (!handler.busy) {
-			boolean dir = RandomNumberGenerator.random.nextBoolean();
+	public void takeAction(final WalkableHandler handler) {
+		if (!handler.isBusy()) {
+			final boolean dir = RandomNumberGenerator.random.nextBoolean();
 			if (isVertical) {
 				if (dir) {
 					handler.walk(map, Dir.North);
@@ -40,7 +40,7 @@ public class WalkAxis implements EntityBehavior {
 	}
 
 	@Override
-	public void setMapHandler(MapHandler map) {
+	public void setMapHandler(final MapHandler map) {
 		this.map = map;
 	}
 

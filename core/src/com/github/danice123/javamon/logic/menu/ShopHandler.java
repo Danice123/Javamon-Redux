@@ -5,6 +5,7 @@ import java.lang.reflect.InvocationTargetException;
 import com.github.danice123.javamon.display.screen.Screen;
 import com.github.danice123.javamon.display.screen.menu.ShopMenu;
 import com.github.danice123.javamon.logic.Game;
+import com.google.common.collect.Lists;
 
 import dev.dankins.javamon.data.Inventory;
 import dev.dankins.javamon.data.item.Item;
@@ -49,10 +50,8 @@ public class ShopHandler extends MenuHandler {
 
 			choiceboxHandler = new ChoiceboxHandler(game,
 					item.getName() + "? That will be $" + cost + ". OK?",
-					new String[] { "yes/no", "choice1" });
-			choiceboxHandler.waitAndHandle();
-
-			if (game.getPlayer().getFlag("choice1")) {
+					Lists.newArrayList("Yes", "No"));
+			if (choiceboxHandler.waitForResponse().equals("Yes")) {
 				if (game.getPlayer().modifyMoney(-cost)) {
 					game.getPlayer().getInventory().addItems(item, shopMenu.getMenuAmount());
 				}
@@ -70,11 +69,8 @@ public class ShopHandler extends MenuHandler {
 				cost = item.getCost() / 2 * shopMenu.getMenuAmount();
 
 				choiceboxHandler = new ChoiceboxHandler(game,
-						"I can pay you $" + cost + " for that.",
-						new String[] { "yes/no", "choice1" });
-				choiceboxHandler.waitAndHandle();
-
-				if (game.getPlayer().getFlag("choice1")) {
+						"I can pay you $" + cost + " for that.", Lists.newArrayList("Yes", "No"));
+				if (choiceboxHandler.waitForResponse().equals("Yes")) {
 					game.getPlayer().modifyMoney(cost);
 					game.getPlayer().getInventory().removeItems(item, shopMenu.getMenuAmount());
 					shopMenu.updateMenu();

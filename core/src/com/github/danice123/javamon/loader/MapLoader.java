@@ -1,6 +1,5 @@
 package com.github.danice123.javamon.loader;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
@@ -14,15 +13,15 @@ import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 import com.badlogic.gdx.utils.Array;
-import com.github.danice123.javamon.logic.entity.EntityHandler;
 import com.github.danice123.javamon.logic.map.MapData;
 import com.github.danice123.javamon.logic.map.MapHandler;
-import com.github.danice123.javamon.logic.script.ScriptException;
 import com.google.common.collect.Lists;
 
 import dev.dankins.javamon.data.map.EncounterList;
 import dev.dankins.javamon.data.map.TriggerList;
 import dev.dankins.javamon.data.script.Script;
+import dev.dankins.javamon.data.script.ScriptLoadingException;
+import dev.dankins.javamon.logic.entity.EntityHandler;
 
 public class MapLoader extends SynchronousAssetLoader<MapData, MapLoader.Parameters> {
 
@@ -34,7 +33,8 @@ public class MapLoader extends SynchronousAssetLoader<MapData, MapLoader.Paramet
 	}
 
 	@Override
-	public MapData load(final AssetManager manager, final String fileName, final FileHandle file, final Parameters parameter) {
+	public MapData load(final AssetManager manager, final String fileName, final FileHandle file,
+			final Parameters parameter) {
 		Optional<Script> mapScript = Optional.empty();
 		TriggerList triggerList = new TriggerList();
 		EncounterList encounterList = new EncounterList();
@@ -43,7 +43,7 @@ public class MapLoader extends SynchronousAssetLoader<MapData, MapLoader.Paramet
 			if (child.name().equals("mapScript.ps")) {
 				try {
 					mapScript = Optional.of(new Script(child));
-				} catch (IOException | ScriptException e) {
+				} catch (final ScriptLoadingException e) {
 					e.printStackTrace();
 				}
 			}
@@ -59,16 +59,19 @@ public class MapLoader extends SynchronousAssetLoader<MapData, MapLoader.Paramet
 		}
 
 		final TiledMap mapData = tmxMapLoader.load(file.path() + "/map.tmx");
-		return new MapData(file.name(), parameter.handler, mapData, entityList, triggerList, encounterList, mapScript);
+		return new MapData(file.name(), parameter.handler, mapData, entityList, triggerList,
+				encounterList, mapScript);
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override
-	public Array<AssetDescriptor> getDependencies(final String fileName, final FileHandle file, final Parameters parameter) {
+	public Array<AssetDescriptor> getDependencies(final String fileName, final FileHandle file,
+			final Parameters parameter) {
 
 		final List<AssetDescriptor> dep = Lists.newArrayList();
 		for (final FileHandle child : file.list()) {
-			if (child.extension().equals("ps") && child.nameWithoutExtension().equals("mapScript")) {
+			if (child.extension().equals("ps")
+					&& child.nameWithoutExtension().equals("mapScript")) {
 				dep.add(new AssetDescriptor<Script>(child, Script.class));
 			}
 			if (child.extension().equals("entity")) {
@@ -80,7 +83,8 @@ public class MapLoader extends SynchronousAssetLoader<MapData, MapLoader.Paramet
 			dep.add(new AssetDescriptor<TriggerList>(file.name() + "-trigger", TriggerList.class));
 		}
 		if (file.child("encounter.yaml").exists()) {
-			dep.add(new AssetDescriptor<EncounterList>(file.name() + "-encounter", EncounterList.class));
+			dep.add(new AssetDescriptor<EncounterList>(file.name() + "-encounter",
+					EncounterList.class));
 		}
 
 		return new Array(dep.toArray(new AssetDescriptor[0]));

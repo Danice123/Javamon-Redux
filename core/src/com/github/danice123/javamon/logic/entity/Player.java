@@ -19,7 +19,6 @@ import dev.dankins.javamon.data.monster.instance.Party;
 public class Player extends WalkableHandler implements Trainer {
 
 	private Map<String, Boolean> flag;
-	private Map<String, String> strings;
 	private CollectionLibrary pokeData;
 	private Party party;
 	private Inventory inventory;
@@ -30,7 +29,6 @@ public class Player extends WalkableHandler implements Trainer {
 	public Player(final Optional<Spriteset> sprites) {
 		super("Player", sprites);
 		flag = Maps.newHashMap();
-		strings = Maps.newHashMap();
 		pokeData = new CollectionLibrary();
 		party = new Party();
 		inventory = new Inventory();
@@ -53,18 +51,6 @@ public class Player extends WalkableHandler implements Trainer {
 
 	public void setFlag(final String s, final boolean state) {
 		flag.put(s, state);
-	}
-
-	public String getString(final String key) {
-		try {
-			return strings.get(key);
-		} catch (final NullPointerException e) {
-			return "InvalidKey";
-		}
-	}
-
-	public void setString(final String key, final String val) {
-		strings.put(key, val);
 	}
 
 	public CollectionLibrary getPokeData() {

@@ -10,7 +10,6 @@ import com.github.danice123.javamon.display.screen.menu.BagMenu.BagMenuType;
 import com.github.danice123.javamon.display.screen.menu.PartyMenu.PartyMenuType;
 import com.github.danice123.javamon.logic.Game;
 import com.github.danice123.javamon.logic.ThreadUtils;
-import com.github.danice123.javamon.logic.script.ScriptHandler;
 
 import dev.dankins.javamon.data.Inventory;
 import dev.dankins.javamon.data.item.Item;
@@ -18,6 +17,7 @@ import dev.dankins.javamon.data.item.ItemStack;
 import dev.dankins.javamon.data.monster.attack.effect.Effect;
 import dev.dankins.javamon.data.monster.instance.MonsterInstance;
 import dev.dankins.javamon.data.script.Script;
+import dev.dankins.javamon.logic.script.ScriptHandler;
 
 public class BagHandler extends MenuHandler implements EffectHandler {
 
@@ -59,7 +59,7 @@ public class BagHandler extends MenuHandler implements EffectHandler {
 				// Item with Script
 				final Optional<Script> script = item.getScript(game.getAssets());
 				if (script.isPresent()) {
-					new ScriptHandler(game, script.get(), null).run();
+					new ScriptHandler(game, script.get()).run();
 					return true;
 				}
 				// Item with effect

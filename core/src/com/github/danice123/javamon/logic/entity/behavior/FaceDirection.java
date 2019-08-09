@@ -6,15 +6,15 @@ import com.github.danice123.javamon.logic.map.MapHandler;
 
 public class FaceDirection implements EntityBehavior {
 
-	private Dir direction;
+	private final Dir direction;
 
-	public FaceDirection(Dir direction) {
+	public FaceDirection(final Dir direction) {
 		this.direction = direction;
 	}
 
 	@Override
-	public void takeAction(WalkableHandler handler) {
-		if (!handler.busy && handler.getFacing() != direction) {
+	public void takeAction(final WalkableHandler handler) {
+		if (!handler.isBusy() && handler.getFacing() != direction) {
 			handler.setFacing(direction);
 		}
 	}
@@ -25,7 +25,7 @@ public class FaceDirection implements EntityBehavior {
 	}
 
 	@Override
-	public void setMapHandler(MapHandler map) {
+	public void setMapHandler(final MapHandler map) {
 	}
 
 }

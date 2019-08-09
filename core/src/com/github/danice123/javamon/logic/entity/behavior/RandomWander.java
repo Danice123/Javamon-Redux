@@ -12,23 +12,23 @@ public class RandomWander implements EntityBehavior {
 	private final int radius;
 	private MapHandler mapHandler;
 
-	public RandomWander(Coord center, int radius) {
+	public RandomWander(final Coord center, final int radius) {
 		this.center = center;
 		this.radius = radius;
 	}
 
 	@Override
-	public void takeAction(WalkableHandler handler) {
-		if (!handler.busy) {
-			Dir direction = EntityBehavior.getRandomDirection();
+	public void takeAction(final WalkableHandler handler) {
+		if (!handler.isBusy()) {
+			final Dir direction = EntityBehavior.getRandomDirection();
 			if (!isOutsideOfBounds(handler, direction)) {
 				handler.walk(mapHandler, direction);
 			}
 		}
 	}
 
-	private boolean isOutsideOfBounds(WalkableHandler handler, Dir direction) {
-		Coord coord = handler.getCoord().inDirection(direction);
+	private boolean isOutsideOfBounds(final WalkableHandler handler, final Dir direction) {
+		final Coord coord = handler.getCoord().inDirection(direction);
 		if (coord.x < center.x - radius || coord.x > center.x + radius) {
 			return true;
 		}
@@ -44,8 +44,8 @@ public class RandomWander implements EntityBehavior {
 	}
 
 	@Override
-	public void setMapHandler(MapHandler map) {
-		this.mapHandler = map;
+	public void setMapHandler(final MapHandler map) {
+		mapHandler = map;
 	}
 
 }

@@ -7,9 +7,10 @@ import com.github.danice123.javamon.logic.map.MapHandler;
 public class LookAroundBehavior implements EntityBehavior {
 
 	@Override
-	public void takeAction(WalkableHandler handler) {
-		if (!handler.busy)
+	public void takeAction(final WalkableHandler handler) {
+		if (!handler.isBusy()) {
 			handler.setFacing(EntityBehavior.getRandomDirection());
+		}
 	}
 
 	@Override
@@ -18,7 +19,7 @@ public class LookAroundBehavior implements EntityBehavior {
 	}
 
 	@Override
-	public void setMapHandler(MapHandler map) {
+	public void setMapHandler(final MapHandler map) {
 	}
 
 }

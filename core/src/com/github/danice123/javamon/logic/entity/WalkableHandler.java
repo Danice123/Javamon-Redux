@@ -10,6 +10,8 @@ import com.github.danice123.javamon.logic.ThreadUtils;
 import com.github.danice123.javamon.logic.entity.behavior.EntityBehavior;
 import com.github.danice123.javamon.logic.map.MapHandler;
 
+import dev.dankins.javamon.logic.entity.EntityHandler;
+
 public class WalkableHandler extends EntityHandler {
 
 	private WalkableHandler following;

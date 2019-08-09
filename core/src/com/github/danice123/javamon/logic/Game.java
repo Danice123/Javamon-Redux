@@ -17,10 +17,10 @@ import com.github.danice123.javamon.loader.MainLoader;
 import com.github.danice123.javamon.logic.entity.Player;
 import com.github.danice123.javamon.logic.map.MapHandler;
 import com.github.danice123.javamon.logic.menu.GameMenuHandler;
-import com.github.danice123.javamon.logic.script.ScriptHandler;
 
 import dev.dankins.javamon.data.SaveFile;
 import dev.dankins.javamon.data.monster.MonsterList;
+import dev.dankins.javamon.logic.script.ScriptHandler;
 
 public class Game implements Runnable {
 
@@ -99,7 +99,8 @@ public class Game implements Runnable {
 		gameMenuHandler.waitAndHandle();
 
 		// Create player
-		final Optional<Spriteset> spriteset = Optional.of(new Spriteset((Texture) assets.get("assets/entity/sprites/Red.png")));
+		final Optional<Spriteset> spriteset = Optional
+				.of(new Spriteset((Texture) assets.get("assets/entity/sprites/Red.png")));
 		player = new Player(spriteset);
 		mapHandler.setPlayer(player);
 
@@ -111,7 +112,7 @@ public class Game implements Runnable {
 			mapName = player.load(assets, saveFile);
 			break;
 		case NewGame:
-			new ScriptHandler(this, assets.get("assets/scripts/Start.ps"), null).run();
+			new ScriptHandler(this, assets.get("assets/scripts/Start.ps")).run();
 			player.setCoord(new Coord(4, 2), 0);
 			player.setFacing(Dir.North);
 			mapName = "Pallet_Town_Red_Home_2";
