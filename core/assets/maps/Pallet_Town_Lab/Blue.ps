@@ -1,14 +1,17 @@
-!Face:t p
+!Face:TARGET PLAYER
 !Branch:ChoosePokemon ChoosePokemon
 !Branch:BlueLabBattle BlueLabBattle
 !Display:1
 !Stop:
+
 @ChoosePokemon
 !Display:2
-!Stop
+!Stop:
+
 @BlueLabBattle
 !Display:3
 !Stop:
-$1:<rivalName>; Yo <playerName>! Gramps isn't around!
-$2:<rivalName>; Heh, I don't need to be greedy like you!/nGo ahead and choose, <playerName>!
-$3:<rivalName>; My Pokemon looks a lot stronger.
+
+$1:<rivalName>: Yo <playerName>! Gramps isn't around!
+$2:<rivalName>: Heh, I don't need to be greedy like you!/nGo ahead and choose, <playerName>!
+$3:<rivalName>: My Pokemon looks a lot stronger.

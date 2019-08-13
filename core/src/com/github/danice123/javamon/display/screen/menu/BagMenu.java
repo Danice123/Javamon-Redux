@@ -2,6 +2,7 @@ package com.github.danice123.javamon.display.screen.menu;
 
 import java.util.List;
 
+import com.github.danice123.javamon.display.screen.AbstractMenu;
 import com.github.danice123.javamon.display.screen.Screen;
 
 import dev.dankins.javamon.data.item.Item;

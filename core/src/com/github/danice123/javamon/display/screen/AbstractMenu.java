@@ -1,6 +1,5 @@
-package com.github.danice123.javamon.display.screen.menu;
+package com.github.danice123.javamon.display.screen;
 
-import com.github.danice123.javamon.display.screen.Screen;
 import com.github.danice123.javamon.logic.ControlProcessor.Key;
 
 public abstract class AbstractMenu extends Screen {

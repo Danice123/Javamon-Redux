@@ -11,6 +11,7 @@ import com.github.danice123.javamon.logic.menu.ChatboxHandler;
 
 import dev.dankins.javamon.data.script.ScriptLoadingException;
 import dev.dankins.javamon.data.script.ScriptLoadingException.SCRIPT_LOADING_ERROR_TYPE;
+import dev.dankins.javamon.logic.script.Command;
 import dev.dankins.javamon.logic.script.ScriptException;
 import dev.dankins.javamon.logic.script.ScriptTarget;
 
@@ -34,7 +35,8 @@ public class Display extends Command {
 	public Optional<String> execute(final Game game, final Map<String, String> strings,
 			final Optional<ScriptTarget> target) throws ScriptException {
 
-		final String parsedText = parseString(strings.get(textReference), strings);
+		final String parsedText = parseString(strings.get(parseString(textReference, strings)),
+				strings);
 
 		final ChatboxHandler box = new ChatboxHandler(game, parsedText);
 		box.waitAndHandle();

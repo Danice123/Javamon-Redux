@@ -13,7 +13,7 @@ import com.badlogic.gdx.utils.Array;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.Lists;
 
-import dev.dankins.javamon.data.map.Trigger;
+import dev.dankins.javamon.data.map.TriggerSerialized;
 import dev.dankins.javamon.data.map.TriggerList;
 import dev.dankins.javamon.data.script.Script;
 
@@ -37,7 +37,7 @@ public class TriggerListLoader extends SynchronousAssetLoader<TriggerList, Trigg
 		final TriggerList list = loadTriggerList(file);
 
 		final List<AssetDescriptor<Script>> assetsToLoad = Lists.newArrayList();
-		for (final Trigger trigger : list.triggers) {
+		for (final TriggerSerialized trigger : list.triggers) {
 			if (trigger.script.startsWith("$")) {
 				assetsToLoad.add(new AssetDescriptor<Script>("assets/scripts/" + trigger.script.substring(1) + ".ps", Script.class));
 			} else {

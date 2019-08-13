@@ -11,6 +11,7 @@ import com.github.danice123.javamon.logic.ThreadUtils;
 
 import dev.dankins.javamon.data.script.ScriptLoadingException;
 import dev.dankins.javamon.data.script.ScriptLoadingException.SCRIPT_LOADING_ERROR_TYPE;
+import dev.dankins.javamon.logic.script.Command;
 import dev.dankins.javamon.logic.script.ScriptException;
 import dev.dankins.javamon.logic.script.ScriptTarget;
 

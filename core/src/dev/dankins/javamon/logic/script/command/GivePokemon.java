@@ -15,6 +15,7 @@ import com.google.common.collect.Lists;
 import dev.dankins.javamon.data.monster.instance.MonsterInstance;
 import dev.dankins.javamon.data.script.ScriptLoadingException;
 import dev.dankins.javamon.data.script.ScriptLoadingException.SCRIPT_LOADING_ERROR_TYPE;
+import dev.dankins.javamon.logic.script.Command;
 import dev.dankins.javamon.logic.script.ScriptException;
 import dev.dankins.javamon.logic.script.ScriptTarget;
 
@@ -42,8 +43,9 @@ public class GivePokemon extends Command {
 	@Override
 	public Optional<String> execute(final Game game, final Map<String, String> strings,
 			final Optional<ScriptTarget> target) throws ScriptException {
-		final MonsterInstance poke = new MonsterInstance(game.getMonsterList().getMonster(monster),
-				level, game.getPlayer().getName(), game.getPlayer().getPlayerId());
+		final MonsterInstance poke = new MonsterInstance(
+				game.getMonsterList().getMonster(parseString(monster, strings)), level,
+				game.getPlayer().getName(), game.getPlayer().getPlayerId());
 		game.getPlayer().getParty().add(poke);
 		game.getPlayer().getPokeData().caught(poke.monster.number);
 

@@ -1,28 +1,40 @@
 package dev.dankins.javamon.data.map;
 
 import java.util.Map;
+import java.util.Optional;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.github.danice123.javamon.logic.Game;
+import com.github.danice123.javamon.logic.ThreadUtils;
 
-public class Trigger {
+import dev.dankins.javamon.data.script.Script;
+import dev.dankins.javamon.logic.entity.EntityHandler;
+import dev.dankins.javamon.logic.script.ScriptHandler;
+import dev.dankins.javamon.logic.script.ScriptTarget;
 
-	public final int x;
-	public final int y;
-	public final int layer;
-	public final String script;
-	public final Map<String, String> arguments;
+public class Trigger implements ScriptTarget {
 
-	@JsonCreator
-	public Trigger(@JsonProperty("x") final int x,
-		@JsonProperty("y") final int y,
-		@JsonProperty("layer") final int layer,
-		@JsonProperty("script") final String script,
-		@JsonProperty("arguments") final Map<String, String> arguments) {
-		this.x = x;
-		this.y = y;
-		this.layer = layer;
+	private final Script script;
+	private final Map<String, String> strings;
+
+	public Trigger(final Script script, final Map<String, String> strings) {
 		this.script = script;
-		this.arguments = arguments;
+		this.strings = strings;
 	}
+
+	public void activate(final Game game) {
+		// TODO: Not threaded?
+		new Thread(new ScriptHandler(game, script, this)).start();
+		ThreadUtils.sleep(100);
+	}
+
+	@Override
+	public Optional<EntityHandler> getEntityHandler() {
+		return Optional.empty();
+	}
+
+	@Override
+	public Map<String, String> getStrings() {
+		return strings;
+	}
+
 }

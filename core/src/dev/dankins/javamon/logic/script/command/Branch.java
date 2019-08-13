@@ -10,6 +10,7 @@ import com.github.danice123.javamon.logic.Game;
 
 import dev.dankins.javamon.data.script.ScriptLoadingException;
 import dev.dankins.javamon.data.script.ScriptLoadingException.SCRIPT_LOADING_ERROR_TYPE;
+import dev.dankins.javamon.logic.script.Command;
 import dev.dankins.javamon.logic.script.ScriptException;
 import dev.dankins.javamon.logic.script.ScriptTarget;
 
@@ -33,7 +34,12 @@ public class Branch extends Command {
 				query = new PlayerItem(i.next());
 				break;
 			case "String":
-				query = new PlayerString(i.next(), i.next());
+				final String stringName = i.next();
+				String stringValue = i.next();
+				while (i.hasNext()) {
+					stringValue = stringValue + " " + i.next();
+				}
+				query = new PlayerString(stringName, stringValue);
 				break;
 			default:
 				query = new PlayerFlag(queryType);
@@ -102,7 +108,8 @@ public class Branch extends Command {
 		@Override
 		public boolean resolve(final Game game, final Map<String, String> strings,
 				final Optional<ScriptTarget> target) {
-			return game.getPlayer().getStrings().get(string).equals(value);
+			return game.getPlayer().getStrings().get(parseString(string, strings))
+					.equals(parseString(value, strings));
 		}
 
 	}

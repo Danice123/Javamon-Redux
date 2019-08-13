@@ -8,6 +8,7 @@ import com.github.danice123.javamon.logic.Game;
 
 import dev.dankins.javamon.data.monster.instance.MonsterInstance;
 import dev.dankins.javamon.data.script.ScriptLoadingException;
+import dev.dankins.javamon.logic.script.Command;
 import dev.dankins.javamon.logic.script.ScriptException;
 import dev.dankins.javamon.logic.script.ScriptTarget;
 

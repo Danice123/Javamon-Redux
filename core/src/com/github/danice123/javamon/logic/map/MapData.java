@@ -23,6 +23,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
 import dev.dankins.javamon.data.map.EncounterList;
+import dev.dankins.javamon.data.map.Trigger;
 import dev.dankins.javamon.data.map.TriggerList;
 import dev.dankins.javamon.data.script.Script;
 import dev.dankins.javamon.logic.entity.EntityHandler;
@@ -36,7 +37,7 @@ public class MapData {
 	private final List<EntityHandler> entities;
 	private final EncounterList encounters;
 	private final List<EntityBehaviorThread> entityThreads;
-	private final Script[][][] triggers;
+	private final Trigger[][][] triggers;
 	private final Optional<Script> mapScript;
 	private boolean borderCollides = false;
 
@@ -276,16 +277,16 @@ public class MapData {
 		return null;
 	}
 
-	public EntityHandler getEntity(final String name) {
+	public Optional<EntityHandler> getEntity(final String name) {
 		for (final EntityHandler entity : entities) {
 			if (entity.getEntity().getName().equals(name)) {
-				return entity;
+				return Optional.of(entity);
 			}
 		}
-		return null;
+		return Optional.empty();
 	}
 
-	public Optional<Script> getTrigger(final Coord coord, final int layer) {
+	public Optional<Trigger> getTrigger(final Coord coord, final int layer) {
 		System.out.println(coord.x + "," + coord.y + "," + layer);
 		try {
 			return Optional.ofNullable(triggers[layer][coord.x][coord.y]);

@@ -13,7 +13,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
 import dev.dankins.javamon.data.script.ScriptLoadingException.SCRIPT_LOADING_ERROR_TYPE;
-import dev.dankins.javamon.logic.script.command.Command;
+import dev.dankins.javamon.logic.script.Command;
 
 public class Script {
 
@@ -68,7 +68,7 @@ public class Script {
 			throws ScriptLoadingException {
 		try {
 			final Class<Command> c = (Class<Command>) Class
-					.forName("com.github.danice123.javamon.logic.script.command." + name);
+					.forName("dev.dankins.javamon.logic.script.command." + name);
 			final Command command = c.getConstructor(List.class).newInstance(args);
 			return command;
 		} catch (final ClassNotFoundException | IllegalArgumentException | IllegalAccessException

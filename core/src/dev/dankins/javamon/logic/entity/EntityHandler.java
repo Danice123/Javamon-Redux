@@ -103,7 +103,6 @@ public class EntityHandler implements ScriptTarget {
 		return busy;
 	}
 
-	@Override
 	public void setBusy(final boolean isBusy) {
 		busy = isBusy;
 	}

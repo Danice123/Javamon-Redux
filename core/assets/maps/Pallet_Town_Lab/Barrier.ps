@@ -4,17 +4,17 @@
 @ChoosePokemon
 !Lock:
 !Display:1
-!Walk:p N
+!Walk:PLAYER N
 !Unlock
 !Stop:
 @BlueLabBattle
 !Lock:
-!Face:p N
+!Face:PLAYER N
 !RespawnPoint:
 !Display:2
-!Branch:ChoseBulbasaur <Side>Bulbasaur
-!Branch:ChoseCharmander <Side>Charmander
-!Branch:ChoseSquirtle <Side>Squirtle
+!Branch:<Side>Bulbasaur Starter=Bulbasaur
+!Branch:<Side>Charmander Starter=Charmander
+!Branch:<Side>Squirtle Starter=Squirtle
 !Stop:
 
 @LeftSquirtle
@@ -59,6 +59,6 @@
 !Set:FirstRivalBattle
 !Unlock:
 !Stop:
-$1:Oak; Hey! Don't go away yet!
-$2:<rivalName>; Wait <playerName>! Let's check out our Pokemon!/nCome on, I'll take you on!
-$3:<rivalName>; Okay! I'll make my Pokemon fight to toughen it up!/n<playerName>! Gramps! Smell you later!
+$1:Oak: Hey! Don't go away yet!
+$2:<rivalName>: Wait <playerName>! Let's check out our Pokemon!/nCome on, I'll take you on!
+$3:<rivalName>: Okay! I'll make my Pokemon fight to toughen it up!/n<playerName>! Gramps! Smell you later!

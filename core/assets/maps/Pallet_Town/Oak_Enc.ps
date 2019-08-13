@@ -1,32 +1,32 @@
 !Branch:OakPalletEncounter OakPalletEncounter
 !Lock:
 !Display:1
-!Face:p s
+!Face:PLAYER S
 !Unhide:Oak
 
 !Goto:<Side>
 @Left
 !Walk:Oak N N E N N N
 !Display:2
-!Follow:p Oak
+!Follow:PLAYER Oak
 !Walk:Oak S S S W S S S S S S S E E E N
 !Goto:Continue
 @Right
 !Walk:Oak N N E N N E N
 !Display:2
-!Follow:p Oak
+!Follow:PLAYER Oak
 !Walk:Oak S W S S W S S S S S S S E E E N
 !Goto:Continue
 
 @Continue
 !Hide:Oak
 !Unfollow:Oak
-!Walk:p N
+!Walk:PLAYER N
 !Set:OakPalletEncounter
 !Warp:Pallet_Town_Lab 6 1 1
 !Move:Oak 6 2 1
-!Face:Blue n
-!Follow:p Oak
+!Face:Blue N
+!Follow:PLAYER Oak
 !Walk:Oak N N N N N N N N
 !Unfollow:Oak
 !Face:Oak S
@@ -39,8 +39,8 @@
 @OakPalletEncounter
 !Stop:
 $1:Hey, Wait! Don't go out!
-$2:Oak; It's unsafe! Wild Pokemon live in tall grass!/nYou need your own Pokemon for your protection. I know!/nHere, come with me!
-$3:<rivalName>; Gramps! I'm fed up with waiting!
-$4:Oak; <rivalName>? Let me think.../nOh that's right, I told you to come! Just wait!/nHere, <playerName>!/nThere are 3 Pokemon here!/nHaha!/nThey are inside the Poke Balls. When I was young, I was a serious Pokemon trainer!/nIn my old age, I have only 3 left, but you can have one! Choose!
-$5:<rivalName>; Hey! Gramps! What about me?
-$6:Oak; Be patient! <rivalName>, you can have one too!
+$2:Oak: It's unsafe! Wild Pokemon live in tall grass!/nYou need your own Pokemon for your protection. I know!/nHere, come with me!
+$3:<rivalName>: Gramps! I'm fed up with waiting!
+$4:Oak: <rivalName>? Let me think.../nOh that's right, I told you to come! Just wait!/nHere, <playerName>!/nThere are 3 Pokemon here!/nHaha!/nThey are inside the Poke Balls. When I was young, I was a serious Pokemon trainer!/nIn my old age, I have only 3 left, but you can have one! Choose!
+$5:<rivalName>: Hey! Gramps! What about me?
+$6:Oak: Be patient! <rivalName>, you can have one too!

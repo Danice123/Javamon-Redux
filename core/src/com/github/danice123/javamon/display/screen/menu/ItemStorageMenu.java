@@ -1,5 +1,6 @@
 package com.github.danice123.javamon.display.screen.menu;
 
+import com.github.danice123.javamon.display.screen.AbstractMenu;
 import com.github.danice123.javamon.display.screen.Screen;
 
 public abstract class ItemStorageMenu extends AbstractMenu {

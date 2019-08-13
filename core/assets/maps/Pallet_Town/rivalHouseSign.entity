@@ -5,4 +5,4 @@ layer: 1
 name: RivalHouseSign
 type: SIGN
 strings:
-  text: $rivalName$'s house
+  text: <rivalName>'s house

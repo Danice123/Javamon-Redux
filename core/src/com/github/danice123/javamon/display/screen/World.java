@@ -19,10 +19,9 @@ import com.github.danice123.javamon.logic.map.WildEncounter;
 import com.github.danice123.javamon.logic.menu.BattleMenuHandler;
 import com.github.danice123.javamon.logic.menu.StartMenuHandler;
 
+import dev.dankins.javamon.data.map.Trigger;
 import dev.dankins.javamon.data.monster.instance.MonsterInstance;
-import dev.dankins.javamon.data.script.Script;
 import dev.dankins.javamon.logic.entity.EntityHandler;
-import dev.dankins.javamon.logic.script.ScriptHandler;
 
 public class World extends Screen {
 
@@ -161,11 +160,10 @@ public class World extends Screen {
 			default:
 				break;
 			}
-			final Optional<Script> trigger = mapHandler.getMap().getTrigger(player.getCoord(),
+			final Optional<Trigger> trigger = mapHandler.getMap().getTrigger(player.getCoord(),
 					player.getLayer());
 			if (trigger.isPresent()) {
-				new Thread(new ScriptHandler(game, trigger.get())).start();
-				ThreadUtils.sleep(100);
+				trigger.get().activate(game);
 				return;
 			}
 

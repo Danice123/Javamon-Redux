@@ -12,10 +12,10 @@ import dev.dankins.javamon.data.script.Script;
 
 public class TriggerList {
 
-	public final List<Trigger> triggers;
+	public final List<TriggerSerialized> triggers;
 
 	@JsonCreator
-	public TriggerList(@JsonProperty("triggers") final List<Trigger> triggers) {
+	public TriggerList(@JsonProperty("triggers") final List<TriggerSerialized> triggers) {
 		this.triggers = triggers;
 	}
 
@@ -23,23 +23,19 @@ public class TriggerList {
 		triggers = Lists.newArrayList();
 	}
 
-	public Script[][][] load(final AssetManager assets, final MapData map, final String mapName) {
-		final Script[][][] scriptMap = new Script[map.getLayer()][map.getX()][map.getY()];
-		for (final Trigger trigger : triggers) {
+	public Trigger[][][] load(final AssetManager assets, final MapData map, final String mapName) {
+		final Trigger[][][] triggerMap = new Trigger[map.getLayer()][map.getX()][map.getY()];
+		for (final TriggerSerialized trigger : triggers) {
 			if (trigger.script.startsWith("$")) {
-				scriptMap[trigger.layer][trigger.x][trigger.y] = assets
-						.get("assets/scripts/" + trigger.script.substring(1) + ".ps", Script.class);
+				triggerMap[trigger.layer][trigger.x][trigger.y] = new Trigger(assets
+						.get("assets/scripts/" + trigger.script.substring(1) + ".ps", Script.class),
+						trigger.arguments);
 			} else {
-				scriptMap[trigger.layer][trigger.x][trigger.y] = assets
-						.get("assets/maps/" + mapName + "/" + trigger.script + ".ps", Script.class);
+				triggerMap[trigger.layer][trigger.x][trigger.y] = new Trigger(assets
+						.get("assets/maps/" + mapName + "/" + trigger.script + ".ps", Script.class),
+						trigger.arguments);
 			}
-			// if (trigger.arguments != null) {
-			// for (final String key : trigger.arguments.keySet()) {
-			// scriptMap[trigger.layer][trigger.x][trigger.y].strings.put(key,
-			// trigger.arguments.get(key));
-			// }
-			// }
 		}
-		return scriptMap;
+		return triggerMap;
 	}
 }

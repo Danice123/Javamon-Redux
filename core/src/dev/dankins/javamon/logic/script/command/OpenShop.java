@@ -11,6 +11,7 @@ import com.google.common.collect.Lists;
 import dev.dankins.javamon.data.Inventory;
 import dev.dankins.javamon.data.item.ItemSerialized;
 import dev.dankins.javamon.data.script.ScriptLoadingException;
+import dev.dankins.javamon.logic.script.Command;
 import dev.dankins.javamon.logic.script.ScriptException;
 import dev.dankins.javamon.logic.script.ScriptTarget;
 
@@ -32,6 +33,8 @@ public class OpenShop extends Command {
 
 		final ShopHandler shopHandler = new ShopHandler(game, shopInv);
 		shopHandler.waitAndHandle();
+
+		return Optional.empty();
 	}
 
 }

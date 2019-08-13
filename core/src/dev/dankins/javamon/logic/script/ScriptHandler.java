@@ -32,7 +32,9 @@ public class ScriptHandler implements Runnable {
 		final Map<String, String> strings = Maps.newHashMap(game.getPlayer().getStrings());
 		strings.putAll(script.strings);
 		if (target.isPresent()) {
-			target.get().setBusy(true);
+			if (target.get().getEntityHandler().isPresent()) {
+				target.get().getEntityHandler().get().setBusy(true);
+			}
 			strings.putAll(target.get().getStrings());
 		}
 		for (int i = 0; i < script.commands.length;) {
@@ -54,8 +56,8 @@ public class ScriptHandler implements Runnable {
 				i++;
 			}
 		}
-		if (target.isPresent()) {
-			target.get().setBusy(false);
+		if (target.isPresent() && target.get().getEntityHandler().isPresent()) {
+			target.get().getEntityHandler().get().setBusy(false);
 		}
 		game.controlLock = false; // Cleanup buggy scripts to continue game play
 	}

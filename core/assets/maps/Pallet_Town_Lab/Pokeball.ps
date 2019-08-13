@@ -1,78 +1,57 @@
 !Branch:ChoosePokemon ChoosePokemon
-!Branch:ChoseCharmander LastPokemon
-!Display:1
+!Branch:LastPokemon StarterPicked
+!Display:description
 !Stop:
 @ChoosePokemon
 !Lock:
 !ShowDexPage:<pokemon>
-!Goto:<pokemon>
-
-@Bulbasaur
-!Choose:2b yes/no ChoseBulbasaur
-!Branch:ChoseBulbasaur ChoseBulbasaur
+!Choose:choose_<pokemon> choice Yes No
+!Branch:Chosen String choice Yes
 !Unlock:
 !Stop:
 
-@ChoseBulbasaur
-!Hide:pokeballBulb
-!Display:3
-!GivePokemon:Bulbasaur 5
+@Chosen
+!Hide:TARGET
+!Display:energetic
+!GivePokemon:<pokemon> 5
+!Set:StarterPicked
+!Set:Starter=<pokemon>
+!Goto:Chosen_<pokemon>
+
+@Chosen_Bulbasaur
 !Walk:Blue S E E
 !Face:Blue N
 !Hide:pokeballChar
-!Display:4
-!Display:5b
-!Goto:Chosen
+!Goto:RivalTake
 
-@Charmander
-!Choose:2c yes/no ChoseCharmander
-!Branch:ChoseCharmander ChoseCharmander
-!Unlock:
-!Stop:
-
-@ChoseCharmander
-!Hide:pokeballChar
-!Display:3
-!GivePokemon:Charmander 5
+@Chosen_Charmander
 !Walk:Blue S S E E E N
 !Hide:pokeballSquir
-!Display:4
-!Display:5c
-!Goto:Chosen
+!Goto:RivalTake
 
-@Squirtle
-!Choose:2s yes/no ChoseSquirtle
-!Branch:ChoseSquirtle ChoseSquirtle
-!Unlock:
-!Stop:
-
-@ChoseSquirtle
-!Hide:pokeballSquir
-!Display:3
-!GivePokemon:Squirtle 5
+@Chosen_Squirtle
 !Walk:Blue S S E E E E N
 !Hide:pokeballBulb
-!Display:4
-!Display:5s
-!Goto:Chosen
 
-
-@Chosen
+@RivalTake
+!Display:rivalTake
+!Display:rival_<pokemon>
 !Set:BlueLabBattle
 !Unset:ChoosePokemon
 !Unlock:
 !Stop:
+
 @LastPokemon
-!Display:6
+!Display:lastPokemon
 !Stop:
 
-$1:Those are Pokeballs. They contain Pokemon!
-$2b:So! You want the plant Pokemon, Bulbasaur?
-$2c:So! You want the fire Pokemon, Charmander?
-$2s:So! You want the water Pokemon, Squirtle?
-$3:This Pokemon is really energetic!
-$4:<rivalName>; I'll take this one, then!
-$5b:<rivalName> received a Charmander!
-$5c:<rivalName> received a Squirtle!
-$5s:<rivalName> received a Bulbasaur!
-$6:Thats Prof. Oak's last Pokemon!
+$description:Those are Pokeballs. They contain Pokemon!
+$choose_Bulbasaur:So! You want the plant Pokemon, Bulbasaur?
+$choose_Charmander:So! You want the fire Pokemon, Charmander?
+$choose_Squirtle:So! You want the water Pokemon, Squirtle?
+$energetic:This Pokemon is really energetic!
+$rivalTake:<rivalName>; I'll take this one, then!
+$rival_Bulbasaur:<rivalName> received a Charmander!
+$rival_Charmander:<rivalName> received a Squirtle!
+$rival_Squirtle:<rivalName> received a Bulbasaur!
+$lastPokemon:Thats Prof. Oak's last Pokemon!

@@ -1,4 +1,4 @@
-package com.github.danice123.javamon.display.screen.menu;
+package com.github.danice123.javamon.display;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;

@@ -1,11 +1,11 @@
 !Display:1
 !Display:2
 
-!Choose:3 choice <c1> Red Ash Jack
-!Branch:choice1 CustomName
-!Branch:choice2 Red
-!Branch:choice3 Ash
-!Branch:choice4 Jack
+!Choose:3 choice <newName> Red Ash Jack
+!Branch:CustomName String choice <newName>
+!Branch:Red String choice Red
+!Branch:Ash String choice Ash
+!Branch:Jack String choice Jack
 @CustomName
 !TextInput:<textInputText> false playerName
 !Goto:Continue
@@ -23,11 +23,11 @@
 !Display:4
 !Display:5
 
-!Choose:6 choice <c1> Blue Gary John
-!Branch:choice1 CustomRivalName
-!Branch:choice2 Blue
-!Branch:choice3 Gary
-!Branch:choice4 John
+!Choose:6 choice <newName> Blue Gary John
+!Branch:CustomRivalName String choice <newName>
+!Branch:Blue String choice Blue
+!Branch:Gary String choice Gary
+!Branch:John String choice John
 @CustomRivalName
 !TextInput:<textInputText2> false rivalName
 !Goto:Continue2
@@ -45,6 +45,7 @@
 !Display:7
 !Display:8
 !Stop:
+
 $1:Hello there! Welcome to the world of Pokemon!/nMy name is Oak! People call me the Pokemon Professor!
 $2:This world is inhabited by creatures called Pokemon!/nFor some people Pokemon are pets. Others use them for fights./nMyself.../nI study Pokemon as a profession.
 $3:First, what is your name?
@@ -55,4 +56,5 @@ $6:...Erm, what is his name again?
 $textInputText2:Rival's name?
 $7:That's right! I rememeber now! His name is <rivalName>!
 $8:<playerName>!/nYour very own Pokemon legend is about to unfold!/nA world of dreams and adventures with Pokemon awaits! Let's go!
-$c1:New Name
+
+$newName:New Name

@@ -5,4 +5,4 @@ layer: 1
 name: PlayerHouseSign
 type: SIGN
 strings:
-  text: $playerName$'s house
+  text: <playerName>'s house
